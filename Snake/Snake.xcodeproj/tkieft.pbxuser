@@ -36,6 +36,14 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {498, 621}}";
+			sepNavSelRange = "{247, 0}";
+			sepNavVisRect = "{{0, 0}, {498, 621}}";
+			sepNavWindowFrame = "{{15, 77}, {543, 750}}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Development;
 		activeExecutable = 063E7B5E0A3C84C4005C4507 /* Snake */;
@@ -50,7 +58,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					243,
+					386,
 					20,
 					48,
 					43,
@@ -67,8 +75,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 171739391;
-			PBXWorkspaceStateSaveDate = 171739391;
+			PBXPerProjectTemplateStateSaveDate = 171740006;
+			PBXWorkspaceStateSaveDate = 171740006;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {
