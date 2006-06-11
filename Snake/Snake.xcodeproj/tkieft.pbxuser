@@ -26,10 +26,11 @@
 	063E7B720A3C84C9005C4507 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 0;
+		isSCMEnabled = 1;
 		scmConfiguration = {
+			SubversionToolPath = /usr/local/bin/svn;
 		};
-		scmType = "";
+		scmType = scm.subversion;
 	};
 	063E7B730A3C84C9005C4507 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
@@ -51,7 +52,7 @@
 					20,
 					243,
 					20,
-					48.1626,
+					48,
 					43,
 					43,
 					20,
@@ -66,8 +67,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 171738308;
-			PBXWorkspaceStateSaveDate = 171738308;
+			PBXPerProjectTemplateStateSaveDate = 171739391;
+			PBXWorkspaceStateSaveDate = 171739391;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

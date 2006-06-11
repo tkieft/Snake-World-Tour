@@ -1,0 +1,45 @@
+Tyler Kieft
+June 10, 2006
+
+Development Plan: Snake-Clone Game
+
+------------------------------------------------------------
+
+Name: ????????
+
+This game will be a simple clone of snake to get my feet wet and see
+if I can actually finish a complete game.  The goal is to get snake
+working in the most barebones way, and then try to add all of the
+frills such as levels, later
+
+Players: 1 or 2
+
+Goal: You control a snake that moves in 4 directions.  The snake must
+avoid hitting itself and the walls while collecting 10 dots on each
+level, then exiting through a hole in the side of the wall.  The snake
+grows each time it eats a dot, making it longer and the playing field
+harder to navigate. In the two player version, each snake has their
+own color collectibles, and it is a race to see which snake finishes
+first.
+
+Resolution: 640 x 480 (later fullscreen?)
+
+Game Board Size: 35 = 420px
+Block Size 12px
+
+
+------------------------------------------------------------
+
+Later add-ons:
+
+o Joystick support
+o Multiple speeds of play
+o Computer player
+o Fullscreen
+o Intro splash and menu screen
+o Ability to choose color of background, (walls), and snake
+o Multiple levels
+o Pause
+o High Scores
+o Ability to make user levels
+o Sound
