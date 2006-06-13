@@ -15,12 +15,6 @@
 #define SCREENHEIGHT 480
 #define SCREENBPP 32
 
-//35 blocks of 12 pixels each per level
-#define TILESIZE 12
-#define LEVELSIZE 35
-#define BOARDX 30
-#define BOARDY 30
-
 #define WALLCOLOR 0xCC0000
 #define FLOORCOLOR 0x0000CC
 

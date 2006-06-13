@@ -13,11 +13,7 @@
 #include "globals.h"
 
 
-Board::Board ( SDL_Surface* sc ) : scr( sc ) 
-{ 
-    offset.x = BOARDX;
-    offset.y = BOARDY;
-}
+Board::Board ( SDL_Surface* sc ) : scr( sc ) {}
 
 void Board::draw()
 {
@@ -39,11 +35,11 @@ void Board::draw()
                     color = WALLCOLOR;
                     break;
             }
-            drawrect( BOARDX + x * TILESIZE, BOARDY + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
+            drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
         }
     if( SDL_MUSTLOCK( scr ) )
         SDL_UnlockSurface( scr );
     
-    SDL_UpdateRect( scr, BOARDX, BOARDY, BOARDX - 1 + TILESIZE * LEVELSIZE, BOARDY - 1 + TILESIZE * LEVELSIZE );
+    SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );
             
 }

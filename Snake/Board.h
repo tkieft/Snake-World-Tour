@@ -16,9 +16,14 @@ class Board
 {
 private:
     SDL_Surface* scr;
-    SDL_Rect offset;
     
 public:
+    /* Class-wide constants */
+    const static int TILESIZE = 12;
+    const static int LEVELSIZE = 35;
+    const static int XLOC = 30;
+    const static int YLOC = 30;
+        
     Board( SDL_Surface* sc );
     void draw();
 };

@@ -70,11 +70,11 @@
 /* Begin PBXFileReference section */
 		068EEAB90A3CE318003887BB /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = main.cpp; sourceTree = "<group>"; };
 		06CC534B0A3E30A300E92E7F /* levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levels.h; sourceTree = "<group>"; };
-		06CC53520A3E321400E92E7F /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		06CC53520A3E321400E92E7F /* Board.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Board.h; sourceTree = "<group>"; };
 		06CC53530A3E321400E92E7F /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
 		06CC53690A3E369000E92E7F /* drawfunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawfunc.cpp; sourceTree = "<group>"; };
-		06CC54320A3E3B9000E92E7F /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		06CC54320A3E3B9000E92E7F /* globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = globals.h; sourceTree = "<group>"; };
 		06FFD1780A3E2196003850BF /* load_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = load_image.h; sourceTree = "<group>"; };
 		06FFD1790A3E2196003850BF /* load_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_image.cpp; sourceTree = "<group>"; };
 		06FFD1AE0A3E24BE003850BF /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				06CC54320A3E3B9000E92E7F /* globals.h */,
 				F5A47A9D01A0482F01D3D55B /* SDLMain.h */,
 				F5A47A9E01A0483001D3D55B /* SDLMain.m */,
 				06CC53520A3E321400E92E7F /* Board.h */,
@@ -151,6 +150,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				06CC54320A3E3B9000E92E7F /* globals.h */,
 				06CC53680A3E369000E92E7F /* drawfunc.h */,
 				06CC53690A3E369000E92E7F /* drawfunc.cpp */,
 				06CC534B0A3E30A300E92E7F /* levels.h */,
