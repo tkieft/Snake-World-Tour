@@ -18,21 +18,21 @@ using std::endl;
 using std::string;
 
 // Function prototypes
-void init();
+void init( SDL_Surface* &scr );
 void deinit();
 
-SDL_Surface* screen = NULL;
-SDL_Surface* bg = NULL;
-SDL_Event event;
+SDL_Surface *bg = NULL;
 
 int main(int argc, char *argv[])
 {
+    SDL_Surface* screen = NULL;
+    SDL_Event event;
     
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
     //cout << rsrcdirectory;
     
-    init();
+    init( screen );
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
@@ -70,7 +70,8 @@ int main(int argc, char *argv[])
 	return(0);
 }
 
-void init()
+// init takes a reference to a pointer to SDL_Surface
+void init( SDL_Surface* &scr )
 {
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
@@ -81,9 +82,9 @@ void init()
     atexit( deinit );
     
     // Attempt to create a 640x480 window with 32 bit pixels
-    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
+    scr = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
     
-    if( screen == NULL )
+    if( scr == NULL )
     {
         cout << "Unable to set 640x480 video: " << SDL_GetError() << endl;
         exit(1);

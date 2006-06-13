@@ -216,6 +216,110 @@
 		vrLen = 369;
 		vrLoc = 124;
 	};
+	0625D72F0A3F61C700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'SDLSurface' was not declared in this scope";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 73;
+		rType = 1;
+	};
+	0625D7330A3F61D400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 19";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 311;
+		vrLoc = 154;
+	};
+	0625D7340A3F61D400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: variable or field 'init' declared void";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 73;
+		rType = 1;
+	};
+	0625D7350A3F61D400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 19";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 311;
+		vrLoc = 154;
+	};
+	0625D7360A3F61D400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: init";
+		rLen = 0;
+		rLoc = 1387;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 1250;
+	};
+	0625D7380A3F61D400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: init";
+		rLen = 0;
+		rLoc = 1373;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 1087;
+	};
+	0625D7390A3F61D700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "void Board::draw()";
+		rLen = 19;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 369;
+		vrLoc = 124;
+	};
+	0625D73A0A3F61D700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "       previous declaration of 'void init(SDL_Surface*&)'";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 20;
+		rType = 1;
+	};
+	0625D73B0A3F61D700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "void Board::draw()";
+		rLen = 19;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 369;
+		vrLoc = 124;
+	};
+	0625D73C0A3F61D700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "void init( SDL_Surface* &scr );";
+		rLen = 32;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 166;
+	};
+	0625D73D0A3F61D800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "void init( SDL_Surface* &scr );";
+		rLen = 32;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 166;
+	};
 	063E7B5E0A3C84C4005C4507 /* Snake */ = {
 		isa = PBXExecutable;
 		activeArgIndex = 2147483647;
@@ -272,9 +376,9 @@
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {560, 1428}}";
-			sepNavSelRange = "{895, 0}";
-			sepNavVisRect = "{{0, 456}, {498, 621}}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 1442}}";
+			sepNavSelRange = "{308, 32}";
+			sepNavVisRect = "{{0, 165}, {913, 244}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -290,7 +394,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: main";
 		rLen = 0;
-		rLoc = 412;
+		rLoc = 386;
 		rType = 0;
 		vrLen = 324;
 		vrLoc = 189;
@@ -522,7 +626,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 46";
 		rLen = 0;
-		rLoc = 841;
+		rLoc = 876;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 767;
@@ -907,6 +1011,17 @@
 			0625D7200A3F60E800F0E531 /* PBXTextBookmark */ = 0625D7200A3F60E800F0E531 /* PBXTextBookmark */;
 			0625D7220A3F60EE00F0E531 /* PBXTextBookmark */ = 0625D7220A3F60EE00F0E531 /* PBXTextBookmark */;
 			0625D7230A3F60F000F0E531 /* PBXTextBookmark */ = 0625D7230A3F60F000F0E531 /* PBXTextBookmark */;
+			0625D72F0A3F61C700F0E531 /* PBXTextBookmark */ = 0625D72F0A3F61C700F0E531 /* PBXTextBookmark */;
+			0625D7330A3F61D400F0E531 /* PBXTextBookmark */ = 0625D7330A3F61D400F0E531 /* PBXTextBookmark */;
+			0625D7340A3F61D400F0E531 /* PBXTextBookmark */ = 0625D7340A3F61D400F0E531 /* PBXTextBookmark */;
+			0625D7350A3F61D400F0E531 /* PBXTextBookmark */ = 0625D7350A3F61D400F0E531 /* PBXTextBookmark */;
+			0625D7360A3F61D400F0E531 /* PBXTextBookmark */ = 0625D7360A3F61D400F0E531 /* PBXTextBookmark */;
+			0625D7380A3F61D400F0E531 /* PBXTextBookmark */ = 0625D7380A3F61D400F0E531 /* PBXTextBookmark */;
+			0625D7390A3F61D700F0E531 /* PBXTextBookmark */ = 0625D7390A3F61D700F0E531 /* PBXTextBookmark */;
+			0625D73A0A3F61D700F0E531 /* PBXTextBookmark */ = 0625D73A0A3F61D700F0E531 /* PBXTextBookmark */;
+			0625D73B0A3F61D700F0E531 /* PBXTextBookmark */ = 0625D73B0A3F61D700F0E531 /* PBXTextBookmark */;
+			0625D73C0A3F61D700F0E531 /* PBXTextBookmark */ = 0625D73C0A3F61D700F0E531 /* PBXTextBookmark */;
+			0625D73D0A3F61D800F0E531 /* PBXTextBookmark */ = 0625D73D0A3F61D800F0E531 /* PBXTextBookmark */;
 			068EEAFE0A3CEFBC003887BB = 068EEAFE0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEAFF0A3CEFBC003887BB = 068EEAFF0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEB000A3CEFBC003887BB = 068EEB000A3CEFBC003887BB /* PBXTextBookmark */;
