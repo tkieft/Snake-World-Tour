@@ -24,8 +24,8 @@ public:
     const static int XLOC = 30;
     const static int YLOC = 30;
     
-    const Uint32 WALLCOLOR = 0xCC0000;
-    const Uint32 FLOORCOLOR = 0x0000CC;
+    const static Uint32 WALLCOLOR = 0xCC0000;
+    const static Uint32 FLOORCOLOR = 0x0000CC;
         
     Board( SDL_Surface* sc );
     void draw();
