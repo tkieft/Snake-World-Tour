@@ -10,6 +10,8 @@
 #include <cmath>
 #include "SDL.h"
 #include "load_image.h"
+#include "globals.h"
+#include "Board.h"
 
 using std::cout;
 using std::endl;
@@ -18,11 +20,6 @@ using std::string;
 // Function prototypes
 void init();
 void deinit();
-
-// Global variables
-const int SCREENWIDTH = 640;
-const int SCREENHEIGHT = 480;
-const int SCREENBPP = 32;
 
 SDL_Surface* screen = NULL;
 SDL_Surface* bg = NULL;
@@ -41,8 +38,12 @@ int main(int argc, char *argv[])
     //cout << bg->w << bg->h;
     SDL_Rect offset;
     offset.x = 0; offset.y = 0;
+
     SDL_BlitSurface( bg, NULL, screen, &offset );
-    SDL_UpdateRect(screen, 0, 0, 640, 480 );
+    SDL_Flip( screen );
+    
+    Board myBoard( screen );
+    myBoard.draw();
 	
     int done = 0;
     while ( !done ) {

@@ -51,22 +51,40 @@
 /* End PBXApplicationTarget section */
 
 /* Begin PBXBuildFile section */
+		068EEABA0A3CE318003887BB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
+		06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
+		06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
+		06CC534C0A3E30A300E92E7F /* levels.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC534B0A3E30A300E92E7F /* levels.h */; };
+		06CC53540A3E321400E92E7F /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53520A3E321400E92E7F /* Board.h */; };
+		06CC53550A3E321400E92E7F /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53530A3E321400E92E7F /* Board.cpp */; };
+		06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53680A3E369000E92E7F /* drawfunc.h */; };
+		06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */; };
+		06CC54330A3E3B9000E92E7F /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC54320A3E3B9000E92E7F /* globals.h */; };
+		06FFD1AF0A3E24BE003850BF /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FFD1AE0A3E24BE003850BF /* snake.png */; };
 		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */; };
 		F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */; };
-		F5A47AA401A0483001D3D55B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9F01A0483001D3D55B /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068EEAB90A3CE318003887BB /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = main.cpp; sourceTree = "<group>"; };
+		06CC534B0A3E30A300E92E7F /* levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levels.h; sourceTree = "<group>"; };
+		06CC53520A3E321400E92E7F /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		06CC53530A3E321400E92E7F /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
+		06CC53690A3E369000E92E7F /* drawfunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawfunc.cpp; sourceTree = "<group>"; };
+		06CC54320A3E3B9000E92E7F /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		06FFD1780A3E2196003850BF /* load_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = load_image.h; sourceTree = "<group>"; };
+		06FFD1790A3E2196003850BF /* load_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_image.cpp; sourceTree = "<group>"; };
+		06FFD1AE0A3E24BE003850BF /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		17587328FF379C6511CA2CBB /* Snake.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17587328FF379C6511CA2CBB /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		F5A47A9D01A0482F01D3D55B /* SDLMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
 		F5A47A9E01A0483001D3D55B /* SDLMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = SOURCE_ROOT; };
-		F5A47A9F01A0483001D3D55B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +102,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				06CC54320A3E3B9000E92E7F /* globals.h */,
 				F5A47A9D01A0482F01D3D55B /* SDLMain.h */,
 				F5A47A9E01A0483001D3D55B /* SDLMain.m */,
+				06CC53520A3E321400E92E7F /* Board.h */,
+				06CC53530A3E321400E92E7F /* Board.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -130,7 +151,12 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F5A47A9F01A0483001D3D55B /* main.c */,
+				06CC53680A3E369000E92E7F /* drawfunc.h */,
+				06CC53690A3E369000E92E7F /* drawfunc.cpp */,
+				06CC534B0A3E30A300E92E7F /* levels.h */,
+				06FFD1780A3E2196003850BF /* load_image.h */,
+				06FFD1790A3E2196003850BF /* load_image.cpp */,
+				068EEAB90A3CE318003887BB /* main.cpp */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -138,6 +164,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06FFD1AE0A3E24BE003850BF /* snake.png */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -160,6 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */,
+				06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */,
+				06CC534C0A3E30A300E92E7F /* levels.h in Headers */,
+				06CC53540A3E321400E92E7F /* Board.h in Headers */,
+				06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */,
+				06CC54330A3E3B9000E92E7F /* globals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */,
-				F5A47AA401A0483001D3D55B /* main.c in Sources */,
+				068EEABA0A3CE318003887BB /* main.cpp in Sources */,
+				06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */,
+				06CC53550A3E321400E92E7F /* Board.cpp in Sources */,
+				06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,13 +258,18 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = "\"/Library/Frameworks/SDL.framework/Headers\"";
-				INSTALL_PATH = "$(HOME)/Applications";
+				HEADER_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_image.framework/Headers",
+					/Library/Frameworks/SDL.framework/Headers,
+				);
+				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "";
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_LDFLAGS = (
 					"-framework",
 					SDL,
+					"-framework",
+					SDL_image,
 				);
 				PRODUCT_NAME = Snake;
 				SECTORDER_FLAGS = "";
@@ -292,18 +333,21 @@
 		063E7B6F0A3C84C9005C4507 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = /Applications;
 			};
 			name = Development;
 		};
 		063E7B700A3C84C9005C4507 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = /Applications;
 			};
 			name = Deployment;
 		};
 		063E7B710A3C84C9005C4507 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = /Applications;
 			};
 			name = Default;
 		};
