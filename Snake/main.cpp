@@ -12,6 +12,7 @@
 #include "load_image.h"
 #include "globals.h"
 #include "Board.h"
+#include "SnakePlayer.h"
 
 using std::cout;
 using std::endl;
@@ -43,7 +44,9 @@ int main(int argc, char *argv[])
     SDL_Flip( screen );
     
     Board myBoard( screen );
-    myBoard.draw();
+    SnakePlayer* mySnakes[] = { NULL, NULL };
+    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
+    myBoard.draw( mySnakes, 1 );
 	
     int done = 0;
     while ( !done ) {

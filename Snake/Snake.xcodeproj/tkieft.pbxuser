@@ -5,7 +5,7 @@
 		comments = "error: 'BOARDY' was not declared in this scope";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 0;
-		rLoc = 15;
+		rLoc = 16;
 		rType = 1;
 	};
 	0625D6FC0A3F609F00F0E531 /* PBXTextBookmark */ = {
@@ -13,7 +13,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: Board";
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 280;
 		rType = 0;
 		vrLen = 366;
 		vrLoc = 124;
@@ -23,15 +23,15 @@
 		comments = "error: expected `{' before 'void'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 17;
+		rLoc = 18;
 		rType = 1;
 	};
 	0625D70C0A3F60DF00F0E531 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "void Board::draw()";
-		rLen = 19;
-		rLoc = 257;
+		rLen = 57;
+		rLoc = 282;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 124;
@@ -41,7 +41,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 1967;
 		vrLoc = 2071;
@@ -81,7 +81,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 293;
 		vrLoc = 0;
@@ -91,7 +91,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 496;
+		rLoc = 521;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 138;
@@ -101,7 +101,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 1967;
 		vrLoc = 2071;
@@ -131,7 +131,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 496;
+		rLoc = 521;
 		rType = 0;
 		vrLen = 297;
 		vrLoc = 138;
@@ -161,7 +161,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 496;
+		rLoc = 521;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 138;
@@ -171,7 +171,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 293;
 		vrLoc = 0;
@@ -181,7 +181,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 154;
@@ -190,8 +190,8 @@
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "void Board::draw()";
-		rLen = 19;
-		rLoc = 257;
+		rLen = 57;
+		rLoc = 282;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 124;
@@ -201,7 +201,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 154;
@@ -210,8 +210,8 @@
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "void Board::draw()";
-		rLen = 19;
-		rLoc = 257;
+		rLen = 57;
+		rLoc = 282;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 124;
@@ -221,7 +221,7 @@
 		comments = "error: 'SDLSurface' was not declared in this scope";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 73;
+		rLoc = 76;
 		rType = 1;
 	};
 	0625D7330A3F61D400F0E531 /* PBXTextBookmark */ = {
@@ -229,7 +229,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 154;
@@ -239,7 +239,7 @@
 		comments = "error: variable or field 'init' declared void";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 73;
+		rLoc = 76;
 		rType = 1;
 	};
 	0625D7350A3F61D400F0E531 /* PBXTextBookmark */ = {
@@ -247,7 +247,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 154;
@@ -257,7 +257,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: init";
 		rLen = 0;
-		rLoc = 1387;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 1250;
@@ -267,7 +267,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: init";
 		rLen = 0;
-		rLoc = 1373;
+		rLoc = 1513;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 1087;
@@ -276,8 +276,8 @@
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "void Board::draw()";
-		rLen = 19;
-		rLoc = 257;
+		rLen = 57;
+		rLoc = 282;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 124;
@@ -287,15 +287,15 @@
 		comments = "       previous declaration of 'void init(SDL_Surface*&)'";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 20;
+		rLoc = 21;
 		rType = 1;
 	};
 	0625D73B0A3F61D700F0E531 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "void Board::draw()";
-		rLen = 19;
-		rLoc = 257;
+		rLen = 57;
+		rLoc = 282;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 124;
@@ -305,7 +305,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "void init( SDL_Surface* &scr );";
 		rLen = 32;
-		rLoc = 308;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 166;
@@ -315,7 +315,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "void init( SDL_Surface* &scr );";
 		rLen = 32;
-		rLoc = 308;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 166;
@@ -325,7 +325,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "void init( SDL_Surface* &scr );";
 		rLen = 32;
-		rLoc = 308;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 166;
@@ -357,7 +357,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "void init( SDL_Surface* &scr );";
 		rLen = 32;
-		rLoc = 308;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 166;
@@ -375,7 +375,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "void init( SDL_Surface* &scr );";
 		rLen = 32;
-		rLoc = 308;
+		rLoc = 333;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 166;
@@ -439,7 +439,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 0;
@@ -459,7 +459,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "SDL_Surface *bg = NULL;";
 		rLen = 24;
-		rLoc = 356;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 431;
 		vrLoc = 211;
@@ -494,7 +494,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 231;
 		vrLoc = 0;
@@ -504,7 +504,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 296;
 		vrLoc = 0;
@@ -554,7 +554,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "SDL_Surface *bg = NULL;";
 		rLen = 24;
-		rLoc = 356;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 431;
 		vrLoc = 211;
@@ -628,7 +628,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 0;
@@ -658,7 +658,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 0;
@@ -668,7 +668,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "SDL_Surface *bg = NULL;";
 		rLen = 24;
-		rLoc = 356;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 431;
 		vrLoc = 211;
@@ -698,7 +698,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 643;
 		vrLoc = 301;
@@ -738,7 +738,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 49";
 		rLen = 0;
-		rLoc = 3599;
+		rLoc = 3600;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 0;
@@ -758,7 +758,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "SDL_Surface *bg = NULL;";
 		rLen = 24;
-		rLoc = 356;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 431;
 		vrLoc = 211;
@@ -778,7 +778,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 173;
@@ -798,7 +798,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 231;
 		vrLoc = 0;
@@ -808,7 +808,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 296;
 		vrLoc = 0;
@@ -1061,7 +1061,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 231;
 		vrLoc = 0;
@@ -1071,7 +1071,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 296;
 		vrLoc = 0;
@@ -1091,7 +1091,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 231;
 		vrLoc = 0;
@@ -1101,7 +1101,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 38";
 		rLen = 0;
-		rLoc = 820;
+		rLoc = 1031;
 		rType = 0;
 		vrLen = 296;
 		vrLoc = 0;
@@ -1111,7 +1111,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 40";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2643;
 		rType = 0;
 		vrLen = 2181;
 		vrLoc = 1744;
@@ -1121,7 +1121,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 40";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2643;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 1744;
@@ -1141,7 +1141,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 40";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2643;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 1744;
@@ -1151,7 +1151,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 40";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2643;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 1744;
@@ -1161,7 +1161,7 @@
 		comments = "error: ISO C++ forbids initialization of member 'WALLCOLOR'";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 1;
-		rLoc = 26;
+		rLoc = 27;
 		rType = 1;
 	};
 	0625D7D00A3F6CDC00F0E531 /* PBXTextBookmark */ = {
@@ -1169,7 +1169,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 40";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2643;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 1744;
@@ -1179,7 +1179,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "const Uint32 WALLCOLOR = 0xCC0000;";
 		rLen = 46;
-		rLoc = 404;
+		rLoc = 429;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 173;
@@ -1189,7 +1189,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 27";
 		rLen = 0;
-		rLoc = 421;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 390;
 		vrLoc = 173;
@@ -1209,7 +1209,7 @@
 		comments = "error: making 'FLOORCOLOR' static";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 1;
-		rLoc = 27;
+		rLoc = 28;
 		rType = 1;
 	};
 	0625D7D80A3F6D5400F0E531 /* PBXTextBookmark */ = {
@@ -1227,7 +1227,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 492;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 187;
@@ -1237,7 +1237,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 27";
 		rLen = 0;
-		rLoc = 421;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 390;
 		vrLoc = 173;
@@ -1257,7 +1257,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 27";
 		rLen = 0;
-		rLoc = 421;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 390;
 		vrLoc = 173;
@@ -1277,7 +1277,7 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 43";
 		rLen = 0;
-		rLoc = 2969;
+		rLoc = 2970;
 		rType = 0;
 		vrLen = 2289;
 		vrLoc = 1526;
@@ -1287,7 +1287,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 492;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 187;
@@ -1297,7 +1297,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 492;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 187;
@@ -1307,10 +1307,716 @@
 		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
 		name = "levels.h: 43";
 		rLen = 0;
-		rLoc = 2969;
+		rLoc = 2970;
 		rType = 0;
 		vrLen = 2289;
 		vrLoc = 1526;
+	};
+	0625D8110A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 40";
+		rLen = 0;
+		rLoc = 2643;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1417;
+	};
+	0625D8120A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: draw";
+		rLen = 0;
+		rLoc = 615;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 173;
+	};
+	0625D8130A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53680A3E369000E92E7F /* drawfunc.h */;
+		name = "drawfunc.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	0625D8140A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8150A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1017;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 774;
+	};
+	0625D8160A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 43";
+		rLen = 0;
+		rLoc = 2970;
+		rType = 0;
+		vrLen = 2289;
+		vrLoc = 1526;
+	};
+	0625D8170A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 27";
+		rLen = 0;
+		rLoc = 446;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 173;
+	};
+	0625D8180A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 40";
+		rLen = 0;
+		rLoc = 2643;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1417;
+	};
+	0625D8190A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SDL_Surface *bg = NULL;";
+		rLen = 24;
+		rLoc = 381;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 0;
+	};
+	0625D81A0A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: draw";
+		rLen = 0;
+		rLoc = 615;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 173;
+	};
+	0625D81B0A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53680A3E369000E92E7F /* drawfunc.h */;
+		name = "drawfunc.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	0625D81C0A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1017;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 774;
+	};
+	0625D81D0A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D81E0A3F704C00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: myBoard";
+		rLen = 0;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 453;
+		vrLoc = 774;
+	};
+	0625D8210A3F706400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'mySnakes' was not declared in this scope";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 47;
+		rType = 1;
+	};
+	0625D8220A3F706800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: expected unqualified-id before '[' token";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 46;
+		rType = 1;
+	};
+	0625D8230A3F706800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SnakePlayer*[] mySnakes = { NULL, NULL };";
+		rLen = 46;
+		rLoc = 936;
+		rType = 0;
+		vrLen = 453;
+		vrLoc = 774;
+	};
+	0625D8250A3F706800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: main";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 406;
+	};
+	0625D8280A3F708A00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 28";
+		rLen = 0;
+		rLoc = 492;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 187;
+	};
+	0625D8290A3F708A00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: expected initializer before '[' token";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 1;
+		rLoc = 46;
+		rType = 1;
+	};
+	0625D82A0A3F708A00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 28";
+		rLen = 0;
+		rLoc = 492;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 187;
+	};
+	0625D82B0A3F708A00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 47";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 441;
+		vrLoc = 774;
+	};
+	0625D83F0A3F710E00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: value computed is not used";
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		rLen = 1;
+		rLoc = 36;
+		rType = 1;
+	};
+	0625D8400A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */;
+		name = "SDLMain.m: 51";
+		rLen = 0;
+		rLoc = 1236;
+		rType = 0;
+		vrLen = 458;
+		vrLoc = 1000;
+	};
+	0625D8410A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: draw";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D8420A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: draw";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 478;
+		vrLoc = 185;
+	};
+	0625D8430A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8440A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */;
+		name = "drawfunc.cpp: 35";
+		rLen = 0;
+		rLoc = 799;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 0;
+	};
+	0625D8450A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1027;
+		rType = 0;
+		vrLen = 501;
+		vrLoc = 667;
+	};
+	0625D8460A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 47";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 453;
+		vrLoc = 774;
+	};
+	0625D8470A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: draw";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 198;
+	};
+	0625D8480A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8490A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: draw";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 185;
+	};
+	0625D84A0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */;
+		name = "SDLMain.m: 51";
+		rLen = 0;
+		rLoc = 1236;
+		rType = 0;
+		vrLen = 458;
+		vrLoc = 1000;
+	};
+	0625D84B0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: draw";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D84C0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: draw";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 478;
+		vrLoc = 185;
+	};
+	0625D84D0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1027;
+		rType = 0;
+		vrLen = 501;
+		vrLoc = 667;
+	};
+	0625D84E0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D84F0A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */;
+		name = "drawfunc.cpp: 35";
+		rLen = 0;
+		rLoc = 799;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 0;
+	};
+	0625D8500A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 533;
+		vrLoc = 667;
+	};
+	0625D8520A3F711600F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "color == snakes[0]->getColor();";
+		rLen = 47;
+		rLoc = 820;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 3;
+	};
+	0625D8530A3F711900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: unused variable 'tile'";
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		rLen = 1;
+		rLoc = 21;
+		rType = 1;
+	};
+	0625D8560A3F711F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 533;
+		vrLoc = 667;
+	};
+	0625D8570A3F711F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 31";
+		rLen = 0;
+		rLoc = 582;
+		rType = 0;
+		vrLen = 1259;
+		vrLoc = 3;
+	};
+	0625D8580A3F712400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 47";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 453;
+		vrLoc = 774;
+	};
+	0625D8590A3F712400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: expected ',' or ';' before ')' token";
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		rLen = 1;
+		rLoc = 30;
+		rType = 1;
+	};
+	0625D85A0A3F712400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 47";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 453;
+		vrLoc = 774;
+	};
+	0625D85B0A3F712400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 31";
+		rLen = 0;
+		rLoc = 620;
+		rType = 0;
+		vrLen = 609;
+		vrLoc = 359;
+	};
+	0625D85C0A3F712700F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 31";
+		rLen = 0;
+		rLoc = 620;
+		rType = 0;
+		vrLen = 609;
+		vrLoc = 359;
+	};
+	0625D8630A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 533;
+		vrLoc = 667;
+	};
+	0625D8640A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1417;
+	};
+	0625D8650A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */;
+		name = "SDLMain.h: 6";
+		rLen = 0;
+		rLoc = 245;
+		rType = 0;
+		vrLen = 307;
+		vrLoc = 0;
+	};
+	0625D8660A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 48";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 533;
+		vrLoc = 667;
+	};
+	0625D8670A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1417;
+	};
+	0625D8680A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */;
+		name = "SDLMain.h: 6";
+		rLen = 0;
+		rLoc = 245;
+		rType = 0;
+		vrLen = 307;
+		vrLoc = 0;
+	};
+	0625D8690A3F716800F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 16";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D8740A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "color == snakes[0]->getColor();";
+		rLen = 47;
+		rLoc = 820;
+		rType = 0;
+		vrLen = 724;
+		vrLoc = 341;
+	};
+	0625D8750A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 16";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D8760A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 16";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D8770A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "color == snakes[0]->getColor();";
+		rLen = 47;
+		rLoc = 820;
+		rType = 0;
+		vrLen = 724;
+		vrLoc = 341;
+	};
+	0625D8780A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 16";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 198;
+	};
+	0625D8790A3F721900F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 545;
+		vrLoc = 0;
+	};
+	0625D87A0A3F721D00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: value computed is not used";
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		rLen = 1;
+		rLoc = 36;
+		rType = 1;
+	};
+	0625D87B0A3F721D00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 38";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 764;
+		vrLoc = 515;
+	};
+	0625D8820A3F724F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1744;
+	};
+	0625D8830A3F724F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8840A3F724F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 1744;
+	};
+	0625D8850A3F724F00F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8860A3F725300F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 38";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 764;
+		vrLoc = 515;
+	};
+	0625D8900A3F72B400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8910A3F72B400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 42";
+		rLen = 0;
+		rLoc = 744;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 339;
+	};
+	0625D8920A3F72B400F0E531 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC534B0A3E30A300E92E7F /* levels.h */;
+		name = "levels.h: 34";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 760;
+		vrLoc = 3;
 	};
 	063E7B5E0A3C84C4005C4507 /* Snake */ = {
 		isa = PBXExecutable;
@@ -1368,9 +2074,9 @@
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {913, 1442}}";
-			sepNavSelRange = "{308, 32}";
-			sepNavVisRect = "{{0, 165}, {913, 244}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 1484}}";
+			sepNavSelRange = "{1034, 0}";
+			sepNavVisRect = "{{0, 496}, {578, 277}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -1386,7 +2092,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: main";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 411;
 		rType = 0;
 		vrLen = 324;
 		vrLoc = 189;
@@ -1478,24 +2184,24 @@
 	06CC534B0A3E30A300E92E7F /* levels.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {680, 756}}";
-			sepNavSelRange = "{2969, 0}";
-			sepNavVisRect = "{{0, 410}, {578, 277}}";
+			sepNavSelRange = "{1966, 0}";
+			sepNavVisRect = "{{0, 19}, {578, 277}}";
 			sepNavWindowFrame = "{{15, 91}, {599, 736}}";
 		};
 	};
 	06CC53520A3E321400E92E7F /* Board.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {913, 476}}";
-			sepNavSelRange = "{467, 0}";
-			sepNavVisRect = "{{0, 232}, {913, 244}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 490}}";
+			sepNavSelRange = "{209, 0}";
+			sepNavVisRect = "{{0, 210}, {578, 277}}";
 			sepNavWindowFrame = "{{61, 49}, {599, 736}}";
 		};
 	};
 	06CC53530A3E321400E92E7F /* Board.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {644, 630}}";
-			sepNavSelRange = "{820, 0}";
-			sepNavVisRect = "{{0, 0}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 658}}";
+			sepNavSelRange = "{898, 0}";
+			sepNavVisRect = "{{0, 393}, {913, 244}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -1618,7 +2324,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 46";
 		rLen = 0;
-		rLoc = 876;
+		rLoc = 901;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 767;
@@ -1638,7 +2344,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: offset";
 		rLen = 0;
-		rLoc = 217;
+		rLoc = 242;
 		rType = 0;
 		vrLen = 195;
 		vrLoc = 114;
@@ -1658,7 +2364,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 42";
 		rLen = 0;
-		rLoc = 862;
+		rLoc = 1073;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 350;
@@ -2112,6 +2818,78 @@
 			0625D7EA0A3F6DD600F0E531 /* PBXTextBookmark */ = 0625D7EA0A3F6DD600F0E531 /* PBXTextBookmark */;
 			0625D7EB0A3F6DDA00F0E531 /* PBXTextBookmark */ = 0625D7EB0A3F6DDA00F0E531 /* PBXTextBookmark */;
 			0625D7EC0A3F6DDE00F0E531 /* PBXTextBookmark */ = 0625D7EC0A3F6DDE00F0E531 /* PBXTextBookmark */;
+			0625D8110A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8110A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8120A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8120A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8130A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8130A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8140A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8140A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8150A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8150A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8160A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8160A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8170A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8170A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8180A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8180A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8190A3F704C00F0E531 /* PBXTextBookmark */ = 0625D8190A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D81A0A3F704C00F0E531 /* PBXTextBookmark */ = 0625D81A0A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D81B0A3F704C00F0E531 /* PBXTextBookmark */ = 0625D81B0A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D81C0A3F704C00F0E531 /* PBXTextBookmark */ = 0625D81C0A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D81D0A3F704C00F0E531 /* PBXTextBookmark */ = 0625D81D0A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D81E0A3F704C00F0E531 /* PBXTextBookmark */ = 0625D81E0A3F704C00F0E531 /* PBXTextBookmark */;
+			0625D8210A3F706400F0E531 /* PBXTextBookmark */ = 0625D8210A3F706400F0E531 /* PBXTextBookmark */;
+			0625D8220A3F706800F0E531 /* PBXTextBookmark */ = 0625D8220A3F706800F0E531 /* PBXTextBookmark */;
+			0625D8230A3F706800F0E531 /* PBXTextBookmark */ = 0625D8230A3F706800F0E531 /* PBXTextBookmark */;
+			0625D8250A3F706800F0E531 /* PBXTextBookmark */ = 0625D8250A3F706800F0E531 /* PBXTextBookmark */;
+			0625D8280A3F708A00F0E531 /* PBXTextBookmark */ = 0625D8280A3F708A00F0E531 /* PBXTextBookmark */;
+			0625D8290A3F708A00F0E531 /* PBXTextBookmark */ = 0625D8290A3F708A00F0E531 /* PBXTextBookmark */;
+			0625D82A0A3F708A00F0E531 /* PBXTextBookmark */ = 0625D82A0A3F708A00F0E531 /* PBXTextBookmark */;
+			0625D82B0A3F708A00F0E531 /* PBXTextBookmark */ = 0625D82B0A3F708A00F0E531 /* PBXTextBookmark */;
+			0625D83F0A3F710E00F0E531 /* PBXTextBookmark */ = 0625D83F0A3F710E00F0E531 /* PBXTextBookmark */;
+			0625D8400A3F711600F0E531 /* PBXTextBookmark */ = 0625D8400A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8410A3F711600F0E531 /* PBXTextBookmark */ = 0625D8410A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8420A3F711600F0E531 /* PBXTextBookmark */ = 0625D8420A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8430A3F711600F0E531 /* PBXTextBookmark */ = 0625D8430A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8440A3F711600F0E531 /* PBXTextBookmark */ = 0625D8440A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8450A3F711600F0E531 /* PBXTextBookmark */ = 0625D8450A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8460A3F711600F0E531 /* PBXTextBookmark */ = 0625D8460A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8470A3F711600F0E531 /* PBXTextBookmark */ = 0625D8470A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8480A3F711600F0E531 /* PBXTextBookmark */ = 0625D8480A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8490A3F711600F0E531 /* PBXTextBookmark */ = 0625D8490A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84A0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84A0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84B0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84B0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84C0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84C0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84D0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84D0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84E0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84E0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D84F0A3F711600F0E531 /* PBXTextBookmark */ = 0625D84F0A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8500A3F711600F0E531 /* PBXTextBookmark */ = 0625D8500A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8520A3F711600F0E531 /* PBXTextBookmark */ = 0625D8520A3F711600F0E531 /* PBXTextBookmark */;
+			0625D8530A3F711900F0E531 /* PBXTextBookmark */ = 0625D8530A3F711900F0E531 /* PBXTextBookmark */;
+			0625D8560A3F711F00F0E531 /* PBXTextBookmark */ = 0625D8560A3F711F00F0E531 /* PBXTextBookmark */;
+			0625D8570A3F711F00F0E531 /* PBXTextBookmark */ = 0625D8570A3F711F00F0E531 /* PBXTextBookmark */;
+			0625D8580A3F712400F0E531 /* PBXTextBookmark */ = 0625D8580A3F712400F0E531 /* PBXTextBookmark */;
+			0625D8590A3F712400F0E531 /* PBXTextBookmark */ = 0625D8590A3F712400F0E531 /* PBXTextBookmark */;
+			0625D85A0A3F712400F0E531 /* PBXTextBookmark */ = 0625D85A0A3F712400F0E531 /* PBXTextBookmark */;
+			0625D85B0A3F712400F0E531 /* PBXTextBookmark */ = 0625D85B0A3F712400F0E531 /* PBXTextBookmark */;
+			0625D85C0A3F712700F0E531 /* PBXTextBookmark */ = 0625D85C0A3F712700F0E531 /* PBXTextBookmark */;
+			0625D8630A3F716800F0E531 /* PBXTextBookmark */ = 0625D8630A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8640A3F716800F0E531 /* PBXTextBookmark */ = 0625D8640A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8650A3F716800F0E531 /* PBXTextBookmark */ = 0625D8650A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8660A3F716800F0E531 /* PBXTextBookmark */ = 0625D8660A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8670A3F716800F0E531 /* PBXTextBookmark */ = 0625D8670A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8680A3F716800F0E531 /* PBXTextBookmark */ = 0625D8680A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8690A3F716800F0E531 /* PBXTextBookmark */ = 0625D8690A3F716800F0E531 /* PBXTextBookmark */;
+			0625D8740A3F721900F0E531 /* PBXTextBookmark */ = 0625D8740A3F721900F0E531 /* PBXTextBookmark */;
+			0625D8750A3F721900F0E531 /* PBXTextBookmark */ = 0625D8750A3F721900F0E531 /* PBXTextBookmark */;
+			0625D8760A3F721900F0E531 /* PBXTextBookmark */ = 0625D8760A3F721900F0E531 /* PBXTextBookmark */;
+			0625D8770A3F721900F0E531 /* PBXTextBookmark */ = 0625D8770A3F721900F0E531 /* PBXTextBookmark */;
+			0625D8780A3F721900F0E531 /* PBXTextBookmark */ = 0625D8780A3F721900F0E531 /* PBXTextBookmark */;
+			0625D8790A3F721900F0E531 /* PBXTextBookmark */ = 0625D8790A3F721900F0E531 /* PBXTextBookmark */;
+			0625D87A0A3F721D00F0E531 /* PBXTextBookmark */ = 0625D87A0A3F721D00F0E531 /* PBXTextBookmark */;
+			0625D87B0A3F721D00F0E531 /* PBXTextBookmark */ = 0625D87B0A3F721D00F0E531 /* PBXTextBookmark */;
+			0625D8820A3F724F00F0E531 /* PBXTextBookmark */ = 0625D8820A3F724F00F0E531 /* PBXTextBookmark */;
+			0625D8830A3F724F00F0E531 /* PBXTextBookmark */ = 0625D8830A3F724F00F0E531 /* PBXTextBookmark */;
+			0625D8840A3F724F00F0E531 /* PBXTextBookmark */ = 0625D8840A3F724F00F0E531 /* PBXTextBookmark */;
+			0625D8850A3F724F00F0E531 /* PBXTextBookmark */ = 0625D8850A3F724F00F0E531 /* PBXTextBookmark */;
+			0625D8860A3F725300F0E531 /* PBXTextBookmark */ = 0625D8860A3F725300F0E531 /* PBXTextBookmark */;
+			0625D8900A3F72B400F0E531 /* PBXTextBookmark */ = 0625D8900A3F72B400F0E531 /* PBXTextBookmark */;
+			0625D8910A3F72B400F0E531 /* PBXTextBookmark */ = 0625D8910A3F72B400F0E531 /* PBXTextBookmark */;
+			0625D8920A3F72B400F0E531 /* PBXTextBookmark */ = 0625D8920A3F72B400F0E531 /* PBXTextBookmark */;
 			068EEAFE0A3CEFBC003887BB = 068EEAFE0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEAFF0A3CEFBC003887BB = 068EEAFF0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEB000A3CEFBC003887BB = 068EEB000A3CEFBC003887BB /* PBXTextBookmark */;

@@ -11,6 +11,7 @@
 #define BOARD_H
 
 #include "SDL.h"
+#include "SnakePlayer.h"
 
 class Board
 {
@@ -28,7 +29,7 @@ public:
     const static Uint32 FLOORCOLOR = 0x0000CC;
         
     Board( SDL_Surface* sc );
-    void draw();
+    void draw( SnakePlayer* snakes[], int numSnakes );
 };
 
 #endif
