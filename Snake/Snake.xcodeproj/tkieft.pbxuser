@@ -61,7 +61,7 @@
 		fRef = 06CC54320A3E3B9000E92E7F /* globals.h */;
 		name = "globals.h: FLOORCOLOR";
 		rLen = 0;
-		rLoc = 329;
+		rLoc = 274;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 119;
@@ -91,7 +91,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 398;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 138;
@@ -111,7 +111,7 @@
 		fRef = 06CC54320A3E3B9000E92E7F /* globals.h */;
 		name = "globals.h: FLOORCOLOR";
 		rLen = 0;
-		rLoc = 329;
+		rLoc = 274;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 119;
@@ -131,7 +131,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 398;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 297;
 		vrLoc = 138;
@@ -141,7 +141,7 @@
 		fRef = 06CC54320A3E3B9000E92E7F /* globals.h */;
 		name = "globals.h: FLOORCOLOR";
 		rLen = 0;
-		rLoc = 329;
+		rLoc = 274;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 119;
@@ -161,7 +161,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 398;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 138;
@@ -376,9 +376,9 @@
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {913, 1442}}";
-			sepNavSelRange = "{308, 32}";
-			sepNavVisRect = "{{0, 165}, {913, 244}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 1442}}";
+			sepNavSelRange = "{356, 24}";
+			sepNavVisRect = "{{0, 191}, {578, 277}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -487,15 +487,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {680, 756}}";
 			sepNavSelRange = "{3599, 0}";
-			sepNavVisRect = "{{0, 479}, {578, 277}}";
+			sepNavVisRect = "{{0, 0}, {578, 277}}";
 			sepNavWindowFrame = "{{15, 91}, {599, 736}}";
 		};
 	};
 	06CC53520A3E321400E92E7F /* Board.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 434}}";
-			sepNavSelRange = "{222, 0}";
-			sepNavVisRect = "{{0, 157}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 476}}";
+			sepNavSelRange = "{482, 0}";
+			sepNavVisRect = "{{0, 199}, {578, 277}}";
 			sepNavWindowFrame = "{{61, 49}, {599, 736}}";
 		};
 	};
@@ -509,9 +509,9 @@
 	};
 	06CC53680A3E369000E92E7F /* drawfunc.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {913, 244}}";
-			sepNavSelRange = "{163, 0}";
-			sepNavVisRect = "{{0, 0}, {913, 244}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 277}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {578, 277}}";
 			sepNavWindowFrame = "{{38, 70}, {599, 736}}";
 		};
 	};
@@ -519,7 +519,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {578, 602}}";
 			sepNavSelRange = "{799, 0}";
-			sepNavVisRect = "{{0, 317}, {578, 277}}";
+			sepNavVisRect = "{{0, 311}, {578, 277}}";
 			sepNavWindowFrame = "{{546, 96}, {599, 736}}";
 		};
 	};
@@ -575,9 +575,9 @@
 	};
 	06CC54320A3E3B9000E92E7F /* globals.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {498, 621}}";
-			sepNavSelRange = "{273, 0}";
-			sepNavVisRect = "{{0, 0}, {498, 621}}";
+			sepNavIntBoundsRect = "{{0, 0}, {578, 277}}";
+			sepNavSelRange = "{274, 0}";
+			sepNavVisRect = "{{0, 0}, {578, 277}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -656,7 +656,7 @@
 		fRef = 06CC54320A3E3B9000E92E7F /* globals.h */;
 		name = "globals.h: FLOORCOLOR";
 		rLen = 0;
-		rLoc = 329;
+		rLoc = 274;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 119;
@@ -928,9 +928,9 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					16,
-					200,
-					50,
-					200,
+					242,
+					92,
+					242,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXSymbolsDataSource_SymbolTypeIconID,

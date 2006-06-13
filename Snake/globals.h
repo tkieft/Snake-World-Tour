@@ -15,7 +15,4 @@
 #define SCREENHEIGHT 480
 #define SCREENBPP 32
 
-#define WALLCOLOR 0xCC0000
-#define FLOORCOLOR 0x0000CC
-
 #endif
