@@ -5,6 +5,10 @@
  *  Created by Tyler on 6/13/06.
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
+ *  CHANGELOG:
+ *  15Jun06 TDK Add handleEvent().
+ *  15Jun06 TDK Add length and getLength().
+ *  13Jun06 TDK New Code.
  */
 
 #ifndef SNAKEPLAYER_H
@@ -33,6 +37,8 @@ public:
     const static int SNAKE_LEFT = 3;
     
     SnakePlayer( Uint32 snakeColor, string snakeName );
+    
+    void handleInput( SDL_Event* snakeEvent );
     
     int getLives();
     int getScore();

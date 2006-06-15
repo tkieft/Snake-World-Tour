@@ -1,12 +1,12 @@
 /* 
-    Tyler Kieft
-    June 12, 2006
-    main.cpp - Initialize SDL
- 
-    CHANGE LOG:
-    15Jun06 Move Render Code to separate function, change init() calling
-    12Jun06 TDK New Code
-*/
+ *   Tyler Kieft
+ *   June 12, 2006
+ *   main.cpp - Initialize SDL
+ *
+ *   CHANGELOG:
+ *   15Jun06 Move render Code to separate function, change init() calling
+ *   12Jun06 TDK New Code
+ */
    
 #include <iostream>
 #include <cstdlib>
@@ -24,7 +24,7 @@ using std::string;
 
 // Function prototypes
 SDL_Surface* init();
-void render( SDL_Surface* scr );
+void render( SnakePlayer* theSnakes[], Board* theBoard );
 void deinit();
 
 SDL_Surface *bg = NULL;
@@ -32,12 +32,16 @@ SDL_Surface *bg = NULL;
 int main(int argc, char *argv[])
 {
     SDL_Event event;
+    SnakePlayer* mySnakes[] = { NULL, NULL };
+    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
+    
     
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
     //cout << rsrcdirectory;
     
     SDL_Surface* screen = init();
+    Board* myBoard = new Board( screen );
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
@@ -50,18 +54,28 @@ int main(int argc, char *argv[])
     int done = 0;
     while ( !done ) {
         
-        render( screen );
+        render( mySnakes, myBoard );
 
 		/* Check for events */
 		while ( SDL_PollEvent(&event) ) {
-			switch (event.type) {
+			switch( event.type ) {
 
 				case SDL_MOUSEMOTION:
 					break;
 				case SDL_MOUSEBUTTONDOWN:
 					break;
-				case SDL_KEYDOWN:
-					/* Any keypress quits the app... */
+				case SDL_KEYUP:
+					switch( event.key.keysym.sym )
+                    {
+                        case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
+                            mySnakes[0]->handleInput( &event );
+                            break;
+                        case SDLK_ESCAPE:
+                            done = 1;
+                            break;
+                        default:
+                            break;
+                    }
 				case SDL_QUIT:
 					done = 1;
 					break;
@@ -74,12 +88,9 @@ int main(int argc, char *argv[])
 	return(0);
 }
 
-void render( SDL_Surface* s )
+void render( SnakePlayer* theSnakes[], Board* theBoard )
 {
-    Board myBoard( s );
-    SnakePlayer* mySnakes[] = { NULL, NULL };
-    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
-    myBoard.draw( mySnakes, 1 );
+    theBoard->draw( theSnakes, 1 );
 }
 
 // init returns a pointer to SDL_Surface
