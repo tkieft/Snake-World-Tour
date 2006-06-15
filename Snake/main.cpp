@@ -46,14 +46,11 @@ int main(int argc, char *argv[])
 
     SDL_BlitSurface( bg, NULL, screen, &offset );
     SDL_Flip( screen );
-    
-    Board myBoard( screen );
-    SnakePlayer* mySnakes[] = { NULL, NULL };
-    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
-    myBoard.draw( mySnakes, 1 );
 	
     int done = 0;
     while ( !done ) {
+        
+        render( screen );
 
 		/* Check for events */
 		while ( SDL_PollEvent(&event) ) {
@@ -75,6 +72,14 @@ int main(int argc, char *argv[])
 	}
 	
 	return(0);
+}
+
+void render( SDL_Surface* s )
+{
+    Board myBoard( s );
+    SnakePlayer* mySnakes[] = { NULL, NULL };
+    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
+    myBoard.draw( mySnakes, 1 );
 }
 
 // init returns a pointer to SDL_Surface

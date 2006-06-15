@@ -650,7 +650,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 48";
 		rLen = 0;
-		rLoc = 1137;
+		rLoc = 1021;
 		rType = 0;
 		vrLen = 462;
 		vrLoc = 774;
@@ -690,7 +690,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 47";
 		rLen = 0;
-		rLoc = 1072;
+		rLoc = 1021;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 774;
@@ -760,7 +760,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 48";
 		rLen = 0;
-		rLoc = 1147;
+		rLoc = 1021;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 667;
@@ -790,7 +790,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 48";
 		rLen = 0;
-		rLoc = 1154;
+		rLoc = 1021;
 		rType = 0;
 		vrLen = 533;
 		vrLoc = 667;
@@ -810,7 +810,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 48";
 		rLen = 0;
-		rLoc = 1154;
+		rLoc = 1021;
 		rType = 0;
 		vrLen = 533;
 		vrLoc = 667;
@@ -991,9 +991,9 @@
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {590, 1596}}";
-			sepNavSelRange = "{804, 0}";
-			sepNavVisRect = "{{0, 415}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {590, 1666}}";
+			sepNavSelRange = "{1098, 0}";
+			sepNavVisRect = "{{0, 579}, {578, 277}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -1257,6 +1257,66 @@
 		rType = 0;
 		vrLen = 537;
 		vrLoc = 519;
+	};
+	06E2566A0A421E4F00674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SDL_Surface* init();";
+		rLen = 21;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 306;
+	};
+	06E2566E0A421EA400674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 47";
+		rLen = 0;
+		rLoc = 946;
+		rType = 0;
+		vrLen = 525;
+		vrLoc = 544;
+	};
+	06E2566F0A421EA900674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SDL_Surface* init();";
+		rLen = 21;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 306;
+	};
+	06E256730A421EC600674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 79";
+		rLen = 0;
+		rLoc = 1482;
+		rType = 0;
+		vrLen = 333;
+		vrLoc = 1393;
+	};
+	06E256740A421EC900674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SDL_Surface* init();";
+		rLen = 21;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 306;
+	};
+	06E256780A421EF200674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 53";
+		rLen = 0;
+		rLoc = 1098;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 812;
 	};
 	06FFD15C0A3E1AC8003850BF /* SDL_video.h */ = {
 		isa = PBXFileReference;
@@ -1637,6 +1697,12 @@
 			06E256670A421E4C00674396 /* PBXTextBookmark */ = 06E256670A421E4C00674396 /* PBXTextBookmark */;
 			06E256680A421E4C00674396 /* PBXTextBookmark */ = 06E256680A421E4C00674396 /* PBXTextBookmark */;
 			06E256690A421E4C00674396 /* PBXTextBookmark */ = 06E256690A421E4C00674396 /* PBXTextBookmark */;
+			06E2566A0A421E4F00674396 /* PBXTextBookmark */ = 06E2566A0A421E4F00674396 /* PBXTextBookmark */;
+			06E2566E0A421EA400674396 /* PBXTextBookmark */ = 06E2566E0A421EA400674396 /* PBXTextBookmark */;
+			06E2566F0A421EA900674396 /* PBXTextBookmark */ = 06E2566F0A421EA900674396 /* PBXTextBookmark */;
+			06E256730A421EC600674396 /* PBXTextBookmark */ = 06E256730A421EC600674396 /* PBXTextBookmark */;
+			06E256740A421EC900674396 /* PBXTextBookmark */ = 06E256740A421EC900674396 /* PBXTextBookmark */;
+			06E256780A421EF200674396 /* PBXTextBookmark */ = 06E256780A421EF200674396 /* PBXTextBookmark */;
 			06FFD1880A3E2368003850BF = 06FFD1880A3E2368003850BF /* PBXTextBookmark */;
 			06FFD18B0A3E2368003850BF = 06FFD18B0A3E2368003850BF /* PBXTextBookmark */;
 			06FFD18C0A3E2368003850BF = 06FFD18C0A3E2368003850BF /* PBXTextBookmark */;
