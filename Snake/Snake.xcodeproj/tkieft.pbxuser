@@ -1318,6 +1318,16 @@
 		vrLen = 455;
 		vrLoc = 812;
 	};
+	06E256790A421EF800674396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "SDL_Surface* init();";
+		rLen = 21;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 306;
+	};
 	06FFD15C0A3E1AC8003850BF /* SDL_video.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
@@ -1703,6 +1713,7 @@
 			06E256730A421EC600674396 /* PBXTextBookmark */ = 06E256730A421EC600674396 /* PBXTextBookmark */;
 			06E256740A421EC900674396 /* PBXTextBookmark */ = 06E256740A421EC900674396 /* PBXTextBookmark */;
 			06E256780A421EF200674396 /* PBXTextBookmark */ = 06E256780A421EF200674396 /* PBXTextBookmark */;
+			06E256790A421EF800674396 /* PBXTextBookmark */ = 06E256790A421EF800674396 /* PBXTextBookmark */;
 			06FFD1880A3E2368003850BF = 06FFD1880A3E2368003850BF /* PBXTextBookmark */;
 			06FFD18B0A3E2368003850BF = 06FFD18B0A3E2368003850BF /* PBXTextBookmark */;
 			06FFD18C0A3E2368003850BF = 06FFD18C0A3E2368003850BF /* PBXTextBookmark */;

@@ -21,6 +21,7 @@ private:
     int score;
     int direction;
     int speed;
+    int length;
     Uint32 color;
     string name;
     
@@ -37,6 +38,7 @@ public:
     int getScore();
     int getDirection();
     int getSpeed();
+    int getLength();
     Uint32 getColor();
     string getName();
 };
