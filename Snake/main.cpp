@@ -2,6 +2,10 @@
     Tyler Kieft
     June 12, 2006
     main.cpp - Initialize SDL
+ 
+    CHANGE LOG:
+    15Jun06 Move Render Code to separate function, change init() calling
+    12Jun06 TDK New Code
 */
    
 #include <iostream>
@@ -19,21 +23,21 @@ using std::endl;
 using std::string;
 
 // Function prototypes
-void init( SDL_Surface* &scr );
+SDL_Surface* init();
+void render( SDL_Surface* scr );
 void deinit();
 
 SDL_Surface *bg = NULL;
 
 int main(int argc, char *argv[])
 {
-    SDL_Surface* screen = NULL;
     SDL_Event event;
     
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
     //cout << rsrcdirectory;
     
-    init( screen );
+    SDL_Surface* screen = init();
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
@@ -73,8 +77,8 @@ int main(int argc, char *argv[])
 	return(0);
 }
 
-// init takes a reference to a pointer to SDL_Surface
-void init( SDL_Surface* &scr )
+// init returns a pointer to SDL_Surface
+SDL_Surface* init()
 {
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
@@ -85,7 +89,7 @@ void init( SDL_Surface* &scr )
     atexit( deinit );
     
     // Attempt to create a 640x480 window with 32 bit pixels
-    scr = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
+    SDL_Surface* scr = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
     
     if( scr == NULL )
     {
@@ -95,11 +99,15 @@ void init( SDL_Surface* &scr )
     
     // Set window title
     SDL_WM_SetCaption("Snake v0.1", NULL);
+    
+    return scr;
 }
 
 void deinit()
 {
-    SDL_FreeSurface( bg );
+    if( bg ) 
+        SDL_FreeSurface( bg );
+    
     /* Clean up the SDL Library */
     SDL_Quit();
     cout << "Quitting...";
