@@ -53,7 +53,7 @@
 /* Begin PBXBuildFile section */
 		0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */; };
 		0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
-		0625D87C0A3F722300F0E531 /* levels.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC534B0A3E30A300E92E7F /* levels.h */; settings = {ATTRIBUTES = (); }; };
+		06377BD10A434FF70006D268 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06377BD00A434FF70006D268 /* levels.txt */; };
 		068EEABA0A3CE318003887BB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
 		06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
 		06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
@@ -73,8 +73,9 @@
 /* Begin PBXFileReference section */
 		0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SnakePlayer.h; sourceTree = "<group>"; };
 		0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnakePlayer.cpp; sourceTree = "<group>"; };
+		06377BD00A434FF70006D268 /* levels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = levels.txt; sourceTree = "<group>"; };
 		068EEAB90A3CE318003887BB /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = main.cpp; sourceTree = "<group>"; };
-		06CC534B0A3E30A300E92E7F /* levels.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = levels.h; sourceTree = "<group>"; };
+		06CC534B0A3E30A300E92E7F /* levels.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = levels.h; path = /Users/tkieft/code/snake/trunk/Snake/levels.h; sourceTree = "<absolute>"; };
 		06CC53520A3E321400E92E7F /* Board.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Board.h; sourceTree = "<group>"; };
 		06CC53530A3E321400E92E7F /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
@@ -160,7 +161,6 @@
 				06CC54320A3E3B9000E92E7F /* globals.h */,
 				06CC53680A3E369000E92E7F /* drawfunc.h */,
 				06CC53690A3E369000E92E7F /* drawfunc.cpp */,
-				06CC534B0A3E30A300E92E7F /* levels.h */,
 				06FFD1780A3E2196003850BF /* load_image.h */,
 				06FFD1790A3E2196003850BF /* load_image.cpp */,
 				068EEAB90A3CE318003887BB /* main.cpp */,
@@ -171,6 +171,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06377BD00A434FF70006D268 /* levels.txt */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -200,7 +201,6 @@
 				06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */,
 				06CC54330A3E3B9000E92E7F /* globals.h in Headers */,
 				0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */,
-				0625D87C0A3F722300F0E531 /* levels.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +226,7 @@
 			files = (
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
 				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
+				06377BD10A434FF70006D268 /* levels.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

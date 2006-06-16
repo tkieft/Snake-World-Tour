@@ -35,13 +35,12 @@ int main(int argc, char *argv[])
     SnakePlayer* mySnakes[] = { NULL, NULL };
     mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
     
-    
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
     //cout << rsrcdirectory;
     
     SDL_Surface* screen = init();
-    Board* myBoard = new Board( screen );
+    Board* myBoard = new Board( screen, rsrcdirectory );
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
