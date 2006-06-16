@@ -75,6 +75,7 @@ int main(int argc, char *argv[])
                         default:
                             break;
                     }
+                    break;
 				case SDL_QUIT:
 					done = 1;
 					break;
@@ -89,8 +90,10 @@ int main(int argc, char *argv[])
 
 void render( SnakePlayer* theSnakes[], Board* theBoard )
 {
+    int ticks = SDL_GetTicks();
     theBoard->updatePosition( theSnakes, 1 );
     theBoard->draw( theSnakes, 1 );
+    while( SDL_GetTicks() - ticks < 1000/FPS );
 }
 
 // init returns a pointer to SDL_Surface

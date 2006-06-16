@@ -190,36 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>06377D700A436D770006D268</string>
+				<string>06377E480A437B830006D268</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>SnakePlayer.cpp</string>
+				<string>Board.cpp</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>06377D750A436DA90006D268</string>
+						<string>06377E520A437C3C0006D268</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>SnakePlayer.cpp</string>
+						<string>Board.cpp</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>06377DC80A4375970006D268</string>
+						<string>06377E5C0A437C6E0006D268</string>
 						<key>history</key>
 						<array>
-							<string>06377DB60A43758F0006D268</string>
-							<string>06377DB70A43758F0006D268</string>
-							<string>06377DB80A43758F0006D268</string>
-							<string>06377D9D0A43757F0006D268</string>
-						</array>
-						<key>prevStack</key>
-						<array>
-							<string>06377DB90A43758F0006D268</string>
-							<string>06377DBA0A43758F0006D268</string>
-							<string>06377DBB0A43758F0006D268</string>
-							<string>06377DBC0A43758F0006D268</string>
-							<string>06377DBD0A43758F0006D268</string>
-							<string>06377DBE0A43758F0006D268</string>
+							<string>06377E4D0A437C280006D268</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -231,11 +219,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {917, 683}}</string>
+				<string>{{0, 20}, {599, 639}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>339 108 917 724 0 0 1280 832 </string>
+				<string>174 152 599 680 0 0 1280 832 </string>
 			</dict>
 		</dict>
 	</array>
@@ -310,6 +298,7 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>089C165CFE840E0CC02AAC07</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>17587328FF379C6511CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -372,7 +361,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>06377DC70A4375970006D268</string>
+										<string>06377E5B0A437C6E0006D268</string>
 										<key>history</key>
 										<array>
 											<string>068EEB0D0A3CEFDA003887BB</string>
@@ -388,13 +377,13 @@
 											<string>0625D8650A3F716800F0E531</string>
 											<string>06E256BF0A4223EC00674396</string>
 											<string>06377C230A435A220006D268</string>
-											<string>06377C240A435A220006D268</string>
-											<string>06377C250A435A220006D268</string>
-											<string>06377DA10A43758F0006D268</string>
 											<string>06377DA20A43758F0006D268</string>
-											<string>06377DA30A43758F0006D268</string>
-											<string>06377DA40A43758F0006D268</string>
-											<string>06377DA50A43758F0006D268</string>
+											<string>06377DE90A4377190006D268</string>
+											<string>06377E2B0A4379F20006D268</string>
+											<string>06377E3B0A437A9F0006D268</string>
+											<string>06377E3C0A437A9F0006D268</string>
+											<string>06377E3D0A437A9F0006D268</string>
+											<string>06377E2C0A4379F20006D268</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -472,6 +461,26 @@
 											<string>06377DB20A43758F0006D268</string>
 											<string>06377DB30A43758F0006D268</string>
 											<string>06377DB40A43758F0006D268</string>
+											<string>06377DD20A4376570006D268</string>
+											<string>06377DEC0A4377190006D268</string>
+											<string>06377DED0A4377190006D268</string>
+											<string>06377DEE0A4377190006D268</string>
+											<string>06377DEF0A4377190006D268</string>
+											<string>06377DFA0A4378050006D268</string>
+											<string>06377DFB0A4378050006D268</string>
+											<string>06377DFC0A4378050006D268</string>
+											<string>06377E0D0A4379350006D268</string>
+											<string>06377E2F0A4379F20006D268</string>
+											<string>06377E300A4379F20006D268</string>
+											<string>06377E310A4379F20006D268</string>
+											<string>06377E320A4379F20006D268</string>
+											<string>06377E330A4379F20006D268</string>
+											<string>06377E340A4379F20006D268</string>
+											<string>06377E350A4379F20006D268</string>
+											<string>06377E360A4379F20006D268</string>
+											<string>06377E3E0A437A9F0006D268</string>
+											<string>06377E3F0A437A9F0006D268</string>
+											<string>06377E400A437A9F0006D268</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -657,7 +666,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>06377D700A436D770006D268</string>
+	<string>06377E480A437B830006D268</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -686,9 +695,8 @@
 		<string>06FFD1D90A3E2697003850BF</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>06377C820A435B2C0006D268</string>
-		<string>/Users/tkieft/code/snake/trunk/Snake/Snake.xcodeproj</string>
 		<string>068EEA880A3C8C7B003887BB</string>
-		<string>06377D700A436D770006D268</string>
+		<string>06377E480A437B830006D268</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
@@ -713,7 +721,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SnakePlayer.cpp</string>
+								<string>Board.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
