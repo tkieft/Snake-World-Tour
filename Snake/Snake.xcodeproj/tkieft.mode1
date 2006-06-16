@@ -190,32 +190,36 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>06377CDA0A435F5D0006D268</string>
+				<string>06377D700A436D770006D268</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>Board.cpp</string>
+				<string>SnakePlayer.cpp</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>06377CE30A435FBB0006D268</string>
+						<string>06377D750A436DA90006D268</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>Board.cpp</string>
+						<string>SnakePlayer.cpp</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>06377D370A436AB50006D268</string>
+						<string>06377DC80A4375970006D268</string>
 						<key>history</key>
 						<array>
-							<string>06377D100A4362210006D268</string>
-							<string>06377D220A4369BB0006D268</string>
+							<string>06377DB60A43758F0006D268</string>
+							<string>06377DB70A43758F0006D268</string>
+							<string>06377DB80A43758F0006D268</string>
+							<string>06377D9D0A43757F0006D268</string>
 						</array>
 						<key>prevStack</key>
 						<array>
-							<string>06377D120A4362210006D268</string>
-							<string>06377D130A4362210006D268</string>
-							<string>06377D140A4362210006D268</string>
-							<string>06377D150A4362210006D268</string>
+							<string>06377DB90A43758F0006D268</string>
+							<string>06377DBA0A43758F0006D268</string>
+							<string>06377DBB0A43758F0006D268</string>
+							<string>06377DBC0A43758F0006D268</string>
+							<string>06377DBD0A43758F0006D268</string>
+							<string>06377DBE0A43758F0006D268</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -227,11 +231,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {599, 639}}</string>
+				<string>{{0, 20}, {917, 683}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>174 152 599 680 0 0 1280 832 </string>
+				<string>339 108 917 724 0 0 1280 832 </string>
 			</dict>
 		</dict>
 	</array>
@@ -267,8 +271,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -370,7 +372,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>06377D360A436AB50006D268</string>
+										<string>06377DC70A4375970006D268</string>
 										<key>history</key>
 										<array>
 											<string>068EEB0D0A3CEFDA003887BB</string>
@@ -384,15 +386,15 @@
 											<string>0625D8400A3F711600F0E531</string>
 											<string>0625D8440A3F711600F0E531</string>
 											<string>0625D8650A3F716800F0E531</string>
-											<string>06E256BD0A4223EC00674396</string>
-											<string>06E256BE0A4223EC00674396</string>
 											<string>06E256BF0A4223EC00674396</string>
 											<string>06377C230A435A220006D268</string>
 											<string>06377C240A435A220006D268</string>
 											<string>06377C250A435A220006D268</string>
-											<string>06377C260A435A220006D268</string>
-											<string>06377C270A435A220006D268</string>
-											<string>06377C280A435A220006D268</string>
+											<string>06377DA10A43758F0006D268</string>
+											<string>06377DA20A43758F0006D268</string>
+											<string>06377DA30A43758F0006D268</string>
+											<string>06377DA40A43758F0006D268</string>
+											<string>06377DA50A43758F0006D268</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -450,6 +452,26 @@
 											<string>06377C490A435A220006D268</string>
 											<string>06377C4A0A435A220006D268</string>
 											<string>06377C4B0A435A220006D268</string>
+											<string>06377D470A436CA80006D268</string>
+											<string>06377D480A436CA80006D268</string>
+											<string>06377D490A436CA80006D268</string>
+											<string>06377D4A0A436CA80006D268</string>
+											<string>06377D4B0A436CA80006D268</string>
+											<string>06377DA60A43758F0006D268</string>
+											<string>06377DA70A43758F0006D268</string>
+											<string>06377DA80A43758F0006D268</string>
+											<string>06377DA90A43758F0006D268</string>
+											<string>06377DAA0A43758F0006D268</string>
+											<string>06377DAB0A43758F0006D268</string>
+											<string>06377DAC0A43758F0006D268</string>
+											<string>06377DAD0A43758F0006D268</string>
+											<string>06377DAE0A43758F0006D268</string>
+											<string>06377DAF0A43758F0006D268</string>
+											<string>06377DB00A43758F0006D268</string>
+											<string>06377DB10A43758F0006D268</string>
+											<string>06377DB20A43758F0006D268</string>
+											<string>06377DB30A43758F0006D268</string>
+											<string>06377DB40A43758F0006D268</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -471,6 +493,8 @@
 							<string>309pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -633,7 +657,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>06377CDA0A435F5D0006D268</string>
+	<string>06377D700A436D770006D268</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -664,8 +688,8 @@
 		<string>06377C820A435B2C0006D268</string>
 		<string>/Users/tkieft/code/snake/trunk/Snake/Snake.xcodeproj</string>
 		<string>068EEA880A3C8C7B003887BB</string>
+		<string>06377D700A436D770006D268</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>06377CDA0A435F5D0006D268</string>
 	</array>
 	<key>WindowString</key>
 	<string>146 213 833 598 0 0 1280 832 </string>
@@ -689,7 +713,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Board.cpp</string>
+								<string>SnakePlayer.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

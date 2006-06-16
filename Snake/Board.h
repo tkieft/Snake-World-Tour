@@ -6,8 +6,9 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Add updatePosition()
  *  16Jun06 TDK Add readCurrentLevel() and nextLevel() methods, 
-                levelData array, destructor.
+ *              levelData array, destructor.
  *  16Jun06 TDK Add currentLevel variable.
  *  12Jun06 TDK New Code.
  */
@@ -33,6 +34,8 @@ private:
     int currentLevel;
     int* levelData;
     string levelPath;
+    int* snakeHead;
+    int* snakeHeadPosition;
     
 public:
     /* Class-wide constants */
@@ -42,10 +45,11 @@ public:
     const static int YLOC = 30;
     
     /* Constructor and destructor */        
-    Board( SDL_Surface* sc, string rsrcPath );
+    Board( SDL_Surface* sc, string rsrcPath, int numSnakes );
     ~Board();
     
     /* Methods */
+    int updatePosition( SnakePlayer* snakes[], int numSnakes );
     void draw( SnakePlayer* snakes[], int numSnakes );
     void nextLevel();
     bool readCurrentLevel();

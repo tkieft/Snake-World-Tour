@@ -6,8 +6,9 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Add updatePosition()
  *  16Jun06 TDK Add destructor, initialize and delete levelData, 
-                nextLevel(), readCurrentLevel().
+ *              nextLevel(), readCurrentLevel().
  *  16Jun06 TDK Add currentLevel variable.
  *  12Jun06 TDK New Code.
  */
@@ -24,14 +25,31 @@ using std::ios;
 #include "SnakePlayer.h"
 
 
-Board::Board ( SDL_Surface* sc, string rsrcPath ) : scr( sc ), currentLevel( 1 )
+Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), currentLevel( 1 )
 {
     levelPath = rsrcPath + "levels.txt";
     levelData = new int[ LEVELSIZE * LEVELSIZE ];
     readCurrentLevel();
+    
+    snakeHead = new int[ numSnakes ];
+    snakeHeadPosition = new int[ numSnakes ];
+    
+    // start snake 1 in middle of bottom, snake 2 in middle of top
+    snakeHead[0] = 10;
+    snakeHeadPosition[0] = (( LEVELSIZE - 1 ) * LEVELSIZE ) + LEVELSIZE / 2;
+    levelData[ snakeHeadPosition[0] ] = snakeHead[0];
+    if( numSnakes == 2 )
+        snakeHead[1] = 400;
+        snakeHeadPosition[1] = LEVELSIZE / 2;
+        levelData[ snakeHeadPosition[1] ] = snakeHead[1];
 }
 
-Board::~Board() { delete[] levelData; }
+Board::~Board()
+{
+    delete[] levelData;
+    delete[] snakeHead;
+    delete[] snakeHeadPosition;
+}
 
 void Board::draw( SnakePlayer* snakes[], int numSnakes )
 {
@@ -62,6 +80,68 @@ void Board::draw( SnakePlayer* snakes[], int numSnakes )
     
     SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
 }
+
+// return 0 if all is well, 1 if snake 1 crashed, 2 if snake 2 crashed
+int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
+{
+    for( int i = 0; i < numSnakes; i++ )
+    {
+        int direction = snakes[i]->getDirection();
+        switch( direction )
+        {
+            case SnakePlayer::SNAKE_UP:
+                if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] != 0 )
+                    return i;
+                snakeHeadPosition[i] -= LEVELSIZE;
+                levelData[snakeHeadPosition[i]] = ++snakeHead[i];
+                break;
+
+            case SnakePlayer::SNAKE_DOWN:
+                if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] != 0 )
+                    return i;
+                snakeHeadPosition[i] += LEVELSIZE;
+                levelData[snakeHeadPosition[i]] = ++snakeHead[i];
+                break;
+                  
+            case SnakePlayer::SNAKE_LEFT:
+                if( levelData[ snakeHeadPosition[i] - 1 ] != 0 )
+                    return i;
+                levelData[++snakeHeadPosition[i]] = ++snakeHead[i];
+                break;
+                    
+            case SnakePlayer::SNAKE_RIGHT:
+                if( levelData[ snakeHeadPosition[i] + 1 ] != 0 )
+                    return i;
+                levelData[--snakeHeadPosition[i]] = ++snakeHead[i];
+                break;
+                        
+            default:
+                break;
+        }
+        
+        for( int j = 0; j < LEVELSIZE * LEVELSIZE; j++ )
+        {
+            if( i == 0 )
+            {
+                if( levelData[ j ] == 10 )
+                    if( ! snakes[i]->isGrowing() )
+                        levelData[ j ] = 0;
+                else if( levelData[j] > 10 && levelData[j] < 400 )
+                    levelData[j]--;
+            }
+            else
+            {
+                if( levelData[ j ] == 400 )
+                    if( ! snakes[i]->isGrowing() )
+                        levelData[ j ] = 0;
+                else if( levelData[j] > 400 )
+                    levelData[j]--;
+            }
+        }
+    }
+    return 0;
+}
+                    
 
 void Board::nextLevel()
 {

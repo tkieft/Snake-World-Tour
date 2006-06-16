@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Initial direction is now a parameter, add grow.
  *  15Jun06 TDK Add handleEvent().
  *  15Jun06 TDK Add length and getLength().
  *  13Jun06 TDK New Code.
@@ -26,6 +27,7 @@ private:
     int direction;
     int speed;
     int length;
+    int growFactor;
     Uint32 color;
     string name;
     
@@ -36,7 +38,7 @@ public:
     const static int SNAKE_DOWN = 2;
     const static int SNAKE_LEFT = 3;
     
-    SnakePlayer( Uint32 snakeColor, string snakeName );
+    SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection );
     
     void handleInput( SDL_Event* snakeEvent );
     
@@ -47,6 +49,7 @@ public:
     int getLength();
     Uint32 getColor();
     string getName();
+    bool isGrowing();
 };
 
 #endif

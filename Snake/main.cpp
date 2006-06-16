@@ -33,14 +33,14 @@ int main(int argc, char *argv[])
 {
     SDL_Event event;
     SnakePlayer* mySnakes[] = { NULL, NULL };
-    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler" );
+    mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler", SnakePlayer::SNAKE_UP );
     
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
     //cout << rsrcdirectory;
     
     SDL_Surface* screen = init();
-    Board* myBoard = new Board( screen, rsrcdirectory );
+    Board* myBoard = new Board( screen, rsrcdirectory, 1 );
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
@@ -89,6 +89,7 @@ int main(int argc, char *argv[])
 
 void render( SnakePlayer* theSnakes[], Board* theBoard )
 {
+    theBoard->updatePosition( theSnakes, 1 );
     theBoard->draw( theSnakes, 1 );
 }
 
