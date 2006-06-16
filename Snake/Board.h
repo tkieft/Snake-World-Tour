@@ -5,6 +5,9 @@
  *  Created by Tyler on 6/12/06.
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
+ *  CHANGELOG:
+ *  16Jun06 TDK Add currentLevel variable.
+ *  12Jun06 TDK New Code.
  */
 
 #ifndef BOARD_H
@@ -17,6 +20,7 @@ class Board
 {
 private:
     SDL_Surface* scr;
+    int currentLevel;
     
 public:
     /* Class-wide constants */

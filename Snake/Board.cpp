@@ -5,6 +5,9 @@
  *  Created by Tyler on 6/12/06.
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
+ *  CHANGELOG:
+ *  16Jun06 TDK Add currentLevel variable.
+ *  12Jun06 TDK New Code.
  */
 
 #include "Board.h"
@@ -14,7 +17,7 @@
 #include "SnakePlayer.h"
 
 
-Board::Board ( SDL_Surface* sc ) : scr( sc ) {}
+Board::Board ( SDL_Surface* sc ) : scr( sc ), currentLevel(1) {}
 
 void Board::draw( SnakePlayer* snakes[], int numSnakes )
 {

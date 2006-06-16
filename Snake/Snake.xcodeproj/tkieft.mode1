@@ -185,48 +185,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>06E256B40A4223C000674396</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>SnakePlayer.cpp</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>06E256C70A4223EC00674396</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>SnakePlayer.cpp</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>06E256C80A4223EC00674396</string>
-						<key>history</key>
-						<array>
-							<string>06E256B90A4223DD00674396</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {733, 651}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 135 733 692 0 0 1280 832 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>833</integer>
@@ -363,7 +322,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>06E256C60A4223EC00674396</string>
+										<string>06E256CC0A42240700674396</string>
 										<key>history</key>
 										<array>
 											<string>068EEB0D0A3CEFDA003887BB</string>
@@ -636,10 +595,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/tkieft/code/snake/trunk/Snake/Snake.xcodeproj</string>
-		<string>068EEA880A3C8C7B003887BB</string>
-		<string>06E256B40A4223C000674396</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>068EEA880A3C8C7B003887BB</string>
+		<string>/Users/tkieft/code/snake/trunk/Snake/Snake.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>187 215 833 598 0 0 1280 832 </string>
@@ -732,7 +690,7 @@
 			<key>WindowToolGUID</key>
 			<string>068EEA880A3C8C7B003887BB</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1102,7 +1060,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
