@@ -6,8 +6,9 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
- *  16Jun06 TDK Add starting position constants
- *  16Jun06 TDK Add updatePosition()
+ *  16Jun06 TDK Collectibles.
+ *  16Jun06 TDK Add starting position constants.
+ *  16Jun06 TDK Add updatePosition().
  *  16Jun06 TDK Add readCurrentLevel() and nextLevel() methods, 
  *              levelData array, destructor.
  *  16Jun06 TDK Add currentLevel variable.
@@ -28,8 +29,10 @@ class Board
 private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
-    const static Uint32 WALLCOLOR = 0xCC0000;
-    const static Uint32 FLOORCOLOR = 0x0000CC;
+    const static int LEVEL_COLLECTIBLE = 5;
+    const static Uint32 WALL_COLOR = 0xCC0000;
+    const static Uint32 FLOOR_COLOR = 0x0000CC;
+    const static Uint32 COLLECTIBLE_COLOR = 0xFFFF00;
     
     SDL_Surface* scr;
     int currentLevel;
@@ -37,6 +40,7 @@ private:
     string levelPath;
     int* snakeHead;
     int* snakeHeadPosition;
+    int collectibles;
     
 public:
     /* Class-wide constants */
@@ -54,6 +58,7 @@ public:
     void draw( SnakePlayer* snakes[], int numSnakes );
     void nextLevel();
     bool readCurrentLevel();
+    void initCollectibles();
     
 private:
     const static int STARTING_POSITION[];

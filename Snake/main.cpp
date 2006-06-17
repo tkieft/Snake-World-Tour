@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 					break;
 				case SDL_MOUSEBUTTONDOWN:
 					break;
-				case SDL_KEYUP:
+				case SDL_KEYDOWN:
 					switch( event.key.keysym.sym )
                     {
                         case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:

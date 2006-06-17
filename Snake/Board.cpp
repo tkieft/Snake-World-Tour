@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Collectibles.
  *  16Jun06 TDK Gate closes once snake is out.
  *  16Jun06 TDK Add updatePosition()
  *  16Jun06 TDK Add destructor, initialize and delete levelData, 
@@ -32,6 +33,7 @@ Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), cu
     levelPath = rsrcPath + "levels.txt";
     levelData = new int[ LEVELSIZE * LEVELSIZE ];
     readCurrentLevel();
+    initCollectibles();
     
     snakeHead = new int[ numSnakes ];
     snakeHeadPosition = new int[ numSnakes ];
@@ -67,9 +69,11 @@ void Board::draw( SnakePlayer* snakes[], int numSnakes )
         {
             tile = levelData[ y * LEVELSIZE + x ];
             if( tile == LEVEL_FLOOR )
-                color = FLOORCOLOR;
+                color = FLOOR_COLOR;
             else if( tile == LEVEL_WALL )
-                color = WALLCOLOR;
+                color = WALL_COLOR;
+            else if( tile == LEVEL_COLLECTIBLE )
+                color = COLLECTIBLE_COLOR;
             else if( tile >= 10 && tile < 400 )
                 color = snakes[0]->getColor();
             else if( numSnakes == 2 && tile >= 400 )
@@ -92,28 +96,60 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
         switch( direction )
         {
             case SnakePlayer::SNAKE_UP:
-                if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] != 0 )
-                    return i;
+                if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] != LEVEL_FLOOR )
+                {
+                    if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] == LEVEL_COLLECTIBLE )
+                    {
+                        collectibles--;
+                        snakes[i]->eat();
+                    }
+                    else
+                        return i;
+                }
                 snakeHeadPosition[i] -= LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
 
             case SnakePlayer::SNAKE_DOWN:
-                if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] != 0 )
-                    return i;
+                if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] != LEVEL_FLOOR )
+                {
+                    if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] == LEVEL_COLLECTIBLE )
+                    {
+                        collectibles--;
+                        snakes[i]->eat();
+                    }
+                    else
+                        return i;
+                }
                 snakeHeadPosition[i] += LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
                   
             case SnakePlayer::SNAKE_LEFT:
-                if( levelData[ snakeHeadPosition[i] - 1 ] != 0 )
-                    return i;
+                if( levelData[ snakeHeadPosition[i] - 1 ] != LEVEL_FLOOR )
+                {
+                    if( levelData[ snakeHeadPosition[i] - 1 ] == LEVEL_COLLECTIBLE )
+                    {
+                        collectibles--;
+                        snakes[i]->eat();
+                    }
+                    else
+                        return i;
+                }
                 levelData[--snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
                     
             case SnakePlayer::SNAKE_RIGHT:
-                if( levelData[ snakeHeadPosition[i] + 1 ] != 0 )
-                    return i;
+                if( levelData[ snakeHeadPosition[i] + 1 ] != LEVEL_FLOOR )
+                {
+                    if( levelData[ snakeHeadPosition[i] + 1] == LEVEL_COLLECTIBLE )
+                    {
+                        collectibles--;
+                        snakes[i]->eat();
+                    }
+                    else
+                        return i;
+                }
                 levelData[++snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
                         
@@ -129,7 +165,7 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
             {
                 if( levelData[ j ] == 10 )
                 {
-                    levelData[j] = 0;
+                    levelData[j] = LEVEL_FLOOR;
                     snakeHead[i]--;
                 }
                 else if( levelData[j] > 10 && levelData[j] < 400 )
@@ -139,15 +175,15 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
             {
                 if( levelData[ j ] == 400 && !growth )
                 {
-                    levelData[ j ] = 0;
+                    levelData[ j ] = LEVEL_FLOOR;
                     snakeHead[i]--;
                 }
                 else if( levelData[j] > 400 )
                     levelData[j]--;
             }
         }
-        if(levelData[STARTING_POSITION[i]] == 0)
-            levelData[STARTING_POSITION[i]] = 1;
+        if(levelData[STARTING_POSITION[i]] == LEVEL_FLOOR)
+            levelData[STARTING_POSITION[i]] = LEVEL_WALL;
     }
     return 0;
 }
@@ -162,6 +198,7 @@ void Board::nextLevel()
         if( ! readCurrentLevel() )
             exit( 1 );
     }
+    initCollectibles();
 }
 
 bool Board::readCurrentLevel()
@@ -199,4 +236,21 @@ bool Board::readCurrentLevel()
     
     levelFile.close();
     return true;
+}
+
+void Board::initCollectibles()
+{
+    srand( time( NULL ) );
+    collectibles = 10;
+    int placement;
+    for( int i = 0; i < collectibles; i++ )
+    {
+        do
+        {
+            placement = rand() % ( LEVELSIZE * LEVELSIZE );
+        }
+        while( levelData[placement] != 0 );
+        
+        levelData[placement] = 5;
+    }
 }

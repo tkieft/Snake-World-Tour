@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Eat!
  *  16Jun06 TDK Initial direction is now a parameter, add grow.
  *  15Jun06 TDK Add handleEvent().
  *  15Jun06 TDK Add length and getLength().
@@ -48,6 +49,7 @@ public:
     Uint32 getColor();
     string getName();
     bool isGrowing();
+    void eat();
 };
 
 #endif
