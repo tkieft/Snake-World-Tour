@@ -28,24 +28,16 @@ using std::ios;
 
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 
-Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), currentLevel( 1 )
+Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), currentLevel( 0 )
 {
     levelPath = rsrcPath + "levels.txt";
     levelData = new int[ LEVELSIZE * LEVELSIZE ];
-    readCurrentLevel();
-    initCollectibles();
     
     snakeHead = new int[ numSnakes ];
     snakeHeadPosition = new int[ numSnakes ];
     
-    // start snake 1 in middle of bottom, snake 2 in middle of top
-    snakeHead[0] = 10;
-    snakeHeadPosition[0] = STARTING_POSITION[0];
-    levelData[ snakeHeadPosition[0] ] = snakeHead[0];
-    if( numSnakes == 2 )
-        snakeHead[1] = 400;
-        snakeHeadPosition[1] = STARTING_POSITION[1];
-        levelData[ snakeHeadPosition[1] ] = snakeHead[1];
+    nextLevel( numSnakes );
+    
 }
 
 Board::~Board()
@@ -104,7 +96,7 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
                         snakes[i]->eat();
                     }
                     else
-                        return i;
+                        return i+1;
                 }
                 snakeHeadPosition[i] -= LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
@@ -119,7 +111,7 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
                         snakes[i]->eat();
                     }
                     else
-                        return i;
+                        return i+1;
                 }
                 snakeHeadPosition[i] += LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
@@ -134,7 +126,7 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
                         snakes[i]->eat();
                     }
                     else
-                        return i;
+                        return i+1;
                 }
                 levelData[--snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
@@ -148,7 +140,7 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
                         snakes[i]->eat();
                     }
                     else
-                        return i;
+                        return i+1;
                 }
                 levelData[++snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
@@ -189,9 +181,19 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
 }
                     
 
-void Board::nextLevel()
+void Board::nextLevel( int numSnakes )
 {
     currentLevel++;
+    levelInit( numSnakes );
+}
+
+void Board::restartLevel( int numSnakes )
+{
+    levelInit( numSnakes );
+}
+
+void Board::levelInit( int numSnakes )
+{
     if( ! readCurrentLevel() )
     {
         currentLevel = 1;
@@ -199,6 +201,17 @@ void Board::nextLevel()
             exit( 1 );
     }
     initCollectibles();
+    
+    // start snake 1 in middle of bottom, snake 2 in middle of top
+    snakeHead[0] = 10;
+    snakeHeadPosition[0] = STARTING_POSITION[0];
+    levelData[ snakeHeadPosition[0] ] = snakeHead[0];
+    if( numSnakes == 2 )
+    {
+        snakeHead[1] = 400;
+        snakeHeadPosition[1] = STARTING_POSITION[1];
+        levelData[ snakeHeadPosition[1] ] = snakeHead[1];
+    }
 }
 
 bool Board::readCurrentLevel()

@@ -6,7 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
- *  16Jun06 TDK Eat!
+ *  16Jun06 TDK Eat! and Die!
  *  16Jun06 TDK Initial Direction is now a parameter, add grow.
  *  15Jun06 TDK Add length and getLength().
  *  13Jun06 TDK New Code.
@@ -31,6 +31,8 @@ int SnakePlayer::getDirection() { return direction; }
 int SnakePlayer::getSpeed() { return speed; }
 Uint32 SnakePlayer::getColor() { return color; }
 string SnakePlayer::getName() { return name; }
+void SnakePlayer::die() { lives--; reset(); }
+void SnakePlayer::reset() { direction = SNAKE_UP; speed = 1; growFactor = 5; }
 
 bool SnakePlayer::isGrowing()
 {

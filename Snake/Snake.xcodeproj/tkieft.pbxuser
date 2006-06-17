@@ -2,17 +2,17 @@
 {
 	0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 770}}";
-			sepNavSelRange = "{1079, 0}";
-			sepNavVisRect = "{{0, 465}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {723, 798}}";
+			sepNavSelRange = "{1122, 0}";
+			sepNavVisRect = "{{0, 500}, {723, 284}}";
 			sepNavWindowFrame = "{{15, 79}, {733, 748}}";
 		};
 	};
 	0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {723, 1036}}";
-			sepNavSelRange = "{1022, 0}";
-			sepNavVisRect = "{{0, 509}, {723, 284}}";
+			sepNavIntBoundsRect = "{{0, 0}, {723, 1064}}";
+			sepNavSelRange = "{898, 0}";
+			sepNavVisRect = "{{0, 286}, {723, 284}}";
 			sepNavWindowFrame = "{{315, 52}, {917, 780}}";
 		};
 	};
@@ -55,7 +55,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 19";
 		rLen = 0;
-		rLoc = 1003;
+		rLoc = 1045;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 173;
@@ -147,6 +147,13 @@
 		vrLen = 307;
 		vrLoc = 0;
 	};
+	06377BD00A434FF70006D268 /* levels.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {723, 504}}";
+			sepNavSelRange = "{1292, 0}";
+			sepNavVisRect = "{{0, 71}, {723, 284}}";
+		};
+	};
 	06377C150A4359CC0006D268 /* fstream */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.cpp.h;
@@ -164,7 +171,7 @@
 		comments = "error: 'struct std::ifstream' has no member named 'isOpen'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 0;
-		rLoc = 206;
+		rLoc = 219;
 		rType = 1;
 	};
 	06377C230A435A220006D268 /* PBXTextBookmark */ = {
@@ -202,7 +209,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -230,7 +237,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -250,7 +257,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 35";
 		rLen = 0;
-		rLoc = 1990;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 0;
@@ -280,7 +287,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 35";
 		rLen = 0;
-		rLoc = 1990;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 361;
 		vrLoc = 17;
@@ -310,7 +317,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: currentLevel";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 438;
 		vrLoc = 294;
@@ -370,7 +377,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 26";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 508;
 		vrLoc = 294;
@@ -420,7 +427,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 28";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 459;
 		vrLoc = 449;
@@ -440,7 +447,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 28";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 459;
 		vrLoc = 449;
@@ -480,7 +487,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 43";
 		rLen = 0;
-		rLoc = 1392;
+		rLoc = 1434;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 554;
@@ -490,7 +497,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: ~Board";
 		rLen = 0;
-		rLoc = 1419;
+		rLoc = 1047;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 30;
@@ -500,7 +507,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -510,7 +517,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1680;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 554;
@@ -520,7 +527,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 61";
 		rLen = 0;
-		rLoc = 7083;
+		rLoc = 7255;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 0;
@@ -530,7 +537,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 34";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 410;
@@ -540,7 +547,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 64";
 		rLen = 0;
-		rLoc = 7043;
+		rLoc = 7215;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 1020;
@@ -550,7 +557,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 34";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 491;
 		vrLoc = 587;
@@ -590,7 +597,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1478;
+		rLoc = 1575;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -630,7 +637,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: ~Board";
 		rLen = 0;
-		rLoc = 1304;
+		rLoc = 1346;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -640,7 +647,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: readCurrentLevel";
 		rLen = 0;
-		rLoc = 6340;
+		rLoc = 6512;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 906;
@@ -650,7 +657,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1478;
+		rLoc = 1575;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -680,7 +687,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 76";
 		rLen = 0;
-		rLoc = 6479;
+		rLoc = 6651;
 		rType = 0;
 		vrLen = 949;
 		vrLoc = 1670;
@@ -710,7 +717,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 75";
 		rLen = 0;
-		rLoc = 6479;
+		rLoc = 6651;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 1670;
@@ -740,7 +747,7 @@
 		comments = "error: no matching function for call to 'Board::Board(SDL_Surface*&)'";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 42;
+		rLoc = 43;
 		rType = 1;
 	};
 	06377C710A435AA10006D268 /* PBXTextBookmark */ = {
@@ -758,7 +765,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 44";
 		rLen = 0;
-		rLoc = 1020;
+		rLoc = 1069;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 575;
@@ -778,7 +785,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -802,7 +809,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 78";
 		rLen = 0;
-		rLoc = 6519;
+		rLoc = 6691;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 1815;
@@ -812,7 +819,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -822,7 +829,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -842,7 +849,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -862,7 +869,7 @@
 		comments = "error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 216;
+		rLoc = 229;
 		rType = 1;
 	};
 	06377CB20A435C9E0006D268 /* PBXTextBookmark */ = {
@@ -880,7 +887,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "if( ! line.find( ( (char) currentLevel ) + \":\" ) )";
 		rLen = 72;
-		rLoc = 6598;
+		rLoc = 6770;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 1670;
@@ -890,7 +897,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -900,7 +907,7 @@
 		comments = "error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 216;
+		rLoc = 229;
 		rType = 1;
 	};
 	06377CB70A435CE30006D268 /* PBXTextBookmark */ = {
@@ -908,7 +915,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 37";
 		rLen = 0;
-		rLoc = 761;
+		rLoc = 801;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 611;
@@ -918,7 +925,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6628;
+		rLoc = 6800;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 1847;
@@ -928,7 +935,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6628;
+		rLoc = 6800;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 1847;
@@ -948,7 +955,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6658;
+		rLoc = 6830;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 1878;
@@ -958,7 +965,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6657;
+		rLoc = 6829;
 		rType = 0;
 		vrLen = 408;
 		vrLoc = 1878;
@@ -968,7 +975,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6628;
+		rLoc = 6800;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 1847;
@@ -978,7 +985,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6657;
+		rLoc = 6829;
 		rType = 0;
 		vrLen = 408;
 		vrLoc = 1878;
@@ -988,7 +995,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 2239;
@@ -998,7 +1005,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 2239;
@@ -1008,7 +1015,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 572;
 		vrLoc = 2239;
@@ -1018,7 +1025,7 @@
 		comments = "error: invalid cast from type 'std::string' to type 'int'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 232;
+		rLoc = 245;
 		rType = 1;
 	};
 	06377CE00A435FBA0006D268 /* PBXTextBookmark */ = {
@@ -1026,7 +1033,7 @@
 		comments = "error: invalid conversion from 'void*' to 'int'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 231;
+		rLoc = 244;
 		rType = 1;
 	};
 	06377CE10A435FBA0006D268 /* PBXTextBookmark */ = {
@@ -1034,7 +1041,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 101";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 548;
 		vrLoc = 2233;
@@ -1044,7 +1051,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 101";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 2239;
@@ -1054,7 +1061,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "levelData[ i * LEVELSIZE + j ] = int( line );";
 		rLen = 58;
-		rLoc = 6957;
+		rLoc = 7129;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 1844;
@@ -1064,7 +1071,7 @@
 		comments = "error: cannot convert 'std::string' to 'const char*' for argument '1' to 'int atoi(const char*)'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 232;
+		rLoc = 245;
 		rType = 1;
 	};
 	06377CEC0A43601D0006D268 /* PBXTextBookmark */ = {
@@ -1072,7 +1079,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 102";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 578;
 		vrLoc = 2252;
@@ -1082,7 +1089,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 1051;
 		vrLoc = 1866;
@@ -1092,7 +1099,7 @@
 		comments = "error: cannot convert 'std::string' to 'const char*' for argument '1' to 'int atoi(const char*)'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 232;
+		rLoc = 245;
 		rType = 1;
 	};
 	06377CEF0A4360340006D268 /* PBXTextBookmark */ = {
@@ -1100,7 +1107,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 397;
 		vrLoc = 2242;
@@ -1110,7 +1117,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 2223;
@@ -1120,7 +1127,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 1716;
@@ -1130,7 +1137,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 536;
 		vrLoc = 2222;
@@ -1140,7 +1147,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: cout";
 		rLen = 0;
-		rLoc = 7014;
+		rLoc = 7186;
 		rType = 0;
 		vrLen = 997;
 		vrLoc = 1821;
@@ -1150,7 +1157,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 539;
 		vrLoc = 2222;
@@ -1160,7 +1167,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: i";
 		rLen = 0;
-		rLoc = 6999;
+		rLoc = 7171;
 		rType = 0;
 		vrLen = 1000;
 		vrLoc = 1821;
@@ -1170,7 +1177,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 105";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 2222;
@@ -1180,7 +1187,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 97";
 		rLen = 0;
-		rLoc = 6817;
+		rLoc = 6989;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 1770;
@@ -1190,7 +1197,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 103";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 428;
 		vrLoc = 2235;
@@ -1200,7 +1207,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: std";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 2222;
@@ -1210,7 +1217,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 97";
 		rLen = 0;
-		rLoc = 6817;
+		rLoc = 6989;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 1770;
@@ -1220,7 +1227,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 428;
 		vrLoc = 2235;
@@ -1230,7 +1237,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 104";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 423;
 		vrLoc = 2222;
@@ -1240,7 +1247,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1478;
+		rLoc = 1575;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -1250,7 +1257,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6519;
+		rLoc = 6691;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 381;
@@ -1260,7 +1267,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6519;
+		rLoc = 6691;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 342;
@@ -1270,7 +1277,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1478;
+		rLoc = 1575;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -1280,7 +1287,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 82";
 		rLen = 0;
-		rLoc = 6519;
+		rLoc = 6691;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 381;
@@ -1290,7 +1297,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: readCurrentLevel";
 		rLen = 0;
-		rLoc = 1478;
+		rLoc = 1575;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 242;
@@ -1300,7 +1307,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 104";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 1768;
@@ -1310,7 +1317,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 410;
 		vrLoc = 2235;
@@ -1320,7 +1327,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 104";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 423;
 		vrLoc = 2222;
@@ -1330,7 +1337,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: LEVELSIZE";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 1768;
@@ -1340,7 +1347,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 104";
 		rLen = 0;
-		rLoc = 7003;
+		rLoc = 7175;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1350,7 +1357,7 @@
 		comments = "error: no match for 'operator<<' in 'levelFile << currentNum'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 231;
+		rLoc = 244;
 		rType = 1;
 	};
 	06377D260A4369C90006D268 /* PBXTextBookmark */ = {
@@ -1358,7 +1365,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 109";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 2147;
@@ -1368,7 +1375,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 107";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 1831;
@@ -1378,7 +1385,7 @@
 		comments = "error: no match for 'operator<<' in 'levelFile << currentNum'";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 231;
+		rLoc = 244;
 		rType = 1;
 	};
 	06377D290A4369D10006D268 /* PBXTextBookmark */ = {
@@ -1386,7 +1393,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 107";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 374;
 		vrLoc = 2301;
@@ -1396,7 +1403,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 109";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 2147;
@@ -1406,7 +1413,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 79";
 		rLen = 0;
-		rLoc = 6380;
+		rLoc = 6552;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 1831;
@@ -1416,7 +1423,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 105";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 365;
 		vrLoc = 2298;
@@ -1426,7 +1433,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 107";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 474;
 		vrLoc = 2147;
@@ -1436,7 +1443,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 87";
 		rLen = 0;
-		rLoc = 6539;
+		rLoc = 6711;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 1772;
@@ -1446,7 +1453,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 107";
 		rLen = 0;
-		rLoc = 7024;
+		rLoc = 7196;
 		rType = 0;
 		vrLen = 474;
 		vrLoc = 2147;
@@ -1456,7 +1463,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 87";
 		rLen = 0;
-		rLoc = 6539;
+		rLoc = 6711;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 1772;
@@ -1466,7 +1473,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 105";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 365;
 		vrLoc = 2298;
@@ -1476,7 +1483,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 105";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 365;
 		vrLoc = 2298;
@@ -1490,7 +1497,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2230;
+		rLoc = 2932;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 2027;
@@ -1510,7 +1517,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: draw";
 		rLen = 0;
-		rLoc = 1445;
+		rLoc = 1487;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 690;
@@ -1530,7 +1537,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: draw";
 		rLen = 0;
-		rLoc = 1445;
+		rLoc = 1487;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 690;
@@ -1550,7 +1557,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2230;
+		rLoc = 2932;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 2027;
@@ -1580,7 +1587,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 37";
 		rLen = 0;
-		rLoc = 1403;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 359;
@@ -1590,7 +1597,7 @@
 		comments = "error: expected `;' before 'theBoard'";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 94;
+		rLoc = 115;
 		rType = 1;
 	};
 	06377D570A436CE20006D268 /* PBXTextBookmark */ = {
@@ -1608,7 +1615,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 37";
 		rLen = 0;
-		rLoc = 1403;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 0;
@@ -1618,7 +1625,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 37";
 		rLen = 0;
-		rLoc = 1403;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 0;
@@ -1628,7 +1635,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2230;
+		rLoc = 2932;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 1638;
@@ -1638,7 +1645,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 111";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 400;
 		vrLoc = 2385;
@@ -1648,7 +1655,7 @@
 		comments = "error: expected `;' before 'theBoard'";
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		rLen = 1;
-		rLoc = 94;
+		rLoc = 115;
 		rType = 1;
 	};
 	06377D5D0A436CFD0006D268 /* PBXTextBookmark */ = {
@@ -1656,7 +1663,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 111";
 		rLen = 0;
-		rLoc = 6944;
+		rLoc = 7116;
 		rType = 0;
 		vrLen = 400;
 		vrLoc = 2385;
@@ -1666,7 +1673,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 2013;
@@ -1676,7 +1683,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 2013;
@@ -1705,7 +1712,7 @@
 		isa = PBXTextBookmark;
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 0;
-		rLoc = "-2147479175";
+		rLoc = "-2147479003";
 		rType = 0;
 	};
 	06377D690A436D140006D268 /* PBXTextBookmark */ = {
@@ -1723,7 +1730,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 37";
 		rLen = 0;
-		rLoc = 1399;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 3;
@@ -1747,7 +1754,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 36";
 		rLen = 0;
-		rLoc = 753;
+		rLoc = 793;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 762;
@@ -1757,7 +1764,7 @@
 		comments = "error: a function-definition is not allowed here before '{' token";
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		rLen = 1;
-		rLoc = 51;
+		rLoc = 53;
 		rType = 1;
 	};
 	06377DA10A43758F0006D268 /* PBXTextBookmark */ = {
@@ -1765,7 +1772,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 742;
@@ -1775,7 +1782,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: updatePosition";
 		rLen = 0;
-		rLoc = 1389;
+		rLoc = 1431;
 		rType = 0;
 		vrLen = 510;
 		vrLoc = 797;
@@ -1785,7 +1792,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2227;
+		rLoc = 2739;
 		rType = 0;
 		vrLen = 396;
 		vrLoc = 2045;
@@ -1795,7 +1802,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 589;
@@ -1805,7 +1812,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: updatePosition";
 		rLen = 0;
-		rLoc = 2683;
+		rLoc = 2311;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 2171;
@@ -1825,7 +1832,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 222;
+		rLoc = 231;
 		rType = 0;
 		vrLen = 411;
 		vrLoc = 0;
@@ -1835,7 +1842,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 9";
 		rLen = 0;
-		rLoc = 224;
+		rLoc = 233;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 530;
@@ -1845,7 +1852,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 495;
 		vrLoc = 589;
@@ -1855,7 +1862,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 1122;
@@ -1865,7 +1872,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -1875,7 +1882,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 742;
@@ -1885,7 +1892,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: updatePosition";
 		rLen = 0;
-		rLoc = 1336;
+		rLoc = 1378;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 797;
@@ -1895,7 +1902,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2227;
+		rLoc = 2739;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 2064;
@@ -1905,7 +1912,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -1915,7 +1922,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: updatePosition";
 		rLen = 0;
-		rLoc = 2683;
+		rLoc = 2311;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 2171;
@@ -1925,7 +1932,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -1935,7 +1942,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: updatePosition";
 		rLen = 0;
-		rLoc = 1389;
+		rLoc = 1431;
 		rType = 0;
 		vrLen = 510;
 		vrLoc = 797;
@@ -1945,7 +1952,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2227;
+		rLoc = 2739;
 		rType = 0;
 		vrLen = 396;
 		vrLoc = 2045;
@@ -1955,7 +1962,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 589;
@@ -1965,7 +1972,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 94";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 2331;
@@ -1975,7 +1982,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 1327;
@@ -1985,7 +1992,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: snakeHeadPosition";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 279;
@@ -1995,7 +2002,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 142";
 		rLen = 0;
-		rLoc = 6103;
+		rLoc = 5739;
 		rType = 0;
 		vrLen = 1741;
 		vrLoc = 2597;
@@ -2005,7 +2012,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 1327;
@@ -2015,7 +2022,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: updatePosition";
 		rLen = 0;
-		rLoc = 2724;
+		rLoc = 2352;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 1133;
@@ -2035,7 +2042,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 74";
 		rLen = 0;
-		rLoc = 6126;
+		rLoc = 5762;
 		rType = 0;
 		vrLen = 1098;
 		vrLoc = 0;
@@ -2045,7 +2052,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: snakeHeadPosition";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 279;
@@ -2055,7 +2062,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 142";
 		rLen = 0;
-		rLoc = 6103;
+		rLoc = 5739;
 		rType = 0;
 		vrLen = 1741;
 		vrLoc = 2597;
@@ -2065,7 +2072,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: handleInput";
 		rLen = 0;
-		rLoc = 1043;
+		rLoc = 1177;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 278;
@@ -2075,7 +2082,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 2036;
@@ -2085,7 +2092,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "}";
 		rLen = 2;
-		rLoc = 6104;
+		rLoc = 5740;
 		rType = 0;
 		vrLen = 412;
 		vrLoc = 4139;
@@ -2095,7 +2102,7 @@
 		comments = "error: a function-definition is not allowed here before '{' token";
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		rLen = 1;
-		rLoc = 51;
+		rLoc = 53;
 		rType = 1;
 	};
 	06377DC30A4375930006D268 /* PBXTextBookmark */ = {
@@ -2103,7 +2110,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2189;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 2036;
@@ -2113,7 +2120,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "}";
 		rLen = 2;
-		rLoc = 6104;
+		rLoc = 5740;
 		rType = 0;
 		vrLen = 412;
 		vrLoc = 4139;
@@ -2123,7 +2130,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "{";
 		rLen = 2;
-		rLoc = 1099;
+		rLoc = 1233;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2133,7 +2140,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 94";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 2331;
@@ -2143,7 +2150,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 45";
 		rLen = 0;
-		rLoc = 1043;
+		rLoc = 1177;
 		rType = 0;
 		vrLen = 1178;
 		vrLoc = 486;
@@ -2153,7 +2160,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "{";
 		rLen = 2;
-		rLoc = 1099;
+		rLoc = 1233;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2163,7 +2170,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2173,7 +2180,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 94";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 2331;
@@ -2183,7 +2190,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 92";
 		rLen = 0;
-		rLoc = 2227;
+		rLoc = 2739;
 		rType = 0;
 		vrLen = 374;
 		vrLoc = 2045;
@@ -2193,7 +2200,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 94";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 2331;
@@ -2203,7 +2210,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 96";
 		rLen = 0;
-		rLoc = 2314;
+		rLoc = 3033;
 		rType = 0;
 		vrLen = 354;
 		vrLoc = 2011;
@@ -2213,7 +2220,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 96";
 		rLen = 0;
-		rLoc = 2271;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 2011;
@@ -2223,7 +2230,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2233,7 +2240,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 96";
 		rLen = 0;
-		rLoc = 2271;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 2011;
@@ -2243,7 +2250,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2253,7 +2260,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 95";
 		rLen = 0;
-		rLoc = 2271;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 2011;
@@ -2263,7 +2270,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 95";
 		rLen = 0;
-		rLoc = 2314;
+		rLoc = 3033;
 		rType = 0;
 		vrLen = 381;
 		vrLoc = 2011;
@@ -2273,7 +2280,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2283,7 +2290,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 78";
 		rLen = 0;
-		rLoc = 1993;
+		rLoc = 2472;
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 1415;
@@ -2293,7 +2300,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2303,7 +2310,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 78";
 		rLen = 0;
-		rLoc = 1993;
+		rLoc = 2472;
 		rType = 0;
 		vrLen = 621;
 		vrLoc = 1442;
@@ -2313,7 +2320,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 1124;
@@ -2323,7 +2330,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -2333,7 +2340,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 78";
 		rLen = 0;
-		rLoc = 1993;
+		rLoc = 2472;
 		rType = 0;
 		vrLen = 621;
 		vrLoc = 1442;
@@ -2343,7 +2350,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 589;
@@ -2353,7 +2360,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 1124;
@@ -2363,7 +2370,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -2373,7 +2380,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 115";
 		rLen = 0;
-		rLoc = 5050;
+		rLoc = 4686;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 2891;
@@ -2383,7 +2390,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -2393,7 +2400,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 527;
 		vrLoc = 550;
@@ -2403,7 +2410,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 115";
 		rLen = 0;
-		rLoc = 5050;
+		rLoc = 4686;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 3036;
@@ -2413,7 +2420,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 115";
 		rLen = 0;
-		rLoc = 5050;
+		rLoc = 4686;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 3036;
@@ -2423,7 +2430,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 620;
@@ -2433,7 +2440,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 43";
 		rLen = 0;
-		rLoc = 973;
+		rLoc = 1107;
 		rType = 0;
 		vrLen = 527;
 		vrLoc = 550;
@@ -2443,7 +2450,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 141";
 		rLen = 0;
-		rLoc = 5860;
+		rLoc = 5496;
 		rType = 0;
 		vrLen = 447;
 		vrLoc = 4161;
@@ -2453,7 +2460,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2463,7 +2470,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 145";
 		rLen = 0;
-		rLoc = 5827;
+		rLoc = 5463;
 		rType = 0;
 		vrLen = 667;
 		vrLoc = 3928;
@@ -2473,7 +2480,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 839;
@@ -2487,7 +2494,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 145";
 		rLen = 0;
-		rLoc = 5827;
+		rLoc = 5463;
 		rType = 0;
 		vrLen = 667;
 		vrLoc = 3928;
@@ -2507,7 +2514,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 145";
 		rLen = 0;
-		rLoc = 5827;
+		rLoc = 5463;
 		rType = 0;
 		vrLen = 667;
 		vrLoc = 3928;
@@ -2527,7 +2534,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 96";
 		rLen = 0;
-		rLoc = 2311;
+		rLoc = 3013;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 1840;
@@ -2547,7 +2554,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 96";
 		rLen = 0;
-		rLoc = 2311;
+		rLoc = 3013;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 1840;
@@ -2607,7 +2614,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 145";
 		rLen = 0;
-		rLoc = 5827;
+		rLoc = 5463;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 3979;
@@ -2617,7 +2624,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: getSpeed";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 278;
@@ -2627,7 +2634,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 357;
@@ -2647,7 +2654,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 492;
 		vrLoc = 456;
@@ -2657,7 +2664,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 21";
 		rLen = 0;
-		rLoc = 491;
+		rLoc = 500;
 		rType = 0;
 		vrLen = 561;
 		vrLoc = 278;
@@ -2667,7 +2674,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 145";
 		rLen = 0;
-		rLoc = 5827;
+		rLoc = 5463;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 3979;
@@ -2677,7 +2684,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 492;
 		vrLoc = 456;
@@ -2687,7 +2694,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 21";
 		rLen = 0;
-		rLoc = 491;
+		rLoc = 500;
 		rType = 0;
 		vrLen = 512;
 		vrLoc = 278;
@@ -2697,7 +2704,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: isGrowing";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 357;
@@ -2707,7 +2714,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: getSpeed";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 278;
@@ -2717,7 +2724,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: getColor";
 		rLen = 0;
-		rLoc = 1001;
+		rLoc = 1010;
 		rType = 0;
 		vrLen = 486;
 		vrLoc = 560;
@@ -2727,7 +2734,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: getColor";
 		rLen = 0;
-		rLoc = 1001;
+		rLoc = 1010;
 		rType = 0;
 		vrLen = 486;
 		vrLoc = 560;
@@ -2747,7 +2754,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: getSpeed";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 483;
 		vrLoc = 470;
@@ -2757,7 +2764,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: getColor";
 		rLen = 0;
-		rLoc = 1001;
+		rLoc = 1010;
 		rType = 0;
 		vrLen = 486;
 		vrLoc = 560;
@@ -2777,7 +2784,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: getSpeed";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 483;
 		vrLoc = 470;
@@ -2787,7 +2794,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 144";
 		rLen = 0;
-		rLoc = 5777;
+		rLoc = 5413;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 3873;
@@ -2797,7 +2804,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 45";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 388;
 		vrLoc = 823;
@@ -2807,7 +2814,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 132";
 		rLen = 0;
-		rLoc = 5464;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 3807;
@@ -2817,7 +2824,7 @@
 		comments = "error: expected `)' before '{' token";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 176;
+		rLoc = 168;
 		rType = 1;
 	};
 	06377E510A437C3C0006D268 /* PBXTextBookmark */ = {
@@ -2825,7 +2832,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 129";
 		rLen = 0;
-		rLoc = 5464;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 680;
 		vrLoc = 3761;
@@ -2835,7 +2842,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 125";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 4986;
 		rType = 0;
 		vrLen = 1368;
 		vrLoc = 3176;
@@ -2845,7 +2852,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 45";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 388;
 		vrLoc = 823;
@@ -2855,7 +2862,7 @@
 		comments = "error: expected `)' before '{' token";
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		rLen = 1;
-		rLoc = 176;
+		rLoc = 168;
 		rType = 1;
 	};
 	06377E560A437C4F0006D268 /* PBXTextBookmark */ = {
@@ -2863,7 +2870,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 45";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1234;
 		rType = 0;
 		vrLen = 388;
 		vrLoc = 823;
@@ -2873,7 +2880,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "{";
 		rLen = 18;
-		rLoc = 5739;
+		rLoc = 5375;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 3770;
@@ -2883,7 +2890,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 130";
 		rLen = 0;
-		rLoc = 5464;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3761;
@@ -2893,7 +2900,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 138";
 		rLen = 0;
-		rLoc = 5737;
+		rLoc = 5373;
 		rType = 0;
 		vrLen = 1353;
 		vrLoc = 3176;
@@ -2903,7 +2910,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "{";
 		rLen = 18;
-		rLoc = 5739;
+		rLoc = 5375;
 		rType = 0;
 		vrLen = 576;
 		vrLoc = 3807;
@@ -2913,7 +2920,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "{";
 		rLen = 18;
-		rLoc = 5739;
+		rLoc = 5375;
 		rType = 0;
 		vrLen = 576;
 		vrLoc = 3807;
@@ -2923,7 +2930,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "{";
 		rLen = 18;
-		rLoc = 5739;
+		rLoc = 5375;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 3787;
@@ -2933,7 +2940,7 @@
 		comments = "error: invalid in-class initialization of static data member of non-integral type 'const int []'";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 1;
-		rLoc = 63;
+		rLoc = 66;
 		rType = 1;
 	};
 	06377E6D0A437E6C0006D268 /* PBXTextBookmark */ = {
@@ -2941,7 +2948,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "{";
 		rLen = 18;
-		rLoc = 5739;
+		rLoc = 5375;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 3787;
@@ -2951,7 +2958,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1680;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 962;
@@ -2961,7 +2968,7 @@
 		comments = "error: expected constructor, destructor, or type conversion before '=' token";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 0;
-		rLoc = 64;
+		rLoc = 67;
 		rType = 1;
 	};
 	06377E790A437EBD0006D268 /* PBXTextBookmark */ = {
@@ -2993,7 +3000,7 @@
 		comments = "error: a brace-enclosed initializer is not allowed here before '{' token";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 1;
-		rLoc = 63;
+		rLoc = 66;
 		rType = 1;
 	};
 	06377E7D0A437EBD0006D268 /* PBXTextBookmark */ = {
@@ -3001,7 +3008,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 130";
 		rLen = 0;
-		rLoc = 5464;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3761;
@@ -3025,7 +3032,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 130";
 		rLen = 0;
-		rLoc = 5464;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 455;
@@ -3035,7 +3042,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1680;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 889;
@@ -3055,7 +3062,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1679;
 		rType = 0;
 		vrLen = 592;
 		vrLoc = 889;
@@ -3065,7 +3072,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1546;
+		rLoc = 1643;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 452;
@@ -3075,7 +3082,7 @@
 		comments = "error: expected constructor, destructor, or type conversion before '=' token";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 0;
-		rLoc = 64;
+		rLoc = 67;
 		rType = 1;
 	};
 	06377E8B0A437EFF0006D268 /* PBXTextBookmark */ = {
@@ -3083,7 +3090,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1679;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 889;
@@ -3093,7 +3100,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: STARTING_POSITION";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 452;
@@ -3103,7 +3110,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 60";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 962;
@@ -3121,7 +3128,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 60";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 962;
@@ -3151,7 +3158,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1679;
 		rType = 0;
 		vrLen = 624;
 		vrLoc = 889;
@@ -3170,7 +3177,7 @@
 		isa = PBXTextBookmark;
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 0;
-		rLoc = "-2147483571";
+		rLoc = "-2147483474";
 		rType = 0;
 	};
 	06377E9B0A437F3E0006D268 /* PBXTextBookmark */ = {
@@ -3188,7 +3195,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: STARTING_POSITION";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 452;
@@ -3228,7 +3235,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: STARTING_POSITION";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 558;
 		vrLoc = 962;
@@ -3238,7 +3245,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: STARTING_POSITION";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 452;
@@ -3268,7 +3275,7 @@
 		comments = "error: declaration of 'const int Board::STARTING_POSITION [2]' outside of class is not definition";
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		rLen = 0;
-		rLoc = 64;
+		rLoc = 67;
 		rType = 1;
 	};
 	06377EC50A43812C0006D268 /* PBXTextBookmark */ = {
@@ -3286,7 +3293,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 60";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 449;
 		vrLoc = 962;
@@ -3296,7 +3303,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 60";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 449;
 		vrLoc = 962;
@@ -3306,7 +3313,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1679;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 889;
@@ -3316,7 +3323,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 59";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1679;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 889;
@@ -3336,7 +3343,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 149";
 		rLen = 0;
-		rLoc = 6012;
+		rLoc = 5648;
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 4422;
@@ -3350,7 +3357,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 149";
 		rLen = 0;
-		rLoc = 6012;
+		rLoc = 5648;
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 4422;
@@ -3360,7 +3367,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 66";
 		rLen = 0;
-		rLoc = 1516;
+		rLoc = 1696;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 1389;
@@ -3370,7 +3377,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 60";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 449;
 		vrLoc = 962;
@@ -3380,7 +3387,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: eat";
 		rLen = 0;
-		rLoc = 1042;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 1148;
@@ -3390,7 +3397,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 586;
@@ -3400,7 +3407,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 99";
 		rLen = 0;
-		rLoc = 3183;
+		rLoc = 2811;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 1598;
@@ -3410,7 +3417,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: initCollectibles";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1605;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 976;
@@ -3420,7 +3427,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 149";
 		rLen = 0;
-		rLoc = 6012;
+		rLoc = 5648;
 		rType = 0;
 		vrLen = 383;
 		vrLoc = 5332;
@@ -3430,7 +3437,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: collectibles";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1040;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 515;
@@ -3450,7 +3457,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: initCollectibles";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1605;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 976;
@@ -3460,7 +3467,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 219";
 		rLen = 0;
-		rLoc = 7424;
+		rLoc = 7596;
 		rType = 0;
 		vrLen = 435;
 		vrLoc = 5193;
@@ -3470,7 +3477,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 490;
 		vrLoc = 594;
@@ -3480,7 +3487,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: eat";
 		rLen = 0;
-		rLoc = 1042;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 1148;
@@ -3490,7 +3497,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 52";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1122;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 586;
@@ -3500,7 +3507,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 99";
 		rLen = 0;
-		rLoc = 3183;
+		rLoc = 2811;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 1598;
@@ -3520,7 +3527,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 66";
 		rLen = 0;
-		rLoc = 1516;
+		rLoc = 1696;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 1389;
@@ -3530,7 +3537,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 65";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 1004;
@@ -3548,7 +3555,7 @@
 		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
 		name = "Board.h: 65";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1683;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 1004;
@@ -3568,7 +3575,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 72";
 		rLen = 0;
-		rLoc = 1928;
+		rLoc = 1556;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 1799;
@@ -3598,7 +3605,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 72";
 		rLen = 0;
-		rLoc = 1928;
+		rLoc = 1556;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 1799;
@@ -3648,7 +3655,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 238";
 		rLen = 0;
-		rLoc = 7318;
+		rLoc = 7490;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 6689;
@@ -3658,7 +3665,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 149";
 		rLen = 0;
-		rLoc = 4944;
+		rLoc = 4578;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 5247;
@@ -3668,7 +3675,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 78";
 		rLen = 0;
-		rLoc = 1993;
+		rLoc = 2472;
 		rType = 0;
 		vrLen = 611;
 		vrLoc = 1442;
@@ -3678,7 +3685,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 149";
 		rLen = 0;
-		rLoc = 4944;
+		rLoc = 4578;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 5247;
@@ -3688,7 +3695,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 78";
 		rLen = 0;
-		rLoc = 1993;
+		rLoc = 2472;
 		rType = 0;
 		vrLen = 611;
 		vrLoc = 1442;
@@ -3698,7 +3705,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1022;
+		rLoc = 1156;
 		rType = 0;
 		vrLen = 398;
 		vrLoc = 701;
@@ -3728,10 +3735,1156 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 47";
 		rLen = 0;
-		rLoc = 1022;
+		rLoc = 1156;
 		rType = 0;
 		vrLen = 379;
 		vrLoc = 876;
+	};
+	06377F2D0A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 47";
+		rLen = 0;
+		rLoc = 1156;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 33;
+	};
+	06377F2E0A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 3";
+		rLen = 0;
+		rLoc = 109;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 0;
+	};
+	06377F2F0A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: eat";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 429;
+		vrLoc = 432;
+	};
+	06377F300A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 149";
+		rLen = 0;
+		rLoc = 4578;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 5138;
+	};
+	06377F310A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 47";
+		rLen = 0;
+		rLoc = 1156;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 33;
+	};
+	06377F320A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 3";
+		rLen = 0;
+		rLoc = 109;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 0;
+	};
+	06377F330A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: eat";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 429;
+		vrLoc = 432;
+	};
+	06377F340A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 149";
+		rLen = 0;
+		rLoc = 4578;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 5138;
+	};
+	06377F350A4388580006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 34";
+		rLen = 0;
+		rLoc = 782;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F390A4388750006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F3A0A4388780006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F3D0A4388820006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F3E0A4388C70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F3F0A4388C90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F410A438B340006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F420A438B360006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F460A438CE20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F470A438CE20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F480A438CE20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 3";
+		rLen = 0;
+		rLoc = 109;
+		rType = 0;
+		vrLen = 1469;
+		vrLoc = 983;
+	};
+	06377F4C0A438D370006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 11";
+		rLen = 0;
+		rLoc = 640;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 283;
+	};
+	06377F500A438D730006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 20";
+		rLen = 0;
+		rLoc = 1292;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 283;
+	};
+	06377F510A438D940006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F520A438DA70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 20";
+		rLen = 0;
+		rLoc = 1292;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 283;
+	};
+	06377F530A438DA70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 149";
+		rLen = 0;
+		rLoc = 4578;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 5138;
+	};
+	06377F540A438DA70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 20";
+		rLen = 0;
+		rLoc = 1292;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 283;
+	};
+	06377F550A438DA70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 149";
+		rLen = 0;
+		rLoc = 4578;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 5138;
+	};
+	06377F560A438DA70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377F5B0A438DC50006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F5C0A438DC70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F5F0A438DD40006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 732;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F600A438DDD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F650A438DF50006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 561;
+	};
+	06377F690A438E6B0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377F6A0A438E6B0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 78";
+		rLen = 0;
+		rLoc = 2472;
+		rType = 0;
+		vrLen = 649;
+		vrLoc = 1416;
+	};
+	06377F6B0A438E6B0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377F6C0A438E6B0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 57";
+		rLen = 0;
+		rLoc = 1404;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 930;
+	};
+	06377F700A438E880006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 59";
+		rLen = 0;
+		rLoc = 1467;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 930;
+	};
+	06377F740A438EA90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 97";
+		rLen = 0;
+		rLoc = 2701;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 2121;
+	};
+	06377F7C0A438F6F0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 59";
+		rLen = 0;
+		rLoc = 1450;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 1165;
+	};
+	06377F800A438FCD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 101";
+		rLen = 0;
+		rLoc = 2932;
+		rType = 0;
+		vrLen = 387;
+		vrLoc = 2176;
+	};
+	06377F810A438FCD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377F820A438FCD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 101";
+		rLen = 0;
+		rLoc = 2932;
+		rType = 0;
+		vrLen = 387;
+		vrLoc = 2176;
+	};
+	06377F830A438FCD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377F840A438FCD0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 151";
+		rLen = 0;
+		rLoc = 4638;
+		rType = 0;
+		vrLen = 737;
+		vrLoc = 4584;
+	};
+	06377F880A4390380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 151";
+		rLen = 0;
+		rLoc = 4638;
+		rType = 0;
+		vrLen = 793;
+		vrLoc = 3855;
+	};
+	06377F890A4390380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 101";
+		rLen = 0;
+		rLoc = 2932;
+		rType = 0;
+		vrLen = 387;
+		vrLoc = 2176;
+	};
+	06377F8A0A4390380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 151";
+		rLen = 0;
+		rLoc = 4638;
+		rType = 0;
+		vrLen = 793;
+		vrLoc = 3855;
+	};
+	06377F8B0A4390380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2355;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 1590;
+	};
+	06377F8F0A4390520006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: Board";
+		rLen = 0;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 516;
+	};
+	06377F930A43905C0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 81";
+		rLen = 0;
+		rLoc = 2140;
+		rType = 0;
+		vrLen = 766;
+		vrLoc = 1578;
+	};
+	06377F9C0A4390F70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'numSnakes' was not declared in this scope";
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		rLen = 1;
+		rLoc = 208;
+		rType = 1;
+	};
+	06377F9D0A4390F70006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "if( numSnakes == 2 )";
+		rLen = 31;
+		rLoc = 6321;
+		rType = 0;
+		vrLen = 549;
+		vrLoc = 5888;
+	};
+	06377FA10A4391290006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "if( numSnakes == 2 )";
+		rLen = 31;
+		rLoc = 6321;
+		rType = 0;
+		vrLen = 434;
+		vrLoc = 5740;
+	};
+	06377FA50A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 39";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 574;
+	};
+	06377FA60A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2322;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 1832;
+	};
+	06377FA70A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377FA80A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 81";
+		rLen = 0;
+		rLoc = 2140;
+		rType = 0;
+		vrLen = 766;
+		vrLoc = 1578;
+	};
+	06377FA90A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 35";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 1043;
+	};
+	06377FAA0A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 39";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 574;
+	};
+	06377FAB0A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2322;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 1832;
+	};
+	06377FAC0A4391380006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: nextLevel";
+		rLen = 0;
+		rLoc = 1524;
+		rType = 0;
+		vrLen = 566;
+		vrLoc = 1043;
+	};
+	06377FB40A4391F10006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: restartLevel";
+		rLen = 0;
+		rLoc = 5929;
+		rType = 0;
+		vrLen = 381;
+		vrLoc = 5742;
+	};
+	06377FB50A4391F10006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: setLevel";
+		rLen = 0;
+		rLoc = 1563;
+		rType = 0;
+		vrLen = 644;
+		vrLoc = 1043;
+	};
+	06377FB60A4391F20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: nextLevel";
+		rLen = 0;
+		rLoc = 1524;
+		rType = 0;
+		vrLen = 598;
+		vrLoc = 1004;
+	};
+	06377FB70A4391F20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 39";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 385;
+		vrLoc = 7044;
+	};
+	06377FB80A4391F20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: setLevel";
+		rLen = 0;
+		rLoc = 1563;
+		rType = 0;
+		vrLen = 608;
+		vrLoc = 1079;
+	};
+	06377FB90A4391F20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: restartLevel";
+		rLen = 0;
+		rLoc = 5929;
+		rType = 0;
+		vrLen = 381;
+		vrLoc = 5742;
+	};
+	06377FBA0A4391F20006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: levelInit";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 515;
+		vrLoc = 838;
+	};
+	06377FBE0A4392050006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: levelInit";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 515;
+		vrLoc = 838;
+	};
+	06377FBF0A4392050006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: levelInit";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 515;
+		vrLoc = 838;
+	};
+	06377FC00A4392050006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 745;
+		vrLoc = 1745;
+	};
+	06377FC40A4392340006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 745;
+		vrLoc = 1745;
+	};
+	06377FC50A4392340006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 745;
+		vrLoc = 1745;
+	};
+	06377FC60A4392340006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 6099;
+	};
+	06377FC70A43923B0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 210";
+		rLen = 0;
+		rLoc = 6351;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 5740;
+	};
+	06377FCA0A43925A0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 663;
+		vrLoc = 1832;
+	};
+	06377FCB0A43925A0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 6099;
+	};
+	06377FCC0A43925A0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 6099;
+	};
+	06377FCD0A43925A0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 663;
+		vrLoc = 1832;
+	};
+	06377FCE0A43925A0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 353;
+		vrLoc = 5740;
+	};
+	06377FD20A4392C60006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 6874;
+	};
+	06377FD30A4392C60006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 214";
+		rLen = 0;
+		rLoc = 6496;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 6874;
+	};
+	06377FD40A4392C60006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 82";
+		rLen = 0;
+		rLoc = 2140;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 1584;
+	};
+	06377FF50A4394D90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 210";
+		rLen = 0;
+		rLoc = 6351;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 5740;
+	};
+	06377FF60A4394D90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: statement cannot resolve address of overloaded function";
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		rLen = 0;
+		rLoc = 86;
+		rType = 1;
+	};
+	06377FF70A4394D90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 210";
+		rLen = 0;
+		rLoc = 6351;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 5740;
+	};
+	06377FF80A4394D90006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2325;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 1907;
+	};
+	06377FF90A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: levelInit";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 838;
+	};
+	06377FFA0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 192";
+		rLen = 0;
+		rLoc = 5927;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 5742;
+	};
+	06377FFB0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 113";
+		rLen = 0;
+		rLoc = 2815;
+		rType = 0;
+		vrLen = 470;
+		vrLoc = 2634;
+	};
+	06377FFC0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 54";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 493;
+		vrLoc = 634;
+	};
+	06377FFD0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 9";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 0;
+	};
+	06377FFE0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 85";
+		rLen = 0;
+		rLoc = 2256;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 1585;
+	};
+	06377FFF0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: eat";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 429;
+		vrLoc = 432;
+	};
+	063780000A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 47";
+		rLen = 0;
+		rLoc = 1156;
+		rType = 0;
+		vrLen = 305;
+		vrLoc = 843;
+	};
+	063780010A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: levelInit";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 838;
+	};
+	063780020A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 192";
+		rLen = 0;
+		rLoc = 5927;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 5742;
+	};
+	063780030A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 89";
+		rLen = 0;
+		rLoc = 2325;
+		rType = 0;
+		vrLen = 743;
+		vrLoc = 1896;
+	};
+	063780040A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 192";
+		rLen = 0;
+		rLoc = 5927;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 5742;
+	};
+	063780050A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 53";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 594;
+	};
+	063780060A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 34";
+		rLen = 0;
+		rLoc = 976;
+		rType = 0;
+		vrLen = 661;
+		vrLoc = 326;
+	};
+	063780070A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 9";
+		rLen = 0;
+		rLoc = 167;
+		rType = 0;
+		vrLen = 381;
+		vrLoc = 120;
+	};
+	063780080A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 9";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 0;
+	};
+	063780090A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 113";
+		rLen = 0;
+		rLoc = 2815;
+		rType = 0;
+		vrLen = 470;
+		vrLoc = 2634;
+	};
+	0637800A0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
+		name = "SnakePlayer.h: 54";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 493;
+		vrLoc = 634;
+	};
+	0637800B0A4394DA0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: reset";
+		rLen = 0;
+		rLoc = 898;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 470;
+	};
+	0637800F0A4395D30006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 86";
+		rLen = 0;
+		rLoc = 2325;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 1288;
+	};
+	063780110A4395D50006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: reset";
+		rLen = 0;
+		rLoc = 898;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 470;
+	};
+	063780120A4395D50006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: reset";
+		rLen = 0;
+		rLoc = 898;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 470;
+	};
+	063780130A4395D50006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 483;
+		vrLoc = 466;
+	};
+	063780140A4395DE0006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 483;
+		vrLoc = 466;
+	};
+	063780180A4396260006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 600;
+		vrLoc = 1085;
+	};
+	063780190A4396260006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 110";
+		rLen = 0;
+		rLoc = 2815;
+		rType = 0;
+		vrLen = 573;
+		vrLoc = 2602;
+	};
+	0637801A0A4396260006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53520A3E321400E92E7F /* Board.h */;
+		name = "Board.h: 33";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 600;
+		vrLoc = 1085;
+	};
+	0637801B0A4396260006D268 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
+		name = "main.cpp: 77";
+		rLen = 0;
+		rLoc = 1886;
+		rType = 0;
+		vrLen = 793;
+		vrLoc = 1533;
 	};
 	063E7B5E0A3C84C4005C4507 /* Snake */ = {
 		isa = PBXExecutable;
@@ -3862,9 +5015,9 @@
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {590, 1862}}";
-			sepNavSelRange = "{1993, 0}";
-			sepNavVisRect = "{{0, 868}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {723, 2170}}";
+			sepNavSelRange = "{1886, 0}";
+			sepNavVisRect = "{{0, 922}, {723, 284}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -3880,7 +5033,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: main";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 324;
 		vrLoc = 189;
@@ -3975,17 +5128,17 @@
 	};
 	06CC53520A3E321400E92E7F /* Board.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 938}}";
-			sepNavSelRange = "{425, 0}";
-			sepNavVisRect = "{{0, 567}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {723, 980}}";
+			sepNavSelRange = "{734, 0}";
+			sepNavVisRect = "{{0, 677}, {723, 284}}";
 			sepNavWindowFrame = "{{174, 96}, {599, 736}}";
 		};
 	};
 	06CC53530A3E321400E92E7F /* Board.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {716, 3584}}";
-			sepNavSelRange = "{4944, 0}";
-			sepNavVisRect = "{{0, 2245}, {578, 277}}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 3766}}";
+			sepNavSelRange = "{6351, 0}";
+			sepNavVisRect = "{{0, 2527}, {913, 244}}";
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
@@ -4114,7 +5267,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 35";
 		rLen = 0;
-		rLoc = 1990;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 0;
@@ -4124,7 +5277,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 53";
 		rLen = 0;
-		rLoc = 1326;
+		rLoc = 1506;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 812;
@@ -4134,7 +5287,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: length";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 428;
 		vrLoc = 355;
@@ -4144,7 +5297,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 9";
 		rLen = 0;
-		rLoc = 268;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 3;
@@ -4154,7 +5307,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: length";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 445;
 		vrLoc = 337;
@@ -4174,7 +5327,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 301;
+		rLoc = 310;
 		rType = 0;
 		vrLen = 331;
 		vrLoc = 0;
@@ -4194,7 +5347,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 9";
 		rLen = 0;
-		rLoc = 268;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 396;
 		vrLoc = 3;
@@ -4220,7 +5373,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 9";
 		rLen = 0;
-		rLoc = 268;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 396;
 		vrLoc = 3;
@@ -4240,7 +5393,7 @@
 		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
 		name = "Board.cpp: 35";
 		rLen = 0;
-		rLoc = 1990;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 0;
@@ -4250,7 +5403,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 57";
 		rLen = 0;
-		rLoc = 1402;
+		rLoc = 1582;
 		rType = 0;
 		vrLen = 437;
 		vrLoc = 1221;
@@ -4260,7 +5413,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -4270,7 +5423,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 73";
 		rLen = 0;
-		rLoc = 1944;
+		rLoc = 2423;
 		rType = 0;
 		vrLen = 345;
 		vrLoc = 1801;
@@ -4280,7 +5433,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 57";
 		rLen = 0;
-		rLoc = 1688;
+		rLoc = 1822;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 446;
@@ -4300,7 +5453,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -4310,7 +5463,7 @@
 		fRef = 068EEAB90A3CE318003887BB /* main.cpp */;
 		name = "main.cpp: 73";
 		rLen = 0;
-		rLoc = 1944;
+		rLoc = 2423;
 		rType = 0;
 		vrLen = 345;
 		vrLoc = 1801;
@@ -4320,7 +5473,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -4330,7 +5483,7 @@
 		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
 		name = "SnakePlayer.cpp: 57";
 		rLen = 0;
-		rLoc = 1688;
+		rLoc = 1822;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 446;
@@ -4340,7 +5493,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -4360,7 +5513,7 @@
 		fRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */;
 		name = "SnakePlayer.h: 9";
 		rLen = 0;
-		rLoc = 257;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 0;
@@ -5013,6 +6166,121 @@
 			06377F210A4386D50006D268 /* PBXTextBookmark */ = 06377F210A4386D50006D268 /* PBXTextBookmark */;
 			06377F250A4387020006D268 /* PBXTextBookmark */ = 06377F250A4387020006D268 /* PBXTextBookmark */;
 			06377F290A43871F0006D268 /* PBXTextBookmark */ = 06377F290A43871F0006D268 /* PBXTextBookmark */;
+			06377F2D0A4388580006D268 /* PBXTextBookmark */ = 06377F2D0A4388580006D268 /* PBXTextBookmark */;
+			06377F2E0A4388580006D268 /* PBXTextBookmark */ = 06377F2E0A4388580006D268 /* PBXTextBookmark */;
+			06377F2F0A4388580006D268 /* PBXTextBookmark */ = 06377F2F0A4388580006D268 /* PBXTextBookmark */;
+			06377F300A4388580006D268 /* PBXTextBookmark */ = 06377F300A4388580006D268 /* PBXTextBookmark */;
+			06377F310A4388580006D268 /* PBXTextBookmark */ = 06377F310A4388580006D268 /* PBXTextBookmark */;
+			06377F320A4388580006D268 /* PBXTextBookmark */ = 06377F320A4388580006D268 /* PBXTextBookmark */;
+			06377F330A4388580006D268 /* PBXTextBookmark */ = 06377F330A4388580006D268 /* PBXTextBookmark */;
+			06377F340A4388580006D268 /* PBXTextBookmark */ = 06377F340A4388580006D268 /* PBXTextBookmark */;
+			06377F350A4388580006D268 /* PBXTextBookmark */ = 06377F350A4388580006D268 /* PBXTextBookmark */;
+			06377F390A4388750006D268 /* PBXTextBookmark */ = 06377F390A4388750006D268 /* PBXTextBookmark */;
+			06377F3A0A4388780006D268 /* PBXTextBookmark */ = 06377F3A0A4388780006D268 /* PBXTextBookmark */;
+			06377F3D0A4388820006D268 /* PBXTextBookmark */ = 06377F3D0A4388820006D268 /* PBXTextBookmark */;
+			06377F3E0A4388C70006D268 /* PBXTextBookmark */ = 06377F3E0A4388C70006D268 /* PBXTextBookmark */;
+			06377F3F0A4388C90006D268 /* PBXTextBookmark */ = 06377F3F0A4388C90006D268 /* PBXTextBookmark */;
+			06377F410A438B340006D268 /* PBXTextBookmark */ = 06377F410A438B340006D268 /* PBXTextBookmark */;
+			06377F420A438B360006D268 /* PBXTextBookmark */ = 06377F420A438B360006D268 /* PBXTextBookmark */;
+			06377F460A438CE20006D268 /* PBXTextBookmark */ = 06377F460A438CE20006D268 /* PBXTextBookmark */;
+			06377F470A438CE20006D268 /* PBXTextBookmark */ = 06377F470A438CE20006D268 /* PBXTextBookmark */;
+			06377F480A438CE20006D268 /* PBXTextBookmark */ = 06377F480A438CE20006D268 /* PBXTextBookmark */;
+			06377F4C0A438D370006D268 /* PBXTextBookmark */ = 06377F4C0A438D370006D268 /* PBXTextBookmark */;
+			06377F500A438D730006D268 /* PBXTextBookmark */ = 06377F500A438D730006D268 /* PBXTextBookmark */;
+			06377F510A438D940006D268 /* PBXTextBookmark */ = 06377F510A438D940006D268 /* PBXTextBookmark */;
+			06377F520A438DA70006D268 /* PBXTextBookmark */ = 06377F520A438DA70006D268 /* PBXTextBookmark */;
+			06377F530A438DA70006D268 /* PBXTextBookmark */ = 06377F530A438DA70006D268 /* PBXTextBookmark */;
+			06377F540A438DA70006D268 /* PBXTextBookmark */ = 06377F540A438DA70006D268 /* PBXTextBookmark */;
+			06377F550A438DA70006D268 /* PBXTextBookmark */ = 06377F550A438DA70006D268 /* PBXTextBookmark */;
+			06377F560A438DA70006D268 /* PBXTextBookmark */ = 06377F560A438DA70006D268 /* PBXTextBookmark */;
+			06377F5B0A438DC50006D268 /* PBXTextBookmark */ = 06377F5B0A438DC50006D268 /* PBXTextBookmark */;
+			06377F5C0A438DC70006D268 /* PBXTextBookmark */ = 06377F5C0A438DC70006D268 /* PBXTextBookmark */;
+			06377F5F0A438DD40006D268 /* PBXTextBookmark */ = 06377F5F0A438DD40006D268 /* PBXTextBookmark */;
+			06377F600A438DDD0006D268 /* PBXTextBookmark */ = 06377F600A438DDD0006D268 /* PBXTextBookmark */;
+			06377F650A438DF50006D268 /* PBXTextBookmark */ = 06377F650A438DF50006D268 /* PBXTextBookmark */;
+			06377F690A438E6B0006D268 /* PBXTextBookmark */ = 06377F690A438E6B0006D268 /* PBXTextBookmark */;
+			06377F6A0A438E6B0006D268 /* PBXTextBookmark */ = 06377F6A0A438E6B0006D268 /* PBXTextBookmark */;
+			06377F6B0A438E6B0006D268 /* PBXTextBookmark */ = 06377F6B0A438E6B0006D268 /* PBXTextBookmark */;
+			06377F6C0A438E6B0006D268 /* PBXTextBookmark */ = 06377F6C0A438E6B0006D268 /* PBXTextBookmark */;
+			06377F700A438E880006D268 /* PBXTextBookmark */ = 06377F700A438E880006D268 /* PBXTextBookmark */;
+			06377F740A438EA90006D268 /* PBXTextBookmark */ = 06377F740A438EA90006D268 /* PBXTextBookmark */;
+			06377F7C0A438F6F0006D268 /* PBXTextBookmark */ = 06377F7C0A438F6F0006D268 /* PBXTextBookmark */;
+			06377F800A438FCD0006D268 /* PBXTextBookmark */ = 06377F800A438FCD0006D268 /* PBXTextBookmark */;
+			06377F810A438FCD0006D268 /* PBXTextBookmark */ = 06377F810A438FCD0006D268 /* PBXTextBookmark */;
+			06377F820A438FCD0006D268 /* PBXTextBookmark */ = 06377F820A438FCD0006D268 /* PBXTextBookmark */;
+			06377F830A438FCD0006D268 /* PBXTextBookmark */ = 06377F830A438FCD0006D268 /* PBXTextBookmark */;
+			06377F840A438FCD0006D268 /* PBXTextBookmark */ = 06377F840A438FCD0006D268 /* PBXTextBookmark */;
+			06377F880A4390380006D268 /* PBXTextBookmark */ = 06377F880A4390380006D268 /* PBXTextBookmark */;
+			06377F890A4390380006D268 /* PBXTextBookmark */ = 06377F890A4390380006D268 /* PBXTextBookmark */;
+			06377F8A0A4390380006D268 /* PBXTextBookmark */ = 06377F8A0A4390380006D268 /* PBXTextBookmark */;
+			06377F8B0A4390380006D268 /* PBXTextBookmark */ = 06377F8B0A4390380006D268 /* PBXTextBookmark */;
+			06377F8F0A4390520006D268 /* PBXTextBookmark */ = 06377F8F0A4390520006D268 /* PBXTextBookmark */;
+			06377F930A43905C0006D268 /* PBXTextBookmark */ = 06377F930A43905C0006D268 /* PBXTextBookmark */;
+			06377F9C0A4390F70006D268 /* PBXTextBookmark */ = 06377F9C0A4390F70006D268 /* PBXTextBookmark */;
+			06377F9D0A4390F70006D268 /* PBXTextBookmark */ = 06377F9D0A4390F70006D268 /* PBXTextBookmark */;
+			06377FA10A4391290006D268 /* PBXTextBookmark */ = 06377FA10A4391290006D268 /* PBXTextBookmark */;
+			06377FA50A4391380006D268 /* PBXTextBookmark */ = 06377FA50A4391380006D268 /* PBXTextBookmark */;
+			06377FA60A4391380006D268 /* PBXTextBookmark */ = 06377FA60A4391380006D268 /* PBXTextBookmark */;
+			06377FA70A4391380006D268 /* PBXTextBookmark */ = 06377FA70A4391380006D268 /* PBXTextBookmark */;
+			06377FA80A4391380006D268 /* PBXTextBookmark */ = 06377FA80A4391380006D268 /* PBXTextBookmark */;
+			06377FA90A4391380006D268 /* PBXTextBookmark */ = 06377FA90A4391380006D268 /* PBXTextBookmark */;
+			06377FAA0A4391380006D268 /* PBXTextBookmark */ = 06377FAA0A4391380006D268 /* PBXTextBookmark */;
+			06377FAB0A4391380006D268 /* PBXTextBookmark */ = 06377FAB0A4391380006D268 /* PBXTextBookmark */;
+			06377FAC0A4391380006D268 /* PBXTextBookmark */ = 06377FAC0A4391380006D268 /* PBXTextBookmark */;
+			06377FB40A4391F10006D268 /* PBXTextBookmark */ = 06377FB40A4391F10006D268 /* PBXTextBookmark */;
+			06377FB50A4391F10006D268 /* PBXTextBookmark */ = 06377FB50A4391F10006D268 /* PBXTextBookmark */;
+			06377FB60A4391F20006D268 /* PBXTextBookmark */ = 06377FB60A4391F20006D268 /* PBXTextBookmark */;
+			06377FB70A4391F20006D268 /* PBXTextBookmark */ = 06377FB70A4391F20006D268 /* PBXTextBookmark */;
+			06377FB80A4391F20006D268 /* PBXTextBookmark */ = 06377FB80A4391F20006D268 /* PBXTextBookmark */;
+			06377FB90A4391F20006D268 /* PBXTextBookmark */ = 06377FB90A4391F20006D268 /* PBXTextBookmark */;
+			06377FBA0A4391F20006D268 /* PBXTextBookmark */ = 06377FBA0A4391F20006D268 /* PBXTextBookmark */;
+			06377FBE0A4392050006D268 /* PBXTextBookmark */ = 06377FBE0A4392050006D268 /* PBXTextBookmark */;
+			06377FBF0A4392050006D268 /* PBXTextBookmark */ = 06377FBF0A4392050006D268 /* PBXTextBookmark */;
+			06377FC00A4392050006D268 /* PBXTextBookmark */ = 06377FC00A4392050006D268 /* PBXTextBookmark */;
+			06377FC40A4392340006D268 /* PBXTextBookmark */ = 06377FC40A4392340006D268 /* PBXTextBookmark */;
+			06377FC50A4392340006D268 /* PBXTextBookmark */ = 06377FC50A4392340006D268 /* PBXTextBookmark */;
+			06377FC60A4392340006D268 /* PBXTextBookmark */ = 06377FC60A4392340006D268 /* PBXTextBookmark */;
+			06377FC70A43923B0006D268 /* PBXTextBookmark */ = 06377FC70A43923B0006D268 /* PBXTextBookmark */;
+			06377FCA0A43925A0006D268 /* PBXTextBookmark */ = 06377FCA0A43925A0006D268 /* PBXTextBookmark */;
+			06377FCB0A43925A0006D268 /* PBXTextBookmark */ = 06377FCB0A43925A0006D268 /* PBXTextBookmark */;
+			06377FCC0A43925A0006D268 /* PBXTextBookmark */ = 06377FCC0A43925A0006D268 /* PBXTextBookmark */;
+			06377FCD0A43925A0006D268 /* PBXTextBookmark */ = 06377FCD0A43925A0006D268 /* PBXTextBookmark */;
+			06377FCE0A43925A0006D268 /* PBXTextBookmark */ = 06377FCE0A43925A0006D268 /* PBXTextBookmark */;
+			06377FD20A4392C60006D268 /* PBXTextBookmark */ = 06377FD20A4392C60006D268 /* PBXTextBookmark */;
+			06377FD30A4392C60006D268 /* PBXTextBookmark */ = 06377FD30A4392C60006D268 /* PBXTextBookmark */;
+			06377FD40A4392C60006D268 /* PBXTextBookmark */ = 06377FD40A4392C60006D268 /* PBXTextBookmark */;
+			06377FF50A4394D90006D268 /* PBXTextBookmark */ = 06377FF50A4394D90006D268 /* PBXTextBookmark */;
+			06377FF60A4394D90006D268 /* PBXTextBookmark */ = 06377FF60A4394D90006D268 /* PBXTextBookmark */;
+			06377FF70A4394D90006D268 /* PBXTextBookmark */ = 06377FF70A4394D90006D268 /* PBXTextBookmark */;
+			06377FF80A4394D90006D268 /* PBXTextBookmark */ = 06377FF80A4394D90006D268 /* PBXTextBookmark */;
+			06377FF90A4394DA0006D268 /* PBXTextBookmark */ = 06377FF90A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFA0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFA0A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFB0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFB0A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFC0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFC0A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFD0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFD0A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFE0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFE0A4394DA0006D268 /* PBXTextBookmark */;
+			06377FFF0A4394DA0006D268 /* PBXTextBookmark */ = 06377FFF0A4394DA0006D268 /* PBXTextBookmark */;
+			063780000A4394DA0006D268 /* PBXTextBookmark */ = 063780000A4394DA0006D268 /* PBXTextBookmark */;
+			063780010A4394DA0006D268 /* PBXTextBookmark */ = 063780010A4394DA0006D268 /* PBXTextBookmark */;
+			063780020A4394DA0006D268 /* PBXTextBookmark */ = 063780020A4394DA0006D268 /* PBXTextBookmark */;
+			063780030A4394DA0006D268 /* PBXTextBookmark */ = 063780030A4394DA0006D268 /* PBXTextBookmark */;
+			063780040A4394DA0006D268 /* PBXTextBookmark */ = 063780040A4394DA0006D268 /* PBXTextBookmark */;
+			063780050A4394DA0006D268 /* PBXTextBookmark */ = 063780050A4394DA0006D268 /* PBXTextBookmark */;
+			063780060A4394DA0006D268 /* PBXTextBookmark */ = 063780060A4394DA0006D268 /* PBXTextBookmark */;
+			063780070A4394DA0006D268 /* PBXTextBookmark */ = 063780070A4394DA0006D268 /* PBXTextBookmark */;
+			063780080A4394DA0006D268 /* PBXTextBookmark */ = 063780080A4394DA0006D268 /* PBXTextBookmark */;
+			063780090A4394DA0006D268 /* PBXTextBookmark */ = 063780090A4394DA0006D268 /* PBXTextBookmark */;
+			0637800A0A4394DA0006D268 /* PBXTextBookmark */ = 0637800A0A4394DA0006D268 /* PBXTextBookmark */;
+			0637800B0A4394DA0006D268 /* PBXTextBookmark */ = 0637800B0A4394DA0006D268 /* PBXTextBookmark */;
+			0637800F0A4395D30006D268 /* PBXTextBookmark */ = 0637800F0A4395D30006D268 /* PBXTextBookmark */;
+			063780110A4395D50006D268 /* PBXTextBookmark */ = 063780110A4395D50006D268 /* PBXTextBookmark */;
+			063780120A4395D50006D268 /* PBXTextBookmark */ = 063780120A4395D50006D268 /* PBXTextBookmark */;
+			063780130A4395D50006D268 /* PBXTextBookmark */ = 063780130A4395D50006D268 /* PBXTextBookmark */;
+			063780140A4395DE0006D268 /* PBXTextBookmark */ = 063780140A4395DE0006D268 /* PBXTextBookmark */;
+			063780180A4396260006D268 /* PBXTextBookmark */ = 063780180A4396260006D268 /* PBXTextBookmark */;
+			063780190A4396260006D268 /* PBXTextBookmark */ = 063780190A4396260006D268 /* PBXTextBookmark */;
+			0637801A0A4396260006D268 /* PBXTextBookmark */ = 0637801A0A4396260006D268 /* PBXTextBookmark */;
+			0637801B0A4396260006D268 /* PBXTextBookmark */ = 0637801B0A4396260006D268 /* PBXTextBookmark */;
 			068EEAFE0A3CEFBC003887BB = 068EEAFE0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEAFF0A3CEFBC003887BB = 068EEAFF0A3CEFBC003887BB /* PBXTextBookmark */;
 			068EEB000A3CEFBC003887BB = 068EEB000A3CEFBC003887BB /* PBXTextBookmark */;

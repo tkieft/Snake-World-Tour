@@ -24,7 +24,7 @@ using std::string;
 
 // Function prototypes
 SDL_Surface* init();
-void render( SnakePlayer* theSnakes[], Board* theBoard );
+bool render( SnakePlayer* theSnakes[], Board* theBoard, int numPlayers );
 void deinit();
 
 SDL_Surface *bg = NULL;
@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 {
     SDL_Event event;
     SnakePlayer* mySnakes[] = { NULL, NULL };
+    int numPlayers = 1;
     mySnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler", SnakePlayer::SNAKE_UP );
     
     string rsrcdirectory = (string) *argv;
@@ -40,7 +41,7 @@ int main(int argc, char *argv[])
     //cout << rsrcdirectory;
     
     SDL_Surface* screen = init();
-    Board* myBoard = new Board( screen, rsrcdirectory, 1 );
+    Board* myBoard = new Board( screen, rsrcdirectory, numPlayers );
     
     bg = load_image( rsrcdirectory + "snake.png" );
     //cout << bg->w << bg->h;
@@ -51,9 +52,15 @@ int main(int argc, char *argv[])
     SDL_Flip( screen );
 	
     int done = 0;
+    bool lost = false;
     while ( !done ) {
         
-        render( mySnakes, myBoard );
+        if( !lost )
+        {
+            if( !render( mySnakes, myBoard, numPlayers ) )
+                lost = true;
+        }
+                
 
 		/* Check for events */
 		while ( SDL_PollEvent(&event) ) {
@@ -67,11 +74,18 @@ int main(int argc, char *argv[])
 					switch( event.key.keysym.sym )
                     {
                         case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
+                            if(lost) break;
                             mySnakes[0]->handleInput( &event );
                             break;
                         case SDLK_ESCAPE:
                             done = 1;
                             break;
+                        case SDLK_SPACE:
+                            if( lost )
+                            {
+                                lost = false;
+                                myBoard->restartLevel( numPlayers );
+                            }
                         default:
                             break;
                     }
@@ -88,12 +102,20 @@ int main(int argc, char *argv[])
 	return(0);
 }
 
-void render( SnakePlayer* theSnakes[], Board* theBoard )
+bool render( SnakePlayer* theSnakes[], Board* theBoard, int numPlayers )
 {
     int ticks = SDL_GetTicks();
-    theBoard->updatePosition( theSnakes, 1 );
+    int snakeWrong = theBoard->updatePosition( theSnakes, 1 );
+    if( snakeWrong > 0 )
+    {
+        theSnakes[snakeWrong - 1]->die();
+        if(numPlayers == 2)
+            theSnakes[ (snakeWrong == 2 ? 0 : 1) ]->reset();
+        return false;
+    }
     theBoard->draw( theSnakes, 1 );
     while( SDL_GetTicks() - ticks < 1000/FPS );
+    return true;
 }
 
 // init returns a pointer to SDL_Surface

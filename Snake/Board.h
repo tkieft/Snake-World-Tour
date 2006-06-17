@@ -30,9 +30,9 @@ private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
     const static int LEVEL_COLLECTIBLE = 5;
-    const static Uint32 WALL_COLOR = 0xCC0000;
-    const static Uint32 FLOOR_COLOR = 0x0000CC;
-    const static Uint32 COLLECTIBLE_COLOR = 0xFFFF00;
+    const static Uint32 WALL_COLOR = 0x003399;
+    const static Uint32 FLOOR_COLOR = 0x000000;
+    const static Uint32 COLLECTIBLE_COLOR = 0x990000;
     
     SDL_Surface* scr;
     int currentLevel;
@@ -41,6 +41,8 @@ private:
     int* snakeHead;
     int* snakeHeadPosition;
     int collectibles;
+    
+    void levelInit( int numSnakes );
     
 public:
     /* Class-wide constants */
@@ -56,7 +58,8 @@ public:
     /* Methods */
     int updatePosition( SnakePlayer* snakes[], int numSnakes );
     void draw( SnakePlayer* snakes[], int numSnakes );
-    void nextLevel();
+    void nextLevel( int numSnakes );
+    void restartLevel( int numSnakes );
     bool readCurrentLevel();
     void initCollectibles();
     
