@@ -47,7 +47,7 @@ Board::~Board()
     delete[] snakeHeadPosition;
 }
 
-void Board::draw( SnakePlayer* snakes[], int numSnakes )
+void Board::draw( SnakePlayer* snakes[] )
 {
     Uint32 color;
     int tile;
@@ -68,7 +68,7 @@ void Board::draw( SnakePlayer* snakes[], int numSnakes )
                 color = COLLECTIBLE_COLOR;
             else if( tile >= 10 && tile < 400 )
                 color = snakes[0]->getColor();
-            else if( numSnakes == 2 && tile >= 400 )
+            else if( snakes[1] && tile >= 400 )
                 color = snakes[1]->getColor();
                 
             drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
@@ -80,8 +80,10 @@ void Board::draw( SnakePlayer* snakes[], int numSnakes )
 }
 
 // return 0 if all is well, 1 if snake 1 crashed, 2 if snake 2 crashed
-int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
+int Board::updatePosition( SnakePlayer* snakes[] )
 {
+    int numSnakes = 1;
+    if( snakes[1] ) numSnakes = 2;
     for( int i = 0; i < numSnakes; i++ )
     {
         int direction = snakes[i]->getDirection();

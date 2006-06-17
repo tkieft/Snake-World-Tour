@@ -24,7 +24,7 @@ using std::string;
 
 // Function prototypes
 SDL_Surface* init();
-bool render( SnakePlayer* theSnakes[], Board* theBoard, int numPlayers );
+bool render( SnakePlayer* theSnakes[], Board* theBoard );
 void deinit();
 
 SDL_Surface *bg = NULL;
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
         
         if( !lost )
         {
-            if( !render( mySnakes, myBoard, numPlayers ) )
+            if( !render( mySnakes, myBoard ) )
                 lost = true;
         }
                 
@@ -102,18 +102,18 @@ int main(int argc, char *argv[])
 	return(0);
 }
 
-bool render( SnakePlayer* theSnakes[], Board* theBoard, int numPlayers )
+bool render( SnakePlayer* theSnakes[], Board* theBoard )
 {
     int ticks = SDL_GetTicks();
-    int snakeWrong = theBoard->updatePosition( theSnakes, 1 );
+    int snakeWrong = theBoard->updatePosition( theSnakes );
     if( snakeWrong > 0 )
     {
         theSnakes[snakeWrong - 1]->die();
-        if(numPlayers == 2)
+        if( theSnakes[1] )
             theSnakes[ (snakeWrong == 2 ? 0 : 1) ]->reset();
         return false;
     }
-    theBoard->draw( theSnakes, 1 );
+    theBoard->draw( theSnakes );
     while( SDL_GetTicks() - ticks < 1000/FPS );
     return true;
 }

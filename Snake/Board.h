@@ -56,8 +56,8 @@ public:
     ~Board();
     
     /* Methods */
-    int updatePosition( SnakePlayer* snakes[], int numSnakes );
-    void draw( SnakePlayer* snakes[], int numSnakes );
+    int updatePosition( SnakePlayer* snakes[] );
+    void draw( SnakePlayer* snakes[] );
     void nextLevel( int numSnakes );
     void restartLevel( int numSnakes );
     bool readCurrentLevel();
