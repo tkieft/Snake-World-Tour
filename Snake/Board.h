@@ -34,7 +34,6 @@ private:
     const static Uint32 FLOOR_COLOR = 0x000000;
     const static Uint32 COLLECTIBLE_COLOR = 0x990000;
     
-    SDL_Surface* scr;
     int currentLevel;
     int* levelData;
     string levelPath;
@@ -52,12 +51,13 @@ public:
     const static int YLOC = 30;
     
     /* Constructor and destructor */        
-    Board( SDL_Surface* sc, string rsrcPath, int numSnakes );
+    Board();
     ~Board();
     
     /* Methods */
+    void Init( string rsrcPath, int numSnakes );
     int updatePosition( SnakePlayer* snakes[] );
-    void draw( SnakePlayer* snakes[] );
+    void draw( SDL_Surface* scr, SnakePlayer* snakes[] );
     void nextLevel( int numSnakes );
     void restartLevel( int numSnakes );
     bool readCurrentLevel();

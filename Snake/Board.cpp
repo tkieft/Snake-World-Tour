@@ -28,7 +28,9 @@ using std::ios;
 
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 
-Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), currentLevel( 0 )
+Board::Board() : currentLevel( 0 ) {}
+
+void Board::Init( string rsrcPath, int numSnakes )
 {
     levelPath = rsrcPath + "levels.txt";
     levelData = new int[ LEVELSIZE * LEVELSIZE ];
@@ -37,7 +39,6 @@ Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), cu
     snakeHeadPosition = new int[ numSnakes ];
     
     nextLevel( numSnakes );
-    
 }
 
 Board::~Board()
@@ -47,7 +48,7 @@ Board::~Board()
     delete[] snakeHeadPosition;
 }
 
-void Board::draw( SnakePlayer* snakes[] )
+void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     Uint32 color;
     int tile;
