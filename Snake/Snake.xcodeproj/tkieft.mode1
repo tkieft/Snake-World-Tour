@@ -185,48 +185,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>06377E480A437B830006D268</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Board.cpp</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>06377E520A437C3C0006D268</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Board.cpp</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>06377E5C0A437C6E0006D268</string>
-						<key>history</key>
-						<array>
-							<string>06377E4D0A437C280006D268</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {599, 639}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>174 152 599 680 0 0 1280 832 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>833</integer>
@@ -333,7 +292,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>146 213 833 598 0 0 1280 832 </string>
+						<string>145 217 833 598 0 0 1280 832 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -344,6 +303,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -361,7 +322,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>06377E5B0A437C6E0006D268</string>
+										<string>06377ED30A4381930006D268</string>
 										<key>history</key>
 										<array>
 											<string>068EEB0D0A3CEFDA003887BB</string>
@@ -369,21 +330,21 @@
 											<string>06FFD1E70A3E271D003850BF</string>
 											<string>06FFD21A0A3E28C8003850BF</string>
 											<string>0625D76C0A3F662800F0E531</string>
-											<string>0625D76D0A3F662800F0E531</string>
 											<string>0625D76F0A3F662800F0E531</string>
-											<string>0625D7C00A3F6C8E00F0E531</string>
 											<string>0625D8400A3F711600F0E531</string>
 											<string>0625D8440A3F711600F0E531</string>
 											<string>0625D8650A3F716800F0E531</string>
 											<string>06E256BF0A4223EC00674396</string>
 											<string>06377C230A435A220006D268</string>
-											<string>06377DA20A43758F0006D268</string>
 											<string>06377DE90A4377190006D268</string>
 											<string>06377E2B0A4379F20006D268</string>
 											<string>06377E3B0A437A9F0006D268</string>
 											<string>06377E3C0A437A9F0006D268</string>
 											<string>06377E3D0A437A9F0006D268</string>
-											<string>06377E2C0A4379F20006D268</string>
+											<string>06377E790A437EBD0006D268</string>
+											<string>06377E7A0A437EBD0006D268</string>
+											<string>06377ECD0A43814D0006D268</string>
+											<string>06377E7B0A437EBD0006D268</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -481,6 +442,13 @@
 											<string>06377E3E0A437A9F0006D268</string>
 											<string>06377E3F0A437A9F0006D268</string>
 											<string>06377E400A437A9F0006D268</string>
+											<string>06377E7D0A437EBD0006D268</string>
+											<string>06377E7E0A437EBD0006D268</string>
+											<string>06377E7F0A437EBD0006D268</string>
+											<string>06377E800A437EBD0006D268</string>
+											<string>06377E810A437EBD0006D268</string>
+											<string>06377E820A437EBD0006D268</string>
+											<string>06377ECE0A43814D0006D268</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -494,7 +462,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {625, 309}}</string>
 								<key>RubberWindowFrame</key>
-								<string>146 213 833 598 0 0 1280 832 </string>
+								<string>145 217 833 598 0 0 1280 832 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -502,8 +470,6 @@
 							<string>309pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -516,7 +482,7 @@
 								<key>Frame</key>
 								<string>{{0, 314}, {625, 243}}</string>
 								<key>RubberWindowFrame</key>
-								<string>146 213 833 598 0 0 1280 832 </string>
+								<string>145 217 833 598 0 0 1280 832 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -666,7 +632,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>06377E480A437B830006D268</string>
+	<string>06377EB80A43808B0006D268</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -696,11 +662,11 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>06377C820A435B2C0006D268</string>
 		<string>068EEA880A3C8C7B003887BB</string>
-		<string>06377E480A437B830006D268</string>
+		<string>/Users/tkieft/code/snake/trunk/Snake/Snake.xcodeproj</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
-	<string>146 213 833 598 0 0 1280 832 </string>
+	<string>145 217 833 598 0 0 1280 832 </string>
 	<key>WindowTools</key>
 	<array>
 		<dict>
@@ -721,7 +687,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Board.cpp</string>
+								<string>Board.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -790,7 +756,7 @@
 			<key>WindowToolGUID</key>
 			<string>068EEA880A3C8C7B003887BB</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

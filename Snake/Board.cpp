@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Gate closes once snake is out.
  *  16Jun06 TDK Add updatePosition()
  *  16Jun06 TDK Add destructor, initialize and delete levelData, 
  *              nextLevel(), readCurrentLevel().
@@ -24,6 +25,7 @@ using std::ios;
 #include "globals.h"
 #include "SnakePlayer.h"
 
+const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 
 Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), currentLevel( 1 )
 {
@@ -36,11 +38,11 @@ Board::Board ( SDL_Surface* sc, string rsrcPath, int numSnakes ) : scr( sc ), cu
     
     // start snake 1 in middle of bottom, snake 2 in middle of top
     snakeHead[0] = 10;
-    snakeHeadPosition[0] = (( LEVELSIZE - 1 ) * LEVELSIZE ) + LEVELSIZE / 2;
+    snakeHeadPosition[0] = STARTING_POSITION[0];
     levelData[ snakeHeadPosition[0] ] = snakeHead[0];
     if( numSnakes == 2 )
         snakeHead[1] = 400;
-        snakeHeadPosition[1] = LEVELSIZE / 2;
+        snakeHeadPosition[1] = STARTING_POSITION[1];
         levelData[ snakeHeadPosition[1] ] = snakeHead[1];
 }
 
@@ -144,6 +146,8 @@ int Board::updatePosition( SnakePlayer* snakes[], int numSnakes )
                     levelData[j]--;
             }
         }
+        if(levelData[STARTING_POSITION[i]] == 0)
+            levelData[STARTING_POSITION[i]] = 1;
     }
     return 0;
 }

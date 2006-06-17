@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  16Jun06 TDK Add starting position constants
  *  16Jun06 TDK Add updatePosition()
  *  16Jun06 TDK Add readCurrentLevel() and nextLevel() methods, 
  *              levelData array, destructor.
@@ -53,6 +54,9 @@ public:
     void draw( SnakePlayer* snakes[], int numSnakes );
     void nextLevel();
     bool readCurrentLevel();
+    
+private:
+    const static int STARTING_POSITION[];
 };
 
 #endif
