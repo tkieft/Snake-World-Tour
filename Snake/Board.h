@@ -37,9 +37,11 @@ private:
     int currentLevel;
     int* levelData;
     string levelPath;
+    string applePath;
     int* snakeHead;
     int* snakeHeadPosition;
     int collectibles;
+    SDL_Surface* apple;
     
     void levelInit( int numSnakes );
     

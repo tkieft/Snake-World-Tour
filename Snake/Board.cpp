@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  17Jun06 TDK Eye drawing and apple drawing code.
  *  16Jun06 TDK Collectibles.
  *  16Jun06 TDK Gate closes once snake is out.
  *  16Jun06 TDK Add updatePosition()
@@ -20,11 +21,14 @@
 #include <iostream>
 using std::ifstream;
 using std::ios;
+using std::cout;
+using std::endl;
 
 #include "Board.h"
 #include "drawfunc.h"
 #include "globals.h"
 #include "SnakePlayer.h"
+#include "load_image.h"
 
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 
@@ -33,16 +37,21 @@ Board::Board() : currentLevel( 0 ) {}
 void Board::Init( string rsrcPath, int numSnakes )
 {
     levelPath = rsrcPath + "levels.txt";
+    applePath = rsrcPath + "apple.bmp";
+    
     levelData = new int[ LEVELSIZE * LEVELSIZE ];
     
     snakeHead = new int[ numSnakes ];
     snakeHeadPosition = new int[ numSnakes ];
+    
+    apple = load_image( applePath, 0xFF, 0x00, 0xFF );
     
     nextLevel( numSnakes );
 }
 
 Board::~Board()
 {
+    SDL_FreeSurface( apple );
     delete[] levelData;
     delete[] snakeHead;
     delete[] snakeHeadPosition;
@@ -52,28 +61,79 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     Uint32 color;
     int tile;
-    
     if( SDL_MUSTLOCK( scr ) )
+    {
         if( SDL_LockSurface( scr ) < 0 )
             return;
+    }
     
     for( int y = 0; y < LEVELSIZE; y++ )
+    {
         for( int x = 0; x < LEVELSIZE; x++ )
         {
             tile = levelData[ y * LEVELSIZE + x ];
-            if( tile == LEVEL_FLOOR )
-                color = FLOOR_COLOR;
-            else if( tile == LEVEL_WALL )
-                color = WALL_COLOR;
-            else if( tile == LEVEL_COLLECTIBLE )
-                color = COLLECTIBLE_COLOR;
-            else if( tile >= 10 && tile < 400 )
-                color = snakes[0]->getColor();
-            else if( snakes[1] && tile >= 400 )
-                color = snakes[1]->getColor();
+            if( tile != LEVEL_COLLECTIBLE )
+            {
+                if( tile == LEVEL_FLOOR )
+                    color = FLOOR_COLOR;
+                else if( tile == LEVEL_WALL )
+                    color = WALL_COLOR;
+                else if( tile >= 10 && tile < 400 )
+                    color = snakes[0]->getColor();
+                else if( snakes[1] && tile >= 400 )
+                    color = snakes[1]->getColor();
                 
-            drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
+                drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
+            }
+            else
+            {
+                // cannot blit to locked surface?!
+                //SDL_Rect spot;
+                //spot.y = YLOC + y * TILESIZE;
+                //spot.x = XLOC + x * TILESIZE;
+                //if (SDL_BlitSurface(apple, NULL, scr, &spot ) != 0 ) cout << "Failure to blit." << endl;
+                SDL_UpdateRect( scr, XLOC + x * TILESIZE, YLOC + y * TILESIZE, XLOC + x * (TILESIZE + 1), YLOC + y * (TILESIZE + 1));
+                for( int i = 0; i < TILESIZE; i++ ) 
+                    for( int j = 0; j < TILESIZE; j++ )
+                        if( ((unsigned int*)apple->pixels)[ i * TILESIZE + j ] != SDL_MapRGB( apple->format, 0xFF, 0x00, 0xFF ) )
+                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = ((unsigned int*)apple->pixels)[i * TILESIZE + j];
+                        else
+                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = FLOOR_COLOR;
+            }
         }
+    }
+            
+    // draw snake eyes
+    int eyeloc1x, eyeloc1y, eyeloc2x, eyeloc2y;
+    for( int i = 0; i < ( snakes[1] ? 2 : 1 ); i++ )
+    {
+        int headx = snakeHeadPosition[i] % 35 * TILESIZE + XLOC;
+        int heady = snakeHeadPosition[i] / 35 * TILESIZE + YLOC;
+        switch( snakes[i]->getDirection() )
+        {
+            case SnakePlayer::SNAKE_UP:
+                eyeloc1x = headx + 3; eyeloc1y = heady + 4;
+                eyeloc2x = headx + 7; eyeloc2y = heady + 4;
+                break;
+            case SnakePlayer::SNAKE_DOWN:
+                eyeloc1x = headx + 3; eyeloc1y = heady + 8;
+                eyeloc2x = headx + 7; eyeloc2y = heady + 8;
+                break;
+            case SnakePlayer::SNAKE_LEFT:
+                eyeloc1x = headx + 4; eyeloc1y = heady + 3;
+                eyeloc2x = headx + 4; eyeloc2y = heady + 7;
+                break;
+            case SnakePlayer::SNAKE_RIGHT:
+                eyeloc1x = headx + 8; eyeloc1y = heady + 3;
+                eyeloc2x = headx + 8; eyeloc2y = heady + 7;
+                break;
+            default:
+                break;
+        }
+        drawrect( eyeloc1x, eyeloc1y, 2, 2, 0, scr);
+        drawrect( eyeloc2x, eyeloc2y, 2, 2, 0, scr);
+    }
+        
     if( SDL_MUSTLOCK( scr ) )
         SDL_UnlockSurface( scr );
     

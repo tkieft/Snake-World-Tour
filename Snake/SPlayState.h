@@ -44,6 +44,7 @@ protected:
 private:
     static SPlayState snakePlayState;
     SDL_Surface* bg;
+    int drewBackground;
 
 };
 

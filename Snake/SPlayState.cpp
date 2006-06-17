@@ -33,6 +33,7 @@ void SPlayState::Init( SGameEngine* game )
         theSnakes[1] = new SnakePlayer( 0x003322, "Brandon", SnakePlayer::SNAKE_DOWN );
     
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
+    drewBackground = false;
 }
 
 void SPlayState::Cleanup()
@@ -41,7 +42,7 @@ void SPlayState::Cleanup()
     SDL_FreeSurface( bg );   
 }
 
-void SPlayState::Pause() { return; }
+void SPlayState::Pause() { drewBackground = false; }
 void SPlayState::Resume() { return; }
 
 void SPlayState::HandleEvents( SGameEngine* game )
@@ -103,8 +104,15 @@ void SPlayState::Draw( SGameEngine* game )
 {
     if( ! lost )
     {
-        SDL_BlitSurface( bg, NULL, game->screen, NULL );
+        if( !drewBackground )
+            SDL_BlitSurface( bg, NULL, game->screen, NULL );
+        
         theBoard.draw( game->screen, theSnakes );
-        SDL_Flip( game->screen );
+        
+        if( !drewBackground ) 
+        {
+            SDL_Flip( game->screen );
+            drewBackground = true;
+        }
     }
 }

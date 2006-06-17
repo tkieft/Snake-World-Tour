@@ -60,6 +60,7 @@
 		06C972A80A447A6A00ECB735 /* SGameEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */; };
 		06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */; };
 		06C973A30A447EF900ECB735 /* SGameState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971830A44603D00ECB735 /* SGameState.h */; };
+		06C9742F0A44826B00ECB735 /* apple.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 06C9742E0A44826B00ECB735 /* apple.bmp */; };
 		06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
 		06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
 		06CC53540A3E321400E92E7F /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53520A3E321400E92E7F /* Board.h */; };
@@ -84,6 +85,7 @@
 		06C971830A44603D00ECB735 /* SGameState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SGameState.h; sourceTree = "<group>"; };
 		06C971F40A446B2900ECB735 /* SPlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPlayState.h; sourceTree = "<group>"; };
 		06C971F50A446B2900ECB735 /* SPlayState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPlayState.cpp; sourceTree = "<group>"; };
+		06C9742E0A44826B00ECB735 /* apple.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = apple.bmp; sourceTree = "<group>"; };
 		06CC53520A3E321400E92E7F /* Board.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Board.h; sourceTree = "<group>"; };
 		06CC53530A3E321400E92E7F /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06C9742E0A44826B00ECB735 /* apple.bmp */,
 				06377BD00A434FF70006D268 /* levels.txt */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				06C9742F0A44826B00ECB735 /* apple.bmp in Resources */,
 				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
 				06377BD10A434FF70006D268 /* levels.txt in Resources */,
 			);

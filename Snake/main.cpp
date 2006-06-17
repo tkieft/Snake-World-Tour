@@ -4,24 +4,18 @@
  *   main.cpp - Initialize SDL
  *
  *   CHANGELOG:
+ *   17Jun06 Massive architectural changes, move most code to SGameEngine, SPlayState
  *   15Jun06 Move render Code to separate function, change init() calling
  *   12Jun06 TDK New Code
  */
-   
-#include <iostream>
-#include <cstdlib>
+
 #include <string>
-#include <cmath>
 #include "SDL.h"
-#include "load_image.h"
 #include "globals.h"
 #include "Board.h"
 #include "SnakePlayer.h"
 #include "SGameEngine.h"
 #include "SPlayState.h"
-
-using std::cout;
-using std::endl;
 using std::string;
 
 int main(int argc, char *argv[])
