@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  17Jun06 TDK Add moveQueue for hopefully more robust movement code
  *  16Jun06 TDK Eat! and Die!
  *  16Jun06 TDK Initial direction is now a parameter, add grow.
  *  15Jun06 TDK Add handleEvent().
@@ -18,6 +19,8 @@
 
 #include "SDL.h"
 #include <string>
+#include <queue>
+using std::queue;
 using std::string;
 
 class SnakePlayer
@@ -30,6 +33,7 @@ private:
     int growFactor;
     Uint32 color;
     string name;
+    queue<int> moveQueue;
     
 public:
     /* Class-wide constants */
@@ -52,6 +56,7 @@ public:
     void eat();
     void die();
     void reset();
+    void updateDirection();
 };
 
 #endif
