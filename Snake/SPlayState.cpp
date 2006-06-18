@@ -65,6 +65,11 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         game->Quit();
                         break;
                     case SDLK_SPACE:
+                        if( lost || won )
+                        {
+                            for( int i = 0; i < game->getNumPlayers(); i++ )
+                                theSnakes[i]->reset();
+                        }
                         if( lost )
                         {
                             lost = false;
@@ -103,8 +108,6 @@ void SPlayState::Update( SGameEngine* game )
         if( result == 1 || result == 2 )
         {
             theSnakes[ result - 1 ]->die();
-            if( game->getNumPlayers() == 2 )
-                theSnakes[ ( result == 2 ? 0 : 1 ) ]->reset();
             lost = true;
         }
         else if( result == 3 || result == 4 )
@@ -114,17 +117,14 @@ void SPlayState::Update( SGameEngine* game )
 
 void SPlayState::Draw( SGameEngine* game )
 {
-    if( ! lost && ! won )
+    if( !drewBackground )
+        SDL_BlitSurface( bg, NULL, game->screen, NULL );
+      
+    theBoard.draw( game->screen, theSnakes );
+        
+    if( !drewBackground ) 
     {
-        if( !drewBackground )
-            SDL_BlitSurface( bg, NULL, game->screen, NULL );
-        
-        theBoard.draw( game->screen, theSnakes );
-        
-        if( !drewBackground ) 
-        {
-            SDL_Flip( game->screen );
-            drewBackground = true;
-        }
+        SDL_Flip( game->screen );
+        drewBackground = true;
     }
 }

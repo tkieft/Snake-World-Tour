@@ -38,7 +38,7 @@ int SnakePlayer::getDirection() { return direction; }
 int SnakePlayer::getSpeed() { return speed; }
 Uint32 SnakePlayer::getColor() { return color; }
 string SnakePlayer::getName() { return name; }
-void SnakePlayer::die() { lives--; reset(); }
+void SnakePlayer::die() { lives--; }
 void SnakePlayer::reset() { direction = SNAKE_UP; speed = 1; growFactor = 5; }
 
 bool SnakePlayer::isGrowing()
