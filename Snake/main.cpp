@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     SGameEngine game;
     
     // initialize the engine
-    game.Init( "Snake v0.1 beta ©2006 Tyler Kieft", rsrcdirectory );
+    game.Init( "Snake v0.1 beta", rsrcdirectory );
     
     // load the game
     game.ChangeState( SPlayState::Instance() );

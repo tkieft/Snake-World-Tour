@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  18Jun06 TDK Make WALL_COLOR non static constant (read from level file)
  *  17Jun06 TDK Add ending position constants.
  *  16Jun06 TDK Collectibles.
  *  16Jun06 TDK Add starting position constants.
@@ -31,7 +32,7 @@ private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
     const static int LEVEL_COLLECTIBLE = 5;
-    const static Uint32 WALL_COLOR = 0x003399;
+    Uint32 WALL_COLOR;
     const static Uint32 FLOOR_COLOR = 0x000000;
     const static Uint32 COLLECTIBLE_COLOR = 0x990000;
     

@@ -16,7 +16,7 @@
 
 SPlayState SPlayState::snakePlayState;
 
-SPlayState::SPlayState() : SGameState(), theBoard()
+SPlayState::SPlayState() : theBoard()
 {
     theSnakes[0] = NULL;
     theSnakes[1] = NULL;

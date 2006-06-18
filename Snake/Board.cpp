@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  18Jun06 TDK readCurrentLevel() more efficient, now read wall color.
  *  17Jun06 TDK Eye drawing and apple drawing code.
  *  16Jun06 TDK Collectibles.
  *  16Jun06 TDK Gate closes once snake is out.
@@ -19,6 +20,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <iostream>
+#include <iomanip>
 using std::ifstream;
 using std::ios;
 using std::cout;
@@ -310,15 +312,34 @@ bool Board::readCurrentLevel()
     if( ! gotNewLevel ) 
         return false;
         
-    int currentNum;
-    for( int i = 0; i < LEVELSIZE; i++ )
+    for( int i = 0; i < LEVELSIZE * LEVELSIZE; i++ )
+        levelFile >> levelData[ i ];
+    
+    // hex input code
+    int col;
+    WALL_COLOR = 0;
+    for( int i = 0; i < 6; i++ )
     {
-        for( int j = 0; j < LEVELSIZE; j++ )
+        WALL_COLOR <<= 4;
+        while( 1 )
         {
-            levelFile >> currentNum;
-            levelData[ i * LEVELSIZE + j ]  = currentNum;
+            col = levelFile.get();
+            if( col >= 48 && col <= 57 )
+            {
+                col -= 48;
+                break;
+            }
+            else if( col >= 65 && col <= 70 )
+            {
+                col -= 55;
+                break;
+            }
+            else
+                continue;
         }
-    }        
+        
+        WALL_COLOR |= col;
+    }
     
     levelFile.close();
     return true;
