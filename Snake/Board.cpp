@@ -294,11 +294,13 @@ bool Board::readCurrentLevel()
         return false;
     
     bool gotNewLevel = false;
-    
+        
     while( ! levelFile.eof() )
     {
         std::getline( levelFile, line );
-        if( line.find( ( (char) currentLevel ) + ":" ) == 0 )
+        //kludgey code
+        char ty = '0' + currentLevel;
+        if( line.find( ty ) == 0 && line.find( ':' ) == 1 )
         {
             gotNewLevel = true;
             break;
