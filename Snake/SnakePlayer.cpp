@@ -16,10 +16,10 @@
 
 #include "SnakePlayer.h"
 
-const int SnakePlayer::SNAKE_UP = 0;
-const int SnakePlayer::SNAKE_RIGHT = 1;
-const int SnakePlayer::SNAKE_DOWN = 2;
-const int SnakePlayer::SNAKE_LEFT = 3;
+//const int SnakePlayer::SNAKE_UP = 0;
+//const int SnakePlayer::SNAKE_RIGHT = 1;
+//const int SnakePlayer::SNAKE_DOWN = 2;
+//const int SnakePlayer::SNAKE_LEFT = 3;
 
 SnakePlayer::SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection ) : moveQueue()
 {

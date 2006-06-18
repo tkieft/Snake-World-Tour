@@ -37,7 +37,7 @@ private:
     
 public:
     /* Class-wide constants */
-    const static int SNAKE_UP, SNAKE_RIGHT, SNAKE_DOWN, SNAKE_LEFT;
+    enum{ SNAKE_UP = 0, SNAKE_RIGHT = 1, SNAKE_DOWN = 2, SNAKE_LEFT = 3 };
     
     SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection );
     
