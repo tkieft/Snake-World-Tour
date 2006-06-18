@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  17Jun06 TDK Move static constant definitions here.
  *  17Jun06 TDK Make input handling more robust.
  *  16Jun06 TDK Eat! and Die!
  *  16Jun06 TDK Initial Direction is now a parameter, add grow.
@@ -14,6 +15,11 @@
  */
 
 #include "SnakePlayer.h"
+
+const int SnakePlayer::SNAKE_UP = 0;
+const int SnakePlayer::SNAKE_RIGHT = 1;
+const int SnakePlayer::SNAKE_DOWN = 2;
+const int SnakePlayer::SNAKE_LEFT = 3;
 
 SnakePlayer::SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection ) : moveQueue()
 {
@@ -51,28 +57,7 @@ void SnakePlayer::eat()
     score += 50;
 }
 
-void SnakePlayer::handleInput( SDL_Event* snakeEvent )
-{
-    switch( snakeEvent->key.keysym.sym )
-    {
-        case SDLK_LEFT: case SDLK_a:
-            moveQueue.push( SNAKE_LEFT );
-            break;
-        case SDLK_RIGHT: case SDLK_d:
-            moveQueue.push( SNAKE_RIGHT );
-            break;
-        case SDLK_UP: case SDLK_w:
-            moveQueue.push( SNAKE_UP );
-            break;
-        case SDLK_DOWN: case SDLK_s:
-            moveQueue.push( SNAKE_DOWN );
-            break;
-        default:
-            break;
-    }
-}
-
-void SnakePlayer::updateDirection(  )
+void SnakePlayer::updateDirection()
 {
     if( !moveQueue.empty() )
     {
@@ -98,5 +83,26 @@ void SnakePlayer::updateDirection(  )
                 break;
         }
         moveQueue.pop();
+    }
+}
+
+void SnakePlayer::handleInput( SDL_Event* snakeEvent )
+{
+    switch( snakeEvent->key.keysym.sym )
+    {
+        case SDLK_LEFT: case SDLK_a:
+            moveQueue.push( SNAKE_LEFT );
+            break;
+        case SDLK_RIGHT: case SDLK_d:
+            moveQueue.push( SNAKE_RIGHT );
+            break;
+        case SDLK_UP: case SDLK_w:
+            moveQueue.push( SNAKE_UP );
+            break;
+        case SDLK_DOWN: case SDLK_s:
+            moveQueue.push( SNAKE_DOWN );
+            break;
+        default:
+            break;
     }
 }

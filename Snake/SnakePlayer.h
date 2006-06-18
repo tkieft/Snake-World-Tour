@@ -37,14 +37,9 @@ private:
     
 public:
     /* Class-wide constants */
-    const static int SNAKE_UP = 0;
-    const static int SNAKE_RIGHT = 1;
-    const static int SNAKE_DOWN = 2;
-    const static int SNAKE_LEFT = 3;
+    const static int SNAKE_UP, SNAKE_RIGHT, SNAKE_DOWN, SNAKE_LEFT;
     
     SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection );
-    
-    void handleInput( SDL_Event* snakeEvent );
     
     int getLives();
     int getScore();
@@ -56,7 +51,9 @@ public:
     void eat();
     void die();
     void reset();
+    
     void updateDirection();
+    void handleInput( SDL_Event* snakeEvent );
 };
 
 #endif

@@ -266,10 +266,10 @@
 			files = (
 				F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */,
 				068EEABA0A3CE318003887BB /* main.cpp in Sources */,
+				0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */,
 				06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */,
 				06CC53550A3E321400E92E7F /* Board.cpp in Sources */,
 				06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */,
-				0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */,
 				06C971F70A446B2900ECB735 /* SPlayState.cpp in Sources */,
 				06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */,
 			);
