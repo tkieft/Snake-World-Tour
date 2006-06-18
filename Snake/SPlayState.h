@@ -34,6 +34,7 @@ public:
     
     static SPlayState* Instance() { return &snakePlayState; }
     bool lost;
+    bool won;
     
     SnakePlayer* theSnakes[2];
     Board theBoard;

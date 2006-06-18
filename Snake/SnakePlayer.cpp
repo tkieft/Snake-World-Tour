@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  17Jun06 TDK Make input handling more robust.
  *  16Jun06 TDK Eat! and Die!
  *  16Jun06 TDK Initial Direction is now a parameter, add grow.
  *  15Jun06 TDK Add length and getLength().
@@ -14,13 +15,13 @@
 
 #include "SnakePlayer.h"
 
-SnakePlayer::SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection )
+SnakePlayer::SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection ) : moveQueue()
 {
     color = snakeColor;
     name = snakeName;
     lives = 3;
     score = 0;
-    direction = SNAKE_UP;
+    direction = startingDirection;
     speed = 1;
     growFactor = 5;
 }
@@ -54,23 +55,48 @@ void SnakePlayer::handleInput( SDL_Event* snakeEvent )
 {
     switch( snakeEvent->key.keysym.sym )
     {
-        case SDLK_LEFT:
-            if( direction != SNAKE_RIGHT )
-                direction = SNAKE_LEFT;
+        case SDLK_LEFT: case SDLK_a:
+            moveQueue.push( SNAKE_LEFT );
             break;
-        case SDLK_RIGHT:
-            if( direction != SNAKE_LEFT )
-                direction = SNAKE_RIGHT;
+        case SDLK_RIGHT: case SDLK_d:
+            moveQueue.push( SNAKE_RIGHT );
             break;
-        case SDLK_UP:
-            if( direction != SNAKE_DOWN )
-                direction = SNAKE_UP;
+        case SDLK_UP: case SDLK_w:
+            moveQueue.push( SNAKE_UP );
             break;
-        case SDLK_DOWN:
-            if( direction != SNAKE_UP )
-                direction = SNAKE_DOWN;
+        case SDLK_DOWN: case SDLK_s:
+            moveQueue.push( SNAKE_DOWN );
             break;
         default:
             break;
+    }
+}
+
+void SnakePlayer::updateDirection(  )
+{
+    if( !moveQueue.empty() )
+    {
+        switch( moveQueue.front() )
+        {
+            case SNAKE_LEFT:
+                if( direction != SNAKE_RIGHT )
+                    direction = SNAKE_LEFT;
+                break;
+            case SNAKE_RIGHT:
+                if( direction != SNAKE_LEFT )
+                    direction = SNAKE_RIGHT;
+                break;
+            case SNAKE_UP:
+                if( direction != SNAKE_DOWN )
+                    direction = SNAKE_UP;
+                break;
+            case SNAKE_DOWN:
+                if( direction != SNAKE_UP )
+                    direction = SNAKE_DOWN;
+                break;
+            default:
+                break;
+        }
+        moveQueue.pop();
     }
 }

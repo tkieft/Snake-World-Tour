@@ -27,10 +27,10 @@ using std::endl;
 #include "Board.h"
 #include "drawfunc.h"
 #include "globals.h"
-#include "SnakePlayer.h"
 #include "load_image.h"
 
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
+const int Board::ENDING_POSITION[] = { Board::STARTING_POSITION[1], Board::STARTING_POSITION[0] };
 
 Board::Board() : currentLevel( 0 ) {}
 
@@ -140,7 +140,8 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
     SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
 }
 
-// return 0 if all is well, 1 if snake 1 crashed, 2 if snake 2 crashed
+// return 0 if continue, 1 if snake 1 crashed, 2 if snake 2 crashed
+// return 3 if snake 1 won, 4 if snake 2 won
 int Board::updatePosition( SnakePlayer* snakes[] )
 {
     int numSnakes = 1;
@@ -237,7 +238,12 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                     levelData[j]--;
             }
         }
-        if(levelData[STARTING_POSITION[i]] == LEVEL_FLOOR)
+        if( collectibles == 0 )
+            if( snakeHeadPosition[i] == ENDING_POSITION[i] )
+                return 3 + i;
+            else
+                levelData[ENDING_POSITION[i]] = LEVEL_FLOOR;
+        if( levelData[STARTING_POSITION[i]] == LEVEL_FLOOR && collectibles != 0 )
             levelData[STARTING_POSITION[i]] = LEVEL_WALL;
     }
     return 0;

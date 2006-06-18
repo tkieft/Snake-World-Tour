@@ -13,7 +13,6 @@
 #include "SDL.h"
 #include "globals.h"
 #include "Board.h"
-#include "SnakePlayer.h"
 #include "SGameEngine.h"
 #include "SPlayState.h"
 using std::string;

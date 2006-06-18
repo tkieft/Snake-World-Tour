@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  17Jun06 TDK Add ending position constants.
  *  16Jun06 TDK Collectibles.
  *  16Jun06 TDK Add starting position constants.
  *  16Jun06 TDK Add updatePosition().
@@ -67,6 +68,7 @@ public:
     
 private:
     const static int STARTING_POSITION[];
+    const static int ENDING_POSITION[];
 };
 
 #endif

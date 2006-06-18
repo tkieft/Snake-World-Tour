@@ -34,6 +34,8 @@ void SPlayState::Init( SGameEngine* game )
     
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
     drewBackground = false;
+    lost = false;
+    won = false;
 }
 
 void SPlayState::Cleanup()
@@ -48,7 +50,7 @@ void SPlayState::Resume() { return; }
 void SPlayState::HandleEvents( SGameEngine* game )
 {
     SDL_Event event;
-    if ( SDL_PollEvent( &event ) )
+    while( SDL_PollEvent( &event ) )
     {
         switch( event.type )
         {
@@ -67,7 +69,13 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         {
                             lost = false;
                             theBoard.restartLevel( game->getNumPlayers() );
-                        }                            
+                        }
+                        if( won )
+                        {
+                            won = false;
+                            theBoard.nextLevel( game->getNumPlayers() );
+                        }
+                        break;
                     case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
                         theSnakes[0]->handleInput( &event );
                         break;
@@ -87,22 +95,26 @@ void SPlayState::HandleEvents( SGameEngine* game )
 
 void SPlayState::Update( SGameEngine* game )
 {
-    if( ! lost )
+    if( !( lost || won ) )
     {
-        int snakeWrong = theBoard.updatePosition( theSnakes );
-        if( snakeWrong > 0 )
+        theSnakes[0]->updateDirection();
+        if( theSnakes[1] ) theSnakes[1]->updateDirection();
+        int result = theBoard.updatePosition( theSnakes );
+        if( result == 1 || result == 2 )
         {
-            theSnakes[ snakeWrong - 1 ]->die();
+            theSnakes[ result - 1 ]->die();
             if( game->getNumPlayers() == 2 )
-                theSnakes[ ( snakeWrong == 2 ? 0 : 1 ) ]->reset();
+                theSnakes[ ( result == 2 ? 0 : 1 ) ]->reset();
             lost = true;
         }
+        else if( result == 3 || result == 4 )
+            won = true;
     }
 }
 
 void SPlayState::Draw( SGameEngine* game )
 {
-    if( ! lost )
+    if( ! lost && ! won )
     {
         if( !drewBackground )
             SDL_BlitSurface( bg, NULL, game->screen, NULL );
