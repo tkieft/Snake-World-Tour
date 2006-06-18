@@ -41,6 +41,7 @@ void SGameEngine::Init( string windowTitle, string d )
     SDL_WM_SetCaption( windowTitle.c_str(), windowTitle.c_str() );
     
     gameRunning = true;
+    numPlayers = 1;
 }
 
 void SGameEngine::Cleanup()

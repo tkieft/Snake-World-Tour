@@ -213,31 +213,33 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 break;
         }
         
-        bool growth = snakes[i]->isGrowing();
-        
-        for( int j = 0; j < LEVELSIZE * LEVELSIZE; j++ )
+        if( !snakes[i]->isGrowing() )
         {
-            if( i == 0 && !growth )
+            for( int j = 0; j < LEVELSIZE * LEVELSIZE; j++ )
             {
-                if( levelData[ j ] == 10 )
+                if( i == 0 )
                 {
-                    levelData[j] = LEVEL_FLOOR;
-                    snakeHead[i]--;
+                    if( levelData[ j ] == 10 )
+                    {
+                        levelData[j] = LEVEL_FLOOR;
+                        snakeHead[i]--;
+                    }
+                    else if( levelData[j] > 10 && levelData[j] < 400 )
+                        levelData[j]--;
                 }
-                else if( levelData[j] > 10 && levelData[j] < 400 )
-                    levelData[j]--;
-            }
-            else
-            {
-                if( levelData[ j ] == 400 && !growth )
+                else
                 {
-                    levelData[ j ] = LEVEL_FLOOR;
-                    snakeHead[i]--;
+                    if( levelData[ j ] == 400 )
+                    {
+                        levelData[ j ] = LEVEL_FLOOR;
+                        snakeHead[i]--;
+                    }
+                    else if( levelData[j] > 400 )
+                        levelData[j]--;
                 }
-                else if( levelData[j] > 400 )
-                    levelData[j]--;
             }
         }
+        
         if( collectibles == 0 )
             if( snakeHeadPosition[i] == ENDING_POSITION[i] )
                 return 3 + i;

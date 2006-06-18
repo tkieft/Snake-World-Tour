@@ -82,7 +82,8 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         }
                         break;
                     case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
-                        theSnakes[0]->handleInput( &event );
+                        if( ! (lost || won ) )
+                            theSnakes[0]->handleInput( &event );
                         break;
                     case SDLK_a: case SDLK_s: case SDLK_w: case SDLK_d:
                         if( game->getNumPlayers() == 2)

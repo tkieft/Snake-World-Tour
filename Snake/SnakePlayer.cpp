@@ -39,7 +39,7 @@ int SnakePlayer::getSpeed() { return speed; }
 Uint32 SnakePlayer::getColor() { return color; }
 string SnakePlayer::getName() { return name; }
 void SnakePlayer::die() { lives--; }
-void SnakePlayer::reset() { direction = SNAKE_UP; speed = 1; growFactor = 5; }
+void SnakePlayer::reset() { direction = SNAKE_UP; speed = 1; growFactor = 5; while( ! moveQueue.empty() ) moveQueue.pop(); }
 
 bool SnakePlayer::isGrowing()
 {
