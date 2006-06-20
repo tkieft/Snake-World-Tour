@@ -13,10 +13,11 @@
 #include "SDL.h"
 #include "SPlayState.h"
 #include "load_image.h"
+#include <iostream>
 
 SPlayState SPlayState::snakePlayState;
 
-SPlayState::SPlayState() : theBoard()
+SPlayState::SPlayState() : theBoard(), theTimer()
 {
     theSnakes[0] = NULL;
     theSnakes[1] = NULL;
@@ -33,6 +34,8 @@ void SPlayState::Init( SGameEngine* game )
         theSnakes[1] = new SnakePlayer( 0x003322, "Brandon", SnakePlayer::SNAKE_DOWN );
     
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
+    theTimer.Init( game->getFileDirectory() );
+    theTimer.start();
     drewBackground = false;
     lost = false;
     won = false;
@@ -44,8 +47,15 @@ void SPlayState::Cleanup()
     SDL_FreeSurface( bg );   
 }
 
-void SPlayState::Pause() { drewBackground = false; }
-void SPlayState::Resume() { return; }
+void SPlayState::Pause()
+{
+    drewBackground = false; 
+    theTimer.pause();
+}
+void SPlayState::Resume()
+{
+    theTimer.unpause();
+}
 
 void SPlayState::HandleEvents( SGameEngine* game )
 {
@@ -74,11 +84,13 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         {
                             lost = false;
                             theBoard.restartLevel( game->getNumPlayers() );
+                            theTimer.start();
                         }
                         if( won )
                         {
                             won = false;
                             theBoard.nextLevel( game->getNumPlayers() );
+                            theTimer.start();
                         }
                         break;
                     case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
@@ -110,22 +122,37 @@ void SPlayState::Update( SGameEngine* game )
         {
             theSnakes[ result - 1 ]->die();
             lost = true;
+            theTimer.stop();
         }
         else if( result == 3 || result == 4 )
+        {
             won = true;
+            theTimer.stop();
+        }
     }
+    //std::cout << theTimer.get_ticks() / 1000 << " ";
 }
 
 void SPlayState::Draw( SGameEngine* game )
 {
     if( !drewBackground )
         SDL_BlitSurface( bg, NULL, game->screen, NULL );
+    
+    if( SDL_MUSTLOCK( game->screen ) )
+    {
+        if( SDL_LockSurface( game->screen ) < 0 )
+            return;
+    }
       
     theBoard.draw( game->screen, theSnakes );
+    theTimer.draw( 483, 408, game->screen );
+    
+    SDL_Flip( game->screen );
+    
+    if( SDL_MUSTLOCK( game->screen ) ) SDL_UnlockSurface( game->screen );
         
     if( !drewBackground ) 
     {
-        SDL_Flip( game->screen );
         drewBackground = true;
     }
 }

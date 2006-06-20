@@ -18,6 +18,7 @@
 #include "SGameState.h"
 #include "SnakePlayer.h"
 #include "Board.h"
+#include "Timer.h"
 
 class SPlayState: public SGameState
 {
@@ -38,6 +39,7 @@ public:
     
     SnakePlayer* theSnakes[2];
     Board theBoard;
+    Timer theTimer;
 
 protected:
     SPlayState();

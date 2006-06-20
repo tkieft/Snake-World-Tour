@@ -63,12 +63,7 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     Uint32 color;
     int tile;
-    if( SDL_MUSTLOCK( scr ) )
-    {
-        if( SDL_LockSurface( scr ) < 0 )
-            return;
-    }
-    
+        
     for( int y = 0; y < LEVELSIZE; y++ )
     {
         for( int x = 0; x < LEVELSIZE; x++ )
@@ -135,11 +130,10 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
         drawrect( eyeloc1x, eyeloc1y, 2, 2, 0, scr);
         drawrect( eyeloc2x, eyeloc2y, 2, 2, 0, scr);
     }
-        
-    if( SDL_MUSTLOCK( scr ) )
-        SDL_UnlockSurface( scr );
     
-    SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
+    // fill in timer box
+    drawrect( 474, 406, 575-474, 447-406, 0xFFFFFF, scr);
+    //SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
 }
 
 // return 0 if continue, 1 if snake 1 crashed, 2 if snake 2 crashed

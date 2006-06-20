@@ -68,6 +68,9 @@
 		06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53680A3E369000E92E7F /* drawfunc.h */; };
 		06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */; };
 		06CC54330A3E3B9000E92E7F /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC54320A3E3B9000E92E7F /* globals.h */; };
+		06FB5AEA0A4766E800D6B6A4 /* nums.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 06FB5AE90A4766E800D6B6A4 /* nums.bmp */; };
+		06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FB5AEF0A47675800D6B6A4 /* Timer.h */; };
+		06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FB5AF00A47675800D6B6A4 /* Timer.cpp */; };
 		06FFD1AF0A3E24BE003850BF /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FFD1AE0A3E24BE003850BF /* snake.png */; };
 		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -91,6 +94,9 @@
 		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
 		06CC53690A3E369000E92E7F /* drawfunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawfunc.cpp; sourceTree = "<group>"; };
 		06CC54320A3E3B9000E92E7F /* globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = globals.h; sourceTree = "<group>"; };
+		06FB5AE90A4766E800D6B6A4 /* nums.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = nums.bmp; sourceTree = "<group>"; };
+		06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Timer.h; sourceTree = "<group>"; };
+		06FB5AF00A47675800D6B6A4 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		06FFD1780A3E2196003850BF /* load_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = load_image.h; sourceTree = "<group>"; };
 		06FFD1790A3E2196003850BF /* load_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_image.cpp; sourceTree = "<group>"; };
 		06FFD1AE0A3E24BE003850BF /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 				06CC53530A3E321400E92E7F /* Board.cpp */,
 				0625D7510A3F639100F0E531 /* SnakePlayer.h */,
 				0625D7520A3F639100F0E531 /* SnakePlayer.cpp */,
+				06FB5AEF0A47675800D6B6A4 /* Timer.h */,
+				06FB5AF00A47675800D6B6A4 /* Timer.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06FB5AE90A4766E800D6B6A4 /* nums.bmp */,
 				06C9742E0A44826B00ECB735 /* apple.bmp */,
 				06377BD00A434FF70006D268 /* levels.txt */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
@@ -227,6 +236,7 @@
 				06C971F60A446B2900ECB735 /* SPlayState.h in Headers */,
 				06C972A80A447A6A00ECB735 /* SGameEngine.h in Headers */,
 				06C973A30A447EF900ECB735 /* SGameState.h in Headers */,
+				06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +264,7 @@
 				06C9742F0A44826B00ECB735 /* apple.bmp in Resources */,
 				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
 				06377BD10A434FF70006D268 /* levels.txt in Resources */,
+				06FB5AEA0A4766E800D6B6A4 /* nums.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +283,7 @@
 				06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */,
 				06C971F70A446B2900ECB735 /* SPlayState.cpp in Sources */,
 				06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */,
+				06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
