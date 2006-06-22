@@ -14,7 +14,8 @@
 #include "globals.h"
 #include "Board.h"
 #include "SGameEngine.h"
-#include "SPlayState.h"
+#include "SIntroState.h"
+
 using std::string;
 
 int main(int argc, char *argv[])
@@ -25,10 +26,10 @@ int main(int argc, char *argv[])
     SGameEngine game;
     
     // initialize the engine
-    game.Init( "Snake v0.1 beta", rsrcdirectory );
+    game.Init( "Snake World Tour 2006      v0.1 beta", rsrcdirectory );
     
     // load the game
-    game.ChangeState( SPlayState::Instance() );
+    game.ChangeState( SIntroState::Instance() );
     
     // main loop
     while( game.isRunning() )

@@ -33,8 +33,7 @@ private:
     const static int LEVEL_WALL = 1;
     const static int LEVEL_COLLECTIBLE = 5;
     Uint32 WALL_COLOR;
-    const static Uint32 FLOOR_COLOR = 0x000000;
-    const static Uint32 COLLECTIBLE_COLOR = 0x990000;
+    Uint32 FLOOR_COLOR;
     
     int currentLevel;
     int* levelData;

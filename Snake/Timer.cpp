@@ -56,7 +56,7 @@ void Timer::calcNumSize()
             }
         }
         numsWidth[k] -= numsOfs[k];
-        std::cout << numsWidth[k] << " ";
+        //std::cout << numsWidth[k] << " ";
     }
     
     if( SDL_MUSTLOCK( nums ) ) SDL_UnlockSurface( nums );
@@ -140,10 +140,12 @@ void Timer::drawOne( int& x, int& y, int num, SDL_Surface* gScreen )
     //std::cout << x << " " << y << "\n";
     //keep track of screen x offset;
     int x0, scrloc, numloc;
+    if( num == 1 )
+        x += 5;
     for( int i = 0; i < NUMHEIGHT; i++ )
     {
         x0 = 0;
-        for( int j = numsOfs[num]; j < numsOfs[num] + numsWidth[num]; j++ )
+        for( int j = numsOfs[num]; j <= numsOfs[num] + numsWidth[num]; j++ )
         {
             scrloc = ( y + i ) * gScreen->pitch / 4 + x + x0;
             numloc = i * SWIDTH + j;

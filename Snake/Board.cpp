@@ -311,28 +311,33 @@ bool Board::readCurrentLevel()
     
     // hex input code
     int col;
-    WALL_COLOR = 0;
-    for( int i = 0; i < 6; i++ )
+    Uint32* myColors[] = { &WALL_COLOR, &FLOOR_COLOR };
+    WALL_COLOR = FLOOR_COLOR = 0;
+    for( int k = 0; k < 2; k++ )
     {
-        WALL_COLOR <<= 4;
-        while( 1 )
+        cout << k;
+        for( int i = 0; i < 6; i++ )
         {
-            col = levelFile.get();
-            if( col >= 48 && col <= 57 )
+            *(myColors[k]) <<= 4;
+            while( 1 )
             {
-                col -= 48;
-                break;
+                col = levelFile.get();
+                if( col >= 48 && col <= 57 )
+                {
+                    col -= 48;
+                    break;
+                }
+                else if( col >= 65 && col <= 70 )
+                {
+                    col -= 55;
+                    break;
+                }
+                else
+                    continue;
             }
-            else if( col >= 65 && col <= 70 )
-            {
-                col -= 55;
-                break;
-            }
-            else
-                continue;
-        }
         
-        WALL_COLOR |= col;
+            *(myColors[k]) |= col;
+        }
     }
     
     levelFile.close();

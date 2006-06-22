@@ -50,7 +50,7 @@ public:
     bool isGrowing();
     void eat();
     void die();
-    void reset();
+    void reset( int dir );
     
     void updateDirection();
     void handleInput( SDL_Event* snakeEvent );

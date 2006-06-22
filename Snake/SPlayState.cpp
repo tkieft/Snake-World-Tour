@@ -29,7 +29,7 @@ void SPlayState::Init( SGameEngine* game )
     bg = load_image( game->getFileDirectory() + "snake.png" );
     
     // create snake(s)
-    theSnakes[0] = new SnakePlayer( 0xFFFFFF, "Tyler", SnakePlayer::SNAKE_UP );
+    theSnakes[0] = new SnakePlayer( 0x295815, "Tyler", SnakePlayer::SNAKE_UP );
     if( game->getNumPlayers() == 2 )
         theSnakes[1] = new SnakePlayer( 0x003322, "Brandon", SnakePlayer::SNAKE_DOWN );
     
@@ -77,8 +77,8 @@ void SPlayState::HandleEvents( SGameEngine* game )
                     case SDLK_SPACE:
                         if( lost || won )
                         {
-                            for( int i = 0; i < game->getNumPlayers(); i++ )
-                                theSnakes[i]->reset();
+                            theSnakes[0]->reset( SnakePlayer::SNAKE_UP );
+                            if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN );
                         }
                         if( lost )
                         {

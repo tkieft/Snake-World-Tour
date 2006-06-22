@@ -22,14 +22,14 @@ void SGameEngine::Init( string windowTitle, string d )
     rsrcdirectory = d;
     
     // initialize SDL
-    if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
+    if( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_TIMER ) < 0 )
     {
         cout << "Unable to initialize SDL: " << SDL_GetError() << endl;
         exit(1);
     }
     
     // create the screen surface ( 640x480 / 32 bit color )
-    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
+    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE | SDL_FULLSCREEN );
     
     if( ! screen )
     {
@@ -41,7 +41,7 @@ void SGameEngine::Init( string windowTitle, string d )
     SDL_WM_SetCaption( windowTitle.c_str(), windowTitle.c_str() );
     
     gameRunning = true;
-    numPlayers = 1;
+    numPlayers = 2;
 }
 
 void SGameEngine::Cleanup()
