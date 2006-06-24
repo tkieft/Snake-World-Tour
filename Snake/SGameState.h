@@ -27,9 +27,7 @@ public:
     virtual void Update( SGameEngine* game ) = 0;
     virtual void Draw( SGameEngine* game ) = 0;
     
-    // only the current state knows when it is time to change -> it must inform the engine
-    void ChangeState( SGameEngine* game, SGameState* state ) { game->ChangeState( state ); }
-
+    
 protected:
     SGameState() { }
 

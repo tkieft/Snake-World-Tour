@@ -49,7 +49,10 @@ void SIntroState::HandleEvents( SGameEngine* game )
             if( event.key.keysym.sym == SDLK_ESCAPE )
                 game->Quit();
             if( event.key.keysym.sym == SDLK_9 )
-                ChangeState( game, SPlayState::Instance() );
+            {
+                game->ChangeState( SPlayState::Instance() );
+                return;
+            }
         }
         else if( event.type == SDL_QUIT )
             game->Quit();
@@ -67,7 +70,7 @@ void SIntroState::Update( SGameEngine* game )
             startticks = SDL_GetTicks();
         else if( SDL_GetTicks() - startticks > 3000 )
         {
-            ChangeState( game, SPlayState::Instance() );
+            game->ChangeState( SPlayState::Instance() );
             return;
         }
     }

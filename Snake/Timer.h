@@ -14,6 +14,7 @@
 
 #include <string>
 #include "SDL.h"
+#include "SDL_TTF.h"
 #include "load_image.h"
 using std::string;
 
@@ -42,7 +43,7 @@ public:
     ~Timer();
     void Init( string pathToResources );
     void draw( int x, int y, SDL_Surface* gScreen );
-    void drawOne( int& x, int& y, int num, SDL_Surface* gScreen );
+    //void drawOne( int& x, int& y, int num, SDL_Surface* gScreen );
     
     void start();
     void pause();
@@ -52,6 +53,12 @@ public:
     int get_ticks();
     bool is_started() { return started; }
     bool is_paused() { return paused; }
+    
+private:
+    TTF_Font *timerFont;
+    SDL_Surface *timerSurface;
+    SDL_Color timerColor;
+    SDL_Color timerBG;
     
 };
 

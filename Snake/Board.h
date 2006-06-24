@@ -24,6 +24,7 @@
 using std::string;
 
 #include "SDL.h"
+#include "SDL_ttf.h"
 #include "SnakePlayer.h"
 
 class Board
@@ -69,6 +70,11 @@ public:
 private:
     const static int STARTING_POSITION[];
     const static int ENDING_POSITION[];
+    
+    TTF_Font *levelNumFont;
+    SDL_Surface *levelNumSurface;
+    SDL_Color levelNumColor;
+    SDL_Color levelNumBG;
 };
 
 #endif

@@ -6,13 +6,14 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  24Jun06 TDK Don't use stupid number bitmap.
  *  19Jun06 TDK New Code.
  */
 
 #include "Timer.h"
 #include <iostream>
 
-Timer::Timer()
+Timer::Timer() : timerColor()
 {
     startTicks = 0;
     pausedTicks = 0;
@@ -20,12 +21,17 @@ Timer::Timer()
     paused = false;
     started = false;
     stopped = false;
+    
+    timerColor.r = 0xEF; timerColor.g = 0x8A; timerColor.b = 0x01;
 }
 
 void Timer::Init( string pathToResources )
 {
-    nums = load_image( pathToResources + "nums.bmp" );
-    calcNumSize();
+    //nums = load_image( pathToResources + "nums.bmp" );
+    //calcNumSize();
+    timerFont = TTF_OpenFont( (pathToResources + "snake.000").c_str(), 25 );
+    if( !timerFont ) exit(1);
+    timerBG.r = timerBG.b = timerBG.g = 0;
 }
 
 void Timer::calcNumSize()
@@ -65,6 +71,7 @@ void Timer::calcNumSize()
 Timer::~Timer()
 {
     SDL_FreeSurface( nums );
+    TTF_CloseFont( timerFont );
 }
 
 void Timer::start()
@@ -119,6 +126,19 @@ void Timer::unpause()
 
 void Timer::draw( int x, int y, SDL_Surface* gScreen )
 {
+    char min = get_ticks() / 1000 / 60 + 48;
+    char s1 = (( get_ticks() / 1000 ) % 60 ) / 10 + 48;
+    char s2 = (( get_ticks() / 1000 ) % 60 ) % 10 + 48;
+    char currentTime[] = { min, ':', s1, s2, '\0' };
+    timerSurface = TTF_RenderText_Shaded( timerFont, currentTime, timerColor, timerBG );
+    SDL_Rect timerRect; timerRect.x = x; timerRect.y = y;
+    SDL_BlitSurface( timerSurface, NULL, gScreen, &timerRect );
+    SDL_FreeSurface( timerSurface );
+}
+
+/*
+void Timer::draw( int x, int y, SDL_Surface* gScreen )
+{
     if( SDL_MUSTLOCK( nums ) )
         if( SDL_LockSurface( nums ) < 0 )
             return;
@@ -158,3 +178,4 @@ void Timer::drawOne( int& x, int& y, int num, SDL_Surface* gScreen )
     
     x += 3 + numsWidth[num];
 }
+*/

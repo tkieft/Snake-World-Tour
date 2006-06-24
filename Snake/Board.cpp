@@ -49,11 +49,17 @@ void Board::Init( string rsrcPath, int numSnakes )
     apple = load_image( applePath, 0xFF, 0x00, 0xFF );
     
     nextLevel( numSnakes );
+    
+    levelNumFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
+    if( !levelNumFont ) exit(1);
+    levelNumColor.r = 0xEF; levelNumColor.g = 0x8A; levelNumColor.b = 0x01;
+    levelNumBG.r = levelNumBG.b = levelNumBG.g = 0;
 }
 
 Board::~Board()
 {
     SDL_FreeSurface( apple );
+    TTF_CloseFont( levelNumFont );
     delete[] levelData;
     delete[] snakeHead;
     delete[] snakeHeadPosition;
@@ -61,6 +67,12 @@ Board::~Board()
 
 void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
+    if( SDL_MUSTLOCK( scr ) )
+    {
+        if( SDL_LockSurface( scr ) < 0 )
+            return;
+    }
+    
     Uint32 color;
     int tile;
         
@@ -89,7 +101,6 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
                 //spot.y = YLOC + y * TILESIZE;
                 //spot.x = XLOC + x * TILESIZE;
                 //if (SDL_BlitSurface(apple, NULL, scr, &spot ) != 0 ) cout << "Failure to blit." << endl;
-                SDL_UpdateRect( scr, XLOC + x * TILESIZE, YLOC + y * TILESIZE, XLOC + x * (TILESIZE + 1), YLOC + y * (TILESIZE + 1));
                 for( int i = 0; i < TILESIZE; i++ ) 
                     for( int j = 0; j < TILESIZE; j++ )
                         if( ((unsigned int*)apple->pixels)[ i * TILESIZE + j ] != SDL_MapRGB( apple->format, 0xFF, 0x00, 0xFF ) )
@@ -131,8 +142,17 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
         drawrect( eyeloc2x, eyeloc2y, 2, 2, 0, scr);
     }
     
+    if( SDL_MUSTLOCK( scr ) ) SDL_UnlockSurface( scr );
+    
+    // draw level
+    char levelString[] = { ((char) currentLevel) + 48, '\0' };
+    levelNumSurface = TTF_RenderText_Shaded( levelNumFont, levelString, levelNumColor, levelNumBG );
+    SDL_Rect levRect = { 554, 415 };
+    SDL_BlitSurface( levelNumSurface, NULL, scr, &levRect );
+    SDL_FreeSurface( levelNumSurface );
+    
     // fill in timer box
-    drawrect( 474, 406, 575-474, 447-406, 0xFFFFFF, scr);
+    //drawrect( 474, 406, 575-474, 447-406, 0xFFFFFF, scr);
     //SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
 }
 
@@ -315,7 +335,7 @@ bool Board::readCurrentLevel()
     WALL_COLOR = FLOOR_COLOR = 0;
     for( int k = 0; k < 2; k++ )
     {
-        cout << k;
+        //cout << k;
         for( int i = 0; i < 6; i++ )
         {
             *(myColors[k]) <<= 4;

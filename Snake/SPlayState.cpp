@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  24Jun06 TDK Move SDL_Flip below Unlock screen.
  *  17Jun06 TDK New Code.
  *
  */
@@ -135,22 +136,14 @@ void SPlayState::Update( SGameEngine* game )
 
 void SPlayState::Draw( SGameEngine* game )
 {
-    if( !drewBackground )
+    //if( !drewBackground )
         SDL_BlitSurface( bg, NULL, game->screen, NULL );
-    
-    if( SDL_MUSTLOCK( game->screen ) )
-    {
-        if( SDL_LockSurface( game->screen ) < 0 )
-            return;
-    }
       
     theBoard.draw( game->screen, theSnakes );
-    theTimer.draw( 483, 408, game->screen );
+    theTimer.draw( 554, 389, game->screen );
     
     SDL_Flip( game->screen );
-    
-    if( SDL_MUSTLOCK( game->screen ) ) SDL_UnlockSurface( game->screen );
-        
+            
     if( !drewBackground ) 
     {
         drewBackground = true;

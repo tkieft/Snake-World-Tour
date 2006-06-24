@@ -54,6 +54,7 @@
 		0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */; };
 		0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
 		06377BD10A434FF70006D268 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06377BD00A434FF70006D268 /* levels.txt */; };
+		066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */ = {isa = PBXBuildFile; fileRef = 066003C90A4D9DFF009ED8EF /* snake.000 */; };
 		0660BCE80A4A1A720007D282 /* SIntroState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0660BCE60A4A1A720007D282 /* SIntroState.h */; };
 		0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0660BCE70A4A1A720007D282 /* SIntroState.cpp */; };
 		0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0660BD000A4A1FCE0007D282 /* snaketitle.png */; };
@@ -85,6 +86,7 @@
 		0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SnakePlayer.h; sourceTree = "<group>"; };
 		0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnakePlayer.cpp; sourceTree = "<group>"; };
 		06377BD00A434FF70006D268 /* levels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = levels.txt; sourceTree = "<group>"; };
+		066003C90A4D9DFF009ED8EF /* snake.000 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snake.000; sourceTree = "<group>"; };
 		0660BCE60A4A1A720007D282 /* SIntroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIntroState.h; sourceTree = "<group>"; };
 		0660BCE70A4A1A720007D282 /* SIntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SIntroState.cpp; sourceTree = "<group>"; };
 		0660BD000A4A1FCE0007D282 /* snaketitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snaketitle.png; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				066003C90A4D9DFF009ED8EF /* snake.000 */,
 				0660BD000A4A1FCE0007D282 /* snaketitle.png */,
 				06FB5AE90A4766E800D6B6A4 /* nums.bmp */,
 				06C9742E0A44826B00ECB735 /* apple.bmp */,
@@ -276,6 +279,7 @@
 				06377BD10A434FF70006D268 /* levels.txt in Resources */,
 				06FB5AEA0A4766E800D6B6A4 /* nums.bmp in Resources */,
 				0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */,
+				066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +327,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_ttf.framework/Headers",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_image.framework/Headers",
 					/Library/Frameworks/SDL.framework/Headers,
 				);
@@ -334,6 +339,8 @@
 					SDL,
 					"-framework",
 					SDL_image,
+					"-framework",
+					SDL_ttf,
 				);
 				PRODUCT_NAME = Snake;
 				SECTORDER_FLAGS = "";

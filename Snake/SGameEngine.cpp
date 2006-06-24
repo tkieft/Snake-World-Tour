@@ -13,6 +13,7 @@
 using std::cout;
 using std::endl;
 #include "SDL.h"
+#include "SDL_ttf.h"
 #include "SGameEngine.h"
 #include "SGameState.h"
 #include "globals.h"
@@ -27,9 +28,15 @@ void SGameEngine::Init( string windowTitle, string d )
         cout << "Unable to initialize SDL: " << SDL_GetError() << endl;
         exit(1);
     }
+    // initialize SDL_TTF
+    if( TTF_Init() < 0 )
+    {
+        cout << "Unable to initialize SDL_ttf";
+        exit(1);
+    }
     
     // create the screen surface ( 640x480 / 32 bit color )
-    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE | SDL_FULLSCREEN );
+    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );// | SDL_FULLSCREEN );
     
     if( ! screen )
     {
@@ -41,7 +48,7 @@ void SGameEngine::Init( string windowTitle, string d )
     SDL_WM_SetCaption( windowTitle.c_str(), windowTitle.c_str() );
     
     gameRunning = true;
-    numPlayers = 2;
+    numPlayers = 1;
 }
 
 void SGameEngine::Cleanup()
@@ -53,7 +60,8 @@ void SGameEngine::Cleanup()
         states.pop_back();
     }
     
-    // get rid of SDL
+    // get rid of SDL & TTF
+    TTF_Quit();
     SDL_Quit();
 }
 
