@@ -3656,6 +3656,46 @@
 		vrLen = 846;
 		vrLoc = 4715;
 	};
+	066006380A4DB59A009ED8EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 150";
+		rLen = 0;
+		rLoc = 5240;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 4715;
+	};
+	0660063C0A4DB5A8009ED8EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 150";
+		rLen = 0;
+		rLoc = 5245;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 4715;
+	};
+	0660063D0A4DB6C7009ED8EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = "Board.cpp: 28";
+		rLen = 0;
+		rLoc = 709;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 530;
+	};
+	0660063E0A4DB6C7009ED8EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		name = cout;
+		rLen = 4;
+		rLoc = 11014;
+		rType = 0;
+		vrLen = 314;
+		vrLoc = 10364;
+	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {723, 630}}";
@@ -5181,6 +5221,10 @@
 			066006170A4DB10F009ED8EF /* PBXTextBookmark */ = 066006170A4DB10F009ED8EF /* PBXTextBookmark */;
 			0660061B0A4DB123009ED8EF /* PBXTextBookmark */ = 0660061B0A4DB123009ED8EF /* PBXTextBookmark */;
 			0660061F0A4DB135009ED8EF /* PBXTextBookmark */ = 0660061F0A4DB135009ED8EF /* PBXTextBookmark */;
+			066006380A4DB59A009ED8EF /* PBXTextBookmark */ = 066006380A4DB59A009ED8EF /* PBXTextBookmark */;
+			0660063C0A4DB5A8009ED8EF /* PBXTextBookmark */ = 0660063C0A4DB5A8009ED8EF /* PBXTextBookmark */;
+			0660063D0A4DB6C7009ED8EF /* PBXTextBookmark */ = 0660063D0A4DB6C7009ED8EF /* PBXTextBookmark */;
+			0660063E0A4DB6C7009ED8EF /* PBXTextBookmark */ = 0660063E0A4DB6C7009ED8EF /* PBXTextBookmark */;
 			0660BD1C0A4A204F0007D282 = 0660BD1C0A4A204F0007D282 /* PBXTextBookmark */;
 			0660BD200A4A204F0007D282 = 0660BD200A4A204F0007D282 /* PBXTextBookmark */;
 			0660BD250A4A204F0007D282 = 0660BD250A4A204F0007D282 /* PBXTextBookmark */;
