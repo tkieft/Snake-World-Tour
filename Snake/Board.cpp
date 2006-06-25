@@ -150,10 +150,12 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
 
 void Board::drawLevelStart( SDL_Surface* scr )
 {
-    char levelText[] = { 'L', 'e', 'v', 'e', 'l', ':', ' ', ((char) currentLevel ) + 48, '\0' };
-    fontSurface = TTF_RenderText_Shaded( levelNumFont, levelText, levelNumColor, levelNumBG );
+    SDL_Rect boardSurface = { XLOC, YLOC, TILESIZE * LEVELSIZE, TILESIZE * LEVELSIZE };
+    SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
+    char levelText[] = { 'L', 'e', 'v', 'e', 'l', ' ', ((char) currentLevel ) + 48, '\0' };
+    fontSurface = TTF_RenderText_Shaded( levelNumFont, levelText, WALL_COLOR, FLOOR_COLOR );
     SDL_Rect where;
-    where.x = (30 + 35 * 12) / 2 - fontSurface->w / 2;
+    where.x = 30 + (35 * 12) / 2 - fontSurface->w / 2;
     where.y = (scr->h / 2) - (fontSurface->h / 2 );
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );

@@ -237,9 +237,9 @@
 	};
 	06CC53530A3E321400E92E7F /* Board.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1220, 5754}}";
-			sepNavSelRange = "{13120, 0}";
-			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 5992}}";
+			sepNavSelRange = "{5240, 102}";
+			sepNavVisRect = "{{0, 1805}, {1117, 660}}";
 			sepNavWindowFrame = "{{135, 43}, {1162, 789}}";
 		};
 	};
