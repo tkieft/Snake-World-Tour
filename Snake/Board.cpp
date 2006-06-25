@@ -177,11 +177,11 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
         char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ((char) snakes[p]->getLives()) + 48, '\0' };
         int score = snakes[p]->getScore();
         char* playerScore = scoreToChar( score );
-        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerLives, levelNumColor, levelNumBG );
+        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerLives, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p1 = { 475, 150 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p1 );
         SDL_FreeSurface( fontSurface );
-        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerScore, levelNumColor, levelNumBG );
+        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerScore, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p2 = { 475, 180 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p2 );
         SDL_FreeSurface( fontSurface );

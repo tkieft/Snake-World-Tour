@@ -208,9 +208,9 @@
 	};
 	06C971F50A446B2900ECB735 /* SPlayState.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {584, 2282}}";
-			sepNavSelRange = "{4699, 0}";
-			sepNavVisRect = "{{0, 1296}, {423, 83}}";
+			sepNavIntBoundsRect = "{{0, 0}, {688, 2324}}";
+			sepNavSelRange = "{4253, 39}";
+			sepNavVisRect = "{{0, 1700}, {688, 619}}";
 			sepNavWindowFrame = "{{13, 79}, {733, 748}}";
 		};
 	};

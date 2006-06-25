@@ -33,6 +33,7 @@ int SnakePlayer::getDirection() { return direction; }
 int SnakePlayer::getSpeed() { return speed; }
 SDL_Color SnakePlayer::getColor() { return color; }
 string SnakePlayer::getName() { return name; }
+void SnakePlayer::win() { score += 100; }
 
 // returns false if snake is dead
 bool SnakePlayer::die() {

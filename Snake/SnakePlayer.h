@@ -50,6 +50,7 @@ public:
     bool isGrowing();
     void eat();
     bool die();
+    void win();
     void reset( int dir );
     
     void updateDirection();
