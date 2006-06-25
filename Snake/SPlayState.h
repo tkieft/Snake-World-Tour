@@ -24,7 +24,7 @@
 class SPlayState: public SGameState
 {
 private:
-    enum State { LEVEL_START, LEVEL_PLAYING, LEVEL_WON, LEVEL_LOST, GAME_LOST };
+    enum State { LEVEL_START, LEVEL_PLAYING, LEVEL_PAUSED, LEVEL_WON, LEVEL_LOST, GAME_LOST };
     State gameState;
 public:
     void Init( SGameEngine* game );

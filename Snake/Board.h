@@ -64,10 +64,13 @@ public:
     int updatePosition( SnakePlayer* snakes[] );
     void drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] );
     void drawLevelStart( SDL_Surface* scr );
+    void drawLevelPaused( SDL_Surface* scr );
+    void drawGameLost( SDL_Surface* scr );
     void drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] );
     
     void nextLevel( int numSnakes );
     void restartLevel( int numSnakes );
+    void setLevel( int level, int numSnakes );
     bool readCurrentLevel();
     void initCollectibles();
     
@@ -75,7 +78,10 @@ private:
     const static int STARTING_POSITION[];
     const static int ENDING_POSITION[];
     
-    TTF_Font *levelNumFont;
+    TTF_Font *largeFont;
+    TTF_Font *mediumFont;
+    TTF_Font *smallFont;
+    
     SDL_Surface *fontSurface;
     SDL_Color levelNumColor;
     SDL_Color levelNumBG;

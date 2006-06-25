@@ -100,8 +100,25 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         if( gameState == LEVEL_START ) {
                             gameState = LEVEL_PLAYING;
                             theTimer.start();
+                            break;
+                        }
+                        if( gameState == GAME_LOST ) {
+                            theSnakes[0]->newGame( SnakePlayer::SNAKE_UP );
+                            if( theSnakes[1] ) theSnakes[1]->newGame( SnakePlayer::SNAKE_UP );
+                            gameState = LEVEL_START;
+                            theBoard.setLevel( 1, game->getNumPlayers() );
+                            break;
                         }
                         break;
+                    case SDLK_p:
+                        if( gameState == LEVEL_PAUSED ) {
+                            gameState = LEVEL_PLAYING;
+                            Resume();
+                        }
+                        else if( gameState == LEVEL_PLAYING ) {
+                            gameState = LEVEL_PAUSED;
+                            Pause();
+                        }
                     case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
                         if( gameState == LEVEL_PLAYING )
                             theSnakes[0]->handleInput( &event );
@@ -151,15 +168,23 @@ void SPlayState::Draw( SGameEngine* game )
 {
     SDL_BlitSurface( bg, NULL, game->screen, NULL );
 
-    if( gameState != LEVEL_START ) {      
+    if( gameState == LEVEL_PLAYING || gameState == LEVEL_WON || gameState == LEVEL_LOST ) {
         theBoard.drawLevelPlaying( game->screen, theSnakes );
         theBoard.drawSnakeInfo( game->screen, theSnakes );
         theTimer.draw( 554, 389, game->screen );
     }
-    else {
+    else if ( gameState == LEVEL_START ) {
         theBoard.drawLevelStart( game->screen );
         theBoard.drawSnakeInfo( game->screen, theSnakes );
     }
-    
+    else if ( gameState == LEVEL_PAUSED ) {
+        theBoard.drawLevelPaused( game->screen );
+        theBoard.drawSnakeInfo( game->screen, theSnakes );
+        theTimer.draw( 554, 389, game->screen );
+    }
+    else if ( gameState == GAME_LOST ) {
+        theBoard.drawGameLost( game->screen );
+        theBoard.drawSnakeInfo( game->screen, theSnakes );
+    }
     SDL_Flip( game->screen );
 }

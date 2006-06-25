@@ -51,6 +51,7 @@ public:
     void eat();
     bool die();
     void win();
+    void newGame( int dir );
     void reset( int dir );
     
     void updateDirection();

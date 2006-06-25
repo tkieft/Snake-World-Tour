@@ -27,6 +27,7 @@ SnakePlayer::SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDi
     growFactor = 5;
 }
 
+void SnakePlayer::newGame( int dir ) { lives = 5; score = 0; reset( dir ); }
 int SnakePlayer::getLives() { return lives; }
 int SnakePlayer::getScore() { return score; }
 int SnakePlayer::getDirection() { return direction; }
