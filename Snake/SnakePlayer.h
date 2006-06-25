@@ -31,7 +31,7 @@ private:
     int direction;
     int speed;
     int growFactor;
-    Uint32 color;
+    SDL_Color color;
     string name;
     queue<int> moveQueue;
     
@@ -39,17 +39,17 @@ public:
     /* Class-wide constants */
     enum{ SNAKE_UP = 0, SNAKE_RIGHT = 1, SNAKE_DOWN = 2, SNAKE_LEFT = 3 };
     
-    SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection );
+    SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection );
     
     int getLives();
     int getScore();
     int getDirection();
     int getSpeed();
-    Uint32 getColor();
+    SDL_Color getColor();
     string getName();
     bool isGrowing();
     void eat();
-    void die();
+    bool die();
     void reset( int dir );
     
     void updateDirection();

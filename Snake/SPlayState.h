@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  25Jun06 TDK Change state to enum.
  *  17Jun06 TDK New Code.
  *
  */
@@ -22,6 +23,9 @@
 
 class SPlayState: public SGameState
 {
+private:
+    enum State { LEVEL_START, LEVEL_PLAYING, LEVEL_WON, LEVEL_LOST, GAME_LOST };
+    State gameState;
 public:
     void Init( SGameEngine* game );
     void Cleanup();
@@ -34,20 +38,18 @@ public:
     void Draw( SGameEngine* game );
     
     static SPlayState* Instance() { return &snakePlayState; }
-    bool lost;
-    bool won;
-    
-    SnakePlayer* theSnakes[2];
-    Board theBoard;
-    Timer theTimer;
 
 protected:
     SPlayState();
     
 private:
     static SPlayState snakePlayState;
+
     SDL_Surface* bg;
-    int drewBackground;
+
+    SnakePlayer* theSnakes[2];
+    Board theBoard;
+    Timer theTimer;
 
 };
 

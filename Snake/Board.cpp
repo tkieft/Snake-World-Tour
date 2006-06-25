@@ -48,12 +48,12 @@ void Board::Init( string rsrcPath, int numSnakes )
     
     apple = load_image( applePath, 0xFF, 0x00, 0xFF );
     
-    nextLevel( numSnakes );
-    
     levelNumFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
     if( !levelNumFont ) exit(1);
     levelNumColor.r = 0xEF; levelNumColor.g = 0x8A; levelNumColor.b = 0x01;
     levelNumBG.r = levelNumBG.b = levelNumBG.g = 0;
+
+    nextLevel( numSnakes );
 }
 
 void Board::Cleanup()
@@ -65,7 +65,7 @@ void Board::Cleanup()
     delete[] snakeHeadPosition;
 }
 
-void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
+void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     if( SDL_MUSTLOCK( scr ) )
     {
@@ -73,7 +73,7 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
             return;
     }
     
-    Uint32 color;
+    SDL_Color color;
     int tile;
         
     for( int y = 0; y < LEVELSIZE; y++ )
@@ -92,7 +92,9 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
                 else if( snakes[1] && tile >= 400 )
                     color = snakes[1]->getColor();
                 
-                drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE, color, scr);
+                drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE,
+                    TILESIZE, TILESIZE,
+                    SDL_MapRGB( scr->format, color.r, color.g, color.b), scr);
             }
             else
             {
@@ -106,7 +108,7 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
                         if( ((unsigned int*)apple->pixels)[ i * TILESIZE + j ] != SDL_MapRGB( apple->format, 0xFF, 0x00, 0xFF ) )
                             ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = ((unsigned int*)apple->pixels)[i * TILESIZE + j];
                         else
-                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = FLOOR_COLOR;
+                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b );
             }
         }
     }
@@ -143,7 +145,22 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
     }
     
     if( SDL_MUSTLOCK( scr ) ) SDL_UnlockSurface( scr );
-    
+
+}
+
+void Board::drawLevelStart( SDL_Surface* scr )
+{
+    char levelText[] = { 'L', 'e', 'v', 'e', 'l', ':', ' ', ((char) currentLevel ) + 48, '\0' };
+    fontSurface = TTF_RenderText_Shaded( levelNumFont, levelText, levelNumColor, levelNumBG );
+    SDL_Rect where;
+    where.x = (30 + 35 * 12) / 2 - fontSurface->w / 2;
+    where.y = (scr->h / 2) - (fontSurface->h / 2 );
+    SDL_BlitSurface( fontSurface, NULL, scr, &where );
+    SDL_FreeSurface( fontSurface );
+}
+
+void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
+{
     // draw level number
     char levelString[] = { ((char) currentLevel) + 48, '\0' };
     fontSurface = TTF_RenderText_Shaded( levelNumFont, levelString, levelNumColor, levelNumBG );
@@ -345,33 +362,44 @@ bool Board::readCurrentLevel()
         levelFile >> levelData[ i ];
     
     // hex input code
-    int col;
-    Uint32* myColors[] = { &WALL_COLOR, &FLOOR_COLOR };
-    WALL_COLOR = FLOOR_COLOR = 0;
+    Uint8 col;
+    Uint8 readColor;
+    SDL_Color* myColors[] = { &WALL_COLOR, &FLOOR_COLOR };
+    
     for( int k = 0; k < 2; k++ )
     {
         //cout << k;
-        for( int i = 0; i < 6; i++ )
+        for( int i = 0; i < 3; i++ )
         {
-            *(myColors[k]) <<= 4;
-            while( 1 )
+            col = 0;
+            for( int j = 0; j < 2; j++ )
             {
-                col = levelFile.get();
-                if( col >= 48 && col <= 57 )
+                col <<= 4;
+                while( 1 )
                 {
-                    col -= 48;
-                    break;
-                }
-                else if( col >= 65 && col <= 70 )
-                {
-                    col -= 55;
-                    break;
-                }
-                else
-                    continue;
+                    readColor = levelFile.get();
+                    if( readColor >= 48 && readColor <= 57 )
+                    {
+                        readColor -= 48;
+                        break;
+                    }
+                    else if( readColor >= 65 && readColor <= 70 )
+                    {
+                        readColor -= 55;
+                        break;
+                    }
+                    else
+                        continue;
+                }       
+                col |= readColor;
             }
-        
-            *(myColors[k]) |= col;
+            switch( i )
+            {
+                case 0: myColors[k]->r = col; break;
+                case 1: myColors[k]->g = col; break;
+                case 2: myColors[k]->b = col; break;
+                default: break;
+            }
         }
     }
     

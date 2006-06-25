@@ -33,8 +33,8 @@ private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
     const static int LEVEL_COLLECTIBLE = 5;
-    Uint32 WALL_COLOR;
-    Uint32 FLOOR_COLOR;
+    SDL_Color WALL_COLOR;
+    SDL_Color FLOOR_COLOR;
     
     int currentLevel;
     int* levelData;
@@ -60,8 +60,12 @@ public:
     
     /* Methods */
     void Init( string rsrcPath, int numSnakes );
+    
     int updatePosition( SnakePlayer* snakes[] );
-    void draw( SDL_Surface* scr, SnakePlayer* snakes[] );
+    void drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] );
+    void drawLevelStart( SDL_Surface* scr );
+    void drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] );
+    
     void nextLevel( int numSnakes );
     void restartLevel( int numSnakes );
     bool readCurrentLevel();

@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGE LOG:
+ *  25Jun06 TDK Change state to enumeration.
  *  19Jun06 TDK New Code.
  */
 
@@ -25,25 +26,16 @@ private:
     int pausedTicks;
     int stoppedTicks;
     
-    bool paused;
-    bool started;
-    bool stopped;
-    
-    SDL_Surface* nums;
-    const static int NUMWIDTH = 30;
-    const static int NUMHEIGHT = 40;
-    const static int SWIDTH = 400;
-    int numsOfs[12];
-    int numsWidth[12];
-    
-    void calcNumSize();
+    enum State { RUNNING, PAUSED, STOPPED };
+
+    State timerState;    
 
 public:
     Timer();
-    void Cleanup();
     void Init( string pathToResources );
+    void Cleanup();
+
     void draw( int x, int y, SDL_Surface* gScreen );
-    //void drawOne( int& x, int& y, int num, SDL_Surface* gScreen );
     
     void start();
     void pause();
@@ -51,8 +43,9 @@ public:
     void stop();
     
     int get_ticks();
-    bool is_started() { return started; }
-    bool is_paused() { return paused; }
+    bool is_running() { return timerState == RUNNING; }
+    bool is_paused() { return timerState == PAUSED; }
+    bool is_stopped() { return timerState == STOPPED; }
     
 private:
     TTF_Font *timerFont;

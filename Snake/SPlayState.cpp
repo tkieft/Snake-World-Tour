@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  15Jun06 TDK gameState variable to hold state.
  *  24Jun06 TDK Move SDL_Flip below Unlock screen.
  *  17Jun06 TDK New Code.
  *
@@ -30,29 +31,30 @@ void SPlayState::Init( SGameEngine* game )
     bg = load_image( game->getFileDirectory() + "snake.png" );
     
     // create snake(s)
-    theSnakes[0] = new SnakePlayer( 0x295815, "Tyler", SnakePlayer::SNAKE_UP );
+    SDL_Color c1 = { 0x29, 0x58, 0x15 };
+    SDL_Color c2 = { 0x00, 0x33, 0x22 };
+    theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP );
     if( game->getNumPlayers() == 2 )
-        theSnakes[1] = new SnakePlayer( 0x003322, "Brandon", SnakePlayer::SNAKE_DOWN );
-    
+        theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN );
+    // set up board and timer
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
     theTimer.Init( game->getFileDirectory() );
-    theTimer.start();
-    drewBackground = false;
-    lost = false;
-    won = false;
+    
+    gameState = LEVEL_START;
 }
 
 void SPlayState::Cleanup()
 {
+    // cleanup members
     theBoard.Cleanup();
     theTimer.Cleanup();
+    
     // free the background
     SDL_FreeSurface( bg );   
 }
 
 void SPlayState::Pause()
 {
-    drewBackground = false; 
     theTimer.pause();
 }
 void SPlayState::Resume()
@@ -78,30 +80,34 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         game->Quit();
                         break;
                     case SDLK_SPACE:
-                        if( lost || won )
+                        if( gameState == LEVEL_LOST || gameState == LEVEL_WON )
                         {
                             theSnakes[0]->reset( SnakePlayer::SNAKE_UP );
                             if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN );
                         }
-                        if( lost )
+                        if( gameState == LEVEL_LOST )
                         {
-                            lost = false;
+                            gameState = LEVEL_PLAYING;
                             theBoard.restartLevel( game->getNumPlayers() );
                             theTimer.start();
+                            break;
                         }
-                        if( won )
-                        {
-                            won = false;
+                        if( gameState == LEVEL_WON ) {
+                            gameState = LEVEL_START;
                             theBoard.nextLevel( game->getNumPlayers() );
+                            break;
+                        }
+                        if( gameState == LEVEL_START ) {
+                            gameState = LEVEL_PLAYING;
                             theTimer.start();
                         }
                         break;
                     case SDLK_LEFT: case SDLK_DOWN: case SDLK_UP: case SDLK_RIGHT:
-                        if( ! (lost || won ) )
+                        if( gameState == LEVEL_PLAYING )
                             theSnakes[0]->handleInput( &event );
                         break;
                     case SDLK_a: case SDLK_s: case SDLK_w: case SDLK_d:
-                        if( game->getNumPlayers() == 2)
+                        if( game->getNumPlayers() == 2 && gameState == LEVEL_PLAYING )
                             theSnakes[1]->handleInput( &event );
                         break;
                     default: break;
@@ -116,38 +122,43 @@ void SPlayState::HandleEvents( SGameEngine* game )
 
 void SPlayState::Update( SGameEngine* game )
 {
-    if( !( lost || won ) )
+    if( gameState == LEVEL_PLAYING )
     {
         theSnakes[0]->updateDirection();
         if( theSnakes[1] ) theSnakes[1]->updateDirection();
         int result = theBoard.updatePosition( theSnakes );
         if( result == 1 || result == 2 )
         {
-            theSnakes[ result - 1 ]->die();
-            lost = true;
-            theTimer.stop();
+            if( !(theSnakes[ result - 1 ]->die()) ) {
+                gameState = GAME_LOST;
+                theTimer.stop();
+            }
+            else {
+                gameState = LEVEL_LOST;
+                theTimer.stop();
+            }
         }
         else if( result == 3 || result == 4 )
         {
-            won = true;
+            gameState = LEVEL_WON;
             theTimer.stop();
         }
     }
-    //std::cout << theTimer.get_ticks() / 1000 << " ";
 }
 
 void SPlayState::Draw( SGameEngine* game )
 {
-    //if( !drewBackground )
-        SDL_BlitSurface( bg, NULL, game->screen, NULL );
-      
-    theBoard.draw( game->screen, theSnakes );
-    theTimer.draw( 554, 389, game->screen );
+    SDL_BlitSurface( bg, NULL, game->screen, NULL );
+
+    if( gameState != LEVEL_START ) {      
+        theBoard.drawLevelPlaying( game->screen, theSnakes );
+        theBoard.drawSnakeInfo( game->screen, theSnakes );
+        theTimer.draw( 554, 389, game->screen );
+    }
+    else {
+        theBoard.drawLevelStart( game->screen );
+        theBoard.drawSnakeInfo( game->screen, theSnakes );
+    }
     
     SDL_Flip( game->screen );
-            
-    if( !drewBackground ) 
-    {
-        drewBackground = true;
-    }
 }

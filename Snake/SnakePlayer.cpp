@@ -16,16 +16,11 @@
 
 #include "SnakePlayer.h"
 
-//const int SnakePlayer::SNAKE_UP = 0;
-//const int SnakePlayer::SNAKE_RIGHT = 1;
-//const int SnakePlayer::SNAKE_DOWN = 2;
-//const int SnakePlayer::SNAKE_LEFT = 3;
-
-SnakePlayer::SnakePlayer( Uint32 snakeColor, string snakeName, int startingDirection ) : moveQueue()
+SnakePlayer::SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection ) : moveQueue()
 {
     color = snakeColor;
     name = snakeName;
-    lives = 3;
+    lives = 5;
     score = 0;
     direction = startingDirection;
     speed = 1;
@@ -36,9 +31,18 @@ int SnakePlayer::getLives() { return lives; }
 int SnakePlayer::getScore() { return score; }
 int SnakePlayer::getDirection() { return direction; }
 int SnakePlayer::getSpeed() { return speed; }
-Uint32 SnakePlayer::getColor() { return color; }
+SDL_Color SnakePlayer::getColor() { return color; }
 string SnakePlayer::getName() { return name; }
-void SnakePlayer::die() { lives--; }
+
+// returns false if snake is dead
+bool SnakePlayer::die() {
+    if( lives > 0 ) {
+        --lives;
+        return true;
+    }
+    else
+        return false;
+}
 void SnakePlayer::reset( int dir ) { direction = dir; speed = 1; growFactor = 5; while( ! moveQueue.empty() ) moveQueue.pop(); }
 
 bool SnakePlayer::isGrowing()
