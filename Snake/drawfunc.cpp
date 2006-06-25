@@ -44,4 +44,40 @@ void drawrect( int x, int y, int width, int height, Uint32 col, SDL_Surface* gSc
             ((unsigned int*)gScreen->pixels)[ofs + j] = col;
         }
     }
-}    
+}
+
+char* scoreToChar( int score )
+{
+    char tempScore[20];
+    char* scoreChar = new char[20];
+    scoreChar[0] = 'S'; scoreChar[1] = 'c'; scoreChar[2] = 'o';
+    scoreChar[3] = 'r'; scoreChar[4] = 'e'; scoreChar[5] = ':';
+    scoreChar[6] = ' ';
+    
+    int i = 0;
+    
+    if( !score ) {
+        scoreChar[7] = '0';
+        scoreChar[8] = '\0';
+    }
+    while( score )
+    {
+        tempScore[i] = ((char) (score % 10)) + 48;
+        score /= 10;
+        i++;
+    }
+    
+    int j = 0;
+    for( ; j < i; j++ )
+    {
+        scoreChar[ j + 7 ] = tempScore[ i - 1 - j];
+        if( ( i - j ) > 1 && (i - j - 1) % 3 == 0 )
+        {
+            i++; j++;
+            scoreChar[j+7] = ',';
+        }
+    }
+    if( j )
+        scoreChar[ 7 + j ] = '\0';
+    return scoreChar;
+}

@@ -44,6 +44,8 @@ void SPlayState::Init( SGameEngine* game )
 
 void SPlayState::Cleanup()
 {
+    theBoard.Cleanup();
+    theTimer.Cleanup();
     // free the background
     SDL_FreeSurface( bg );   
 }

@@ -56,7 +56,7 @@ void Board::Init( string rsrcPath, int numSnakes )
     levelNumBG.r = levelNumBG.b = levelNumBG.g = 0;
 }
 
-Board::~Board()
+void Board::Cleanup()
 {
     SDL_FreeSurface( apple );
     TTF_CloseFont( levelNumFont );
@@ -144,16 +144,31 @@ void Board::draw( SDL_Surface* scr, SnakePlayer* snakes[] )
     
     if( SDL_MUSTLOCK( scr ) ) SDL_UnlockSurface( scr );
     
-    // draw level
+    // draw level number
     char levelString[] = { ((char) currentLevel) + 48, '\0' };
-    levelNumSurface = TTF_RenderText_Shaded( levelNumFont, levelString, levelNumColor, levelNumBG );
+    fontSurface = TTF_RenderText_Shaded( levelNumFont, levelString, levelNumColor, levelNumBG );
     SDL_Rect levRect = { 554, 414 };
-    SDL_BlitSurface( levelNumSurface, NULL, scr, &levRect );
-    SDL_FreeSurface( levelNumSurface );
+    SDL_BlitSurface( fontSurface, NULL, scr, &levRect );
+    SDL_FreeSurface( fontSurface );
     
-    // fill in timer box
-    //drawrect( 474, 406, 575-474, 447-406, 0xFFFFFF, scr);
-    //SDL_UpdateRect( scr, XLOC, YLOC, XLOC - 1 + TILESIZE * LEVELSIZE, YLOC - 1 + TILESIZE * LEVELSIZE );            
+    // draw player score and lives
+    for( int p = 0; p < 2; p++ )
+    {
+        if( !snakes[p] ) break;
+        char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ((char) snakes[p]->getLives()) + 48, '\0' };
+        int score = snakes[p]->getScore();
+        char* playerScore = scoreToChar( score );
+        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerLives, levelNumColor, levelNumBG );
+        SDL_Rect p1 = { 475, 150 + p*100 };
+        SDL_BlitSurface( fontSurface, NULL, scr, &p1 );
+        SDL_FreeSurface( fontSurface );
+        fontSurface = TTF_RenderText_Shaded( levelNumFont, playerScore, levelNumColor, levelNumBG );
+        SDL_Rect p2 = { 475, 180 + p*100 };
+        SDL_BlitSurface( fontSurface, NULL, scr, &p2 );
+        SDL_FreeSurface( fontSurface );
+        delete[] playerScore;        
+    }
+    
 }
 
 // return 0 if continue, 1 if snake 1 crashed, 2 if snake 2 crashed

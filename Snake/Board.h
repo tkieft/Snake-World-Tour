@@ -56,7 +56,7 @@ public:
     
     /* Constructor and destructor */        
     Board();
-    ~Board();
+    void Cleanup();
     
     /* Methods */
     void Init( string rsrcPath, int numSnakes );
@@ -72,7 +72,7 @@ private:
     const static int ENDING_POSITION[];
     
     TTF_Font *levelNumFont;
-    SDL_Surface *levelNumSurface;
+    SDL_Surface *fontSurface;
     SDL_Color levelNumColor;
     SDL_Color levelNumBG;
 };

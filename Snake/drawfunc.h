@@ -17,6 +17,6 @@
 #include "SDL.h"
 
 void drawrect( int x, int y, int width, int height, Uint32 col, SDL_Surface* gScreen );
-void drawnum( int x, int y, char num, SDL_Surface* gScreen );
+char* scoreToChar( int score );
 
 #endif

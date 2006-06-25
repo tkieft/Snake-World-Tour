@@ -33,7 +33,6 @@ void SIntroState::Cleanup()
 {
     SDL_FreeSurface( title );
     SDL_FreeSurface( fader );
-        
 }
 
 void SIntroState::Pause() {}

@@ -40,7 +40,7 @@ private:
 
 public:
     Timer();
-    ~Timer();
+    void Cleanup();
     void Init( string pathToResources );
     void draw( int x, int y, SDL_Surface* gScreen );
     //void drawOne( int& x, int& y, int num, SDL_Surface* gScreen );

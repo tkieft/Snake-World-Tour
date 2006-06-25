@@ -68,7 +68,7 @@ void Timer::calcNumSize()
     if( SDL_MUSTLOCK( nums ) ) SDL_UnlockSurface( nums );
 }
 
-Timer::~Timer()
+void Timer::Cleanup()
 {
     SDL_FreeSurface( nums );
     TTF_CloseFont( timerFont );

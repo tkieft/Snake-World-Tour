@@ -5,7 +5,7 @@ Development Plan: Snake-Clone Game
 
 ------------------------------------------------------------
 
-Name: ????????
+Name: Snake World Tour 2006
 
 This game will be a simple clone of snake to get my feet wet and see
 if I can actually finish a complete game.  The goal is to get snake
