@@ -33,11 +33,15 @@ private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
     const static int LEVEL_COLLECTIBLE = 5;
+    const static int LEVEL_FLOOR_NO_COLLECTIBLE = 9; //Don't put collectibles here!
     SDL_Color WALL_COLOR;
     SDL_Color FLOOR_COLOR;
     
     int currentLevel;
     int* levelData;
+    string levelName;
+    string levelLocation;
+    
     string levelPath;
     string applePath;
     int* snakeHead;
@@ -77,6 +81,9 @@ public:
 private:
     const static int STARTING_POSITION[];
     const static int ENDING_POSITION[];
+    
+    void drawLargeText( const char* text, double yMult, SDL_Surface* scr );
+    void drawSmallText( const char* text, SDL_Surface* scr );
     
     TTF_Font *largeFont;
     TTF_Font *mediumFont;

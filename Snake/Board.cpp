@@ -89,7 +89,7 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
             tile = levelData[ y * LEVELSIZE + x ];
             if( tile != LEVEL_COLLECTIBLE )
             {
-                if( tile == LEVEL_FLOOR )
+                if( tile == LEVEL_FLOOR || tile == LEVEL_FLOOR_NO_COLLECTIBLE )
                     color = FLOOR_COLOR;
                 else if( tile == LEVEL_WALL )
                     color = WALL_COLOR;
@@ -154,61 +154,51 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
 
 }
 
+void Board::drawLargeText( const char* text, double yMult, SDL_Surface* scr )
+{
+    fontSurface = TTF_RenderText_Shaded( largeFont, text, WALL_COLOR, FLOOR_COLOR );
+    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, ( scr->h / 2 ) + ( fontSurface->h * yMult ) };
+    SDL_BlitSurface( fontSurface, NULL, scr, &where );
+    SDL_FreeSurface( fontSurface );
+}
+
+void Board::drawSmallText( const char* text, SDL_Surface* scr )
+{
+    fontSurface = TTF_RenderText_Shaded( smallFont, text, WALL_COLOR, FLOOR_COLOR );
+    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, YLOC + TILESIZE * LEVELSIZE - fontSurface->h };
+    SDL_BlitSurface( fontSurface, NULL, scr, &where );
+    SDL_FreeSurface( fontSurface );
+}
+
 void Board::drawLevelStart( SDL_Surface* scr )
 {
     SDL_Rect boardSurface = { XLOC, YLOC, TILESIZE * LEVELSIZE, TILESIZE * LEVELSIZE };
     SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
+    
     char levelText[] = { 'L', 'e', 'v', 'e', 'l', ' ', ((char) currentLevel ) + 48, '\0' };
-    fontSurface = TTF_RenderText_Shaded( largeFont, levelText, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where;
-    where.x = 30 + (35 * 12) / 2 - fontSurface->w / 2;
-    where.y = (scr->h / 2) - (fontSurface->h / 2 );
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
-    char contText[] = "Press spacebar to start level";
-    fontSurface = TTF_RenderText_Shaded( smallFont, contText, WALL_COLOR, FLOOR_COLOR );
-    where.x = 30 + ( 35 * 12 ) / 2 - fontSurface->w / 2;
-    where.y = YLOC + TILESIZE * LEVELSIZE - fontSurface->h;
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
+    drawLargeText( levelText, (-1.5), scr );
+    drawLargeText( levelName.c_str(), (-.5), scr );
+    drawLargeText( levelLocation.c_str(), .5, scr );
+
+    drawSmallText( "Press space to begin", scr );
 }
 
 void Board::drawLevelPaused( SDL_Surface* scr )
 {
     SDL_Rect boardSurface = { XLOC, YLOC, TILESIZE * LEVELSIZE, TILESIZE * LEVELSIZE };
     SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
-    char pausedText[] = "* PAUSED *";
-    fontSurface = TTF_RenderText_Shaded( largeFont, pausedText, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where;
-    where.x = 30 + (35 * 12) / 2 - fontSurface->w / 2;
-    where.y = (scr->h / 2) - (fontSurface->h / 2 );
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
-    char contText[] = "Press 'p' to continue playing";
-    fontSurface = TTF_RenderText_Shaded( smallFont, contText, WALL_COLOR, FLOOR_COLOR );
-    where.x = 30 + ( 35 * 12 ) / 2 - fontSurface->w / 2;
-    where.y = YLOC + TILESIZE * LEVELSIZE - fontSurface->h;
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
+    
+    drawLargeText( "* PAUSED *", -.5, scr );
+    drawSmallText( "Press 'p' to continue playing", scr );
 }
 
 void Board::drawGameLost( SDL_Surface* scr )
 {
     SDL_Rect boardSurface = { XLOC, YLOC, TILESIZE * LEVELSIZE, TILESIZE * LEVELSIZE };
     SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
-    char lostText[] = "GAME OVER";
-    fontSurface = TTF_RenderText_Shaded( largeFont, lostText, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where;
-    where.x = 30 + (35 * 12) / 2 - fontSurface->w / 2;
-    where.y = (scr->h / 2) - (fontSurface->h / 2 );
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
-    char contText[] = "Press spacebar to play again";
-    fontSurface = TTF_RenderText_Shaded( smallFont, contText, WALL_COLOR, FLOOR_COLOR );
-    where.x = 30 + ( 35 * 12 ) / 2 - fontSurface->w / 2;
-    where.y = YLOC + TILESIZE * LEVELSIZE - fontSurface->h;
-    SDL_BlitSurface( fontSurface, NULL, scr, &where );
-    SDL_FreeSurface( fontSurface );
+    
+    drawLargeText( "GAME OVER", -.5, scr );
+    drawSmallText( "Press space to play again", scr );
 }
 
 
@@ -247,15 +237,17 @@ int Board::updatePosition( SnakePlayer* snakes[] )
 {
     int numSnakes = 1;
     if( snakes[1] ) numSnakes = 2;
+    int nextPos;
     for( int i = 0; i < numSnakes; i++ )
     {
         int direction = snakes[i]->getDirection();
         switch( direction )
         {
             case SnakePlayer::SNAKE_UP:
-                if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] != LEVEL_FLOOR )
+                nextPos = levelData[ snakeHeadPosition[i]  - LEVELSIZE ];
+                if( nextPos != LEVEL_FLOOR && nextPos != LEVEL_FLOOR_NO_COLLECTIBLE )
                 {
-                    if( levelData[ snakeHeadPosition[i] - LEVELSIZE ] == LEVEL_COLLECTIBLE )
+                    if( nextPos == LEVEL_COLLECTIBLE )
                     {
                         collectibles--;
                         snakes[i]->eat();
@@ -268,9 +260,10 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 break;
 
             case SnakePlayer::SNAKE_DOWN:
-                if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] != LEVEL_FLOOR )
+                nextPos = levelData[ snakeHeadPosition[i] + LEVELSIZE ];
+                if( nextPos != LEVEL_FLOOR && nextPos != LEVEL_FLOOR_NO_COLLECTIBLE)
                 {
-                    if( levelData[ snakeHeadPosition[i] + LEVELSIZE ] == LEVEL_COLLECTIBLE )
+                    if( nextPos == LEVEL_COLLECTIBLE )
                     {
                         collectibles--;
                         snakes[i]->eat();
@@ -283,9 +276,10 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 break;
                   
             case SnakePlayer::SNAKE_LEFT:
-                if( levelData[ snakeHeadPosition[i] - 1 ] != LEVEL_FLOOR )
+                nextPos = levelData[ snakeHeadPosition[i] - 1 ];
+                if( nextPos != LEVEL_FLOOR && nextPos != LEVEL_FLOOR_NO_COLLECTIBLE )
                 {
-                    if( levelData[ snakeHeadPosition[i] - 1 ] == LEVEL_COLLECTIBLE )
+                    if( nextPos == LEVEL_COLLECTIBLE )
                     {
                         collectibles--;
                         snakes[i]->eat();
@@ -297,9 +291,10 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 break;
                     
             case SnakePlayer::SNAKE_RIGHT:
-                if( levelData[ snakeHeadPosition[i] + 1 ] != LEVEL_FLOOR )
+                nextPos = levelData[ snakeHeadPosition[i] + 1 ];
+                if( nextPos != LEVEL_FLOOR && nextPos != LEVEL_FLOOR_NO_COLLECTIBLE )
                 {
-                    if( levelData[ snakeHeadPosition[i] + 1] == LEVEL_COLLECTIBLE )
+                    if( nextPos == LEVEL_COLLECTIBLE )
                     {
                         collectibles--;
                         snakes[i]->eat();
@@ -341,6 +336,7 @@ int Board::updatePosition( SnakePlayer* snakes[] )
             }
         }
         
+        // won the level
         if( collectibles == 0 )
             if( snakeHeadPosition[i] == ENDING_POSITION[i] )
                 return 3 + i;
@@ -416,6 +412,9 @@ bool Board::readCurrentLevel()
     
     if( ! gotNewLevel ) 
         return false;
+    
+    getline( levelFile, levelName );
+    getline( levelFile, levelLocation );
         
     for( int i = 0; i < LEVELSIZE * LEVELSIZE; i++ )
         levelFile >> levelData[ i ];
@@ -477,7 +476,7 @@ void Board::initCollectibles()
         {
             placement = rand() % ( LEVELSIZE * LEVELSIZE );
         }
-        while( levelData[placement] != 0 );
+        while( levelData[placement] != LEVEL_FLOOR );
         
         levelData[placement] = 5;
     }

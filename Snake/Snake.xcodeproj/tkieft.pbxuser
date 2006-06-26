@@ -10,17 +10,18 @@
 	};
 	0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {872, 1610}}";
-			sepNavSelRange = "{769, 0}";
-			sepNavVisRect = "{{0, 116}, {872, 651}}";
+			sepNavIntBoundsRect = "{{0, 0}, {788, 1610}}";
+			sepNavSelRange = "{863, 0}";
+			sepNavVisRect = "{{0, 375}, {670, 160}}";
 			sepNavWindowFrame = "{{315, 52}, {917, 780}}";
 		};
 	};
 	06377BD00A434FF70006D268 /* levels.txt */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {723, 3220}}";
-			sepNavSelRange = "{4927, 0}";
-			sepNavVisRect = "{{0, 482}, {723, 286}}";
+			sepNavIntBoundsRect = "{{0, 0}, {456, 3360}}";
+			sepNavSelRange = "{3809, 0}";
+			sepNavVisRect = "{{0, 489}, {456, 644}}";
+			sepNavWindowFrame = "{{169, 59}, {501, 773}}";
 		};
 	};
 	063E7B5E0A3C84C4005C4507 /* Snake */ = {
@@ -150,43 +151,34 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	06490D1A0A4F0CFE00BF3581 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: 'Unpause' was not declared in this scope";
-		fRef = 06C971F50A446B2900ECB735 /* SPlayState.cpp */;
-		rLen = 1;
-		rLoc = 115;
-		rType = 1;
+	06490E1D0A4F6B1D00BF3581 /* Board.cpp:236 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 06CC53530A3E321400E92E7F /* Board.cpp */;
+		functionName = "Board::updatePosition()";
+		hitCount = 4;
+		lineNumber = 236;
+		location = Snake;
+		modificationTime = 172976997.770413;
+		state = 1;
 	};
-	06490D1D0A4F0D0D00BF3581 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
-		name = "Board.cpp: 187";
-		rLen = 0;
-		rLoc = 7083;
-		rType = 0;
-		vrLen = 2240;
-		vrLoc = 5306;
+	06490E260A4F6C3300BF3581 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
 	};
-	06490D1E0A4F0D0D00BF3581 /* PBXTextBookmark */ = {
+	06490E510A4F75C900BF3581 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 06CC53530A3E321400E92E7F /* Board.cpp */;
-		name = "Board.cpp: 187";
+		fRef = 06377BD00A434FF70006D268 /* levels.txt */;
+		name = "levels.txt: 59";
 		rLen = 0;
-		rLoc = 7083;
+		rLoc = 3809;
 		rType = 0;
-		vrLen = 2240;
-		vrLoc = 5306;
-	};
-	06490D1F0A4F0D0D00BF3581 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 06C971F50A446B2900ECB735 /* SPlayState.cpp */;
-		name = "SPlayState.cpp: 108";
-		rLen = 0;
-		rLoc = 3591;
-		rType = 0;
-		vrLen = 2213;
-		vrLoc = 1741;
+		vrLen = 2666;
+		vrLoc = 2320;
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
 		uiCtxt = {
@@ -267,18 +259,18 @@
 	};
 	06CC53520A3E321400E92E7F /* Board.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 1274}}";
-			sepNavSelRange = "{1705, 0}";
-			sepNavVisRect = "{{0, 586}, {1117, 660}}";
+			sepNavIntBoundsRect = "{{0, 0}, {554, 1372}}";
+			sepNavSelRange = "{915, 0}";
+			sepNavVisRect = "{{0, 496}, {554, 607}}";
 			sepNavWindowFrame = "{{174, 96}, {599, 736}}";
 		};
 	};
 	06CC53530A3E321400E92E7F /* Board.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1352, 6790}}";
-			sepNavSelRange = "{7724, 0}";
-			sepNavVisRect = "{{0, 2548}, {1117, 660}}";
-			sepNavWindowFrame = "{{72, 43}, {1162, 789}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 6776}}";
+			sepNavSelRange = "{1036, 0}";
+			sepNavVisRect = "{{4, 0}, {584, 632}}";
+			sepNavWindowFrame = "{{395, 71}, {629, 761}}";
 		};
 	};
 	06CC53680A3E369000E92E7F /* drawfunc.h */ = {
@@ -333,7 +325,7 @@
 		hitCount = 1;
 		lineNumber = 39;
 		location = Snake;
-		modificationTime = 172943644.432974;
+		modificationTime = 172976891.781855;
 		state = 1;
 	};
 	06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */ = {
@@ -348,7 +340,7 @@
 		hitCount = 1;
 		lineNumber = 97;
 		location = Snake;
-		modificationTime = 172943644.43302;
+		modificationTime = 172976891.781994;
 		state = 1;
 	};
 	06FFD1780A3E2196003850BF /* load_image.h */ = {
@@ -385,6 +377,7 @@
 		breakpoints = (
 			06FB5C2E0A4785E900D6B6A4 /* Timer.cpp:39 */,
 			06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */,
+			06490E1D0A4F6B1D00BF3581 /* Board.cpp:236 */,
 		);
 		breakpointsGroup = 06CC52FF0A3E2EB900E92E7F /* XCBreakpointsBucket */;
 		codeSenseManager = 063E7B730A3C84C9005C4507 /* Code sense */;
@@ -546,10 +539,8 @@
 			PBXWorkspaceStateSaveDate = 172950760;
 		};
 		perUserProjectItems = {
-			06490D1A0A4F0CFE00BF3581 /* PBXTextBookmark */ = 06490D1A0A4F0CFE00BF3581 /* PBXTextBookmark */;
-			06490D1D0A4F0D0D00BF3581 /* PBXTextBookmark */ = 06490D1D0A4F0D0D00BF3581 /* PBXTextBookmark */;
-			06490D1E0A4F0D0D00BF3581 /* PBXTextBookmark */ = 06490D1E0A4F0D0D00BF3581 /* PBXTextBookmark */;
-			06490D1F0A4F0D0D00BF3581 /* PBXTextBookmark */ = 06490D1F0A4F0D0D00BF3581 /* PBXTextBookmark */;
+			06490E260A4F6C3300BF3581 /* PBXBookmark */ = 06490E260A4F6C3300BF3581 /* PBXBookmark */;
+			06490E510A4F75C900BF3581 /* PBXTextBookmark */ = 06490E510A4F75C900BF3581 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {
