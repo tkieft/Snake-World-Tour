@@ -76,7 +76,7 @@ public:
     void restartLevel( int numSnakes );
     void setLevel( int level, int numSnakes );
     bool readCurrentLevel();
-    void initCollectibles();
+    void placeCollectible();
     
 private:
     const static int STARTING_POSITION[];
@@ -86,8 +86,10 @@ private:
     void drawSmallText( const char* text, SDL_Surface* scr );
     
     TTF_Font *largeFont;
-    TTF_Font *mediumFont;
     TTF_Font *smallFont;
+
+    TTF_Font* playerFont[2];
+    TTF_Font *levelFont;
     
     SDL_Surface *fontSurface;
     SDL_Color levelNumColor;

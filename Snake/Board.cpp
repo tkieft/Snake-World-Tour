@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  27Jun06 TDK Add more fonts so that colors are correct, only one apple at a time.
  *  18Jun06 TDK readCurrentLevel() more efficient, now read wall color.
  *  17Jun06 TDK Eye drawing and apple drawing code.
  *  16Jun06 TDK Collectibles.
@@ -34,7 +35,11 @@ using std::endl;
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 const int Board::ENDING_POSITION[] = { Board::STARTING_POSITION[1], Board::STARTING_POSITION[0] };
 
-Board::Board() : currentLevel( 0 ) {}
+Board::Board() : currentLevel( 0 )
+{
+    playerFont[0] = NULL;
+    playerFont[1] = NULL;
+}
 
 void Board::Init( string rsrcPath, int numSnakes )
 {
@@ -48,10 +53,16 @@ void Board::Init( string rsrcPath, int numSnakes )
     
     apple = load_image( applePath, 0xFF, 0x00, 0xFF );
     
-    mediumFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
+    for( int i = 0; i < 2; i++ )
+    {
+        playerFont[i] = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
+        if( !playerFont[i] )
+            exit(1);
+    }
+    levelFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
     smallFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 18 );
     largeFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 34 );
-    if( !mediumFont || !smallFont || !largeFont )
+    if( !largeFont )
         exit(1);
     
     levelNumColor.r = 0xEF; levelNumColor.g = 0x8A; levelNumColor.b = 0x01;
@@ -64,7 +75,9 @@ void Board::Cleanup()
 {
     SDL_FreeSurface( apple );
     TTF_CloseFont( smallFont );
-    TTF_CloseFont( mediumFont );
+    TTF_CloseFont( playerFont[0] );
+    TTF_CloseFont( playerFont[1] );
+    TTF_CloseFont( levelFont );
     TTF_CloseFont( largeFont );
     delete[] levelData;
     delete[] snakeHead;
@@ -206,7 +219,7 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     // draw level number
     char levelString[] = { ((char) currentLevel) + 48, '\0' };
-    fontSurface = TTF_RenderText_Shaded( mediumFont, levelString, levelNumColor, levelNumBG );
+    fontSurface = TTF_RenderText_Shaded( levelFont, levelString, levelNumColor, levelNumBG );
     SDL_Rect levRect = { 554, 414 };
     SDL_BlitSurface( fontSurface, NULL, scr, &levRect );
     SDL_FreeSurface( fontSurface );
@@ -218,11 +231,11 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
         char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ((char) snakes[p]->getLives()) + 48, '\0' };
         int score = snakes[p]->getScore();
         char* playerScore = scoreToChar( score );
-        fontSurface = TTF_RenderText_Shaded( mediumFont, playerLives, snakes[p]->getColor(), levelNumBG );
+        fontSurface = TTF_RenderText_Shaded( playerFont[p], playerLives, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p1 = { 475, 150 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p1 );
         SDL_FreeSurface( fontSurface );
-        fontSurface = TTF_RenderText_Shaded( mediumFont, playerScore, snakes[p]->getColor(), levelNumBG );
+        fontSurface = TTF_RenderText_Shaded( playerFont[p], playerScore, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p2 = { 475, 180 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p2 );
         SDL_FreeSurface( fontSurface );
@@ -249,8 +262,8 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 {
                     if( nextPos == LEVEL_COLLECTIBLE )
                     {
-                        collectibles--;
                         snakes[i]->eat();
+                        if( --collectibles) placeCollectible();
                     }
                     else
                         return i+1;
@@ -265,8 +278,8 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 {
                     if( nextPos == LEVEL_COLLECTIBLE )
                     {
-                        collectibles--;
                         snakes[i]->eat();
+                        if( --collectibles) placeCollectible();
                     }
                     else
                         return i+1;
@@ -281,8 +294,8 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 {
                     if( nextPos == LEVEL_COLLECTIBLE )
                     {
-                        collectibles--;
                         snakes[i]->eat();
+                        if( --collectibles) placeCollectible();
                     }
                     else
                         return i+1;
@@ -296,8 +309,8 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                 {
                     if( nextPos == LEVEL_COLLECTIBLE )
                     {
-                        collectibles--;
                         snakes[i]->eat();
+                        if( --collectibles) placeCollectible();
                     }
                     else
                         return i+1;
@@ -374,7 +387,8 @@ void Board::levelInit( int numSnakes )
         if( ! readCurrentLevel() )
             exit( 1 );
     }
-    initCollectibles();
+    collectibles = 10;
+    placeCollectible();
     
     // start snake 1 in middle of bottom, snake 2 in middle of top
     snakeHead[0] = 10;
@@ -465,19 +479,15 @@ bool Board::readCurrentLevel()
     return true;
 }
 
-void Board::initCollectibles()
+void Board::placeCollectible()
 {
     srand( time( NULL ) );
-    collectibles = 10;
     int placement;
-    for( int i = 0; i < collectibles; i++ )
+    do
     {
-        do
-        {
-            placement = rand() % ( LEVELSIZE * LEVELSIZE );
-        }
-        while( levelData[placement] != LEVEL_FLOOR );
-        
-        levelData[placement] = 5;
+        placement = rand() % ( LEVELSIZE * LEVELSIZE );
     }
+    while( levelData[placement] != LEVEL_FLOOR );
+        
+    levelData[placement] = 5;
 }

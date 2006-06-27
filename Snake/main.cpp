@@ -10,6 +10,7 @@
  */
 
 #include <string>
+#include <iostream>
 #include "SDL.h"
 #include "globals.h"
 #include "Board.h"
@@ -26,6 +27,9 @@ int main(int argc, char *argv[])
     SGameEngine game;
     
     // initialize the engine
+    const SDL_version* version = SDL_Linked_Version();
+    std::cout << "Snake World Tour 2006\nTyler Kieft\nLinked with SDL Version "
+        << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl;
     game.Init( "Snake World Tour 2006      v0.1 beta", rsrcdirectory );
     
     // load the game
