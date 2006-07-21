@@ -12,6 +12,7 @@
 
 #include "SMenuState.h"
 #include "SPlayState.h"
+#include "globals.h"
 #include <iostream>
 using std::cout;
 
@@ -34,6 +35,8 @@ void SMenuState::init_menus( SGameEngine* game ) {
     options_menu->addOption( "screensize" );
     options_menu->addOptionChoice( "screensize", "Windowed" );
     options_menu->addOptionChoice( "screensize", "Fullscreen" );
+    options_menu->addSelectableOption( "Save" );
+    options_menu->addSelectableOption( "Cancel" );
     
 }
 
@@ -78,6 +81,17 @@ void SMenuState::HandleEvents( SGameEngine* game )
                             current_menu = options_menu;
                         else
                             game->Quit();
+                    }
+                    else {
+                        if( current_menu->getOption() == "Cancel" )
+                            current_menu = main_menu;
+                        else if( current_menu->getOption() == "Save" ) {
+                            current_menu = main_menu;
+                            if( options_menu->getChoice("screensize") == "Fullscreen" )
+                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_FULLSCREEN | SDL_SWSURFACE );
+                            else
+                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
+                        }
                     }
                 default:
                     break;

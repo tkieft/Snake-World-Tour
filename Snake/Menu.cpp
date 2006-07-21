@@ -117,15 +117,14 @@ void Menu::drawOption( SGameEngine* game, int q, int yofs )
     int totalWidth = 0;
     SDL_Surface* fSurfaces[ options[q]->getChoices() ];
     for( int i = 0; i < options[q]->getChoices(); i++ ) {
-        fSurfaces[i] = TTF_RenderText_Shaded( theFont, (options[q]->getName()).c_str(), textColor, bgColor);
-        totalWidth += fSurfaces[i]->w + 10;
+        fSurfaces[i] = TTF_RenderText_Shaded( theFont, (options[q]->getChoiceWithNum(i)).c_str(), textColor, bgColor);
+        totalWidth += fSurfaces[i]->w + 30;
     }
                 
     SDL_Rect where = { SCREENWIDTH / 2 - totalWidth / 2, yofs };
     for( int i = 0; i < options[q]->getChoices(); i++ ){
         SDL_BlitSurface( fSurfaces[i], NULL, game->screen, &where );
-        where.x += 10 + fSurfaces[i]->w;
-        if( i == options[q]->getCurrentChoiceNum() ) {
+        if( q == currentOption && i == options[q]->getCurrentChoiceNum() ) {
             SDL_Rect where2 = where;
             where2.x -= 20;
             where2.y += 12;
@@ -133,6 +132,7 @@ void Menu::drawOption( SGameEngine* game, int q, int yofs )
             where2.h = 12;
             SDL_FillRect( game->screen, &where2, SDL_MapRGB( game->screen->format, textColor.r, textColor.g, textColor.b));
         }
+        where.x += 30 + fSurfaces[i]->w;
         SDL_FreeSurface( fSurfaces[i] );
     }
     

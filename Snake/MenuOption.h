@@ -34,6 +34,7 @@ public:
     bool isSelectable() { return selectable; }
     string getCurrentChoice();
     int getCurrentChoiceNum() { return current_choice; }
+    string getChoiceWithNum( int num ) { return choices[num]; }
     int getChoices() { return num_choices; }
     string getName();
 };

@@ -14,6 +14,7 @@
 
 #include "SDL.h"
 #include "SPlayState.h"
+#include "SMenuState.h"
 #include "load_image.h"
 #include <iostream>
 
@@ -77,7 +78,7 @@ void SPlayState::HandleEvents( SGameEngine* game )
                 switch( event.key.keysym.sym )
                 {
                     case SDLK_ESCAPE:
-                        game->Quit();
+                        game->PushState( SMenuState::Instance() );
                         break;
                     case SDLK_SPACE:
                         if( gameState == LEVEL_LOST || gameState == LEVEL_WON )
