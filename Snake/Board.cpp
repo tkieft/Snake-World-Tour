@@ -39,6 +39,7 @@ Board::Board() : currentLevel( 0 )
 {
     playerFont[0] = NULL;
     playerFont[1] = NULL;
+    srand( time( NULL ) );
 }
 
 void Board::Init( string rsrcPath, int numSnakes )
@@ -106,6 +107,8 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
                     color = FLOOR_COLOR;
                 else if( tile == LEVEL_WALL )
                     color = WALL_COLOR;
+                else if( tile == LEVEL_WALL2 )
+                    color = WALL2_COLOR;
                 else if( tile >= 10 && tile < 400 )
                     color = snakes[0]->getColor();
                 else if( snakes[1] && tile >= 400 )
@@ -170,7 +173,7 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
 void Board::drawLargeText( const char* text, double yMult, SDL_Surface* scr )
 {
     fontSurface = TTF_RenderText_Shaded( largeFont, text, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, ( scr->h / 2 ) + ( fontSurface->h * yMult ) };
+    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, ( scr->h / 2 ) + ( fontSurface->h * yMult ) };
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );
 }
@@ -436,9 +439,9 @@ bool Board::readCurrentLevel()
     // hex input code
     Uint8 col;
     Uint8 readColor;
-    SDL_Color* myColors[] = { &WALL_COLOR, &FLOOR_COLOR };
+    SDL_Color* myColors[] = { &WALL_COLOR, &WALL2_COLOR, &FLOOR_COLOR };
     
-    for( int k = 0; k < 2; k++ )
+    for( int k = 0; k < 3; k++ )
     {
         //cout << k;
         for( int i = 0; i < 3; i++ )
@@ -481,7 +484,6 @@ bool Board::readCurrentLevel()
 
 void Board::placeCollectible()
 {
-    srand( time( NULL ) );
     int placement;
     do
     {

@@ -10,7 +10,7 @@
  */
 
 #include "SIntroState.h"
-#include "SPlayState.h"
+#include "SMenuState.h"
 #include "load_image.h"
 
 SIntroState SIntroState::snakeIntroState;
@@ -49,7 +49,7 @@ void SIntroState::HandleEvents( SGameEngine* game )
                 game->Quit();
             if( event.key.keysym.sym == SDLK_9 )
             {
-                game->ChangeState( SPlayState::Instance() );
+                game->ChangeState( SMenuState::Instance() );
                 return;
             }
         }
@@ -69,7 +69,7 @@ void SIntroState::Update( SGameEngine* game )
             startticks = SDL_GetTicks();
         else if( SDL_GetTicks() - startticks > 3000 )
         {
-            game->ChangeState( SPlayState::Instance() );
+            game->ChangeState( SMenuState::Instance() );
             return;
         }
     }

@@ -32,9 +32,11 @@ class Board
 private:
     const static int LEVEL_FLOOR = 0;
     const static int LEVEL_WALL = 1;
+    const static int LEVEL_WALL2 = 2;
     const static int LEVEL_COLLECTIBLE = 5;
     const static int LEVEL_FLOOR_NO_COLLECTIBLE = 9; //Don't put collectibles here!
     SDL_Color WALL_COLOR;
+    SDL_Color WALL2_COLOR;
     SDL_Color FLOOR_COLOR;
     
     int currentLevel;

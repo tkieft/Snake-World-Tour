@@ -13,6 +13,7 @@
 #ifndef SGAMEENGINE_H
 #define SGAMEENGINE_H
 
+#include "SDL.h"
 #include <vector>
 #include <string>
 using std::vector;

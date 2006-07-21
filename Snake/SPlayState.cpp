@@ -31,7 +31,7 @@ void SPlayState::Init( SGameEngine* game )
     bg = load_image( game->getFileDirectory() + "snake.png" );
     
     // create snake(s)
-    SDL_Color c1 = { 0x00, 0x00, 0xA5 };
+    SDL_Color c1 = { 0x00, 0x88, 0x00 };
     SDL_Color c2 = { 0x00, 0x33, 0x22 };
     theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP );
     if( game->getNumPlayers() == 2 )

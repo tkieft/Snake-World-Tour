@@ -54,6 +54,12 @@
 		0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */; };
 		0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
 		06377BD10A434FF70006D268 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06377BD00A434FF70006D268 /* levels.txt */; };
+		06431CEA0A703DB20027C0D2 /* SMenuState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CE80A703DB20027C0D2 /* SMenuState.h */; };
+		06431CEB0A703DB20027C0D2 /* SMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CE90A703DB20027C0D2 /* SMenuState.cpp */; };
+		06431CFB0A7040AE0027C0D2 /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CF90A7040AE0027C0D2 /* Menu.h */; };
+		06431CFC0A7040AE0027C0D2 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CFA0A7040AE0027C0D2 /* Menu.cpp */; };
+		06431D0A0A70426C0027C0D2 /* MenuOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431D080A70426C0027C0D2 /* MenuOption.h */; };
+		06431D0B0A70426C0027C0D2 /* MenuOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431D090A70426C0027C0D2 /* MenuOption.cpp */; };
 		066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */ = {isa = PBXBuildFile; fileRef = 066003C90A4D9DFF009ED8EF /* snake.000 */; };
 		0660BCE80A4A1A720007D282 /* SIntroState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0660BCE60A4A1A720007D282 /* SIntroState.h */; };
 		0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0660BCE70A4A1A720007D282 /* SIntroState.cpp */; };
@@ -86,6 +92,12 @@
 		0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SnakePlayer.h; sourceTree = "<group>"; };
 		0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnakePlayer.cpp; sourceTree = "<group>"; };
 		06377BD00A434FF70006D268 /* levels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = levels.txt; sourceTree = "<group>"; };
+		06431CE80A703DB20027C0D2 /* SMenuState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMenuState.h; sourceTree = "<group>"; };
+		06431CE90A703DB20027C0D2 /* SMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SMenuState.cpp; sourceTree = "<group>"; };
+		06431CF90A7040AE0027C0D2 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		06431CFA0A7040AE0027C0D2 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		06431D080A70426C0027C0D2 /* MenuOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuOption.h; sourceTree = "<group>"; };
+		06431D090A70426C0027C0D2 /* MenuOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuOption.cpp; sourceTree = "<group>"; };
 		066003C90A4D9DFF009ED8EF /* snake.000 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snake.000; sourceTree = "<group>"; };
 		0660BCE60A4A1A720007D282 /* SIntroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIntroState.h; sourceTree = "<group>"; };
 		0660BCE70A4A1A720007D282 /* SIntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SIntroState.cpp; sourceTree = "<group>"; };
@@ -132,9 +144,11 @@
 		06C9719E0A4461FD00ECB735 /* Game Engine and States */ = {
 			isa = PBXGroup;
 			children = (
-				06C9711B0A445C4C00ECB735 /* SGameEngine.h */,
 				06C971830A44603D00ECB735 /* SGameState.h */,
+				06C9711B0A445C4C00ECB735 /* SGameEngine.h */,
 				06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */,
+				06431CE80A703DB20027C0D2 /* SMenuState.h */,
+				06431CE90A703DB20027C0D2 /* SMenuState.cpp */,
 				06C971F40A446B2900ECB735 /* SPlayState.h */,
 				06C971F50A446B2900ECB735 /* SPlayState.cpp */,
 				0660BCE60A4A1A720007D282 /* SIntroState.h */,
@@ -150,10 +164,14 @@
 				F5A47A9E01A0483001D3D55B /* SDLMain.m */,
 				06CC53520A3E321400E92E7F /* Board.h */,
 				06CC53530A3E321400E92E7F /* Board.cpp */,
+				06431CF90A7040AE0027C0D2 /* Menu.h */,
+				06431CFA0A7040AE0027C0D2 /* Menu.cpp */,
 				0625D7510A3F639100F0E531 /* SnakePlayer.h */,
 				0625D7520A3F639100F0E531 /* SnakePlayer.cpp */,
 				06FB5AEF0A47675800D6B6A4 /* Timer.h */,
 				06FB5AF00A47675800D6B6A4 /* Timer.cpp */,
+				06431D080A70426C0027C0D2 /* MenuOption.h */,
+				06431D090A70426C0027C0D2 /* MenuOption.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -250,6 +268,9 @@
 				06C973A30A447EF900ECB735 /* SGameState.h in Headers */,
 				06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */,
 				0660BCE80A4A1A720007D282 /* SIntroState.h in Headers */,
+				06431CEA0A703DB20027C0D2 /* SMenuState.h in Headers */,
+				06431CFB0A7040AE0027C0D2 /* Menu.h in Headers */,
+				06431D0A0A70426C0027C0D2 /* MenuOption.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +321,9 @@
 				06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */,
 				06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */,
 				0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */,
+				06431CEB0A703DB20027C0D2 /* SMenuState.cpp in Sources */,
+				06431CFC0A7040AE0027C0D2 /* Menu.cpp in Sources */,
+				06431D0B0A70426C0027C0D2 /* MenuOption.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
