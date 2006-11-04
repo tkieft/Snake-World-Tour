@@ -31,6 +31,7 @@ private:
     int direction;
     int speed;
     int growFactor;
+	int allGrow;
     SDL_Color color;
     string name;
     queue<int> moveQueue;
@@ -39,7 +40,7 @@ public:
     /* Class-wide constants */
     enum{ SNAKE_UP = 0, SNAKE_RIGHT = 1, SNAKE_DOWN = 2, SNAKE_LEFT = 3 };
     
-    SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection );
+    SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection, int grow );
     
     int getLives();
     int getScore();
@@ -51,8 +52,8 @@ public:
     void eat();
     bool die();
     void win();
-    void newGame( int dir );
-    void reset( int dir );
+    void newGame( int dir, int grow );
+    void reset( int dir, int grow );
     
     void updateDirection();
     void handleInput( SDL_Event* snakeEvent );

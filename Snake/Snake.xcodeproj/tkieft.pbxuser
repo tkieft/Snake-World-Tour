@@ -1,5 +1,82 @@
 // !$*UTF8*$!
 {
+	06208FD90AFCF87D0080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		rLen = 5;
+		rLoc = 780;
+		rType = 0;
+	};
+	06208FDC0AFCF8C60080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2982;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 696;
+	};
+	06208FE10AFCF9120080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2982;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 696;
+	};
+	06208FE20AFCF9120080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2982;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 696;
+	};
+	06208FE50AFCF9440080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2982;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 696;
+	};
+	06208FEA0AFCFA910080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2982;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 696;
+	};
+	06208FFC0AFCFC4D0080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2981;
+		rType = 0;
+		vrLen = 275;
+		vrLoc = 690;
+	};
+	06208FFE0AFCFD2F0080A78A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */;
+		name = "SnakePlayer.cpp: 115";
+		rLen = 0;
+		rLoc = 2972;
+		rType = 0;
+		vrLen = 275;
+		vrLoc = 681;
+	};
 	0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {872, 868}}";
@@ -10,9 +87,9 @@
 	};
 	0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {788, 1610}}";
-			sepNavSelRange = "{863, 0}";
-			sepNavVisRect = "{{0, 375}, {670, 160}}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1610}}";
+			sepNavSelRange = "{2982, 0}";
+			sepNavVisRect = "{{0, 370}, {734, 86}}";
 			sepNavWindowFrame = "{{315, 52}, {917, 780}}";
 		};
 	};
@@ -178,7 +255,7 @@
 		hitCount = 1;
 		lineNumber = 252;
 		location = Snake;
-		modificationTime = 184299403.525814;
+		modificationTime = 184350603.887177;
 		state = 1;
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
@@ -222,7 +299,7 @@
 		hitCount = 1;
 		lineNumber = 50;
 		location = Snake;
-		modificationTime = 184299403.525822;
+		modificationTime = 184350603.887184;
 		state = 1;
 	};
 	06C1C4B10AFC1A5D00430E18 /* SGameEngine.cpp:43 */ = {
@@ -236,7 +313,7 @@
 		functionName = "SGameEngine::Init()";
 		hitCount = 1;
 		lineNumber = 43;
-		modificationTime = 184299403.52588;
+		modificationTime = 184350603.887209;
 		state = 2;
 	};
 	06C1C4B40AFC1A7500430E18 /* SGameEngine.cpp:26 */ = {
@@ -251,7 +328,7 @@
 		hitCount = 1;
 		lineNumber = 26;
 		location = Snake;
-		modificationTime = 184299403.525894;
+		modificationTime = 184350603.88722;
 		state = 1;
 	};
 	06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {
@@ -379,7 +456,7 @@
 		hitCount = 1;
 		lineNumber = 39;
 		location = Snake;
-		modificationTime = 184299403.525736;
+		modificationTime = 184350603.887084;
 		state = 1;
 	};
 	06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */ = {
@@ -394,7 +471,7 @@
 		hitCount = 1;
 		lineNumber = 97;
 		location = Snake;
-		modificationTime = 184299403.525777;
+		modificationTime = 184350603.887163;
 		state = 1;
 	};
 	06FFD1780A3E2196003850BF /* load_image.h */ = {
@@ -592,8 +669,18 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 184301547;
-			PBXWorkspaceStateSaveDate = 184301547;
+			PBXPerProjectTemplateStateSaveDate = 184349581;
+			PBXWorkspaceStateSaveDate = 184349581;
+		};
+		perUserProjectItems = {
+			06208FD90AFCF87D0080A78A /* PBXTextBookmark */ = 06208FD90AFCF87D0080A78A /* PBXTextBookmark */;
+			06208FDC0AFCF8C60080A78A /* PBXTextBookmark */ = 06208FDC0AFCF8C60080A78A /* PBXTextBookmark */;
+			06208FE10AFCF9120080A78A /* PBXTextBookmark */ = 06208FE10AFCF9120080A78A /* PBXTextBookmark */;
+			06208FE20AFCF9120080A78A /* PBXTextBookmark */ = 06208FE20AFCF9120080A78A /* PBXTextBookmark */;
+			06208FE50AFCF9440080A78A /* PBXTextBookmark */ = 06208FE50AFCF9440080A78A /* PBXTextBookmark */;
+			06208FEA0AFCFA910080A78A /* PBXTextBookmark */ = 06208FEA0AFCFA910080A78A /* PBXTextBookmark */;
+			06208FFC0AFCFC4D0080A78A /* PBXTextBookmark */ = 06208FFC0AFCFC4D0080A78A /* PBXTextBookmark */;
+			06208FFE0AFCFD2F0080A78A /* PBXTextBookmark */ = 06208FFE0AFCFD2F0080A78A /* PBXTextBookmark */;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

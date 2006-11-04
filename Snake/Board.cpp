@@ -88,11 +88,6 @@ void Board::Cleanup()
 
 void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
-    if( SDL_MUSTLOCK( scr ) )
-    {
-        if( SDL_LockSurface( scr ) < 0 )
-            return;
-    }
     
     SDL_Color color;
     int tile;
@@ -114,24 +109,24 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
                     color = snakes[0]->getColor();
                 else if( snakes[1] && tile >= 400 )
                     color = snakes[1]->getColor();
+
+				SDL_Rect pos = { XLOC + x * TILESIZE, YLOC + y * TILESIZE, TILESIZE, TILESIZE };
                 
-                drawrect( XLOC + x * TILESIZE, YLOC + y * TILESIZE,
-                    TILESIZE, TILESIZE,
-                    SDL_MapRGB( scr->format, color.r, color.g, color.b), scr);
+                SDL_FillRect( scr, &pos, SDL_MapRGB( scr->format, color.r, color.g, color.b) );
             }
             else
             {
-                // cannot blit to locked surface?!
-                //SDL_Rect spot;
-                //spot.y = YLOC + y * TILESIZE;
-                //spot.x = XLOC + x * TILESIZE;
-                //if (SDL_BlitSurface(apple, NULL, scr, &spot ) != 0 ) cout << "Failure to blit." << endl;
-                for( int i = 0; i < TILESIZE; i++ ) 
-                    for( int j = 0; j < TILESIZE; j++ )
-                        if( ((unsigned int*)apple->pixels)[ i * TILESIZE + j ] != SDL_MapRGB( apple->format, 0xFF, 0x00, 0xFF ) )
-                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = ((unsigned int*)apple->pixels)[i * TILESIZE + j];
-                        else
-                            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b );
+                SDL_Rect spot;
+                spot.y = YLOC + y * TILESIZE;
+                spot.x = XLOC + x * TILESIZE;
+                if (SDL_BlitSurface(apple, NULL, scr, &spot ) != 0 ) cout << "Failure to blit." << endl;
+                
+				//for( int i = 0; i < TILESIZE; i++ ) 
+                //    for( int j = 0; j < TILESIZE; j++ )
+                //        if( ((unsigned int*)apple->pixels)[ i * TILESIZE + j ] != SDL_MapRGB( apple->format, 0xFF, 0x00, 0xFF ) )
+                //            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = ((unsigned int*)apple->pixels)[i * TILESIZE + j];
+                //        else
+                //            ((unsigned int*)scr->pixels)[ (YLOC + y * TILESIZE) * scr->pitch / 4 + XLOC + x * TILESIZE + ( i * scr->pitch / 4 ) + j] = SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b );
             }
         }
     }
@@ -163,11 +158,11 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
             default:
                 break;
         }
-        drawrect( eyeloc1x, eyeloc1y, 2, 2, 0, scr);
-        drawrect( eyeloc2x, eyeloc2y, 2, 2, 0, scr);
+		SDL_Rect eyeloc = { eyeloc1x, eyeloc1y, 2, 2 };
+        SDL_FillRect( scr, &eyeloc, SDL_MapRGB( scr->format, 0, 0, 0 ) );
+        eyeloc.x = eyeloc2x; eyeloc.y = eyeloc2y;
+		SDL_FillRect( scr, &eyeloc, SDL_MapRGB( scr->format, 0, 0, 0 ) );
     }
-    
-    if( SDL_MUSTLOCK( scr ) ) SDL_UnlockSurface( scr );
 
 }
 

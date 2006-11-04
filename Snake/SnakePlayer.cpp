@@ -16,7 +16,7 @@
 
 #include "SnakePlayer.h"
 
-SnakePlayer::SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection ) : moveQueue()
+SnakePlayer::SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDirection, int grow ) : moveQueue()
 {
     color = snakeColor;
     name = snakeName;
@@ -24,10 +24,10 @@ SnakePlayer::SnakePlayer( SDL_Color snakeColor, string snakeName, int startingDi
     score = 0;
     direction = startingDirection;
     speed = 1;
-    growFactor = 5;
+    allGrow = growFactor = grow;
 }
 
-void SnakePlayer::newGame( int dir ) { lives = 5; score = 0; reset( dir ); }
+void SnakePlayer::newGame( int dir, int grow ) { lives = 5; score = 0; reset( dir, grow ); }
 int SnakePlayer::getLives() { return lives; }
 int SnakePlayer::getScore() { return score; }
 int SnakePlayer::getDirection() { return direction; }
@@ -45,7 +45,7 @@ bool SnakePlayer::die() {
     else
         return false;
 }
-void SnakePlayer::reset( int dir ) { direction = dir; speed = 1; growFactor = 5; while( ! moveQueue.empty() ) moveQueue.pop(); }
+void SnakePlayer::reset( int dir, int grow ) { direction = dir; speed = 1; allGrow = growFactor = grow; while( ! moveQueue.empty() ) moveQueue.pop(); }
 
 bool SnakePlayer::isGrowing()
 {
@@ -59,7 +59,7 @@ bool SnakePlayer::isGrowing()
 
 void SnakePlayer::eat()
 {
-    growFactor += 3;
+    growFactor += allGrow;
     score += 50;
 }
 

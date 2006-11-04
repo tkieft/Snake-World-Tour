@@ -7,7 +7,8 @@
  *
  *
  *  CHANGE LOG:
- *  3Nov06  TDK Add draw common background before drawing menu text.
+ *  04Nov06 TDK Add ability to restart game in middle, add difficulty.  
+ *  03Nov06 TDK Add draw common background before drawing menu text.
  *  20Jul06 TDK New Code.
  */
 
@@ -33,8 +34,7 @@ void SMenuState::init_menus( SGameEngine* game ) {
     main_menu = new Menu( "Main Menu", game->getFileDirectory() );
 	if( game->isPlaying() )
     	main_menu->addSelectableOption( "Resume Game" );
-	else
-		main_menu->addSelectableOption( "New Game" );
+	main_menu->addSelectableOption( "New Game" );
     main_menu->addSelectableOption( "Options" );
     main_menu->addSelectableOption( "Quit" );
     
@@ -49,6 +49,10 @@ void SMenuState::init_menus( SGameEngine* game ) {
 	num_players_menu->addOption( "Players" );
 	num_players_menu->addOptionChoice( "Players", "1" );
 	num_players_menu->addOptionChoice( "Players", "2" );
+	num_players_menu->addOption( "Difficulty" );
+	num_players_menu->addOptionChoice( "Difficulty", "Easy" );
+	num_players_menu->addOptionChoice( "Difficulty", "Normal" );
+	num_players_menu->addOptionChoice( "Difficulty", "Expert" );
 	num_players_menu->addSelectableOption( "Play" );
 	num_players_menu->addSelectableOption( "Cancel" );
     
@@ -117,7 +121,20 @@ void SMenuState::HandleEvents( SGameEngine* game )
 						{
 							if( num_players_menu->getChoice("Players") == "2" )
 								game->setNumPlayers(2);
-							game->ChangeState( SPlayState::Instance() );
+							if( num_players_menu->getChoice("Difficulty") == "Easy" )
+								game->setGameDiff(2);
+							else if( num_players_menu->getChoice("Difficulty") == "Expert" )
+								game->setGameDiff(6);
+							
+							if( game->isPlaying() )
+							{
+								game->stopPlaying();
+								game->PopState(); //pop the menu state
+								game->PopState(); //pop the play state
+								game->ChangeState( SPlayState::Instance() );
+							}
+							else
+								game->ChangeState( SPlayState::Instance() );
 						}
 					}
 					else {

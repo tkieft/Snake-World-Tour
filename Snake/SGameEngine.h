@@ -48,6 +48,9 @@ public:
     
     int getNumPlayers() { return numPlayers; }
     void setNumPlayers( int n ) { numPlayers = n; }
+
+	int getGameDiff() { return gameDiff; }
+	void setGameDiff( int n ) { gameDiff = n; }
     
     string getFileDirectory() { return rsrcdirectory; }
     
@@ -58,6 +61,7 @@ private:
     bool gameRunning;
 	bool gamePlaying;
     int numPlayers;
+	int gameDiff;
     string rsrcdirectory;
 };
 

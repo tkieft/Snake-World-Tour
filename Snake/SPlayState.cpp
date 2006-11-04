@@ -36,9 +36,9 @@ void SPlayState::Init( SGameEngine* game )
     // create snake(s)
     SDL_Color c1 = { 0x00, 0x88, 0x00 };
     SDL_Color c2 = { 0x00, 0x33, 0x22 };
-    theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP );
+    theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP, game->getGameDiff() );
     if( game->getNumPlayers() == 2 )
-        theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN );
+        theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
     // set up board and timer
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
 	theBoard.setLevel( 1, game->getNumPlayers() );
@@ -86,8 +86,8 @@ void SPlayState::HandleEvents( SGameEngine* game )
                     case SDLK_SPACE:
                         if( gameState == LEVEL_LOST || gameState == LEVEL_WON )
                         {
-                            theSnakes[0]->reset( SnakePlayer::SNAKE_UP );
-                            if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN );
+                            theSnakes[0]->reset( SnakePlayer::SNAKE_UP, game->getGameDiff() );
+                            if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
                         }
                         if( gameState == LEVEL_LOST )
                         {
