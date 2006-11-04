@@ -215,7 +215,7 @@ void Board::drawGameLost( SDL_Surface* scr )
     SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
     
     drawLargeText( "GAME OVER", -.5, scr );
-    drawSmallText( "Press space to play again", scr );
+    drawSmallText( "Press space to return to the menu", scr );
 }
 
 

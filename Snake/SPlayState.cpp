@@ -41,6 +41,7 @@ void SPlayState::Init( SGameEngine* game )
         theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN );
     // set up board and timer
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
+	theBoard.setLevel( 1, game->getNumPlayers() );
     theTimer.Init( game->getFileDirectory() );
     
     gameState = LEVEL_START;
@@ -106,10 +107,8 @@ void SPlayState::HandleEvents( SGameEngine* game )
                             break;
                         }
                         if( gameState == GAME_LOST ) {
-                            theSnakes[0]->newGame( SnakePlayer::SNAKE_UP );
-                            if( theSnakes[1] ) theSnakes[1]->newGame( SnakePlayer::SNAKE_UP );
-                            gameState = LEVEL_START;
-                            theBoard.setLevel( 1, game->getNumPlayers() );
+							game->stopPlaying();
+                            game->ChangeState( SMenuState::Instance() );
                             break;
                         }
                         break;

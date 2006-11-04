@@ -39,6 +39,7 @@ public:
     bool isRunning() { return gameRunning; }
 	
 	void startPlaying() { gamePlaying = true; }
+	void stopPlaying() { gamePlaying = false; }
 	bool isPlaying() { return gamePlaying; }
     
 	void Quit() { gameRunning = false; }
