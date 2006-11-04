@@ -34,7 +34,7 @@ void SMenuState::init_menus( SGameEngine* game ) {
 	if( game->isPlaying() )
     	main_menu->addSelectableOption( "Resume Game" );
 	else
-		main_menu->addSelectableOption( "Play" );
+		main_menu->addSelectableOption( "New Game" );
     main_menu->addSelectableOption( "Options" );
     main_menu->addSelectableOption( "Quit" );
     
@@ -44,6 +44,13 @@ void SMenuState::init_menus( SGameEngine* game ) {
     options_menu->addOptionChoice( "Screen Size", "Fullscreen" );
     options_menu->addSelectableOption( "Save" );
     options_menu->addSelectableOption( "Cancel" );
+
+	num_players_menu = new Menu( "New Game", game->getFileDirectory() );
+	num_players_menu->addOption( "Players" );
+	num_players_menu->addOptionChoice( "Players", "1" );
+	num_players_menu->addOptionChoice( "Players", "2" );
+	num_players_menu->addSelectableOption( "Play" );
+	num_players_menu->addSelectableOption( "Cancel" );
     
 }
 
@@ -85,8 +92,11 @@ void SMenuState::HandleEvents( SGameEngine* game )
                     break;
                 case SDLK_RETURN:
                     if( current_menu == main_menu ) {
-                        if( current_menu->getOption() == "Play" )
-                            game->ChangeState( SPlayState::Instance() );
+                        if( current_menu->getOption() == "New Game" )
+						{
+							num_players_menu->reset();
+							current_menu = num_players_menu;
+						}
                         else if( current_menu->getOption() == "Resume Game" )
                             game->PopState();
                         else if( current_menu->getOption() == "Options" )
@@ -97,7 +107,20 @@ void SMenuState::HandleEvents( SGameEngine* game )
                         else
                             game->Quit();
                     }
-                    else {
+                    else if( current_menu == num_players_menu ) {
+						if( current_menu->getOption() == "Cancel" )
+						{
+							main_menu->reset();
+							current_menu = main_menu;
+						}
+						else if( current_menu->getOption() == "Play" )
+						{
+							if( num_players_menu->getChoice("Players") == "2" )
+								game->setNumPlayers(2);
+							game->ChangeState( SPlayState::Instance() );
+						}
+					}
+					else {
                         if( current_menu->getOption() == "Cancel" )
 						{
 							main_menu->reset();

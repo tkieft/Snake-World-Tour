@@ -48,6 +48,7 @@ private:
     
     Menu* main_menu;
     Menu* options_menu;
+	Menu* num_players_menu;
 };
 
 #endif

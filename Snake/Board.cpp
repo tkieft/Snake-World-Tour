@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  03Nov06 TDK Add space before # of lives, Hunger.
  *  27Jun06 TDK Add more fonts so that colors are correct, only one apple at a time.
  *  18Jun06 TDK readCurrentLevel() more efficient, now read wall color.
  *  17Jun06 TDK Eye drawing and apple drawing code.
@@ -56,7 +57,7 @@ void Board::Init( string rsrcPath, int numSnakes )
     
     for( int i = 0; i < 2; i++ )
     {
-        playerFont[i] = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
+        playerFont[i] = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 20 );
         if( !playerFont[i] )
             exit(1);
     }
@@ -231,16 +232,25 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
     for( int p = 0; p < 2; p++ )
     {
         if( !snakes[p] ) break;
-        char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ((char) snakes[p]->getLives()) + 48, '\0' };
-        int score = snakes[p]->getScore();
-        char* playerScore = scoreToChar( score );
+		
+		// draw lives
+		char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ' ', ((char) snakes[p]->getLives()) + 48, '\0' };
         fontSurface = TTF_RenderText_Shaded( playerFont[p], playerLives, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p1 = { 475, 150 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p1 );
         SDL_FreeSurface( fontSurface );
+
+		char* playerHunger = numToChar( collectibles, false );
+		fontSurface = TTF_RenderText_Shaded( playerFont[p], playerHunger, snakes[p]->getColor(), levelNumBG );
+		SDL_Rect p2 = { 475, 175 + p*100 };
+		SDL_BlitSurface( fontSurface, NULL, scr, &p2 );
+		SDL_FreeSurface( fontSurface );
+		
+		int score = snakes[p]->getScore();
+        char* playerScore = numToChar( score, true );
         fontSurface = TTF_RenderText_Shaded( playerFont[p], playerScore, snakes[p]->getColor(), levelNumBG );
-        SDL_Rect p2 = { 475, 180 + p*100 };
-        SDL_BlitSurface( fontSurface, NULL, scr, &p2 );
+        SDL_Rect p3 = { 475, 200 + p*100 };
+        SDL_BlitSurface( fontSurface, NULL, scr, &p3 );
         SDL_FreeSurface( fontSurface );
         delete[] playerScore;        
     }

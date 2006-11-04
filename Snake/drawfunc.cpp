@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  03Nov06 TDK numToChar can do Hunger too.
  *  19Jun06 TDK Drawnum shall get its own class.
  *  18Jun06 TDK Add drawnum.
  *  12Jun06 TDK New Code.
@@ -46,38 +47,49 @@ void drawrect( int x, int y, int width, int height, Uint32 col, SDL_Surface* gSc
     }
 }
 
-char* scoreToChar( int score )
+char* numToChar( int num, bool isScore )
 {
     char tempScore[20];
     char* scoreChar = new char[20];
-    scoreChar[0] = 'S'; scoreChar[1] = 'c'; scoreChar[2] = 'o';
-    scoreChar[3] = 'r'; scoreChar[4] = 'e'; scoreChar[5] = ':';
-    scoreChar[6] = ' ';
+	int startChar = 0;
+	
+	if( isScore )
+	{
+    	scoreChar[0] = 'S'; scoreChar[1] = 'c'; scoreChar[2] = 'o';
+    	scoreChar[3] = 'r'; scoreChar[4] = 'e'; scoreChar[5] = ':';
+    	scoreChar[6] = ' '; startChar = 7;
+	}
+	else
+	{
+		scoreChar[0] = 'H'; scoreChar[1] = 'u'; scoreChar[2] = 'n';
+    	scoreChar[3] = 'g'; scoreChar[4] = 'e'; scoreChar[5] = 'r';
+    	scoreChar[6] = ':'; scoreChar[7] = ' '; startChar = 8;
+	}
     
     int i = 0;
     
-    if( !score ) {
-        scoreChar[7] = '0';
-        scoreChar[8] = '\0';
+    if( !num ) {
+        scoreChar[startChar++] = '0';
+        scoreChar[startChar++] = '\0';
     }
-    while( score )
+    while( num )
     {
-        tempScore[i] = ((char) (score % 10)) + 48;
-        score /= 10;
+        tempScore[i] = ((char) (num % 10)) + 48;
+        num /= 10;
         i++;
     }
     
     int j = 0;
     for( ; j < i; j++ )
     {
-        scoreChar[ j + 7 ] = tempScore[ i - 1 - j];
+        scoreChar[ j + startChar ] = tempScore[ i - 1 - j];
         if( ( i - j ) > 1 && (i - j - 1) % 3 == 0 )
         {
             i++; j++;
-            scoreChar[j+7] = ',';
+            scoreChar[j+startChar] = ',';
         }
     }
     if( j )
-        scoreChar[ 7 + j ] = '\0';
+        scoreChar[ startChar + j ] = '\0';
     return scoreChar;
 }
