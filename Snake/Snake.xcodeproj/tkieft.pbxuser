@@ -171,7 +171,7 @@
 		hitCount = 1;
 		lineNumber = 252;
 		location = Snake;
-		modificationTime = 175179456.526304;
+		modificationTime = 184294146.021923;
 		state = 1;
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
@@ -203,6 +203,50 @@
 			sepNavWindowFrame = "{{449, 76}, {626, 756}}";
 		};
 	};
+	06C1C4AE0AFC1A4A00430E18 /* SGameEngine.cpp:50 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */;
+		functionName = "SGameEngine::Init()";
+		hitCount = 1;
+		lineNumber = 50;
+		location = Snake;
+		modificationTime = 184294146.02193;
+		state = 1;
+	};
+	06C1C4B10AFC1A5D00430E18 /* SGameEngine.cpp:43 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */;
+		functionName = "SGameEngine::Init()";
+		hitCount = 1;
+		lineNumber = 43;
+		modificationTime = 184294146.022016;
+		state = 2;
+	};
+	06C1C4B40AFC1A7500430E18 /* SGameEngine.cpp:26 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */;
+		functionName = "SGameEngine::Init()";
+		hitCount = 1;
+		lineNumber = 26;
+		location = Snake;
+		modificationTime = 184294146.022129;
+		state = 1;
+	};
 	06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {554, 798}}";
@@ -213,9 +257,9 @@
 	};
 	06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {662, 1554}}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 1568}}";
 			sepNavSelRange = "{1178, 0}";
-			sepNavVisRect = "{{0, 257}, {554, 607}}";
+			sepNavVisRect = "{{0, 0}, {840, 709}}";
 			sepNavWindowFrame = "{{487, 93}, {599, 736}}";
 		};
 	};
@@ -325,7 +369,7 @@
 		hitCount = 1;
 		lineNumber = 39;
 		location = Snake;
-		modificationTime = 175179456.526225;
+		modificationTime = 184294146.021858;
 		state = 1;
 	};
 	06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */ = {
@@ -340,7 +384,7 @@
 		hitCount = 1;
 		lineNumber = 97;
 		location = Snake;
-		modificationTime = 175179456.526289;
+		modificationTime = 184294146.021914;
 		state = 1;
 	};
 	06FFD1780A3E2196003850BF /* load_image.h */ = {
@@ -378,6 +422,9 @@
 			06FB5C2E0A4785E900D6B6A4 /* Timer.cpp:39 */,
 			06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */,
 			06490E1D0A4F6B1D00BF3581 /* Board.cpp:252 */,
+			06C1C4AE0AFC1A4A00430E18 /* SGameEngine.cpp:50 */,
+			06C1C4B10AFC1A5D00430E18 /* SGameEngine.cpp:43 */,
+			06C1C4B40AFC1A7500430E18 /* SGameEngine.cpp:26 */,
 		);
 		breakpointsGroup = 06CC52FF0A3E2EB900E92E7F /* XCBreakpointsBucket */;
 		codeSenseManager = 063E7B730A3C84C9005C4507 /* Code sense */;
@@ -535,8 +582,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 175178552;
-			PBXWorkspaceStateSaveDate = 175178552;
+			PBXPerProjectTemplateStateSaveDate = 184290679;
+			PBXWorkspaceStateSaveDate = 184290679;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

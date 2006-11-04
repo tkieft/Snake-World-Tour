@@ -6,6 +6,9 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGE LOG:
+ *  3Nov06  TDK Reset method.
+ *  3Nov06  TDK Fool around with colors.
+ *  3Nov06  TDK Draw smaller black rectangle so background is shown.
  *  20Jul06 TDK New Code.
  */
 
@@ -18,7 +21,9 @@ Menu::Menu( string theTitle, string rsrcPath ) : options() {
     currentOption = 0;
     
     theFont = TTF_OpenFont( (rsrcPath + "snake.000").c_str(), 25 );
-    textColor.r = 0xFF; textColor.g = 0x00; textColor.b = 0x00;
+	titleColor.r = 0xB9; titleColor.g = 0x09; titleColor.b = 0x15;
+    textColor.r = 0x07; textColor.g = 0x7E; textColor.b = 0x41;
+    textSelectedColor.r = 0xFB; textSelectedColor.g = 0xFF; textSelectedColor.b = 0x00;
     bgColor.r = 0x00; bgColor.g = 0x00; bgColor.b = 0x00;
 }
 
@@ -67,6 +72,10 @@ string Menu::getOption() {
     return options[currentOption]->getName();
 }
 
+void Menu::reset() {
+	currentOption = 0;
+}
+
 string Menu::getChoice( string optName )
 {
     int opt = -1;
@@ -77,11 +86,12 @@ string Menu::getChoice( string optName )
 
 void Menu::Draw( SGameEngine* game )
 {
-    SDL_FillRect( game->screen, NULL, SDL_MapRGB( game->screen->format, bgColor.r, bgColor.g, bgColor.b ) );
+	SDL_Rect bgrect = { 28, 28, SCREENWIDTH - 28 * 2, SCREENHEIGHT - 28 * 2 };
+    SDL_FillRect( game->screen, &bgrect, SDL_MapRGB( game->screen->format, bgColor.r, bgColor.g, bgColor.b ) );
     
     //draw menu title
-    fontSurface = TTF_RenderText_Shaded( theFont, title.c_str(), textColor, bgColor );
-    SDL_Rect where = { SCREENWIDTH / 2 - fontSurface->w / 2, 20 };
+    fontSurface = TTF_RenderText_Shaded( theFont, title.c_str(), titleColor, bgColor );
+    SDL_Rect where = { SCREENWIDTH / 2 - fontSurface->w / 2, 40 };
     SDL_BlitSurface( fontSurface, NULL, game->screen, &where );
     SDL_FreeSurface( fontSurface );
     
@@ -107,7 +117,7 @@ void Menu::drawSelectableOption( SGameEngine* game, int q, int yofs )
         where.y += 12;
         where.w = 12;
         where.h = 12;
-        SDL_FillRect( game->screen, &where, SDL_MapRGB( game->screen->format, textColor.r, textColor.g, textColor.b));
+        SDL_FillRect( game->screen, &where, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
     }
     SDL_FreeSurface( fontSurface );
 }
@@ -115,22 +125,27 @@ void Menu::drawSelectableOption( SGameEngine* game, int q, int yofs )
 void Menu::drawOption( SGameEngine* game, int q, int yofs )
 {
     int totalWidth = 0;
-    SDL_Surface* fSurfaces[ options[q]->getChoices() ];
+    SDL_Surface* fSurfaces[ options[q]->getChoices() + 1 ];
+    fSurfaces[0] = TTF_RenderText_Shaded( theFont, (options[q]->getName()+":").c_str(), textColor, bgColor);
+    totalWidth += fSurfaces[0]->w + 30;
     for( int i = 0; i < options[q]->getChoices(); i++ ) {
-        fSurfaces[i] = TTF_RenderText_Shaded( theFont, (options[q]->getChoiceWithNum(i)).c_str(), textColor, bgColor);
-        totalWidth += fSurfaces[i]->w + 30;
+        if( i == options[q]->getCurrentChoiceNum() )
+            fSurfaces[i+1] = TTF_RenderText_Shaded( theFont, (options[q]->getChoiceWithNum(i)).c_str(), textSelectedColor, bgColor);
+        else
+            fSurfaces[i+1] = TTF_RenderText_Shaded( theFont, (options[q]->getChoiceWithNum(i)).c_str(), textColor, bgColor);
+        totalWidth += fSurfaces[i+1]->w + 30;
     }
                 
-    SDL_Rect where = { SCREENWIDTH / 2 - totalWidth / 2, yofs };
-    for( int i = 0; i < options[q]->getChoices(); i++ ){
+    SDL_Rect where = { SCREENWIDTH / 2 - (totalWidth-30) / 2, yofs };
+    for( int i = 0; i < options[q]->getChoices() + 1; i++ ){
         SDL_BlitSurface( fSurfaces[i], NULL, game->screen, &where );
-        if( q == currentOption && i == options[q]->getCurrentChoiceNum() ) {
+        if( q == currentOption && i-1 == options[q]->getCurrentChoiceNum() ) {
             SDL_Rect where2 = where;
             where2.x -= 20;
             where2.y += 12;
             where2.w = 12;
             where2.h = 12;
-            SDL_FillRect( game->screen, &where2, SDL_MapRGB( game->screen->format, textColor.r, textColor.g, textColor.b));
+            SDL_FillRect( game->screen, &where2, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
         }
         where.x += 30 + fSurfaces[i]->w;
         SDL_FreeSurface( fSurfaces[i] );

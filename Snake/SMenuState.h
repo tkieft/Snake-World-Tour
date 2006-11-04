@@ -38,8 +38,10 @@ protected:
     SMenuState() {}
 
 private:
-    void init_menus( SGameEngine* game );
+	void init_menus( SGameEngine* game );
     
+	SDL_Surface* bg;
+
     static SMenuState snakeMenuState;
     enum { MAIN_MENU, OPTIONS_MENU };
     Menu* current_menu;

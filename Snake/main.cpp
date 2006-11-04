@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {   
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 11 ) + "Resources/";
-    
+
     SGameEngine game;
     
     // initialize the engine

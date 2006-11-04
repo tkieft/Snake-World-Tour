@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  3Nov06  TDK Add variable to tell if playing or not.
  *  17Jun06 TDK New Code.
  *
  */
@@ -36,7 +37,11 @@ public:
     void Draw();
 
     bool isRunning() { return gameRunning; }
-    void Quit() { gameRunning = false; }
+	
+	void startPlaying() { gamePlaying = true; }
+	bool isPlaying() { return gamePlaying; }
+    
+	void Quit() { gameRunning = false; }
     
     SDL_Surface* screen;
     
@@ -50,6 +55,7 @@ private:
     // the stack of states - first in first out
     vector< SGameState* > states;
     bool gameRunning;
+	bool gamePlaying;
     int numPlayers;
     string rsrcdirectory;
 };

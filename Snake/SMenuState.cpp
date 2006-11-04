@@ -7,6 +7,7 @@
  *
  *
  *  CHANGE LOG:
+ *  3Nov06  TDK Add draw common background before drawing menu text.
  *  20Jul06 TDK New Code.
  */
 
@@ -20,6 +21,9 @@ SMenuState SMenuState::snakeMenuState;
 
 void SMenuState::Init( SGameEngine* game )
 {
+	// load up background
+    bg = load_image( game->getFileDirectory() + "snake.png" );
+	
     //cout << "Menu State Init";
     init_menus( game );
     current_menu = main_menu;
@@ -27,14 +31,17 @@ void SMenuState::Init( SGameEngine* game )
 
 void SMenuState::init_menus( SGameEngine* game ) {
     main_menu = new Menu( "Main Menu", game->getFileDirectory() );
-    main_menu->addSelectableOption( "Play" );
+	if( game->isPlaying() )
+    	main_menu->addSelectableOption( "Resume Game" );
+	else
+		main_menu->addSelectableOption( "Play" );
     main_menu->addSelectableOption( "Options" );
     main_menu->addSelectableOption( "Quit" );
     
     options_menu = new Menu( "Options", game->getFileDirectory() );
-    options_menu->addOption( "screensize" );
-    options_menu->addOptionChoice( "screensize", "Windowed" );
-    options_menu->addOptionChoice( "screensize", "Fullscreen" );
+    options_menu->addOption( "Screen Size" );
+    options_menu->addOptionChoice( "Screen Size", "Windowed" );
+    options_menu->addOptionChoice( "Screen Size", "Fullscreen" );
     options_menu->addSelectableOption( "Save" );
     options_menu->addSelectableOption( "Cancel" );
     
@@ -42,6 +49,9 @@ void SMenuState::init_menus( SGameEngine* game ) {
 
 void SMenuState::Cleanup()
 {
+	// free background surface
+	SDL_FreeSurface( bg );
+	
     delete main_menu;
     delete options_menu;
 }
@@ -76,23 +86,33 @@ void SMenuState::HandleEvents( SGameEngine* game )
                 case SDLK_RETURN:
                     if( current_menu == main_menu ) {
                         if( current_menu->getOption() == "Play" )
-                            game->PushState( SPlayState::Instance() );
+                            game->ChangeState( SPlayState::Instance() );
+                        else if( current_menu->getOption() == "Resume Game" )
+                            game->PopState();
                         else if( current_menu->getOption() == "Options" )
+						{
+							options_menu->reset(); //move cursor back to top
                             current_menu = options_menu;
+						}
                         else
                             game->Quit();
                     }
                     else {
                         if( current_menu->getOption() == "Cancel" )
+						{
+							main_menu->reset();
                             current_menu = main_menu;
+						}
                         else if( current_menu->getOption() == "Save" ) {
+							main_menu->reset();
                             current_menu = main_menu;
-                            if( options_menu->getChoice("screensize") == "Fullscreen" )
-                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_FULLSCREEN | SDL_SWSURFACE );
+                            if( options_menu->getChoice("Screen Size") == "Fullscreen" )
+                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_FULLSCREEN | SDL_DOUBLEBUF | SDL_HWSURFACE );
                             else
                                 SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
                         }
                     }
+                    break;
                 default:
                     break;
             }
@@ -108,6 +128,9 @@ void SMenuState::Update( SGameEngine* game )
 
 void SMenuState::Draw( SGameEngine* game )
 {
+	//Draw common background
+	SDL_BlitSurface( bg, NULL, game->screen, NULL );
+	
     //cout << "Menu State Draw";
     current_menu->Draw( game );
     SDL_Flip( game->screen );

@@ -34,7 +34,9 @@ private:
     
     SDL_Surface *fontSurface;
     TTF_Font *theFont;
+	SDL_Color titleColor;
     SDL_Color textColor;
+    SDL_Color textSelectedColor;
     SDL_Color bgColor;
     
     void drawSelectableOption( SGameEngine* game, int q, int yofs );
@@ -54,6 +56,8 @@ public:
     string getOption();
     string getChoice( string optName );
     void Draw( SGameEngine* game );
+
+	void reset();
     
 };
 

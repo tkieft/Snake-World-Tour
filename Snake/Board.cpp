@@ -223,7 +223,7 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
     // draw level number
     char levelString[] = { ((char) currentLevel) + 48, '\0' };
     fontSurface = TTF_RenderText_Shaded( levelFont, levelString, levelNumColor, levelNumBG );
-    SDL_Rect levRect = { 554, 414 };
+    SDL_Rect levRect = { 554, 415 };
     SDL_BlitSurface( fontSurface, NULL, scr, &levRect );
     SDL_FreeSurface( fontSurface );
     

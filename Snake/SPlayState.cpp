@@ -28,6 +28,8 @@ SPlayState::SPlayState() : theBoard(), theTimer()
 
 void SPlayState::Init( SGameEngine* game )
 {
+	game->startPlaying();
+	
     // load up background
     bg = load_image( game->getFileDirectory() + "snake.png" );
     
