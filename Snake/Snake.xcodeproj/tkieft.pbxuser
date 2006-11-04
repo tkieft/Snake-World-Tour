@@ -159,6 +159,13 @@
 			sepNavWindowFrame = "{{469, 59}, {600, 773}}";
 		};
 	};
+	06431D090A70426C0027C0D2 /* MenuOption.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {670, 588}}";
+			sepNavSelRange = "{785, 0}";
+			sepNavVisRect = "{{0, 432}, {670, 156}}";
+		};
+	};
 	06490E1D0A4F6B1D00BF3581 /* Board.cpp:252 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -171,7 +178,7 @@
 		hitCount = 1;
 		lineNumber = 252;
 		location = Snake;
-		modificationTime = 184297287.844302;
+		modificationTime = 184299403.525814;
 		state = 1;
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
@@ -215,7 +222,7 @@
 		hitCount = 1;
 		lineNumber = 50;
 		location = Snake;
-		modificationTime = 184297287.844309;
+		modificationTime = 184299403.525822;
 		state = 1;
 	};
 	06C1C4B10AFC1A5D00430E18 /* SGameEngine.cpp:43 */ = {
@@ -229,7 +236,7 @@
 		functionName = "SGameEngine::Init()";
 		hitCount = 1;
 		lineNumber = 43;
-		modificationTime = 184297287.844377;
+		modificationTime = 184299403.52588;
 		state = 2;
 	};
 	06C1C4B40AFC1A7500430E18 /* SGameEngine.cpp:26 */ = {
@@ -244,7 +251,7 @@
 		hitCount = 1;
 		lineNumber = 26;
 		location = Snake;
-		modificationTime = 184297287.844385;
+		modificationTime = 184299403.525894;
 		state = 1;
 	};
 	06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {
@@ -369,7 +376,7 @@
 		hitCount = 1;
 		lineNumber = 39;
 		location = Snake;
-		modificationTime = 184297287.844265;
+		modificationTime = 184299403.525736;
 		state = 1;
 	};
 	06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */ = {
@@ -384,7 +391,7 @@
 		hitCount = 1;
 		lineNumber = 97;
 		location = Snake;
-		modificationTime = 184297287.844294;
+		modificationTime = 184299403.525777;
 		state = 1;
 	};
 	06FFD1780A3E2196003850BF /* load_image.h */ = {
