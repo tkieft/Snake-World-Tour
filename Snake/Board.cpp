@@ -119,6 +119,9 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
                 SDL_Rect spot;
                 spot.y = YLOC + y * TILESIZE;
                 spot.x = XLOC + x * TILESIZE;
+				spot.w = spot.h = 12;
+				// must fill floor color first to get correct transparency
+				SDL_FillRect( scr, &spot, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
                 if (SDL_BlitSurface(apple, NULL, scr, &spot ) != 0 ) cout << "Failure to blit." << endl;
                 
 				//for( int i = 0; i < TILESIZE; i++ ) 
