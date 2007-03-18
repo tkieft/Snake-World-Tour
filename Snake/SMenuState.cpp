@@ -7,6 +7,7 @@
  *
  *
  *  CHANGE LOG:
+ *  25Feb06 TDK Fix bug in number of players code.
  *  04Nov06 TDK Add ability to restart game in middle, add difficulty.  
  *  03Nov06 TDK Add draw common background before drawing menu text.
  *  20Jul06 TDK New Code.
@@ -121,6 +122,8 @@ void SMenuState::HandleEvents( SGameEngine* game )
 						{
 							if( num_players_menu->getChoice("Players") == "2" )
 								game->setNumPlayers(2);
+							else
+								game->setNumPlayers(1);
 							if( num_players_menu->getChoice("Difficulty") == "Easy" )
 								game->setGameDiff(2);
 							else if( num_players_menu->getChoice("Difficulty") == "Expert" )
