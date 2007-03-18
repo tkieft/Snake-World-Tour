@@ -170,23 +170,22 @@ void SPlayState::Draw( SGameEngine* game )
 {
     SDL_BlitSurface( bg, NULL, game->screen, NULL );
 
+	theBoard.drawSnakeInfo( game->screen, theSnakes );
+	theBoard.drawHelp( game->screen );
+
     if( gameState == LEVEL_PLAYING || gameState == LEVEL_WON || gameState == LEVEL_LOST ) {
         theBoard.drawLevelPlaying( game->screen, theSnakes );
-        theBoard.drawSnakeInfo( game->screen, theSnakes );
         theTimer.draw( 554, 389, game->screen );
     }
     else if ( gameState == LEVEL_START ) {
         theBoard.drawLevelStart( game->screen );
-        theBoard.drawSnakeInfo( game->screen, theSnakes );
     }
     else if ( gameState == LEVEL_PAUSED ) {
         theBoard.drawLevelPaused( game->screen );
-        theBoard.drawSnakeInfo( game->screen, theSnakes );
         theTimer.draw( 554, 389, game->screen );
     }
     else if ( gameState == GAME_LOST ) {
         theBoard.drawGameLost( game->screen );
-        theBoard.drawSnakeInfo( game->screen, theSnakes );
     }
     SDL_Flip( game->screen );
 }

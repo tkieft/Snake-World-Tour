@@ -56,7 +56,7 @@ public:
     
 private:
 
-    // the stack of states - first in first out
+    // the stack of states - last in first out
     vector< SGameState* > states;
     bool gameRunning;
 	bool gamePlaying;

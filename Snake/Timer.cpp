@@ -60,6 +60,9 @@ int Timer::get_ticks()
     
     else if( is_stopped() )
         return stoppedTicks - startTicks;
+
+	// get rid of compiler warning
+	return 0;
 }
 
 void Timer::pause()

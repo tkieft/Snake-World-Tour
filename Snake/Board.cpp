@@ -255,6 +255,23 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
     
 }
 
+void Board::drawHelp( SDL_Surface* scr )
+{
+	SDL_Color helpColor; helpColor.r = helpColor.g = helpColor.b = 0xFF;
+	
+	char* pauseHelp = "'P' to Pause";
+	fontSurface = TTF_RenderText_Shaded( smallFont, pauseHelp, helpColor, levelNumBG );
+    SDL_Rect where = { 475, 340 };
+    SDL_BlitSurface( fontSurface, NULL, scr, &where );
+    SDL_FreeSurface( fontSurface );
+
+	char* escHelp = "'Esc' for Menu";
+	fontSurface = TTF_RenderText_Shaded( smallFont, escHelp, helpColor, levelNumBG );
+    where.x = 475; where.y = 360;
+    SDL_BlitSurface( fontSurface, NULL, scr, &where );
+    SDL_FreeSurface( fontSurface );
+}
+
 // return 0 if continue, 1 if snake 1 crashed, 2 if snake 2 crashed
 // return 3 if snake 1 won, 4 if snake 2 won
 int Board::updatePosition( SnakePlayer* snakes[] )
