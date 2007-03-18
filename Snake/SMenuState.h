@@ -36,6 +36,7 @@ public:
 
 protected:
     SMenuState() {}
+	~SMenuState() {}
 
 private:
 	void init_menus( SGameEngine* game );

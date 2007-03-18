@@ -33,6 +33,7 @@ public:
     
 protected:
     SIntroState() {}
+	~SIntroState() {}
     
 private:
     static SIntroState snakeIntroState;

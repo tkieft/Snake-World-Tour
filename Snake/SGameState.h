@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *  
  *  CHANGELOG:
+ *  18Mar07 TDK Get rid of many compiler warnings by adding virtual destructor.
  *  17Jun06 TDK New Code.
  */
 
@@ -30,7 +31,7 @@ public:
     
 protected:
     SGameState() { }
-
+	virtual ~SGameState() { }
 };
 
 #endif

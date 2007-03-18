@@ -41,6 +41,7 @@ public:
 
 protected:
     SPlayState();
+	~SPlayState() {};
     
 private:
     static SPlayState snakePlayState;
