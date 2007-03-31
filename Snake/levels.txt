@@ -77,7 +77,7 @@ FFFFFF
 FF0000
 000000
 
-2:
+8:
 Hogwarts Castle
 Northern England
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -287,7 +287,7 @@ A2A2A2
 FFFFFF
 000000
 
-8:
+2:
 South Pole
 Antarctica
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1

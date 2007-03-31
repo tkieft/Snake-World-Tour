@@ -199,7 +199,7 @@
 	};
 	0660BD000A4A1FCE0007D282 /* snaketitle.png */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{15, 54}, {600, 773}}";
+			sepNavWindowFrame = "{{15, 48}, {908, 779}}";
 		};
 	};
 	068EEAB90A3CE318003887BB /* main.cpp */ = {
@@ -413,6 +413,11 @@
 			sepNavWindowFrame = "{{8, 59}, {626, 756}}";
 		};
 	};
+	06FFD1AE0A3E24BE003850BF /* snake.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 48}, {908, 779}}";
+		};
+	};
 	089C165DFE840E0CC02AAC07 /* English */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {578, 277}}";
@@ -592,8 +597,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 196999988;
-			PBXWorkspaceStateSaveDate = 196999988;
+			PBXPerProjectTemplateStateSaveDate = 197039383;
+			PBXWorkspaceStateSaveDate = 197039383;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

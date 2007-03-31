@@ -4,6 +4,7 @@
  *   main.cpp - Initialize SDL
  *
  *   CHANGELOG:
+ *   31Mar07 Removed 2006 :*( Changed version to .9 beta
  *   17Jun06 Massive architectural changes, move most code to SGameEngine, SPlayState
  *   15Jun06 Move render Code to separate function, change init() calling
  *   12Jun06 TDK New Code
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
     const SDL_version* version = SDL_Linked_Version();
     std::cout << "Snake World Tour 2006\nTyler Kieft\nLinked with SDL Version "
         << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl;
-    game.Init( "Snake World Tour 2006      v0.1 beta", rsrcdirectory );
+    game.Init( "Snake World Tour      v0.9 beta", rsrcdirectory );
     
     // load the game
     game.ChangeState( SIntroState::Instance() );

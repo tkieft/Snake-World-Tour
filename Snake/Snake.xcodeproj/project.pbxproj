@@ -78,7 +78,6 @@
 		06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53680A3E369000E92E7F /* drawfunc.h */; };
 		06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */; };
 		06CC54330A3E3B9000E92E7F /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC54320A3E3B9000E92E7F /* globals.h */; };
-		06FB5AEA0A4766E800D6B6A4 /* nums.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 06FB5AE90A4766E800D6B6A4 /* nums.bmp */; };
 		06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FB5AEF0A47675800D6B6A4 /* Timer.h */; };
 		06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FB5AF00A47675800D6B6A4 /* Timer.cpp */; };
 		06FFD1AF0A3E24BE003850BF /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FFD1AE0A3E24BE003850BF /* snake.png */; };
@@ -114,7 +113,6 @@
 		06CC53680A3E369000E92E7F /* drawfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawfunc.h; sourceTree = "<group>"; };
 		06CC53690A3E369000E92E7F /* drawfunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawfunc.cpp; sourceTree = "<group>"; };
 		06CC54320A3E3B9000E92E7F /* globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = globals.h; sourceTree = "<group>"; };
-		06FB5AE90A4766E800D6B6A4 /* nums.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = nums.bmp; sourceTree = "<group>"; };
 		06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Timer.h; sourceTree = "<group>"; };
 		06FB5AF00A47675800D6B6A4 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		06FFD1780A3E2196003850BF /* load_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = load_image.h; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 			children = (
 				066003C90A4D9DFF009ED8EF /* snake.000 */,
 				0660BD000A4A1FCE0007D282 /* snaketitle.png */,
-				06FB5AE90A4766E800D6B6A4 /* nums.bmp */,
 				06C9742E0A44826B00ECB735 /* apple.bmp */,
 				06377BD00A434FF70006D268 /* levels.txt */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
@@ -298,7 +295,6 @@
 				06C9742F0A44826B00ECB735 /* apple.bmp in Resources */,
 				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
 				06377BD10A434FF70006D268 /* levels.txt in Resources */,
-				06FB5AEA0A4766E800D6B6A4 /* nums.bmp in Resources */,
 				0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */,
 				066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */,
 			);
