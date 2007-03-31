@@ -7,8 +7,8 @@
 	<key>CFBundleName</key>
 	<string>Snake World Tour</string>
 	<key>CFBundleShortVersionString</key>
-	<string>Snake version 0.1</string>
+	<string>Version 0.9</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2006 Tyler Kieft.</string>
+	<string>Copyright © 2006-2007 Tyler Kieft.</string>
 </dict>
 </plist>

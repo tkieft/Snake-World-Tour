@@ -65,6 +65,9 @@
 		0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0660BCE70A4A1A720007D282 /* SIntroState.cpp */; };
 		0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0660BD000A4A1FCE0007D282 /* snaketitle.png */; };
 		068EEABA0A3CE318003887BB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
+		06BF2DB90BBEA060003BE77A /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
+		06BF2DC10BBEA17D003BE77A /* Snake_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */; };
+		06BF2DC70BBEA1EB003BE77A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06BF2DC60BBEA1EB003BE77A /* Info.plist */; };
 		06C971F60A446B2900ECB735 /* SPlayState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971F40A446B2900ECB735 /* SPlayState.h */; };
 		06C971F70A446B2900ECB735 /* SPlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C971F50A446B2900ECB735 /* SPlayState.cpp */; };
 		06C972A80A447A6A00ECB735 /* SGameEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */; };
@@ -102,6 +105,9 @@
 		0660BCE70A4A1A720007D282 /* SIntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SIntroState.cpp; sourceTree = "<group>"; };
 		0660BD000A4A1FCE0007D282 /* snaketitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snaketitle.png; sourceTree = "<group>"; };
 		068EEAB90A3CE318003887BB /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = main.cpp; sourceTree = "<group>"; };
+		06BF2DB80BBEA060003BE77A /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Snake_Prefix.pch; sourceTree = "<group>"; };
+		06BF2DC60BBEA1EB003BE77A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SGameEngine.h; sourceTree = "<group>"; };
 		06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SGameEngine.cpp; sourceTree = "<group>"; };
 		06C971830A44603D00ECB735 /* SGameState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SGameState.h; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+				06BF2DB90BBEA060003BE77A /* SDL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +184,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06BF2DB80BBEA060003BE77A /* SDL.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -221,6 +229,7 @@
 				06FFD1780A3E2196003850BF /* load_image.h */,
 				06FFD1790A3E2196003850BF /* load_image.cpp */,
 				068EEAB90A3CE318003887BB /* main.cpp */,
+				06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 				06C9742E0A44826B00ECB735 /* apple.bmp */,
 				06377BD00A434FF70006D268 /* levels.txt */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
+				06BF2DC60BBEA1EB003BE77A /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -268,6 +278,7 @@
 				06431CEA0A703DB20027C0D2 /* SMenuState.h in Headers */,
 				06431CFB0A7040AE0027C0D2 /* Menu.h in Headers */,
 				06431D0A0A70426C0027C0D2 /* MenuOption.h in Headers */,
+				06BF2DC10BBEA17D003BE77A /* Snake_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +308,7 @@
 				06377BD10A434FF70006D268 /* levels.txt in Resources */,
 				0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */,
 				066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */,
+				06BF2DC70BBEA1EB003BE77A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
