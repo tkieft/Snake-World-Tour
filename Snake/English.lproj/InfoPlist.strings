@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleGetInfoString</key>
-	<string>Snake World Tour, Copyright 2006 Tyler Kieft.</string>
+	<string>Snake World Tour, Copyright © 2006-2007 Tyler Kieft.</string>
 	<key>CFBundleName</key>
 	<string>Snake World Tour</string>
 	<key>CFBundleShortVersionString</key>
