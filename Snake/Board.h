@@ -74,6 +74,8 @@ public:
     void drawGameLost( SDL_Surface* scr );
     void drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] );
 	void drawHelp( SDL_Surface* scr );
+	void drawLevelLostInfo( SDL_Surface* scr );
+	void drawLevelWonInfo( SDL_Surface* scr );
     
     void nextLevel( int numSnakes );
     void restartLevel( int numSnakes );
@@ -86,15 +88,16 @@ private:
     const static int ENDING_POSITION[];
     
     void drawLargeText( const char* text, double yMult, SDL_Surface* scr );
-    void drawSmallText( const char* text, SDL_Surface* scr );
+	void drawSmallText( const char* text, SDL_Surface* scr, string loc );
+	void drawBorderedRect( SDL_Surface* scr );
     
-    TTF_Font *largeFont;
-    TTF_Font *smallFont;
+    TTF_Font* largeFont;
+    TTF_Font* smallFont;
 
     TTF_Font* playerFont[2];
-    TTF_Font *levelFont;
+    TTF_Font* levelFont;
     
-    SDL_Surface *fontSurface;
+    SDL_Surface* fontSurface;
     SDL_Color levelNumColor;
     SDL_Color levelNumBG;
 };

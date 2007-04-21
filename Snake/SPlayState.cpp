@@ -176,6 +176,10 @@ void SPlayState::Draw( SGameEngine* game )
     if( gameState == LEVEL_PLAYING || gameState == LEVEL_WON || gameState == LEVEL_LOST ) {
         theBoard.drawLevelPlaying( game->screen, theSnakes );
         theTimer.draw( 554, 389, game->screen );
+		if( gameState == LEVEL_LOST )
+			theBoard.drawLevelLostInfo( game->screen );
+		else if( gameState == LEVEL_WON )
+			theBoard.drawLevelWonInfo( game->screen );
     }
     else if ( gameState == LEVEL_START ) {
         theBoard.drawLevelStart( game->screen );

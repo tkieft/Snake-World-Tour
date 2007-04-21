@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *	20Apr07 TDK Add drawing code for when level is lost, won
  *  03Nov06 TDK Add space before # of lives, Hunger.
  *  27Jun06 TDK Add more fonts so that colors are correct, only one apple at a time.
  *  18Jun06 TDK readCurrentLevel() more efficient, now read wall color.
@@ -36,15 +37,13 @@ using std::endl;
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 const int Board::ENDING_POSITION[] = { Board::STARTING_POSITION[1], Board::STARTING_POSITION[0] };
 
-Board::Board() : currentLevel( 0 )
-{
+Board::Board() : currentLevel( 0 ) {
     playerFont[0] = NULL;
     playerFont[1] = NULL;
     srand( time( NULL ) );
 }
 
-void Board::Init( string rsrcPath, int numSnakes )
-{
+void Board::Init( string rsrcPath, int numSnakes ) {
     levelPath = rsrcPath + "levels.txt";
     applePath = rsrcPath + "apple.bmp";
     
@@ -73,8 +72,7 @@ void Board::Init( string rsrcPath, int numSnakes )
     nextLevel( numSnakes );
 }
 
-void Board::Cleanup()
-{
+void Board::Cleanup() {
     SDL_FreeSurface( apple );
     TTF_CloseFont( smallFont );
     TTF_CloseFont( playerFont[0] );
@@ -86,8 +84,7 @@ void Board::Cleanup()
     delete[] snakeHeadPosition;
 }
 
-void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] )
-{
+void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] ) {
     
     SDL_Color color;
     int tile;
@@ -177,10 +174,22 @@ void Board::drawLargeText( const char* text, double yMult, SDL_Surface* scr )
     SDL_FreeSurface( fontSurface );
 }
 
-void Board::drawSmallText( const char* text, SDL_Surface* scr )
-{
-    fontSurface = TTF_RenderText_Shaded( smallFont, text, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, YLOC + TILESIZE * LEVELSIZE - fontSurface->h };
+void Board::drawSmallText( const char* text, SDL_Surface* scr, string loc = "bottom" ) {
+	SDL_Color textColor = WALL_COLOR;
+	if( loc == "middle1" )
+		textColor = WALL2_COLOR;
+		
+    fontSurface = TTF_RenderText_Shaded( smallFont, text, textColor, FLOOR_COLOR );
+
+	// must build surface before calculating position!!
+	SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, YLOC + TILESIZE * LEVELSIZE - fontSurface->h };
+	if( loc == "middle1" )
+		where.y -= TILESIZE * LEVELSIZE / 2 + fontSurface->h / 2;
+	else if( loc == "middle2" )
+		where.y -= TILESIZE * LEVELSIZE / 2 - fontSurface->h / 2;
+	else if( loc == "middle3" )
+		where.y -= TILESIZE * LEVELSIZE / 2 - 3 * fontSurface->h / 2;
+		
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );
 }
@@ -194,7 +203,6 @@ void Board::drawLevelStart( SDL_Surface* scr )
     drawLargeText( levelText, (-1.5), scr );
     drawLargeText( levelName.c_str(), (-.5), scr );
     drawLargeText( levelLocation.c_str(), .5, scr );
-
     drawSmallText( "Press space to begin", scr );
 }
 
@@ -270,6 +278,30 @@ void Board::drawHelp( SDL_Surface* scr )
     where.x = 475; where.y = 360;
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );
+}
+
+void Board::drawLevelLostInfo( SDL_Surface* scr ) {
+	drawBorderedRect( scr );
+	drawSmallText( "Player ? Lost", scr, "middle1" );
+	drawSmallText( "Press space to restart", scr, "middle2" );
+	drawSmallText( "the current level", scr, "middle3" );
+}
+
+void Board::drawLevelWonInfo( SDL_Surface* scr ) {
+	drawBorderedRect( scr );
+	drawSmallText( "Level Cleared!", scr, "middle1" );
+	drawSmallText( "Press space to advance", scr, "middle2" );
+	drawSmallText( "to the next level", scr, "middle3" );
+}
+
+void Board::drawBorderedRect( SDL_Surface* scr ) {
+	// draw a rectangle with border in the middle of the gameboard
+	int boardSize = TILESIZE * LEVELSIZE;
+	const int rectX = 240, rectY = 80;
+	SDL_Rect middleBoard = { XLOC + boardSize / 2 - rectX / 2 - 3, YLOC + boardSize / 2 - rectY / 2 - 3, rectX + 6, rectY + 6 };
+	SDL_FillRect( scr, &middleBoard, SDL_MapRGB( scr->format, WALL_COLOR.r, WALL_COLOR.g, WALL_COLOR.b ) );
+    SDL_Rect middleBoard2 = { XLOC + boardSize / 2 - rectX / 2, YLOC + boardSize / 2 - rectY / 2, rectX, rectY };
+	SDL_FillRect( scr, &middleBoard2, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
 }
 
 // return 0 if continue, 1 if snake 1 crashed, 2 if snake 2 crashed
