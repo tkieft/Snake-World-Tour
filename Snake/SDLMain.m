@@ -43,16 +43,21 @@ static BOOL   gCalledAppMainline = FALSE;
 
 static NSString *getApplicationName(void)
 {
-    NSDictionary *dict;
+    //NSDictionary *dict;
     NSString *appName = 0;
 
     /* Determine the application name */
-    dict = (NSDictionary *)CFBundleGetInfoDictionary(CFBundleGetMainBundle());
-    if (dict)
-        appName = [dict objectForKey: @"CFBundleName"];
+    appName = (NSString*)CFBundleGetValueForInfoDictionaryKey( CFBundleGetMainBundle(), CFSTR( "CFBundleName" ) );
     
-    if (![appName length])
+	//if (dict) {
+    //    appName = [dict objectForKey: @"CFBundleName"];
+		//NSLog(appName);
+	//}
+    
+    if (![appName length]) {
         appName = [[NSProcessInfo processInfo] processName];
+		//NSLog(appName);
+	}
 
     return appName;
 }
