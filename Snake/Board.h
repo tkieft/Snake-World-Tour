@@ -40,6 +40,7 @@ private:
     SDL_Color FLOOR_COLOR;
     
     int currentLevel;
+	int deadPlayer;
     int* levelData;
     string levelName;
     string levelLocation;

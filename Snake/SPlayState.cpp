@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  21Apr07	TDK	Fix nasty bug where restarting game would cause errors because snakes hadn't been deleted
  *  15Jun06 TDK gameState variable to hold state.
  *  24Jun06 TDK Move SDL_Flip below Unlock screen.
  *  17Jun06 TDK New Code.
@@ -20,14 +21,12 @@
 
 SPlayState SPlayState::snakePlayState;
 
-SPlayState::SPlayState() : theBoard(), theTimer()
-{
+SPlayState::SPlayState() : theBoard(), theTimer() {
     theSnakes[0] = NULL;
     theSnakes[1] = NULL;
 }
 
-void SPlayState::Init( SGameEngine* game )
-{
+void SPlayState::Init( SGameEngine* game ) {
 	game->startPlaying();
 	
     // load up background
@@ -36,9 +35,19 @@ void SPlayState::Init( SGameEngine* game )
     // create snake(s)
     SDL_Color c1 = { 0x00, 0x88, 0x00 };
     SDL_Color c2 = { 0x00, 0x33, 0x22 };
-    theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP, game->getGameDiff() );
+
+	// clean up a possible previous game
+	if( theSnakes[0] )
+		delete theSnakes[0];
+	if( theSnakes[1] ) {
+		delete theSnakes[1];
+		theSnakes[1] = NULL;
+	}
+
+   	theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP, game->getGameDiff() );
     if( game->getNumPlayers() == 2 )
-        theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
+      	theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
+
     // set up board and timer
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
 	theBoard.setLevel( 1, game->getNumPlayers() );
@@ -47,8 +56,7 @@ void SPlayState::Init( SGameEngine* game )
     gameState = LEVEL_START;
 }
 
-void SPlayState::Cleanup()
-{
+void SPlayState::Cleanup() {
     // cleanup members
     theBoard.Cleanup();
     theTimer.Cleanup();

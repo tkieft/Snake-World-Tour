@@ -37,7 +37,7 @@ using std::endl;
 const int Board::STARTING_POSITION[] = { ( LEVELSIZE * (LEVELSIZE - 1) ) + LEVELSIZE / 2, LEVELSIZE / 2 };
 const int Board::ENDING_POSITION[] = { Board::STARTING_POSITION[1], Board::STARTING_POSITION[0] };
 
-Board::Board() : currentLevel( 0 ) {
+Board::Board() : currentLevel( 0 ), deadPlayer( 1 ) {
     playerFont[0] = NULL;
     playerFont[1] = NULL;
     srand( time( NULL ) );
@@ -263,8 +263,7 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
     
 }
 
-void Board::drawHelp( SDL_Surface* scr )
-{
+void Board::drawHelp( SDL_Surface* scr ) {
 	SDL_Color helpColor; helpColor.r = helpColor.g = helpColor.b = 0xFF;
 	
 	char* pauseHelp = "'P' to Pause";
@@ -282,7 +281,8 @@ void Board::drawHelp( SDL_Surface* scr )
 
 void Board::drawLevelLostInfo( SDL_Surface* scr ) {
 	drawBorderedRect( scr );
-	drawSmallText( "Player ? Lost", scr, "middle1" );
+	char text[] = { 'P', 'l', 'a', 'y', 'e', 'r', ' ', ((char)deadPlayer) + 48, ' ', 'D', 'i', 'e', 'd', '!', '\0' };
+	drawSmallText( text, scr, "middle1" );
 	drawSmallText( "Press space to restart", scr, "middle2" );
 	drawSmallText( "the current level", scr, "middle3" );
 }
@@ -326,7 +326,7 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                         if( --collectibles) placeCollectible();
                     }
                     else
-                        return i+1;
+                        return deadPlayer = i + 1;
                 }
                 snakeHeadPosition[i] -= LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
@@ -342,7 +342,7 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                         if( --collectibles) placeCollectible();
                     }
                     else
-                        return i+1;
+                        return deadPlayer = i + 1;
                 }
                 snakeHeadPosition[i] += LEVELSIZE;
                 levelData[snakeHeadPosition[i]] = ++snakeHead[i];
@@ -358,7 +358,7 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                         if( --collectibles) placeCollectible();
                     }
                     else
-                        return i+1;
+                        return deadPlayer = i + 1;
                 }
                 levelData[--snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
@@ -373,7 +373,7 @@ int Board::updatePosition( SnakePlayer* snakes[] )
                         if( --collectibles) placeCollectible();
                     }
                     else
-                        return i+1;
+                        return deadPlayer = i + 1;
                 }
                 levelData[++snakeHeadPosition[i]] = ++snakeHead[i];
                 break;
