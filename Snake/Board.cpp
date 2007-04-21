@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *	21Apr07	TDK	Different die string for each level
  *	20Apr07 TDK Add drawing code for when level is lost, won
  *  03Nov06 TDK Add space before # of lives, Hunger.
  *  27Jun06 TDK Add more fonts so that colors are correct, only one apple at a time.
@@ -28,6 +29,7 @@ using std::ifstream;
 using std::ios;
 using std::cout;
 using std::endl;
+using std::string;
 
 #include "Board.h"
 #include "drawfunc.h"
@@ -280,11 +282,14 @@ void Board::drawHelp( SDL_Surface* scr ) {
 }
 
 void Board::drawLevelLostInfo( SDL_Surface* scr ) {
+	// KLUDGEY CODE AHEAD!!!
 	drawBorderedRect( scr );
-	char text[] = { 'P', 'l', 'a', 'y', 'e', 'r', ' ', ((char)deadPlayer) + 48, ' ', 'D', 'i', 'e', 'd', '!', '\0' };
+	char text[ 50 ];
+	sprintf( text, "Snake %d %s", deadPlayer, dieString.c_str() );
 	drawSmallText( text, scr, "middle1" );
 	drawSmallText( "Press space to restart", scr, "middle2" );
 	drawSmallText( "the current level", scr, "middle3" );
+	//TODO: Different die strings based on level!
 }
 
 void Board::drawLevelWonInfo( SDL_Surface* scr ) {
@@ -297,7 +302,7 @@ void Board::drawLevelWonInfo( SDL_Surface* scr ) {
 void Board::drawBorderedRect( SDL_Surface* scr ) {
 	// draw a rectangle with border in the middle of the gameboard
 	int boardSize = TILESIZE * LEVELSIZE;
-	const int rectX = 240, rectY = 80;
+	const int rectX = 320, rectY = 100;
 	SDL_Rect middleBoard = { XLOC + boardSize / 2 - rectX / 2 - 3, YLOC + boardSize / 2 - rectY / 2 - 3, rectX + 6, rectY + 6 };
 	SDL_FillRect( scr, &middleBoard, SDL_MapRGB( scr->format, WALL_COLOR.r, WALL_COLOR.g, WALL_COLOR.b ) );
     SDL_Rect middleBoard2 = { XLOC + boardSize / 2 - rectX / 2, YLOC + boardSize / 2 - rectY / 2, rectX, rectY };
@@ -489,6 +494,7 @@ bool Board::readCurrentLevel()
     
     getline( levelFile, levelName );
     getline( levelFile, levelLocation );
+	getline( levelFile, dieString );
         
     for( int i = 0; i < LEVELSIZE * LEVELSIZE; i++ )
         levelFile >> levelData[ i ];

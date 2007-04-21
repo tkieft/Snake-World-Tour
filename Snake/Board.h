@@ -44,6 +44,7 @@ private:
     int* levelData;
     string levelName;
     string levelLocation;
+	string dieString;
     
     string levelPath;
     string applePath;
