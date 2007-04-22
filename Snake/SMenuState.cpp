@@ -125,9 +125,9 @@ void SMenuState::HandleEvents( SGameEngine* game )
 							else
 								game->setNumPlayers(1);
 							if( num_players_menu->getChoice("Difficulty") == "Easy" )
-								game->setGameDiff(2);
+								game->setGameDifficulty(2);
 							else if( num_players_menu->getChoice("Difficulty") == "Expert" )
-								game->setGameDiff(6);
+								game->setGameDifficulty(6);
 							
 							if( game->isPlaying() )
 							{

@@ -44,9 +44,9 @@ void SPlayState::Init( SGameEngine* game ) {
 		theSnakes[1] = NULL;
 	}
 
-   	theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP, game->getGameDiff() );
+   	theSnakes[0] = new SnakePlayer( c1, "Tyler", SnakePlayer::SNAKE_UP, game->getGameDifficulty() );
     if( game->getNumPlayers() == 2 )
-      	theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
+      	theSnakes[1] = new SnakePlayer( c2, "Brandon", SnakePlayer::SNAKE_DOWN, game->getGameDifficulty() );
 
     // set up board and timer
     theBoard.Init( game->getFileDirectory(), game->getNumPlayers() );
@@ -94,8 +94,8 @@ void SPlayState::HandleEvents( SGameEngine* game )
                     case SDLK_SPACE:
                         if( gameState == LEVEL_LOST || gameState == LEVEL_WON )
                         {
-                            theSnakes[0]->reset( SnakePlayer::SNAKE_UP, game->getGameDiff() );
-                            if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN, game->getGameDiff() );
+                            theSnakes[0]->reset( SnakePlayer::SNAKE_UP, game->getGameDifficulty() );
+                            if( theSnakes[1] ) theSnakes[1]->reset( SnakePlayer::SNAKE_DOWN, game->getGameDifficulty() );
                         }
                         if( gameState == LEVEL_LOST )
                         {

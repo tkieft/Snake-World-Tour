@@ -50,7 +50,7 @@ void SGameEngine::Init( string windowTitle, string d )
     gameRunning = true;
 	gamePlaying = false;
     numPlayers = 1;
-	gameDiff = 4;
+	gameDifficulty = 4;
 }
 
 void SGameEngine::Cleanup()
