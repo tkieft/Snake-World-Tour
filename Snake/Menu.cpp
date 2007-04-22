@@ -50,6 +50,15 @@ void Menu::addOptionChoice( string optName, string choice ) {
     options[opt]->addChoice( choice );
 }
 
+void Menu::setDefaultChoice( string optName, string choice ) {
+	int opt = -1;
+	
+	while( options[ ++opt ]->getName() != optName );
+	
+	while( options[opt]->getCurrentChoice() != choice )
+		options[opt]->nextChoice();
+}
+
 void Menu::nextOption() {
     if( ++currentOption >= numOptions )
         currentOption = 0;

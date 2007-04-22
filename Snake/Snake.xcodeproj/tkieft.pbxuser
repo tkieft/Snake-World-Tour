@@ -185,7 +185,7 @@
 		hitCount = 1;
 		lineNumber = 252;
 		location = Snake;
-		modificationTime = 198886387.631138;
+		modificationTime = 198953574.995781;
 		state = 1;
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
@@ -229,7 +229,7 @@
 		hitCount = 1;
 		lineNumber = 50;
 		location = Snake;
-		modificationTime = 198896655.133477;
+		modificationTime = 198953574.995852;
 		state = 2;
 	};
 	06C1C4B10AFC1A5D00430E18 /* SGameEngine.cpp:43 */ = {
@@ -243,7 +243,7 @@
 		functionName = "SGameEngine::Init()";
 		hitCount = 1;
 		lineNumber = 43;
-		modificationTime = 198886387.631169;
+		modificationTime = 198953574.996006;
 		state = 2;
 	};
 	06C1C4B40AFC1A7500430E18 /* SGameEngine.cpp:26 */ = {
@@ -258,7 +258,7 @@
 		hitCount = 1;
 		lineNumber = 26;
 		location = Snake;
-		modificationTime = 198886387.631185;
+		modificationTime = 198953574.996083;
 		state = 1;
 	};
 	06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {
@@ -528,6 +528,76 @@
 		vrLen = 112;
 		vrLoc = 1275;
 	};
+	06D789FE0BDAED01005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A020BDAEDA6005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A0B0BDAEE5F005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A0F0BDAEE65005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A160BDBAC10005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A2C0BDBCA8F005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A2D0BDBCA92005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
 	06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {554, 910}}";
@@ -556,7 +626,7 @@
 		hitCount = 1;
 		lineNumber = 39;
 		location = Snake;
-		modificationTime = 198886387.630967;
+		modificationTime = 198953574.995589;
 		state = 1;
 	};
 	06FB5C300A47865B00D6B6A4 /* Timer.cpp:97 */ = {
@@ -571,7 +641,7 @@
 		hitCount = 1;
 		lineNumber = 97;
 		location = Snake;
-		modificationTime = 198886387.631058;
+		modificationTime = 198953574.995644;
 		state = 1;
 	};
 	06FFD1780A3E2196003850BF /* load_image.h */ = {
@@ -794,6 +864,13 @@
 			06D789FA0BDAEC69005505FB /* PBXBookmark */ = 06D789FA0BDAEC69005505FB /* PBXBookmark */;
 			06D789FB0BDAEC69005505FB /* PBXTextBookmark */ = 06D789FB0BDAEC69005505FB /* PBXTextBookmark */;
 			06D789FC0BDAEC69005505FB /* PBXTextBookmark */ = 06D789FC0BDAEC69005505FB /* PBXTextBookmark */;
+			06D789FE0BDAED01005505FB /* PBXTextBookmark */ = 06D789FE0BDAED01005505FB /* PBXTextBookmark */;
+			06D78A020BDAEDA6005505FB /* PBXTextBookmark */ = 06D78A020BDAEDA6005505FB /* PBXTextBookmark */;
+			06D78A0B0BDAEE5F005505FB /* PBXTextBookmark */ = 06D78A0B0BDAEE5F005505FB /* PBXTextBookmark */;
+			06D78A0F0BDAEE65005505FB /* PBXTextBookmark */ = 06D78A0F0BDAEE65005505FB /* PBXTextBookmark */;
+			06D78A160BDBAC10005505FB /* PBXTextBookmark */ = 06D78A160BDBAC10005505FB /* PBXTextBookmark */;
+			06D78A2C0BDBCA8F005505FB /* PBXTextBookmark */ = 06D78A2C0BDBCA8F005505FB /* PBXTextBookmark */;
+			06D78A2D0BDBCA92005505FB /* PBXTextBookmark */ = 06D78A2D0BDBCA92005505FB /* PBXTextBookmark */;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

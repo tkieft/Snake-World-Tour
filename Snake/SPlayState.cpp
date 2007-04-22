@@ -115,7 +115,6 @@ void SPlayState::HandleEvents( SGameEngine* game )
                             break;
                         }
                         if( gameState == GAME_LOST ) {
-							game->stopPlaying();
                             game->ChangeState( SMenuState::Instance() );
                             break;
                         }
@@ -158,6 +157,7 @@ void SPlayState::Update( SGameEngine* game )
         {
             if( !(theSnakes[ result - 1 ]->die()) ) {
                 gameState = GAME_LOST;
+				game->stopPlaying();
                 theTimer.stop();
             }
             else {

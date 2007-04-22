@@ -49,6 +49,7 @@ public:
     void addOption( string newOption );
     void addSelectableOption( string newOption );
     void addOptionChoice( string optName, string choice );
+	void setDefaultChoice( string optName, string choice );
     void nextOption();
     void nextChoice();
     void previousOption();

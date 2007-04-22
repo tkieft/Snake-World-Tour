@@ -54,6 +54,11 @@ void SMenuState::init_menus( SGameEngine* game ) {
 	num_players_menu->addOptionChoice( "Difficulty", "Easy" );
 	num_players_menu->addOptionChoice( "Difficulty", "Normal" );
 	num_players_menu->addOptionChoice( "Difficulty", "Expert" );
+	num_players_menu->setDefaultChoice( "Difficulty", "Normal" );
+	//num_players_menu->addOption( "Snake 1 Name" );
+	//num_players_menu->addOptionChoice( "Snake 1 Name", "Tyler" );
+	//num_players_menu->addOption( "Snake 2 Name" );
+	//num_players_menu->addOptionChoice( "Snake 2 Name", "Brandon" );
 	num_players_menu->addSelectableOption( "Play" );
 	num_players_menu->addSelectableOption( "Cancel" );
     
@@ -140,7 +145,7 @@ void SMenuState::HandleEvents( SGameEngine* game )
 								game->ChangeState( SPlayState::Instance() );
 						}
 					}
-					else {
+					else if( current_menu == options_menu ) {
                         if( current_menu->getOption() == "Cancel" )
 						{
 							main_menu->reset();

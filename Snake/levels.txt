@@ -293,7 +293,7 @@ A2A2A2
 FFFFFF
 000000
 
-2:
+1:
 South Pole
 Antarctica
 fell through an iceberg!
@@ -336,7 +336,7 @@ fell through an iceberg!
 FF8000
 DDDDDD
 
-1:
+2:
 Atlantis
 ???
 was attacked by a merman!
