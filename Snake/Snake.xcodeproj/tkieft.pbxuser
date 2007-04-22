@@ -351,6 +351,85 @@
 			sepNavWindowFrame = "{{9, 68}, {543, 750}}";
 		};
 	};
+	06D789620BDAE4E4005505FB /* snake.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 48}, {908, 779}}";
+		};
+	};
+	06D789860BDAE68F005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+	};
+	06D789890BDAE6A7005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		uiCtxt = {
+			TOCViewDetailVisibleRect = "{{0, 0}, {621, 246}}";
+			TOCViewExpandedItems = (
+				"com.apple.target-editor-pane.settings",
+				"com.apple.target-editor-pane.settings.simple",
+				"com.apple.target-editor-pane.info-plist",
+				"com.apple.target-editor-pane.info-plist.simple",
+				"com.apple.target-editor-pane.buildphases",
+			);
+			TOCViewMasterVisibleRect = "{{0, 0}, {248, 604}}";
+			TOCViewSelectedItems = (
+				PBXInfoPlistExpertSettingsEditorModule,
+			);
+		};
+	};
+	06D789940BDAE7B3005505FB /* Credits.rtf */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {863, 665}}";
+			sepNavSelRange = "{0, 146}";
+			sepNavVisRect = "{{0, 0}, {863, 665}}";
+			sepNavWindowFrame = "{{15, 48}, {908, 779}}";
+		};
+	};
+	06D789A40BDAE8B4005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+	};
+	06D789A80BDAE8D6005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		uiCtxt = {
+			TOCViewDetailVisibleRect = "{{0, 0}, {621, 120}}";
+			TOCViewExpandedItems = (
+				"com.apple.target-editor-pane.settings",
+				"com.apple.target-editor-pane.settings.simple",
+				"com.apple.target-editor-pane.info-plist",
+				"com.apple.target-editor-pane.info-plist.simple",
+				"com.apple.target-editor-pane.buildphases",
+			);
+			TOCViewMasterVisibleRect = "{{0, 0}, {248, 604}}";
+			TOCViewSelectedItems = (
+				PBXProductDisplaySettingsModule,
+			);
+		};
+	};
+	06D789BC0BDAE9C7005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+	};
+	06D789C10BDAEA0A005505FB /* PBXTargetBookmark */ = {
+		isa = PBXTargetBookmark;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		uiCtxt = {
+			TOCViewDetailVisibleRect = "{{0, 0}, {621, 259}}";
+			TOCViewExpandedItems = (
+				"com.apple.target-editor-pane.settings",
+				"com.apple.target-editor-pane.settings.simple",
+				"com.apple.target-editor-pane.info-plist",
+				"com.apple.target-editor-pane.info-plist.simple",
+				"com.apple.target-editor-pane.buildphases",
+			);
+			TOCViewMasterVisibleRect = "{{0, 0}, {248, 604}}";
+			TOCViewSelectedItems = (
+				"com.apple.target-editor-pane.settings.expert",
+			);
+		};
+	};
 	06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {554, 910}}";
@@ -597,8 +676,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 198865316;
-			PBXWorkspaceStateSaveDate = 198865316;
+			PBXPerProjectTemplateStateSaveDate = 198894001;
+			PBXWorkspaceStateSaveDate = 198894001;
+		};
+		perUserProjectItems = {
+			06D789860BDAE68F005505FB /* PBXTargetBookmark */ = 06D789860BDAE68F005505FB /* PBXTargetBookmark */;
+			06D789890BDAE6A7005505FB /* PBXTargetBookmark */ = 06D789890BDAE6A7005505FB /* PBXTargetBookmark */;
+			06D789A40BDAE8B4005505FB /* PBXTargetBookmark */ = 06D789A40BDAE8B4005505FB /* PBXTargetBookmark */;
+			06D789A80BDAE8D6005505FB /* PBXTargetBookmark */ = 06D789A80BDAE8D6005505FB /* PBXTargetBookmark */;
+			06D789BC0BDAE9C7005505FB /* PBXTargetBookmark */ = 06D789BC0BDAE9C7005505FB /* PBXTargetBookmark */;
+			06D789C10BDAEA0A005505FB /* PBXTargetBookmark */ = 06D789C10BDAEA0A005505FB /* PBXTargetBookmark */;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {

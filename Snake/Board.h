@@ -76,7 +76,7 @@ public:
     void drawGameLost( SDL_Surface* scr );
     void drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] );
 	void drawHelp( SDL_Surface* scr );
-	void drawLevelLostInfo( SDL_Surface* scr );
+	void drawLevelLostInfo( SDL_Surface* scr, SnakePlayer* snakes[] );
 	void drawLevelWonInfo( SDL_Surface* scr );
     
     void nextLevel( int numSnakes );

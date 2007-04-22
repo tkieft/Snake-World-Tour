@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     const SDL_version* version = SDL_Linked_Version();
     std::cout << "Snake World Tour\nTyler Kieft\nLinked with SDL Version "
         << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl;
-    game.Init( "Snake World Tour      v0.9 beta", rsrcdirectory );
+    game.Init( "Snake World Tour", rsrcdirectory );
     
     // load the game
     game.ChangeState( SIntroState::Instance() );

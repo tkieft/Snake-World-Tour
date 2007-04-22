@@ -281,12 +281,11 @@ void Board::drawHelp( SDL_Surface* scr ) {
     SDL_FreeSurface( fontSurface );
 }
 
-void Board::drawLevelLostInfo( SDL_Surface* scr ) {
+void Board::drawLevelLostInfo( SDL_Surface* scr, SnakePlayer* snakes[] ) {
 	// KLUDGEY CODE AHEAD!!!
 	drawBorderedRect( scr );
-	char text[ 50 ];
-	sprintf( text, "Snake %d %s", deadPlayer, dieString.c_str() );
-	drawSmallText( text, scr, "middle1" );
+	string text = snakes[ deadPlayer - 1 ]->getName() + " " + dieString;
+	drawSmallText( text.c_str(), scr, "middle1" );
 	drawSmallText( "Press space to restart", scr, "middle2" );
 	drawSmallText( "the current level", scr, "middle3" );
 	//TODO: Different die strings based on level!
