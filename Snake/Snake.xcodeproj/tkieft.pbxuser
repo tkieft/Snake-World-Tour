@@ -2,9 +2,9 @@
 {
 	0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {872, 868}}";
-			sepNavSelRange = "{1165, 0}";
-			sepNavVisRect = "{{0, 122}, {872, 651}}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 882}}";
+			sepNavSelRange = "{547, 18}";
+			sepNavVisRect = "{{0, 139}, {528, 437}}";
 			sepNavWindowFrame = "{{315, 52}, {917, 780}}";
 		};
 	};
@@ -24,7 +24,7 @@
 			sepNavWindowFrame = "{{169, 59}, {501, 773}}";
 		};
 	};
-	063E7B5E0A3C84C4005C4507 /* Snake */ = {
+	063E7B5E0A3C84C4005C4507 /* Snake World Tour */ = {
 		isa = PBXExecutable;
 		activeArgIndex = 2147483647;
 		activeArgIndices = (
@@ -56,7 +56,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = Snake;
+		name = "Snake World Tour";
 		savedGlobals = {
 		};
 		sourceDirectories = (
@@ -166,6 +166,13 @@
 			sepNavVisRect = "{{0, 706}, {734, 86}}";
 		};
 	};
+	06431CF90A7040AE0027C0D2 /* Menu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {428, 910}}";
+			sepNavSelRange = "{350, 13}";
+			sepNavVisRect = "{{0, 264}, {325, 186}}";
+		};
+	};
 	06431D090A70426C0027C0D2 /* MenuOption.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {670, 588}}";
@@ -190,9 +197,9 @@
 	};
 	0660BCE60A4A1A720007D282 /* SIntroState.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {554, 630}}";
-			sepNavSelRange = "{791, 0}";
-			sepNavVisRect = "{{0, 2}, {554, 607}}";
+			sepNavIntBoundsRect = "{{0, 0}, {528, 644}}";
+			sepNavSelRange = "{281, 37}";
+			sepNavVisRect = "{{0, 207}, {528, 437}}";
 			sepNavWindowFrame = "{{388, 76}, {572, 749}}";
 		};
 	};
@@ -263,9 +270,9 @@
 	};
 	06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {734, 966}}";
-			sepNavSelRange = "{1355, 0}";
-			sepNavVisRect = "{{0, 848}, {734, 86}}";
+			sepNavIntBoundsRect = "{{0, 0}, {528, 966}}";
+			sepNavSelRange = "{384, 18}";
+			sepNavVisRect = "{{0, 125}, {528, 437}}";
 			sepNavWindowFrame = "{{572, 49}, {601, 779}}";
 		};
 	};
@@ -320,9 +327,9 @@
 	};
 	06CC53520A3E321400E92E7F /* Board.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {554, 1428}}";
-			sepNavSelRange = "{1006, 0}";
-			sepNavVisRect = "{{0, 311}, {554, 607}}";
+			sepNavIntBoundsRect = "{{0, 0}, {528, 1512}}";
+			sepNavSelRange = "{690, 12}";
+			sepNavVisRect = "{{0, 195}, {528, 437}}";
 			sepNavWindowFrame = "{{174, 96}, {599, 736}}";
 		};
 	};
@@ -365,11 +372,11 @@
 	};
 	06D789860BDAE68F005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 	};
 	06D789890BDAE6A7005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 		uiCtxt = {
 			TOCViewDetailVisibleRect = "{{0, 0}, {621, 246}}";
 			TOCViewExpandedItems = (
@@ -395,11 +402,11 @@
 	};
 	06D789A40BDAE8B4005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 	};
 	06D789A80BDAE8D6005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 		uiCtxt = {
 			TOCViewDetailVisibleRect = "{{0, 0}, {621, 120}}";
 			TOCViewExpandedItems = (
@@ -417,11 +424,11 @@
 	};
 	06D789BC0BDAE9C7005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 	};
 	06D789C10BDAEA0A005505FB /* PBXTargetBookmark */ = {
 		isa = PBXTargetBookmark;
-		trg = 29B97326FDCFA39411CA2CEA /* Snake */;
+		trg = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 		uiCtxt = {
 			TOCViewDetailVisibleRect = "{{0, 0}, {621, 259}}";
 			TOCViewExpandedItems = (
@@ -598,6 +605,46 @@
 		vrLen = 112;
 		vrLoc = 1275;
 	};
+	06D78A300BDBCACD005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A320BDC3418005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A380BDC52FC005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
+	06D78A3E0BDC5361005505FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */;
+		name = "SGameEngine.h: gameDifficulty";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 112;
+		vrLoc = 1275;
+	};
 	06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {554, 910}}";
@@ -675,10 +722,10 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Development;
-		activeExecutable = 063E7B5E0A3C84C4005C4507 /* Snake */;
-		activeTarget = 29B97326FDCFA39411CA2CEA /* Snake */;
+		activeExecutable = 063E7B5E0A3C84C4005C4507 /* Snake World Tour */;
+		activeTarget = 29B97326FDCFA39411CA2CEA /* Snake World Tour */;
 		addToTargets = (
-			29B97326FDCFA39411CA2CEA /* Snake */,
+			29B97326FDCFA39411CA2CEA /* Snake World Tour */,
 		);
 		breakpoints = (
 			06FB5C2E0A4785E900D6B6A4 /* Timer.cpp:39 */,
@@ -691,7 +738,7 @@
 		breakpointsGroup = 06CC52FF0A3E2EB900E92E7F /* XCBreakpointsBucket */;
 		codeSenseManager = 063E7B730A3C84C9005C4507 /* Code sense */;
 		executables = (
-			063E7B5E0A3C84C4005C4507 /* Snake */,
+			063E7B5E0A3C84C4005C4507 /* Snake World Tour */,
 		);
 		perUserDictionary = {
 			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
@@ -871,15 +918,19 @@
 			06D78A160BDBAC10005505FB /* PBXTextBookmark */ = 06D78A160BDBAC10005505FB /* PBXTextBookmark */;
 			06D78A2C0BDBCA8F005505FB /* PBXTextBookmark */ = 06D78A2C0BDBCA8F005505FB /* PBXTextBookmark */;
 			06D78A2D0BDBCA92005505FB /* PBXTextBookmark */ = 06D78A2D0BDBCA92005505FB /* PBXTextBookmark */;
+			06D78A300BDBCACD005505FB /* PBXTextBookmark */ = 06D78A300BDBCACD005505FB /* PBXTextBookmark */;
+			06D78A320BDC3418005505FB /* PBXTextBookmark */ = 06D78A320BDC3418005505FB /* PBXTextBookmark */;
+			06D78A380BDC52FC005505FB /* PBXTextBookmark */ = 06D78A380BDC52FC005505FB /* PBXTextBookmark */;
+			06D78A3E0BDC5361005505FB /* PBXTextBookmark */ = 06D78A3E0BDC5361005505FB /* PBXTextBookmark */;
 		};
 		sourceControlManager = 063E7B720A3C84C9005C4507 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	29B97326FDCFA39411CA2CEA /* Snake */ = {
+	29B97326FDCFA39411CA2CEA /* Snake World Tour */ = {
 		activeExec = 0;
 		executables = (
-			063E7B5E0A3C84C4005C4507 /* Snake */,
+			063E7B5E0A3C84C4005C4507 /* Snake World Tour */,
 		);
 	};
 	F5A47A9D01A0482F01D3D55B /* SDLMain.h */ = {
