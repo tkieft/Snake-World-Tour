@@ -38,6 +38,8 @@ private:
     SDL_Color textColor;
     SDL_Color textSelectedColor;
     SDL_Color bgColor;
+
+	SDL_Surface *apple;
     
     void drawSelectableOption( SGameEngine* game, int q, int yofs );
     void drawOption( SGameEngine* game, int q, int yofs );

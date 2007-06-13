@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGE LOG:
+ *  13Jun07 TDK Change selection indicator to be apple from game.
  *  3Nov06  TDK Reset method.
  *  3Nov06  TDK Fool around with colors.
  *  3Nov06  TDK Draw smaller black rectangle so background is shown.
@@ -25,6 +26,8 @@ Menu::Menu( string theTitle, string rsrcPath ) : options() {
     textColor.r = 0x07; textColor.g = 0x7E; textColor.b = 0x41;
     textSelectedColor.r = 0xFB; textSelectedColor.g = 0xFF; textSelectedColor.b = 0x00;
     bgColor.r = 0x00; bgColor.g = 0x00; bgColor.b = 0x00;
+
+	apple = load_image( rsrcPath + "apple.bmp", 0xFF, 0x00, 0xFF );
 }
 
 Menu::~Menu() {
@@ -32,6 +35,8 @@ Menu::~Menu() {
         delete options[i];
         
     TTF_CloseFont( theFont );
+
+	SDL_FreeSurface( apple );
 }
 
 void Menu::addOption( string newOption ) {
@@ -152,7 +157,8 @@ void Menu::drawSelectableOption( SGameEngine* game, int q, int yofs )
         where.y += 12;
         where.w = 12;
         where.h = 12;
-        SDL_FillRect( game->screen, &where, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
+        //SDL_FillRect( game->screen, &where, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
+		SDL_BlitSurface( apple, NULL, game->screen, &where );
     }
     SDL_FreeSurface( fontSurface );
 }
@@ -180,7 +186,8 @@ void Menu::drawOption( SGameEngine* game, int q, int yofs )
             where2.y += 12;
             where2.w = 12;
             where2.h = 12;
-            SDL_FillRect( game->screen, &where2, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
+            //SDL_FillRect( game->screen, &where2, SDL_MapRGB( game->screen->format, textSelectedColor.r, textSelectedColor.g, textSelectedColor.b));
+			SDL_BlitSurface( apple, NULL, game->screen, &where2 );
         }
         where.x += 30 + fSurfaces[i]->w;
         SDL_FreeSurface( fSurfaces[i] );
