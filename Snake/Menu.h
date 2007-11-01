@@ -32,14 +32,14 @@ private:
     int numOptions;
     int currentOption;
     
-    SDL_Surface *fontSurface;
-    TTF_Font *theFont;
+    SDL_Surface* fontSurface;
+    TTF_Font* theFont;
 	SDL_Color titleColor;
     SDL_Color textColor;
     SDL_Color textSelectedColor;
     SDL_Color bgColor;
 
-	SDL_Surface *apple;
+	SDL_Surface* apple;
     
     void drawSelectableOption( SGameEngine* game, int q, int yofs );
     void drawOption( SGameEngine* game, int q, int yofs );

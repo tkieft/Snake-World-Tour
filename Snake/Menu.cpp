@@ -135,7 +135,7 @@ void Menu::Draw( SGameEngine* game )
 	
 	
     
-    int offset = SCREENHEIGHT / 2 - 50 * numOptions / 2;
+    int offset = SCREENHEIGHT / 2 - 50 * numOptions / 2 + 10;
     for( int i = 0; i < numOptions; i++ ) {
         if( options[i]->isSelectable() )
             drawSelectableOption( game, i, offset );

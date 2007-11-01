@@ -15,6 +15,7 @@
 
 #include "SMenuState.h"
 #include "SPlayState.h"
+#include "SHelpState.h"
 #include "globals.h"
 #include <iostream>
 using std::cout;
@@ -37,6 +38,7 @@ void SMenuState::init_menus( SGameEngine* game ) {
     	main_menu->addSelectableOption( "Resume Game" );
 	main_menu->addSelectableOption( "New Game" );
     main_menu->addSelectableOption( "Options" );
+	main_menu->addSelectableOption( "Help" );
     main_menu->addSelectableOption( "Quit" );
     
     options_menu = new Menu( "Options", game->getFileDirectory() );
@@ -113,6 +115,10 @@ void SMenuState::HandleEvents( SGameEngine* game )
 						{
 							options_menu->reset(); //move cursor back to top
                             current_menu = options_menu;
+						}
+						else if( current_menu->getOption() == "Help" )
+						{
+							game->PushState( SHelpState::Instance() );
 						}
                         else
                             game->Quit();
