@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  15Nov07 TDK Added check for EOF when reading level file.
  *	21Apr07	TDK	Different die string for each level
  *	20Apr07 TDK Add drawing code for when level is lost, won
  *  03Nov06 TDK Add space before # of lives, Hunger.
@@ -514,6 +515,9 @@ bool Board::readCurrentLevel()
                 col <<= 4;
                 while( 1 )
                 {
+					if (levelFile.eof())
+						exit(10);
+					
                     readColor = levelFile.get();
                     if( readColor >= 48 && readColor <= 57 )
                     {
