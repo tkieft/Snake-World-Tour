@@ -3,116 +3,66 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 45;
 	objects = {
 
-/* Begin PBXApplicationTarget section */
-		29B97326FDCFA39411CA2CEA /* Snake World Tour */ = {
-			isa = PBXApplicationTarget;
-			buildConfigurationList = 063E7B6A0A3C84C9005C4507 /* Build configuration list for PBXApplicationTarget "Snake World Tour" */;
-			buildPhases = (
-				29B97327FDCFA39411CA2CEA /* Headers */,
-				29B97328FDCFA39411CA2CEA /* Resources */,
-				061874780CD97A4E00713BA2 /* CopyFiles */,
-				29B9732BFDCFA39411CA2CEA /* Sources */,
-				29B9732DFDCFA39411CA2CEA /* Frameworks */,
-			);
-			dependencies = (
-			);
-			name = "Snake World Tour";
-			productInstallPath = "$(HOME)/Applications";
-			productName = Snake;
-			productReference = 17587328FF379C6511CA2CBB /* Snake World Tour.app */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>Snake World Tour</string>
-	<key>CFBundleIconFile</key>
-	<string>snake.icns</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.snier.snake</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>Snake World Tour</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>0.9</string>
-	<key>NSMainNibFile</key>
-	<string>SDLMain</string>
-	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
-</dict>
-</plist>
-";
-		};
-/* End PBXApplicationTarget section */
-
 /* Begin PBXBuildFile section */
-		0618746F0CD97A4500713BA2 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
-		061874700CD97A4500713BA2 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
-		061874710CD97A4500713BA2 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
-		061E7AF90CD838F6005D1E13 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
-		061E7AFD0CD83905005D1E13 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
-		0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */; };
-		0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
-		06377BD10A434FF70006D268 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06377BD00A434FF70006D268 /* levels.txt */; };
-		06431CEA0A703DB20027C0D2 /* SMenuState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CE80A703DB20027C0D2 /* SMenuState.h */; };
-		06431CEB0A703DB20027C0D2 /* SMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CE90A703DB20027C0D2 /* SMenuState.cpp */; };
-		06431CFB0A7040AE0027C0D2 /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CF90A7040AE0027C0D2 /* Menu.h */; };
-		06431CFC0A7040AE0027C0D2 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CFA0A7040AE0027C0D2 /* Menu.cpp */; };
-		06431D0A0A70426C0027C0D2 /* MenuOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431D080A70426C0027C0D2 /* MenuOption.h */; };
-		06431D0B0A70426C0027C0D2 /* MenuOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431D090A70426C0027C0D2 /* MenuOption.cpp */; };
-		066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */ = {isa = PBXBuildFile; fileRef = 066003C90A4D9DFF009ED8EF /* snake.000 */; };
-		0660BCE80A4A1A720007D282 /* SIntroState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0660BCE60A4A1A720007D282 /* SIntroState.h */; };
-		0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0660BCE70A4A1A720007D282 /* SIntroState.cpp */; };
-		0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0660BD000A4A1FCE0007D282 /* snaketitle.png */; };
-		0681021E0C20BC3100D4FA80 /* SHelpState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0681021C0C20BC3100D4FA80 /* SHelpState.cpp */; };
-		0681021F0C20BC3100D4FA80 /* SHelpState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0681021D0C20BC3100D4FA80 /* SHelpState.h */; };
-		068EEABA0A3CE318003887BB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
-		06BF2DB90BBEA060003BE77A /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
-		06BF2DC10BBEA17D003BE77A /* Snake_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */; };
-		06C971F60A446B2900ECB735 /* SPlayState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971F40A446B2900ECB735 /* SPlayState.h */; };
-		06C971F70A446B2900ECB735 /* SPlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C971F50A446B2900ECB735 /* SPlayState.cpp */; };
-		06C972A80A447A6A00ECB735 /* SGameEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */; };
-		06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */; };
-		06C973A30A447EF900ECB735 /* SGameState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971830A44603D00ECB735 /* SGameState.h */; };
-		06C9742F0A44826B00ECB735 /* apple.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 06C9742E0A44826B00ECB735 /* apple.bmp */; };
-		06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
-		06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
-		06CC53540A3E321400E92E7F /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53520A3E321400E92E7F /* Board.h */; };
-		06CC53550A3E321400E92E7F /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53530A3E321400E92E7F /* Board.cpp */; };
-		06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53680A3E369000E92E7F /* drawfunc.h */; };
-		06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */; };
-		06CC54330A3E3B9000E92E7F /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC54320A3E3B9000E92E7F /* globals.h */; };
-		06D789630BDAE4E4005505FB /* snake.icns in Resources */ = {isa = PBXBuildFile; fileRef = 06D789620BDAE4E4005505FB /* snake.icns */; };
-		06D789950BDAE7B3005505FB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06D789940BDAE7B3005505FB /* Credits.rtf */; };
-		06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FB5AEF0A47675800D6B6A4 /* Timer.h */; };
-		06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FB5AF00A47675800D6B6A4 /* Timer.cpp */; };
-		06FFD1AF0A3E24BE003850BF /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FFD1AE0A3E24BE003850BF /* snake.png */; };
-		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */; };
-		F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */; };
+		06FC31F30E53A05100FB3182 /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */; };
+		06FC31F40E53A05100FB3182 /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
+		06FC31F50E53A05100FB3182 /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53520A3E321400E92E7F /* Board.h */; };
+		06FC31F60E53A05100FB3182 /* drawfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53680A3E369000E92E7F /* drawfunc.h */; };
+		06FC31F70E53A05100FB3182 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC54320A3E3B9000E92E7F /* globals.h */; };
+		06FC31F80E53A05100FB3182 /* SnakePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0625D7510A3F639100F0E531 /* SnakePlayer.h */; };
+		06FC31F90E53A05100FB3182 /* SPlayState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971F40A446B2900ECB735 /* SPlayState.h */; };
+		06FC31FA0E53A05100FB3182 /* SGameEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C9711B0A445C4C00ECB735 /* SGameEngine.h */; };
+		06FC31FB0E53A05100FB3182 /* SGameState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C971830A44603D00ECB735 /* SGameState.h */; };
+		06FC31FC0E53A05100FB3182 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FB5AEF0A47675800D6B6A4 /* Timer.h */; };
+		06FC31FD0E53A05100FB3182 /* SIntroState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0660BCE60A4A1A720007D282 /* SIntroState.h */; };
+		06FC31FE0E53A05100FB3182 /* SMenuState.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CE80A703DB20027C0D2 /* SMenuState.h */; };
+		06FC31FF0E53A05100FB3182 /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431CF90A7040AE0027C0D2 /* Menu.h */; };
+		06FC32000E53A05100FB3182 /* MenuOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 06431D080A70426C0027C0D2 /* MenuOption.h */; };
+		06FC32010E53A05100FB3182 /* Snake_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */; };
+		06FC32020E53A05100FB3182 /* SHelpState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0681021D0C20BC3100D4FA80 /* SHelpState.h */; };
+		06FC32050E53A05100FB3182 /* apple.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 06C9742E0A44826B00ECB735 /* apple.bmp */; };
+		06FC32060E53A05100FB3182 /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FFD1AE0A3E24BE003850BF /* snake.png */; };
+		06FC32070E53A05100FB3182 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06377BD00A434FF70006D268 /* levels.txt */; };
+		06FC32080E53A05100FB3182 /* snaketitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0660BD000A4A1FCE0007D282 /* snaketitle.png */; };
+		06FC32090E53A05100FB3182 /* snake.000 in Resources */ = {isa = PBXBuildFile; fileRef = 066003C90A4D9DFF009ED8EF /* snake.000 */; };
+		06FC320A0E53A05100FB3182 /* snake.icns in Resources */ = {isa = PBXBuildFile; fileRef = 06D789620BDAE4E4005505FB /* snake.icns */; };
+		06FC320B0E53A05100FB3182 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06D789940BDAE7B3005505FB /* Credits.rtf */; };
+		06FC320D0E53A05100FB3182 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
+		06FC320E0E53A05100FB3182 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
+		06FC320F0E53A05100FB3182 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
+		06FC32110E53A05100FB3182 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */; };
+		06FC32120E53A05100FB3182 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
+		06FC32130E53A05100FB3182 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
+		06FC32140E53A05100FB3182 /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
+		06FC32150E53A05100FB3182 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53530A3E321400E92E7F /* Board.cpp */; };
+		06FC32160E53A05100FB3182 /* drawfunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53690A3E369000E92E7F /* drawfunc.cpp */; };
+		06FC32170E53A05100FB3182 /* SPlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C971F50A446B2900ECB735 /* SPlayState.cpp */; };
+		06FC32180E53A05100FB3182 /* SGameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */; };
+		06FC32190E53A05100FB3182 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FB5AF00A47675800D6B6A4 /* Timer.cpp */; };
+		06FC321A0E53A05100FB3182 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0660BCE70A4A1A720007D282 /* SIntroState.cpp */; };
+		06FC321B0E53A05100FB3182 /* SMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CE90A703DB20027C0D2 /* SMenuState.cpp */; };
+		06FC321C0E53A05100FB3182 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431CFA0A7040AE0027C0D2 /* Menu.cpp */; };
+		06FC321D0E53A05100FB3182 /* MenuOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431D090A70426C0027C0D2 /* MenuOption.cpp */; };
+		06FC321E0E53A05100FB3182 /* SHelpState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0681021C0C20BC3100D4FA80 /* SHelpState.cpp */; };
+		06FC32200E53A05100FB3182 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		06FC32210E53A05100FB3182 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
+		06FC32220E53A05100FB3182 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
+		06FC32230E53A05100FB3182 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		061874780CD97A4E00713BA2 /* CopyFiles */ = {
+		06FC320C0E53A05100FB3182 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0618746F0CD97A4500713BA2 /* SDL_image.framework in CopyFiles */,
-				061874700CD97A4500713BA2 /* SDL_ttf.framework in CopyFiles */,
-				061874710CD97A4500713BA2 /* SDL.framework in CopyFiles */,
+				06FC320D0E53A05100FB3182 /* SDL_image.framework in CopyFiles */,
+				06FC320E0E53A05100FB3182 /* SDL_ttf.framework in CopyFiles */,
+				06FC320F0E53A05100FB3182 /* SDL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,12 +104,11 @@
 		06D789940BDAE7B3005505FB /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		06FB5AEF0A47675800D6B6A4 /* Timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Timer.h; sourceTree = "<group>"; };
 		06FB5AF00A47675800D6B6A4 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		06FC32290E53A05100FB3182 /* Snake World Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snake World Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FFD1780A3E2196003850BF /* load_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = load_image.h; sourceTree = "<group>"; };
 		06FFD1790A3E2196003850BF /* load_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_image.cpp; sourceTree = "<group>"; };
 		06FFD1AE0A3E24BE003850BF /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		17587328FF379C6511CA2CBB /* Snake World Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "Snake World Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		F5A47A9D01A0482F01D3D55B /* SDLMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
@@ -167,14 +116,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+		06FC321F0E53A05100FB3182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
-				06BF2DB90BBEA060003BE77A /* SDL.framework in Frameworks */,
-				061E7AF90CD838F6005D1E13 /* SDL_ttf.framework in Frameworks */,
-				061E7AFD0CD83905005D1E13 /* SDL_image.framework in Frameworks */,
+				06FC32200E53A05100FB3182 /* Cocoa.framework in Frameworks */,
+				06FC32210E53A05100FB3182 /* SDL.framework in Frameworks */,
+				06FC32220E53A05100FB3182 /* SDL_ttf.framework in Frameworks */,
+				06FC32230E53A05100FB3182 /* SDL_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +190,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17587328FF379C6511CA2CBB /* Snake World Tour.app */,
+				06FC32290E53A05100FB3182 /* Snake World Tour.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,7 +232,6 @@
 				06D789620BDAE4E4005505FB /* snake.icns */,
 				06FFD1AE0A3E24BE003850BF /* snake.png */,
 				06D789940BDAE7B3005505FB /* Credits.rtf */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -300,119 +248,158 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		29B97327FDCFA39411CA2CEA /* Headers */ = {
+		06FC31F20E53A05100FB3182 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */,
-				06CC530D0A3E2F1600E92E7F /* load_image.h in Headers */,
-				06CC53540A3E321400E92E7F /* Board.h in Headers */,
-				06CC536A0A3E369000E92E7F /* drawfunc.h in Headers */,
-				06CC54330A3E3B9000E92E7F /* globals.h in Headers */,
-				0625D7530A3F639100F0E531 /* SnakePlayer.h in Headers */,
-				06C971F60A446B2900ECB735 /* SPlayState.h in Headers */,
-				06C972A80A447A6A00ECB735 /* SGameEngine.h in Headers */,
-				06C973A30A447EF900ECB735 /* SGameState.h in Headers */,
-				06FB5AF10A47675800D6B6A4 /* Timer.h in Headers */,
-				0660BCE80A4A1A720007D282 /* SIntroState.h in Headers */,
-				06431CEA0A703DB20027C0D2 /* SMenuState.h in Headers */,
-				06431CFB0A7040AE0027C0D2 /* Menu.h in Headers */,
-				06431D0A0A70426C0027C0D2 /* MenuOption.h in Headers */,
-				06BF2DC10BBEA17D003BE77A /* Snake_Prefix.pch in Headers */,
-				0681021F0C20BC3100D4FA80 /* SHelpState.h in Headers */,
+				06FC31F30E53A05100FB3182 /* SDLMain.h in Headers */,
+				06FC31F40E53A05100FB3182 /* load_image.h in Headers */,
+				06FC31F50E53A05100FB3182 /* Board.h in Headers */,
+				06FC31F60E53A05100FB3182 /* drawfunc.h in Headers */,
+				06FC31F70E53A05100FB3182 /* globals.h in Headers */,
+				06FC31F80E53A05100FB3182 /* SnakePlayer.h in Headers */,
+				06FC31F90E53A05100FB3182 /* SPlayState.h in Headers */,
+				06FC31FA0E53A05100FB3182 /* SGameEngine.h in Headers */,
+				06FC31FB0E53A05100FB3182 /* SGameState.h in Headers */,
+				06FC31FC0E53A05100FB3182 /* Timer.h in Headers */,
+				06FC31FD0E53A05100FB3182 /* SIntroState.h in Headers */,
+				06FC31FE0E53A05100FB3182 /* SMenuState.h in Headers */,
+				06FC31FF0E53A05100FB3182 /* Menu.h in Headers */,
+				06FC32000E53A05100FB3182 /* MenuOption.h in Headers */,
+				06FC32010E53A05100FB3182 /* Snake_Prefix.pch in Headers */,
+				06FC32020E53A05100FB3182 /* SHelpState.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXNativeTarget section */
+		06FC31F10E53A05100FB3182 /* Snake World Tour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06FC32240E53A05100FB3182 /* Build configuration list for PBXNativeTarget "Snake World Tour" */;
+			buildPhases = (
+				06FC31F20E53A05100FB3182 /* Headers */,
+				06FC32030E53A05100FB3182 /* Resources */,
+				06FC320C0E53A05100FB3182 /* CopyFiles */,
+				06FC32100E53A05100FB3182 /* Sources */,
+				06FC321F0E53A05100FB3182 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snake World Tour";
+			productInstallPath = "$(HOME)/Applications";
+			productName = Snake;
+			productReference = 06FC32290E53A05100FB3182 /* Snake World Tour.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 063E7B6E0A3C84C9005C4507 /* Build configuration list for PBXProject "Snake" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Snake */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29B97326FDCFA39411CA2CEA /* Snake World Tour */,
+				06FC31F10E53A05100FB3182 /* Snake World Tour */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		29B97328FDCFA39411CA2CEA /* Resources */ = {
+		06FC32030E53A05100FB3182 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
-				06C9742F0A44826B00ECB735 /* apple.bmp in Resources */,
-				06FFD1AF0A3E24BE003850BF /* snake.png in Resources */,
-				06377BD10A434FF70006D268 /* levels.txt in Resources */,
-				0660BD010A4A1FCE0007D282 /* snaketitle.png in Resources */,
-				066003CA0A4D9DFF009ED8EF /* snake.000 in Resources */,
-				06D789630BDAE4E4005505FB /* snake.icns in Resources */,
-				06D789950BDAE7B3005505FB /* Credits.rtf in Resources */,
+				06FC32050E53A05100FB3182 /* apple.bmp in Resources */,
+				06FC32060E53A05100FB3182 /* snake.png in Resources */,
+				06FC32070E53A05100FB3182 /* levels.txt in Resources */,
+				06FC32080E53A05100FB3182 /* snaketitle.png in Resources */,
+				06FC32090E53A05100FB3182 /* snake.000 in Resources */,
+				06FC320A0E53A05100FB3182 /* snake.icns in Resources */,
+				06FC320B0E53A05100FB3182 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+		06FC32100E53A05100FB3182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */,
-				068EEABA0A3CE318003887BB /* main.cpp in Sources */,
-				0625D7540A3F639100F0E531 /* SnakePlayer.cpp in Sources */,
-				06CC530E0A3E2F1600E92E7F /* load_image.cpp in Sources */,
-				06CC53550A3E321400E92E7F /* Board.cpp in Sources */,
-				06CC536B0A3E369000E92E7F /* drawfunc.cpp in Sources */,
-				06C971F70A446B2900ECB735 /* SPlayState.cpp in Sources */,
-				06C972A90A447A6C00ECB735 /* SGameEngine.cpp in Sources */,
-				06FB5AF20A47675800D6B6A4 /* Timer.cpp in Sources */,
-				0660BCE90A4A1A720007D282 /* SIntroState.cpp in Sources */,
-				06431CEB0A703DB20027C0D2 /* SMenuState.cpp in Sources */,
-				06431CFC0A7040AE0027C0D2 /* Menu.cpp in Sources */,
-				06431D0B0A70426C0027C0D2 /* MenuOption.cpp in Sources */,
-				0681021E0C20BC3100D4FA80 /* SHelpState.cpp in Sources */,
+				06FC32110E53A05100FB3182 /* SDLMain.m in Sources */,
+				06FC32120E53A05100FB3182 /* main.cpp in Sources */,
+				06FC32130E53A05100FB3182 /* SnakePlayer.cpp in Sources */,
+				06FC32140E53A05100FB3182 /* load_image.cpp in Sources */,
+				06FC32150E53A05100FB3182 /* Board.cpp in Sources */,
+				06FC32160E53A05100FB3182 /* drawfunc.cpp in Sources */,
+				06FC32170E53A05100FB3182 /* SPlayState.cpp in Sources */,
+				06FC32180E53A05100FB3182 /* SGameEngine.cpp in Sources */,
+				06FC32190E53A05100FB3182 /* Timer.cpp in Sources */,
+				06FC321A0E53A05100FB3182 /* SIntroState.cpp in Sources */,
+				06FC321B0E53A05100FB3182 /* SMenuState.cpp in Sources */,
+				06FC321C0E53A05100FB3182 /* Menu.cpp in Sources */,
+				06FC321D0E53A05100FB3182 /* MenuOption.cpp in Sources */,
+				06FC321E0E53A05100FB3182 /* SHelpState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		063E7B6B0A3C84C9005C4507 /* Development */ = {
+		063E7B6F0A3C84C9005C4507 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = /Applications;
+			};
+			name = Development;
+		};
+		063E7B700A3C84C9005C4507 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = /Applications;
+			};
+			name = Deployment;
+		};
+		063E7B710A3C84C9005C4507 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = /Applications;
+			};
+			name = Default;
+		};
+		06FC32250E53A05100FB3182 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					/Library/Frameworks/SDL_ttf.framework/Headers,
 					/Library/Frameworks/SDL_image.framework/Headers,
 					/Library/Frameworks/SDL.framework/Headers,
 				);
+				INFOPLIST_FILE = "";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "";
-				OPTIMIZATION_CFLAGS = "-O0";
 				PREBINDING = NO;
 				PRODUCT_NAME = "Snake World Tour";
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -424,17 +411,19 @@
 			};
 			name = Development;
 		};
-		063E7B6C0A3C84C9005C4507 /* Deployment */ = {
+		06FC32260E53A05100FB3182 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_image.framework/Headers",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_ttf.framework/Headers",
 					/Library/Frameworks/SDL.framework/Headers,
 				);
+				INFOPLIST_FILE = "Info-Snake_World_Tour__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
@@ -457,11 +446,13 @@
 			};
 			name = Deployment;
 		};
-		063E7B6D0A3C84C9005C4507 /* Default */ = {
+		06FC32270E53A05100FB3182 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "\"/Library/Frameworks/SDL.framework/Headers\"";
+				INFOPLIST_FILE = "Info-Snake_World_Tour__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
@@ -479,46 +470,25 @@
 			};
 			name = Default;
 		};
-		063E7B6F0A3C84C9005C4507 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INSTALL_PATH = /Applications;
-			};
-			name = Development;
-		};
-		063E7B700A3C84C9005C4507 /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INSTALL_PATH = /Applications;
-			};
-			name = Deployment;
-		};
-		063E7B710A3C84C9005C4507 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INSTALL_PATH = /Applications;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		063E7B6A0A3C84C9005C4507 /* Build configuration list for PBXApplicationTarget "Snake World Tour" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				063E7B6B0A3C84C9005C4507 /* Development */,
-				063E7B6C0A3C84C9005C4507 /* Deployment */,
-				063E7B6D0A3C84C9005C4507 /* Default */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
-		};
 		063E7B6E0A3C84C9005C4507 /* Build configuration list for PBXProject "Snake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				063E7B6F0A3C84C9005C4507 /* Development */,
 				063E7B700A3C84C9005C4507 /* Deployment */,
 				063E7B710A3C84C9005C4507 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		06FC32240E53A05100FB3182 /* Build configuration list for PBXNativeTarget "Snake World Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06FC32250E53A05100FB3182 /* Development */,
+				06FC32260E53A05100FB3182 /* Deployment */,
+				06FC32270E53A05100FB3182 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Default;
