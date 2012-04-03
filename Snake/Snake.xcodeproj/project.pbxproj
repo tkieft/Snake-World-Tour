@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -299,8 +299,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 063E7B6E0A3C84C9005C4507 /* Build configuration list for PBXProject "Snake" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -385,10 +388,10 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					/Library/Frameworks/SDL_ttf.framework/Headers,
 					/Library/Frameworks/SDL_image.framework/Headers,
@@ -397,7 +400,6 @@
 				INFOPLIST_FILE = "";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = "Snake World Tour";
 				SDKROOT = "";
 				SECTORDER_FLAGS = "";
@@ -416,8 +418,8 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_image.framework/Headers",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_ttf.framework/Headers",
@@ -451,6 +453,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"/Library/Frameworks/SDL.framework/Headers\"";
 				INFOPLIST_FILE = "Info-Snake_World_Tour__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
