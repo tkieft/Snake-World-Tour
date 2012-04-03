@@ -1,0 +1,6 @@
+Snake World Tour
+----------------
+
+A clone of the old "Nibbles" game for MS QBasic, written in C++
+
+Requires the SDL library.
