@@ -7,6 +7,7 @@
  *
  *
  *  CHANGE LOG:
+ *  15Nov07 TDK Start game while on any menu option.
  *  25Feb06 TDK Fix bug in number of players code.
  *  04Nov06 TDK Add ability to restart game in middle, add difficulty.  
  *  03Nov06 TDK Add draw common background before drawing menu text.
@@ -129,7 +130,7 @@ void SMenuState::HandleEvents( SGameEngine* game )
 							main_menu->reset();
 							current_menu = main_menu;
 						}
-						else if( current_menu->getOption() == "Play" )
+						else
 						{
 							if( num_players_menu->getChoice("Players") == "2" )
 								game->setNumPlayers(2);

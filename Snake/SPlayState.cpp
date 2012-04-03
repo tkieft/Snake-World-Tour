@@ -6,6 +6,7 @@
  *  Copyright 2006 Tyler Kieft. All rights reserved.
  *
  *  CHANGELOG:
+ *  15Nov07 TDK Add enter key to be analagous to spacebar.
  *  21Apr07	TDK	Fix nasty bug where restarting game would cause errors because snakes hadn't been deleted
  *  15Jun06 TDK gameState variable to hold state.
  *  24Jun06 TDK Move SDL_Flip below Unlock screen.
@@ -92,6 +93,7 @@ void SPlayState::HandleEvents( SGameEngine* game )
                         game->PushState( SMenuState::Instance() );
                         break;
                     case SDLK_SPACE:
+					case SDLK_RETURN:
                         if( gameState == LEVEL_LOST || gameState == LEVEL_WON )
                         {
                             theSnakes[0]->reset( SnakePlayer::SNAKE_UP, game->getGameDifficulty() );
