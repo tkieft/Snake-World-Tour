@@ -21,7 +21,7 @@ SDL_Surface *load_image( string filename, int r, int g, int b )
     
     if( loadedImage )
     {
-        optimizedImage = SDL_ConvertSurfaceFormat( loadedImage, SDL_PIXELFORMAT_RGBA32, 0);
+        optimizedImage = SDL_ConvertSurfaceFormat( loadedImage, SDL_PIXELFORMAT_ARGB8888, 0);
         SDL_FreeSurface( loadedImage );
     }
     else
