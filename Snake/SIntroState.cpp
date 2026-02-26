@@ -66,8 +66,8 @@ void SIntroState::Update( SGameEngine* game )
         alpha = 0;
         
         if( ! startticks )
-            startticks = SDL_GetTicks();
-        else if( SDL_GetTicks() - startticks > 3000 )
+            startticks = SDL_GetTicks64();
+        else if( SDL_GetTicks64() - startticks > 3000 )
         {
             game->ChangeState( SMenuState::Instance() );
             return;

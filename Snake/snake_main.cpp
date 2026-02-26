@@ -40,13 +40,13 @@ extern "C" int snake_main(int argc, char *argv[])
     // main loop
     while( game.isRunning() )
     {
-        int ticks = SDL_GetTicks();
-        
+        Uint64 ticks = SDL_GetTicks64();
+
         game.HandleEvents();
         game.Update();
         game.Draw();
-        
-        while( SDL_GetTicks() - ticks < 1000 / FPS );
+
+        while( SDL_GetTicks64() - ticks < 1000 / FPS );
     }
     
     // cleanup the engine

@@ -22,9 +22,9 @@ using std::string;
 class Timer
 {
 private:
-    int startTicks;
-    int pausedTicks;
-    int stoppedTicks;
+    Uint64 startTicks;
+    Uint64 pausedTicks;
+    Uint64 stoppedTicks;
     
     enum State { RUNNING, PAUSED, STOPPED };
 
@@ -42,7 +42,7 @@ public:
     void unpause();
     void stop();
     
-    int get_ticks();
+    Uint64 get_ticks();
     bool is_running() { return timerState == RUNNING; }
     bool is_paused() { return timerState == PAUSED; }
     bool is_stopped() { return timerState == STOPPED; }

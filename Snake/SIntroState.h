@@ -40,7 +40,7 @@ private:
     SDL_Surface* title;
     SDL_Surface* fader;
     int alpha;
-    int startticks;
+    Uint64 startticks;
 };
 
 #endif
