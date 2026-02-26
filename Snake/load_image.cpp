@@ -8,6 +8,7 @@
  */
 #include <iostream>
 #include "SDL_image.h"
+#include "globals.h"
 #include "load_image.h"
 
 SDL_Surface *load_image( string filename, int r, int g, int b )
@@ -20,7 +21,7 @@ SDL_Surface *load_image( string filename, int r, int g, int b )
     
     if( loadedImage )
     {
-        optimizedImage = SDL_DisplayFormat( loadedImage );
+        optimizedImage = SDL_ConvertSurfaceFormat( loadedImage, SDL_PIXELFORMAT_RGBA32, 0);
         SDL_FreeSurface( loadedImage );
     }
     else
@@ -28,8 +29,9 @@ SDL_Surface *load_image( string filename, int r, int g, int b )
     
     if( optimizedImage && ( r || g || b ) )
     {
+        SDL_SetSurfaceRLE(optimizedImage, SDL_TRUE);
         Uint32 colorkey = SDL_MapRGB( optimizedImage->format, r, g, b );
-        SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, colorkey );
+        SDL_SetColorKey( optimizedImage, SDL_TRUE, colorkey );
     }
     
     //std::cout << optimizedImage;

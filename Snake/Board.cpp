@@ -43,7 +43,7 @@ const int Board::ENDING_POSITION[] = { Board::STARTING_POSITION[1], Board::START
 Board::Board() : currentLevel( 0 ), deadPlayer( 1 ) {
     playerFont[0] = NULL;
     playerFont[1] = NULL;
-    srand( time( NULL ) );
+    srand( 0 );
 }
 
 void Board::Init( string rsrcPath, int numSnakes ) {
@@ -172,7 +172,7 @@ void Board::drawLevelPlaying( SDL_Surface* scr, SnakePlayer* snakes[] ) {
 void Board::drawLargeText( const char* text, double yMult, SDL_Surface* scr )
 {
     fontSurface = TTF_RenderText_Shaded( largeFont, text, WALL_COLOR, FLOOR_COLOR );
-    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, ( scr->h / 2 ) + ( fontSurface->h * yMult ) };
+    SDL_Rect where = { XLOC + ( TILESIZE * LEVELSIZE ) / 2 - fontSurface->w / 2, static_cast<int>(( scr->h / 2 ) + ( fontSurface->h * yMult )) };
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );
 }
@@ -202,7 +202,7 @@ void Board::drawLevelStart( SDL_Surface* scr )
     SDL_Rect boardSurface = { XLOC, YLOC, TILESIZE * LEVELSIZE, TILESIZE * LEVELSIZE };
     SDL_FillRect( scr, &boardSurface, SDL_MapRGB( scr->format, FLOOR_COLOR.r, FLOOR_COLOR.g, FLOOR_COLOR.b ) );
     
-    char levelText[] = { 'L', 'e', 'v', 'e', 'l', ' ', ((char) currentLevel ) + 48, '\0' };
+    char levelText[] = { 'L', 'e', 'v', 'e', 'l', ' ', static_cast<char>(currentLevel + 48), '\0' };
     drawLargeText( levelText, (-1.5), scr );
     drawLargeText( levelName.c_str(), (-.5), scr );
     drawLargeText( levelLocation.c_str(), .5, scr );
@@ -231,7 +231,7 @@ void Board::drawGameLost( SDL_Surface* scr )
 void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
 {
     // draw level number
-    char levelString[] = { ((char) currentLevel) + 48, '\0' };
+    char levelString[] = { static_cast<char>(currentLevel + 48), '\0' };
     fontSurface = TTF_RenderText_Shaded( levelFont, levelString, levelNumColor, levelNumBG );
     SDL_Rect levRect = { 554, 415 };
     SDL_BlitSurface( fontSurface, NULL, scr, &levRect );
@@ -243,7 +243,7 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
         if( !snakes[p] ) break;
 		
 		// draw lives
-		char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ' ', ((char) snakes[p]->getLives()) + 48, '\0' };
+		char playerLives[] = { 'L', 'i', 'v', 'e', 's', ':', ' ', static_cast<char>(snakes[p]->getLives() + 48), '\0' };
         fontSurface = TTF_RenderText_Shaded( playerFont[p], playerLives, snakes[p]->getColor(), levelNumBG );
         SDL_Rect p1 = { 475, 150 + p*100 };
         SDL_BlitSurface( fontSurface, NULL, scr, &p1 );
@@ -269,13 +269,13 @@ void Board::drawSnakeInfo( SDL_Surface* scr, SnakePlayer* snakes[] )
 void Board::drawHelp( SDL_Surface* scr ) {
 	SDL_Color helpColor; helpColor.r = helpColor.g = helpColor.b = 0xFF;
 	
-	char* pauseHelp = "'P' to Pause";
+	char const * pauseHelp = "'P' to Pause";
 	fontSurface = TTF_RenderText_Shaded( smallFont, pauseHelp, helpColor, levelNumBG );
     SDL_Rect where = { 475, 340 };
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
     SDL_FreeSurface( fontSurface );
 
-	char* escHelp = "'Esc' for Menu";
+	char const * escHelp = "'Esc' for Menu";
 	fontSurface = TTF_RenderText_Shaded( smallFont, escHelp, helpColor, levelNumBG );
     where.x = 475; where.y = 360;
     SDL_BlitSurface( fontSurface, NULL, scr, &where );
@@ -416,10 +416,12 @@ int Board::updatePosition( SnakePlayer* snakes[] )
         
         // won the level
         if( collectibles == 0 )
+        {
             if( snakeHeadPosition[i] == ENDING_POSITION[i] )
                 return 3 + i;
             else
                 levelData[ENDING_POSITION[i]] = LEVEL_FLOOR;
+        }
         if( levelData[STARTING_POSITION[i]] == LEVEL_FLOOR && collectibles != 0 )
             levelData[STARTING_POSITION[i]] = LEVEL_WALL;
     }

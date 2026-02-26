@@ -162,9 +162,9 @@ void SMenuState::HandleEvents( SGameEngine* game )
 							main_menu->reset();
                             current_menu = main_menu;
                             if( options_menu->getChoice("Screen Size") == "Fullscreen" )
-                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_FULLSCREEN | SDL_DOUBLEBUF | SDL_HWSURFACE );
+                                SDL_SetWindowFullscreen(game->window, SDL_WINDOW_FULLSCREEN);
                             else
-                                SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );
+                                SDL_SetWindowFullscreen(game->window, 0);
                         }
                     }
                     break;
@@ -188,5 +188,9 @@ void SMenuState::Draw( SGameEngine* game )
 	
     //cout << "Menu State Draw";
     current_menu->Draw( game );
-    SDL_Flip( game->screen );
+
+    SDL_UpdateTexture(game->texture, NULL, game->screen->pixels, game->screen->pitch);
+    SDL_RenderClear(game->renderer);
+    SDL_RenderCopy(game->renderer, game->texture, NULL, NULL);
+    SDL_RenderPresent(game->renderer);
 }

@@ -26,7 +26,7 @@ void SIntroState::Init( SGameEngine* game )
                                   title->format->Bmask, title->format->Amask );
     
     SDL_FillRect( fader, NULL, SDL_MapRGB( title->format, 0, 0, 0 ));
-    SDL_SetAlpha( fader, SDL_SRCALPHA | SDL_RLEACCEL, alpha );
+    SDL_SetSurfaceAlphaMod(fader, alpha);
 }
 
 void SIntroState::Cleanup()
@@ -74,7 +74,7 @@ void SIntroState::Update( SGameEngine* game )
         }
     }
     
-    SDL_SetAlpha( fader, SDL_SRCALPHA | SDL_RLEACCEL, alpha );
+    SDL_SetSurfaceAlphaMod(fader, alpha);
 }
 
 void SIntroState::Draw( SGameEngine* game )
@@ -83,5 +83,8 @@ void SIntroState::Draw( SGameEngine* game )
     if( alpha )
         SDL_BlitSurface( fader, NULL, game->screen, NULL );
     
-    SDL_UpdateRect( game->screen, 0, 0, 0, 0 );
+    SDL_UpdateTexture(game->texture, NULL, game->screen->pixels, game->screen->pitch);
+    SDL_RenderClear(game->renderer);
+    SDL_RenderCopy(game->renderer, game->texture, NULL, NULL);
+    SDL_RenderPresent(game->renderer);
 }

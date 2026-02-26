@@ -7,6 +7,7 @@
 
 #import "SDL.h"
 #import "SDLMain.h"
+#import "snake_main.h"
 #import <sys/param.h> /* for MAXPATHLEN */
 #import <unistd.h>
 
@@ -69,19 +70,6 @@ static NSString *getApplicationName(void)
 @end
 #endif
 
-@interface SDLApplication : NSApplication
-@end
-
-@implementation SDLApplication
-/* Invoked from the Quit menu item */
-- (void)terminate:(id)sender
-{
-    /* Post a SDL_QUIT event */
-    SDL_Event event;
-    event.type = SDL_QUIT;
-    SDL_PushEvent(&event);
-}
-@end
 
 /* The main class of the application, the application's delegate */
 @implementation SDLMain
@@ -151,7 +139,7 @@ static void setApplicationMenu(void)
     [appleMenu addItemWithTitle:title action:@selector(hide:) keyEquivalent:@"h"];
 
     menuItem = (NSMenuItem *)[appleMenu addItemWithTitle:@"Hide Others" action:@selector(hideOtherApplications:) keyEquivalent:@"h"];
-    [menuItem setKeyEquivalentModifierMask:(NSAlternateKeyMask|NSCommandKeyMask)];
+    [menuItem setKeyEquivalentModifierMask:(NSEventModifierFlagOption|NSEventModifierFlagCommand)];
 
     [appleMenu addItemWithTitle:@"Show All" action:@selector(unhideAllApplications:) keyEquivalent:@""];
 
@@ -208,8 +196,8 @@ static void CustomApplicationMain (int argc, char **argv)
     SDLMain				*sdlMain;
 
     /* Ensure the application object is initialised */
-    [SDLApplication sharedApplication];
-    
+    [NSApplication sharedApplication];
+
 #ifdef SDL_USE_CPS
     {
         CPSProcessSerNum PSN;
@@ -217,7 +205,7 @@ static void CustomApplicationMain (int argc, char **argv)
         if (!CPSGetCurrentProcess(&PSN))
             if (!CPSEnableForegroundOperation(&PSN,0x03,0x3C,0x2C,0x1103))
                 if (!CPSSetFrontProcess(&PSN))
-                    [SDLApplication sharedApplication];
+                    [NSApplication sharedApplication];
     }
 #endif /* SDL_USE_CPS */
 
@@ -228,8 +216,8 @@ static void CustomApplicationMain (int argc, char **argv)
 
     /* Create SDLMain and make it the app delegate */
     sdlMain = [[SDLMain alloc] init];
-    [NSApp setDelegate:sdlMain];
-    
+    [NSApp setDelegate:(id) sdlMain];
+
     /* Start the main event loop */
     [NSApp run];
     
@@ -240,52 +228,27 @@ static void CustomApplicationMain (int argc, char **argv)
 #endif
 
 
-/*
- * Catch document open requests...this lets us notice files when the app
- *  was launched by double-clicking a document, or when a document was
- *  dragged/dropped on the app's icon. You need to have a
- *  CFBundleDocumentsType section in your Info.plist to get this message,
- *  apparently.
- *
- * Files are added to gArgv, so to the app, they'll look like command line
- *  arguments. Previously, apps launched from the finder had nothing but
- *  an argv[0].
- *
- * This message may be received multiple times to open several docs on launch.
- *
- * This message is ignored once the app's mainline has been called.
- */
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
+{
+    if (SDL_GetEventState(SDL_QUIT) == SDL_ENABLE) {
+        SDL_Event event;
+        event.type = SDL_QUIT;
+        SDL_PushEvent(&event);
+    }
+
+    return NSTerminateCancel;
+}
+
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
-    const char *temparg;
-    size_t arglen;
-    char *arg;
-    char **newargv;
-
-    if (!gFinderLaunch)  /* MacOS is passing command line args. */
-        return FALSE;
-
-    if (gCalledAppMainline)  /* app has started, ignore this document. */
-        return FALSE;
-
-    temparg = [filename UTF8String];
-    arglen = SDL_strlen(temparg) + 1;
-    arg = (char *) SDL_malloc(arglen);
-    if (arg == NULL)
-        return FALSE;
-
-    newargv = (char **) realloc(gArgv, sizeof (char *) * (gArgc + 2));
-    if (newargv == NULL)
-    {
-        SDL_free(arg);
-        return FALSE;
+    if (SDL_GetEventState(SDL_DROPFILE) == SDL_ENABLE) {
+        SDL_Event event;
+        event.type = SDL_DROPFILE;
+        event.drop.file = SDL_strdup([filename UTF8String]);
+        return (SDL_PushEvent(&event) > 0);
     }
-    gArgv = newargv;
 
-    SDL_strlcpy(arg, temparg, arglen);
-    gArgv[gArgc++] = arg;
-    gArgv[gArgc] = NULL;
-    return TRUE;
+    return NO;
 }
 
 
@@ -304,7 +267,7 @@ static void CustomApplicationMain (int argc, char **argv)
 
     /* Hand off to main application code */
     gCalledAppMainline = TRUE;
-    status = SDL_main (gArgc, gArgv);
+    status = snake_main (gArgc, gArgv);
 
     /* We're done, thank you for playing */
     exit(status);
@@ -316,9 +279,9 @@ static void CustomApplicationMain (int argc, char **argv)
 
 - (NSString *)stringByReplacingRange:(NSRange)aRange with:(NSString *)aString
 {
-    unsigned int bufferSize;
-    unsigned int selfLen = [self length];
-    unsigned int aStringLen = [aString length];
+    NSUInteger bufferSize;
+    NSUInteger selfLen = [self length];
+    NSUInteger aStringLen = [aString length];
     unichar *buffer;
     NSRange localRange;
     NSString *result;

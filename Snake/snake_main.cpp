@@ -20,7 +20,7 @@
 
 using std::string;
 
-int main(int argc, char *argv[])
+extern "C" int snake_main(int argc, char *argv[])
 {   
     string rsrcdirectory = (string) *argv;
     rsrcdirectory = rsrcdirectory.substr( 0, rsrcdirectory.length() - 22 ) + "Resources/";
@@ -28,9 +28,10 @@ int main(int argc, char *argv[])
     SGameEngine game;
     
     // initialize the engine
-    const SDL_version* version = SDL_Linked_Version();
+    SDL_version version;
+    SDL_VERSION(&version);
     std::cout << "Snake World Tour\nTyler Kieft\nLinked with SDL Version "
-        << (int) version->major << "." << (int) version->minor << "." << (int) version->patch << std::endl;
+        << (int) version.major << "." << (int) version.minor << "." << (int) version.patch << std::endl;
     game.Init( "Snake World Tour", rsrcdirectory );
     
     // load the game

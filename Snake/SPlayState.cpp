@@ -201,5 +201,9 @@ void SPlayState::Draw( SGameEngine* game )
     else if ( gameState == GAME_LOST ) {
         theBoard.drawGameLost( game->screen );
     }
-    SDL_Flip( game->screen );
+
+    SDL_UpdateTexture(game->texture, NULL, game->screen->pixels, game->screen->pitch);
+    SDL_RenderClear(game->renderer);
+    SDL_RenderCopy(game->renderer, game->texture, NULL, NULL);
+    SDL_RenderPresent(game->renderer);
 }

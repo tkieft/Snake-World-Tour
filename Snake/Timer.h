@@ -15,7 +15,7 @@
 
 #include <string>
 #include "SDL.h"
-#include "SDL_TTF.h"
+#include "SDL_ttf.h"
 #include "load_image.h"
 using std::string;
 

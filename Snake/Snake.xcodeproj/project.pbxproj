@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0688B6AF2F509FB000B318D6 /* snake_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 0688B6AE2F509FAE00B318D6 /* snake_main.h */; };
 		06FC31F30E53A05100FB3182 /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */; };
 		06FC31F40E53A05100FB3182 /* load_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 06FFD1780A3E2196003850BF /* load_image.h */; };
 		06FC31F50E53A05100FB3182 /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CC53520A3E321400E92E7F /* Board.h */; };
@@ -30,11 +31,8 @@
 		06FC32090E53A05100FB3182 /* snake.000 in Resources */ = {isa = PBXBuildFile; fileRef = 066003C90A4D9DFF009ED8EF /* snake.000 */; };
 		06FC320A0E53A05100FB3182 /* snake.icns in Resources */ = {isa = PBXBuildFile; fileRef = 06D789620BDAE4E4005505FB /* snake.icns */; };
 		06FC320B0E53A05100FB3182 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06D789940BDAE7B3005505FB /* Credits.rtf */; };
-		06FC320D0E53A05100FB3182 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
-		06FC320E0E53A05100FB3182 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
-		06FC320F0E53A05100FB3182 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
 		06FC32110E53A05100FB3182 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */; };
-		06FC32120E53A05100FB3182 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* main.cpp */; };
+		06FC32120E53A05100FB3182 /* snake_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068EEAB90A3CE318003887BB /* snake_main.cpp */; };
 		06FC32130E53A05100FB3182 /* SnakePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0625D7520A3F639100F0E531 /* SnakePlayer.cpp */; };
 		06FC32140E53A05100FB3182 /* load_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FFD1790A3E2196003850BF /* load_image.cpp */; };
 		06FC32150E53A05100FB3182 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53530A3E321400E92E7F /* Board.cpp */; };
@@ -48,9 +46,6 @@
 		06FC321D0E53A05100FB3182 /* MenuOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06431D090A70426C0027C0D2 /* MenuOption.cpp */; };
 		06FC321E0E53A05100FB3182 /* SHelpState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0681021C0C20BC3100D4FA80 /* SHelpState.cpp */; };
 		06FC32200E53A05100FB3182 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		06FC32210E53A05100FB3182 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BF2DB80BBEA060003BE77A /* SDL.framework */; };
-		06FC32220E53A05100FB3182 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */; };
-		06FC32230E53A05100FB3182 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E7AFC0CD83905005D1E13 /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,17 +55,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				06FC320D0E53A05100FB3182 /* SDL_image.framework in CopyFiles */,
-				06FC320E0E53A05100FB3182 /* SDL_ttf.framework in CopyFiles */,
-				06FC320F0E53A05100FB3182 /* SDL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SDL_ttf.framework; path = /Library/Frameworks/SDL_ttf.framework; sourceTree = "<absolute>"; };
-		061E7AFC0CD83905005D1E13 /* SDL_image.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SDL_image.framework; path = /Library/Frameworks/SDL_image.framework; sourceTree = "<absolute>"; };
 		0625D7510A3F639100F0E531 /* SnakePlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SnakePlayer.h; sourceTree = "<group>"; };
 		0625D7520A3F639100F0E531 /* SnakePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnakePlayer.cpp; sourceTree = "<group>"; };
 		06377BD00A434FF70006D268 /* levels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = levels.txt; sourceTree = "<group>"; };
@@ -86,8 +76,8 @@
 		0660BD000A4A1FCE0007D282 /* snaketitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snaketitle.png; sourceTree = "<group>"; };
 		0681021C0C20BC3100D4FA80 /* SHelpState.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SHelpState.cpp; sourceTree = "<group>"; };
 		0681021D0C20BC3100D4FA80 /* SHelpState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SHelpState.h; sourceTree = "<group>"; };
-		068EEAB90A3CE318003887BB /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = main.cpp; sourceTree = "<group>"; };
-		06BF2DB80BBEA060003BE77A /* SDL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		0688B6AE2F509FAE00B318D6 /* snake_main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = snake_main.h; sourceTree = "<group>"; };
+		068EEAB90A3CE318003887BB /* snake_main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; path = snake_main.cpp; sourceTree = "<group>"; };
 		06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Snake_Prefix.pch; sourceTree = "<group>"; };
 		06C9711B0A445C4C00ECB735 /* SGameEngine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SGameEngine.h; sourceTree = "<group>"; };
 		06C9711C0A445C4C00ECB735 /* SGameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SGameEngine.cpp; sourceTree = "<group>"; };
@@ -121,9 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FC32200E53A05100FB3182 /* Cocoa.framework in Frameworks */,
-				06FC32210E53A05100FB3182 /* SDL.framework in Frameworks */,
-				06FC32220E53A05100FB3182 /* SDL_ttf.framework in Frameworks */,
-				06FC32230E53A05100FB3182 /* SDL_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +157,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				061E7AFC0CD83905005D1E13 /* SDL_image.framework */,
-				061E7AF80CD838F6005D1E13 /* SDL_ttf.framework */,
-				06BF2DB80BBEA060003BE77A /* SDL.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -216,7 +200,8 @@
 				06CC53690A3E369000E92E7F /* drawfunc.cpp */,
 				06FFD1780A3E2196003850BF /* load_image.h */,
 				06FFD1790A3E2196003850BF /* load_image.cpp */,
-				068EEAB90A3CE318003887BB /* main.cpp */,
+				068EEAB90A3CE318003887BB /* snake_main.cpp */,
+				0688B6AE2F509FAE00B318D6 /* snake_main.h */,
 				06BF2DC00BBEA17D003BE77A /* Snake_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -263,6 +248,7 @@
 				06FC31FB0E53A05100FB3182 /* SGameState.h in Headers */,
 				06FC31FC0E53A05100FB3182 /* Timer.h in Headers */,
 				06FC31FD0E53A05100FB3182 /* SIntroState.h in Headers */,
+				0688B6AF2F509FB000B318D6 /* snake_main.h in Headers */,
 				06FC31FE0E53A05100FB3182 /* SMenuState.h in Headers */,
 				06FC31FF0E53A05100FB3182 /* Menu.h in Headers */,
 				06FC32000E53A05100FB3182 /* MenuOption.h in Headers */,
@@ -300,14 +286,16 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2620;
 			};
 			buildConfigurationList = 063E7B6E0A3C84C9005C4507 /* Build configuration list for PBXProject "Snake" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Snake */;
 			projectDirPath = "";
@@ -341,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FC32110E53A05100FB3182 /* SDLMain.m in Sources */,
-				06FC32120E53A05100FB3182 /* main.cpp in Sources */,
+				06FC32120E53A05100FB3182 /* snake_main.cpp in Sources */,
 				06FC32130E53A05100FB3182 /* SnakePlayer.cpp in Sources */,
 				06FC32140E53A05100FB3182 /* load_image.cpp in Sources */,
 				06FC32150E53A05100FB3182 /* Board.cpp in Sources */,
@@ -363,29 +351,159 @@
 		063E7B6F0A3C84C9005C4507 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _THREAD_SAFE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/lib",
+					"-lSDL2",
+					"-lSDL2_ttf",
+					"-lSDL2_image",
+				);
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				USER_HEADER_SEARCH_PATHS = /opt/homebrew/include/SDL2;
 			};
 			name = Development;
 		};
 		063E7B700A3C84C9005C4507 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _THREAD_SAFE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/lib",
+					"-lSDL2",
+					"-lSDL2_ttf",
+					"-lSDL2_image",
+				);
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				USER_HEADER_SEARCH_PATHS = /opt/homebrew/include/SDL2;
 			};
 			name = Deployment;
 		};
 		063E7B710A3C84C9005C4507 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _THREAD_SAFE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/lib",
+					"-lSDL2",
+					"-lSDL2_ttf",
+					"-lSDL2_image",
+				);
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				USER_HEADER_SEARCH_PATHS = /opt/homebrew/include/SDL2;
 			};
 			name = Default;
 		};
 		06FC32250E53A05100FB3182 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -416,7 +534,9 @@
 		06FC32260E53A05100FB3182 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -451,6 +571,8 @@
 		06FC32270E53A05100FB3182 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"/Library/Frameworks\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

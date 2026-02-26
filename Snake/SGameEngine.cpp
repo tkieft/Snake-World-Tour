@@ -36,17 +36,44 @@ void SGameEngine::Init( string windowTitle, string d )
     }
     
     // create the screen surface ( 640x480 / 32 bit color )
-    screen = SDL_SetVideoMode( SCREENWIDTH, SCREENHEIGHT, SCREENBPP, SDL_SWSURFACE );// | SDL_FULLSCREEN );
-    
-    if( ! screen )
+    window = SDL_CreateWindow(
+        windowTitle.c_str(),
+        SDL_WINDOWPOS_CENTERED,
+        SDL_WINDOWPOS_CENTERED,
+        SCREENWIDTH,
+        SCREENHEIGHT,
+        SDL_SWSURFACE );
+
+    if( ! window )
     {
         cout << "Unable to set 640x480 video: " << SDL_GetError() << endl;
         exit(1);
     }
-    
-    // set the title bar text
-    SDL_WM_SetCaption( windowTitle.c_str(), windowTitle.c_str() );
-    
+
+    renderer = SDL_CreateRenderer(window, -1, 0);
+
+    if( ! renderer )
+    {
+        cout << "Unable to create renderer: " << SDL_GetError() << endl;
+        exit(1);
+    }
+
+    screen = SDL_CreateRGBSurface(0, SCREENWIDTH, SCREENHEIGHT, SCREENBPP,
+                                  0x00FF0000,
+                                  0x0000FF00,
+                                  0x000000FF,
+                                  0xFF000000);
+    texture = SDL_CreateTexture(renderer,
+                                SDL_PIXELFORMAT_ARGB8888,
+                                SDL_TEXTUREACCESS_STREAMING,
+                                640, 480);
+
+    if( ! screen )
+    {
+        cout << "Unable to create surface: " << SDL_GetError() << endl;
+        exit(1);
+    }
+
     gameRunning = true;
 	gamePlaying = false;
     numPlayers = 1;
@@ -61,7 +88,17 @@ void SGameEngine::Cleanup()
         states.back()->Cleanup();
         states.pop_back();
     }
-    
+
+    SDL_DestroyTexture(texture);
+    SDL_FreeSurface(screen);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+
+    texture = NULL;
+    screen = NULL;
+    renderer = NULL;
+    window = NULL;
+
     // get rid of SDL & TTF
     TTF_Quit();
     SDL_Quit();

@@ -43,9 +43,12 @@ public:
 	bool isPlaying() { return gamePlaying; }
     
 	void Quit() { gameRunning = false; }
-    
+
+    SDL_Window* window;
+    SDL_Renderer* renderer;
     SDL_Surface* screen;
-    
+    SDL_Texture* texture;
+
     int getNumPlayers() { return numPlayers; }
     void setNumPlayers( int n ) { numPlayers = n; }
 
