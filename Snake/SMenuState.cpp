@@ -74,6 +74,7 @@ void SMenuState::Cleanup()
 	
     delete main_menu;
     delete options_menu;
+    delete num_players_menu;
 }
 
 void SMenuState::Pause() {}
